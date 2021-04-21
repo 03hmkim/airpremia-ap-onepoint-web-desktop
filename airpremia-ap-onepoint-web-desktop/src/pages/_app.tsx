@@ -151,6 +151,7 @@ const AppMiddleWare = ({ Component, pageProps }: any) => {
         <div>
           <Head>
             <title>AirPremia Onepoint</title>
+            <div style={{display:'none'}}>테스트</div>
           </Head>
           <HeaderGroup resetData={resetBookingSession} />
           <ToastPopup />
