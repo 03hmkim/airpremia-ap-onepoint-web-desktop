@@ -303,3 +303,4 @@ export {default as DepArrListTemplate} from 'src/components/templates/checkin/de
 export {default as DepArrResultTemplate} from 'src/components/templates/checkin/depArrResult';
 
 export {default as ByeUserTemplate} from 'src/components/templates/auth/byeUser/index';
+//
