@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21">
+    <defs>
+        <style>
+            .prefix__cls-2_ico_online_checkin{fill:none;stroke-miterlimit:10;stroke:#222;stroke-width:1.8px}
+        </style>
+    </defs>
+    <g id="prefix__ico_online_checkin" transform="translate(.5 .5)">
+        <path id="prefix__사각형_1069" d="M0 0H20V20H0z"  style="stroke:transparent;fill:none;stroke-miterlimit:10"/>
+        <g id="prefix__그룹_3301"  transform="translate(-249.275 -289.82)">
+            <path id="prefix__패스_3616" d="M256.412 298.7l1.907 1.907 3.818-3.818" class="prefix__cls-2_ico_online_checkin" />
+            <rect id="prefix__사각형_1065" width="18" height="12.6" class="prefix__cls-2_ico_online_checkin"  rx="3.6" transform="translate(250.275 292.82)"/>
+            <path id="prefix__선_345" d="M0 0L10.794 0" class="prefix__cls-2_ico_online_checkin"  transform="translate(253.866 308.82)"/>
+            <path id="prefix__선_347" d="M0 0L0 3.401" class="prefix__cls-2_ico_online_checkin"  transform="translate(259.267 305.42)"/>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <radialGradient id="radial-gradient" cx=".015" cy=".313" r=".953" gradientTransform="matrix(0 -1 -1.41 0 .456 .328)" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#c7e0f5"/>
+            <stop offset=".06" stop-color="#bfdbf3"/>
+            <stop offset=".152" stop-color="#a9d0ef"/>
+            <stop offset=".25" stop-color="#8bc1e9"/>
+            <stop offset=".329" stop-color="#78b3e0"/>
+            <stop offset=".488" stop-color="#4890c8"/>
+            <stop offset=".7" stop-color="#005ca6"/>
+            <stop offset=".813" stop-color="#004b93"/>
+            <stop offset="1" stop-color="#002a6d"/>
+        </radialGradient>
+        <radialGradient id="radial-gradient-2" cx="1.005" cy="-.021" r="1.252" gradientTransform="matrix(1 0 0 .881 0 -.002)" xlink:href="#radial-gradient"/>
+        <radialGradient id="radial-gradient-3" cx=".985" cy=".687" r=".943" gradientTransform="matrix(0 1 1.41 0 .017 -.298)" xlink:href="#radial-gradient"/>
+        <radialGradient id="radial-gradient-4" cx="-.005" cy="1.021" r="1.245" gradientTransform="matrix(-1 0 0 -.881 -.011 1.92)" xlink:href="#radial-gradient"/>
+    </defs>
+    <g id="img_c016" transform="translate(-35 -388)">
+        <g id="box" fill="#fff" stroke="#e5e5e5" transform="translate(35 388)">
+            <rect width="26" height="26" stroke="none" rx="13"/>
+            <rect width="25" height="25" x=".5" y=".5" fill="none" rx="12.5"/>
+        </g>
+        <g id="그룹_3086" transform="translate(-80.476 142.559)">
+            <path id="패스_3086" fill="url(#radial-gradient)" d="M123.253 272.178a3.292 3.292 0 0 0 .409 2.57l5.539 8.694h-4.047a1.933 1.933 0 0 1-1.537-.785l-3.02-4.745a1.592 1.592 0 0 1 0-1.573z" transform="translate(0 -17.736)"/>
+            <path id="패스_3087" fill="url(#radial-gradient-2)" d="M140.321 269.413a1.37 1.37 0 0 0-.057 1.223l-1.871-2.936a3.292 3.292 0 0 1-.409-2.57l.333-.522a1.792 1.792 0 0 1 1.565-.787h3.98z" transform="translate(-14.731 -10.687)"/>
+            <path id="패스_3088" fill="url(#radial-gradient-3)" d="M174.091 262.412a3.289 3.289 0 0 0-.409-2.57l-5.538-8.693h4.047a1.935 1.935 0 0 1 1.537.784l3.021 4.747a1.59 1.59 0 0 1 0 1.572z" transform="translate(-40.278)"/>
+            <path id="패스_3089" fill="url(#radial-gradient-4)" d="M172.133 289.14a1.372 1.372 0 0 0 .057-1.223l1.871 2.937a3.289 3.289 0 0 1 .409 2.57l-.333.522a1.79 1.79 0 0 1-1.564.788h-3.98z" transform="translate(-40.657 -31.011)"/>
+        </g>
+    </g>
+</svg>

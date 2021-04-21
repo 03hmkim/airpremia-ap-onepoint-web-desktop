@@ -1,0 +1,6 @@
+<svg id="btn_link_pre" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <rect id="guide" width="20" height="20" fill="none" opacity="0"/>
+  <g id="ico_arrow" transform="translate(1.951)">
+    <path id="ico_arrow-2" data-name="ico_arrow" d="M0,0H7V7" transform="translate(7.999 14.949) rotate(-135)" fill="none" stroke="#222" stroke-linejoin="round" stroke-width="1"/>
+  </g>
+</svg>

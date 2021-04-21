@@ -1,0 +1,37 @@
+{
+  "name": "@airpremia/core",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "lint-check": "tsc --noEmit && eslint --ignore-path .eslintignore ./**/*.ts --fix",
+    "dev": "rm -rf dist && tsc --w"
+  },
+  "dependencies": {
+    "@capacitor/cli": "^2.4.0",
+    "@capacitor/core": "^2.4.0",
+    "@types/lodash": "^4.14.149",
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.36",
+    "immer": "^6.0.2",
+    "lodash": "^4.17.15",
+    "moment": "^2.24.0",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
+    "typesafe-actions": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.18",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "husky": "^4.2.3",
+    "prettier": "^2.0.2",
+    "typescript": "^3.8.3"
+  }
+}

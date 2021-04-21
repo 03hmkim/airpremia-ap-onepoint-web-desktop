@@ -1,0 +1,7 @@
+<svg id="ico_badge_new" xmlns="http://www.w3.org/2000/svg" width="16" height="22" viewBox="0 0 16 22">
+  <rect id="area" width="15" height="20" fill="none" opacity="0"/>
+  <g id="ico_badge_new-2" data-name="ico_badge_new" transform="translate(-329 -134)">
+    <rect id="bg" width="16" height="22" rx="8" transform="translate(329 134)" fill="#ff4d00"/>
+    <path id="ico_badge_new-3" data-name="ico_badge_new" d="M6,6.973H4.54L1.593,2.887V7H0V0H1.513L4.407,4V0H6V6.973Z" transform="translate(334 141.5)" fill="#fff"/>
+  </g>
+</svg>

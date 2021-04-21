@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="106" height="65" viewBox="0 0 106 65">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke:#e5e5e5;stroke-width:2px;stroke-miterlimit:10}
+        </style>
+    </defs>
+    <g id="prefix__img_bookflight_inflight_meal" transform="translate(-15234 -706)">
+        <g id="prefix__사각형_1576" style="fill:#fff;stroke:#f2f2f2">
+            <path d="M8 0h90a8 8 0 0 1 8 8v53a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V8a8 8 0 0 1 8-8z" style="stroke:none" transform="translate(15234 706)"/>
+            <path d="M8 .5h90a7.5 7.5 0 0 1 7.5 7.5v53a3.5 3.5 0 0 1-3.5 3.5H4A3.5 3.5 0 0 1 .5 61V8A7.5 7.5 0 0 1 8 .5z" style="fill:none" transform="translate(15234 706)"/>
+        </g>
+        <g id="prefix__ico_restaurant" transform="translate(15269 721)">
+            <g id="prefix__ico_restaurant-2" transform="translate(6.231 .692)">
+                <path id="prefix__선_344" d="M0 0L0 33.058" class="prefix__cls-2" transform="translate(4.148)"/>
+                <path id="prefix__선_345" d="M0 0L0 33.058" class="prefix__cls-2" transform="translate(15.237)"/>
+                <path id="prefix__패스_1078" d="M488.332 148v6.924a4.15 4.15 0 0 0 4.15 4.148 4.149 4.149 0 0 0 4.148-4.148V148" class="prefix__cls-2" transform="translate(-488.332 -148.004)"/>
+                <path id="prefix__사각형_1002" d="M0 0h3.293a3 3 0 0 1 3 3v3.8a3 3 0 0 1-3 3H0V0z" class="prefix__cls-2" transform="translate(15.237 1.263)"/>
+            </g>
+            <path id="prefix__area" d="M0 0H36V36H0z" style="stroke:#ddd;stroke-width:.1px;opacity:0;stroke-miterlimit:10;fill:none"/>
+        </g>
+    </g>
+</svg>

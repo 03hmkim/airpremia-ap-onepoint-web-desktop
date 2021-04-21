@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__ico_event_orange" width="30" height="30" viewBox="0 0 30 30">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke:#ff4d00;stroke-miterlimit:10;stroke-width:2px}
+        </style>
+    </defs>
+    <path id="prefix__사각형_1421" d="M0 0H30V30H0z" style="fill:#222;opacity:0"/>
+    <path id="prefix__사각형_1422" d="M2 0h.615a2 2 0 0 1 2 2v.615a2 2 0 0 1-2 2H0V2a2 2 0 0 1 2-2z" class="prefix__cls-2" transform="translate(15.071 2.298)"/>
+    <path id="prefix__사각형_1423" d="M2 0h.615a2 2 0 0 1 2 2v2.615H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" class="prefix__cls-2" transform="translate(10.401 2.298)"/>
+    <path id="prefix__패스_1454" d="M395.442 291.137h-16.154v-12.692a8.077 8.077 0 0 1 8.077-8.077 8.077 8.077 0 0 1 8.077 8.077z" class="prefix__cls-2" transform="translate(-372.336 -263.464)"/>
+    <path id="prefix__선_355" d="M0 0L0 20.775" class="prefix__cls-2" transform="translate(15.014 6.885)"/>
+</svg>

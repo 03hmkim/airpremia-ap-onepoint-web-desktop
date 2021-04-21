@@ -1,0 +1,5 @@
+<svg id="ico_switch" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <rect id="area" width="16" height="16" fill="#fff" opacity="0"/>
+  <path id="패스_11" data-name="패스 11" d="M0,3.122H11.2L7.922,0" transform="translate(2.4 14.067) rotate(-90)" fill="none" stroke="#222" stroke-linejoin="round" stroke-width="1.5"/>
+  <path id="패스_12" data-name="패스 12" d="M0,3.122H11.2L7.922,0" transform="translate(13.522 1.933) rotate(90)" fill="none" stroke="#222" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

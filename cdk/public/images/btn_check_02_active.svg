@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" viewBox="0 0 20 26">
+    <defs>
+        <clipPath id="clip-path">
+            <path fill="none" d="M0 0H20V26H0z"/>
+        </clipPath>
+    </defs>
+    <g id="btn_check_02_inactive" clip-path="url(#clip-path)">
+        <rect id="사각형_488" width="20" height="26" fill="#ff4d00" rx="10"/>
+        <path id="패스_1084" fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="2px" d="M68.869 797.661v4.5h8" transform="rotate(-45 -910.15 481.048)"/>
+    </g>
+</svg>

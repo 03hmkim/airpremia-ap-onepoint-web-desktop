@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__ico_wifi" width="34" height="34" viewBox="0 0 34 34">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke:#222;stroke-miterlimit:10;stroke-width:2.5px}
+        </style>
+    </defs>
+    <path id="prefix__area" d="M0 0H34V34H0z" style="fill:none"/>
+    <g id="prefix__ico_wifi-2" transform="translate(3.814 7.178)">
+        <path id="prefix__사각형_659" d="M607.96 121.7a2.467 2.467 0 0 1 2.466 2.468 2.466 2.466 0 0 1-2.466 2.466 2.466 2.466 0 0 1-2.466-2.466 2.467 2.467 0 0 1 2.466-2.468z" class="prefix__cls-2" transform="translate(-594.681 -105.098)"/>
+        <path id="prefix__패스_1056" d="M623.786 114.507a18.779 18.779 0 0 0-26.557-.005v.005" class="prefix__cls-2" transform="translate(-597.225 -109.004)"/>
+        <path id="prefix__패스_1057" d="M617.075 118.848a11.1 11.1 0 0 0-15.694 0" class="prefix__cls-2" transform="translate(-595.947 -106.976)"/>
+    </g>
+</svg>

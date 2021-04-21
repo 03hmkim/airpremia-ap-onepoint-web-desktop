@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__ico_hotel_orange" width="30" height="30" viewBox="0 0 30 30">
+    <path id="prefix__area" d="M0 0H30V30H0z" style="fill:#ffdbdb;opacity:0"/>
+    <g id="prefix__ico_hotel_orange-2" transform="translate(4 3)">
+        <path id="prefix__패스_1058" d="M657.321 424.3v-22.6a2.218 2.218 0 0 1 2.181-2.255h10.91a2.219 2.219 0 0 1 2.181 2.255v22.745" transform="translate(-653.975 -399.445)" style="stroke-miterlimit:10;fill:none;stroke:#ff4d00;stroke-width:2px"/>
+        <path id="prefix__패스_1064" d="M669.45 422.843h-1.88v-6.83a2.583 2.583 0 0 0-5.163 0v6.83h-1.88v-6.83a4.464 4.464 0 0 1 8.923 0z" style="fill:#ff4d00" transform="translate(-654.002 -398.304)"/>
+        <path id="prefix__패스_1065" d="M1.063 0h22.308" transform="translate(-1.063 24)" style="fill:none;stroke:#ff4d00;stroke-width:2px"/>
+        <g id="prefix__dot" transform="translate(6.524 4.461)">
+            <path id="prefix___06" d="M0 0H2.231V2.231H0z" style="fill:#ff4d00" transform="translate(6.692 3.346)"/>
+            <path id="prefix___05" d="M0 0H2.231V2.231H0z" style="fill:#ff4d00" transform="translate(3.346 3.346)"/>
+            <path id="prefix___04" d="M0 0H2.231V2.231H0z" style="fill:#ff4d00" transform="translate(0 3.346)"/>
+            <path id="prefix___03" d="M0 0H2.231V2.231H0z" style="fill:#ff4d00" transform="translate(6.692)"/>
+            <path id="prefix___02" d="M0 0H2.231V2.231H0z" style="fill:#ff4d00" transform="translate(3.346)"/>
+            <path id="prefix___01" d="M0 0H2.231V2.231H0z" style="fill:#ff4d00" />
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__ico_caution_gray" width="12" height="15" viewBox="0 0 12 15">
+    <defs>
+        <style>
+            .prefix__cls-3{fill:gray}
+        </style>
+    </defs>
+    <rect id="prefix__area" width="12" height="15" rx="6" style="opacity:0;fill:#fff"/>
+    <g id="prefix__ico_caution" transform="translate(-25 -486)">
+        <g id="prefix__사각형_1055" transform="translate(25 486)" style="stroke:gray;fill:#fff">
+            <rect width="12" height="15" rx="6" style="stroke:none"/>
+            <rect width="11" height="14" x=".5" y=".5" rx="5.5" style="fill:none"/>
+        </g>
+        <circle id="prefix__타원_231" cx=".75" cy=".75" r=".75" class="prefix__cls-3" transform="translate(30.25 490)"/>
+        <path id="prefix__사각형_1054" d="M0 0H1.5V4.5H0z" class="prefix__cls-3" transform="translate(30.25 492.5)"/>
+    </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="ico_seatmap_toilet" width="25.882" height="28" viewBox="0 0 25.882 28">
+    <defs>
+        <clipPath id="clip-path">
+            <path id="area" fill="#fff" d="M0 0H25.882V28H0z" transform="translate(-2 -2)"/>
+        </clipPath>
+        <style>
+            .icoSeatMapToilet{fill:none;stroke:#ddd;stroke-linejoin:round;stroke-width:2px}
+        </style>
+    </defs>
+    <g id="마스크_그룹_1" clip-path="url(#clip-path)" transform="translate(2 2)">
+        <rect id="사각형_1139" width="3.195" height="3.195" class="icoSeatMapToilet" rx="1.598" transform="translate(2.462 .706)"/>
+        <path id="패스_1114" d="M1021.537 264.6v5.069a3.355 3.355 0 0 1-3.354 3.354 3.355 3.355 0 0 1-3.354-3.354V264.6" class="icoSeatMapToilet" transform="translate(-1014.122 -257.295)"/>
+        <rect id="사각형_1140" width="3.195" height="3.195" class="icoSeatMapToilet" rx="1.598" transform="translate(15.06 .706)"/>
+        <path id="패스_1115" d="M1026.3 276.022h1.874v-8.288a3.355 3.355 0 0 1 3.354-3.354 3.355 3.355 0 0 1 3.354 3.354v8.288h1.87" class="icoSeatMapToilet" transform="translate(-1014.869 -257.281)"/>
+        <path id="선_363" d="M0 0L0 8.563" class="icoSeatMapToilet" transform="translate(4.06 15.523)"/>
+        <path id="선_364" d="M0 0L0 6.278" class="icoSeatMapToilet" transform="translate(16.658 17.807)"/>
+    </g>
+</svg>
