@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+    <defs>
+        <clipPath id="clip-path">
+            <path fill="none" d="M0 0H20V20H0z"/>
+        </clipPath>
+        <style>
+            .cls-ico-del{fill:none;stroke:#222;stroke-miterlimit:10;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="ico_del" clip-path="url(#clip-path)">
+        <path id="asset_area" fill="#fff" d="M0 0H20V20H0z" opacity="0.004"/>
+        <g id="ico_del-2" transform="translate(-430.009 -384.494)">
+            <path id="패스_1058" d="M445.779 390.25v10.785a1.249 1.249 0 0 1-1.291 1.2h-5.918a1.249 1.249 0 0 1-1.291-1.2v-10.8" class="cls-ico-del" transform="translate(-1.27 -.744)"/>
+            <path id="선_216" d="M12 0L0 0" class="cls-ico-del" transform="translate(434.209 390.124)"/>
+            <path id="패스_1235" d="M441.473 390.294v-1.339a.479.479 0 0 1 .495-.461h2.511a.479.479 0 0 1 .495.461v1.339" class="cls-ico-del" transform="translate(-2.964 -.5)"/>
+            <g id="그룹_1428" transform="translate(438.979 392.81)">
+                <path id="선_217" d="M0 0L0 6.046" class="cls-ico-del" transform="translate(0 .028)"/>
+                <path id="선_218" d="M0 0L0 6" class="cls-ico-del" transform="translate(2.53)"/>
+            </g>
+        </g>
+    </g>
+</svg>

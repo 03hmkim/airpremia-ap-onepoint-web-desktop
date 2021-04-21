@@ -1,0 +1,48 @@
+export default [
+  {
+    origin: 'ICN',
+    destination: 'BKK',
+    arrival: '2020-08-01T23:55:00',
+    departure: '2020-08-01T20:00:00',
+    dateChange: 0,
+    name: {
+      first: 'Daehee',
+      middle: null,
+      last: 'Jeong',
+      title: null,
+      suffix: null,
+    },
+    flightDateTime: '2020-08-01T19:30:00',
+    boardingTerminal: 'TERMINAL 2',
+    boardingGate: 'GATE 34',
+    identifier: 'YP551',
+    seat: '39D',
+    barCode:
+      'M1JEONG/DAEHEE         U7C4RZ ICNBKKYP 0551 214Y039D0001 147>1181  0169BYP 0000000000000299990M12345678 0      1000000005          ',
+    originText: '서울/인천',
+    destinationText: '방콕',
+  },
+  {
+    origin: 'ICN',
+    destination: 'BKK',
+    arrival: '2020-08-01T23:55:00',
+    departure: '2020-08-01T20:00:00',
+    dateChange: 0,
+    name: {
+      first: 'Daehee',
+      middle: null,
+      last: 'Jeong',
+      title: null,
+      suffix: null,
+    },
+    flightDateTime: '2020-08-01T19:30:00',
+    boardingTerminal: 'TERMINAL 2',
+    boardingGate: 'GATE 34',
+    identifier: 'YP551',
+    seat: '39D',
+    barCode:
+      'M1JEONG/DAEHEE         U7C4RZ ICNBKKYP 0551 214Y039D0001 147>1181  0169BYP 0000000000000299990M12345678 0      1000000005          ',
+    originText: '서울/인천',
+    destinationText: '방콕',
+  },
+];

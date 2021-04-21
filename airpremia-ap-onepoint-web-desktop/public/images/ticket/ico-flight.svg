@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="99" height="20" viewBox="0 0 99 20">
+    <defs>
+        <style>
+            .prefix__cls-1{fill:none;stroke:#222;stroke-linecap:round;stroke-width:2px;stroke-dasharray:0 5}.prefix__cls-3{fill:#222}
+        </style>
+    </defs>
+    <g id="prefix__ico_flight" transform="translate(-124 -245)">
+        <path id="prefix__dot_line" d="M0 0L31 0" class="prefix__cls-1" transform="translate(125 255)"/>
+        <g id="prefix__airplane" transform="translate(-16.275 -40)">
+            <path id="prefix__box" d="M0 0H15V8H0z" transform="translate(182.275 289)" style="fill:#fff;opacity:0"/>
+            <rect id="prefix__사각형_1091" width="13" height="2" class="prefix__cls-3" rx="1" transform="translate(184 294)"/>
+            <rect id="prefix__사각형_1092" width="2" height="6" class="prefix__cls-3" rx="1" transform="rotate(-28 676.979 -228.564)"/>
+            <rect id="prefix__사각형_1093" width="2" height="4" class="prefix__cls-3" rx="1" transform="rotate(-31 619.18 -182.192)"/>
+        </g>
+        <path id="prefix__dot_line-2" d="M0 0L31 0" class="prefix__cls-1" transform="translate(191 255)"/>
+        <path id="prefix__area" d="M0 0H97V20H0z" transform="translate(125 245)" style="fill:none"/>
+    </g>
+</svg>

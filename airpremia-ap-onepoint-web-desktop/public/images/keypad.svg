@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="295" viewBox="0 0 480 295">
+    <defs>
+        <linearGradient id="prefix__linear-gradient" x1="1" x2="-4.87" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#132136"/>
+            <stop offset="1" stop-color="red" stop-opacity=".02"/>
+        </linearGradient>
+        <linearGradient id="prefix__linear-gradient-2" x2="5.87" y1=".5" y2=".5" gradientUnits="objectBoundingBox">
+            <stop offset="0" stop-color="#132136"/>
+            <stop offset="1" stop-color="#0062ff" stop-opacity=".02"/>
+        </linearGradient>
+        <style>
+            .prefix__cls-1{fill:#1b2b45}.prefix__cls-5{fill:none;stroke:#fff;stroke-width:2px}.prefix__cls-8{fill:#fff;font-size:26px;font-family:Heebo-Regular,Heebo;letter-spacing:-.02em}
+        </style>
+    </defs>
+    <g id="prefix__keypad" transform="translate(54 -372)">
+        <path id="prefix__click_area" d="M0 0H145V74H0z" class="prefix__cls-1" transform="translate(-54 372)"/>
+        <path id="prefix__click_area-2" d="M0 0H95V74H0z" class="prefix__cls-1" transform="translate(91 372)"/>
+        <path id="prefix__click_area-3" d="M0 0H95V74H0z" class="prefix__cls-1" transform="translate(186 372)"/>
+        <path id="prefix__click_area-4" d="M0 0H145V74H0z" class="prefix__cls-1" transform="translate(281 372)"/>
+        <path id="prefix__box" d="M0 0h336v73H16A16 16 0 0 1 0 57V0z" transform="translate(-54 594)" style="fill:#132136"/>
+        <path id="prefix__box-2" d="M0 0h145v57a16 16 0 0 1-16 16H0V0z" class="prefix__cls-1" transform="translate(281 594)"/>
+        <g id="prefix__ico_delet" transform="translate(1)">
+            <path id="prefix__사각형_1414" d="M0 0H29V20H0z" transform="translate(313 620)" style="fill:none"/>
+            <g id="prefix__그룹_1742" transform="translate(-2)">
+                <g id="prefix__합치기_1" style="stroke-linejoin:round;fill:none">
+                    <path d="M3796.306-8369.856l-8.235-8 8.235-8h16v16z" style="stroke:none" transform="translate(-3471.071 9007.857)"/>
+                    <path d="M3812.305-8369.856v-16.002h-15.999l-8.235 8.002 8.235 8h16m0 2h-16c-.52 0-1.02-.204-1.393-.566l-8.235-8c-.388-.377-.607-.893-.607-1.434 0-.54.219-1.058.606-1.435l8.236-8.002c.373-.362.873-.565 1.393-.565h16c1.104 0 2 .895 2 2v16.002c0 1.104-.896 2-2 2z" style="stroke:none;fill:#fff" transform="translate(-3471.071 9007.857)"/>
+                </g>
+                <g id="prefix__그룹_1741" transform="translate(262.703 -1.297)">
+                    <path id="prefix__패스_1541" d="M-3716.415 9014.443l6.594 6.594" class="prefix__cls-5" transform="translate(3783.415 -8386.443)"/>
+                    <path id="prefix__패스_1542" d="M-3709.822 9014.443l-6.594 6.594" class="prefix__cls-5" transform="translate(3783.415 -8386.443)"/>
+                </g>
+            </g>
+        </g>
+        <path id="prefix__gra_red" d="M0 0h168v73H16A16 16 0 0 1 0 57V0z" transform="translate(-54 594)"/>
+        <path id="prefix__gra_blue" d="M0 0H168V73H0z" transform="translate(113 594)"/>
+        <text id="prefix___1" class="prefix__cls-8" transform="translate(44 417)">
+            <tspan x="-7.306" y="0">1</tspan>
+        </text>
+        <text id="prefix___5" class="prefix__cls-8" transform="translate(234 417)">
+            <tspan x="-7.306" y="0">5</tspan>
+        </text>
+        <text id="prefix___9" class="prefix__cls-8" transform="translate(329 417)">
+            <tspan x="-7.306" y="0">9</tspan>
+        </text>
+        <path id="prefix__click_area-5" d="M0 0H145V74H0z" class="prefix__cls-1" transform="translate(-54 446)"/>
+        <path id="prefix__click_area-6" d="M0 0H95V74H0z" class="prefix__cls-1" transform="translate(91 446)"/>
+        <path id="prefix__click_area-7" d="M0 0H95V74H0z" class="prefix__cls-1" transform="translate(186 446)"/>
+        <path id="prefix__click_area-8" d="M0 0H145V74H0z" class="prefix__cls-1" transform="translate(281 446)"/>
+        <text id="prefix___8" class="prefix__cls-8" transform="translate(44 491)">
+            <tspan x="-7.306" y="0">8</tspan>
+        </text>
+        <text id="prefix___6" class="prefix__cls-8" transform="translate(139 491)">
+            <tspan x="-7.306" y="0">6</tspan>
+        </text>
+        <text id="prefix___3" class="prefix__cls-8" transform="translate(234 491)">
+            <tspan x="-7.306" y="0">3</tspan>
+        </text>
+        <text id="prefix___7" class="prefix__cls-8" transform="translate(329 491)">
+            <tspan x="-7.306" y="0">7</tspan>
+        </text>
+        <path id="prefix__click_area-9" d="M0 0H145V74H0z" class="prefix__cls-1" transform="translate(-54 520)"/>
+        <path id="prefix__click_area-10" d="M0 0H95V74H0z" class="prefix__cls-1" transform="translate(91 520)"/>
+        <path id="prefix__click_area-11" d="M0 0H95V74H0z" class="prefix__cls-1" transform="translate(186 520)"/>
+        <path id="prefix__click_area-12" d="M0 0H145V74H0z" class="prefix__cls-1" transform="translate(281 520)"/>
+        <text id="prefix___2" class="prefix__cls-8" transform="translate(44 565)">
+            <tspan x="-7.306" y="0">2</tspan>
+        </text>
+        <text id="prefix___0" class="prefix__cls-8" transform="translate(139 565)">
+            <tspan x="-7.306" y="0">0</tspan>
+        </text>
+        <text id="prefix___4" class="prefix__cls-8" transform="translate(234 565)">
+            <tspan x="-7.306" y="0">4</tspan>
+        </text>
+    </g>
+</svg>

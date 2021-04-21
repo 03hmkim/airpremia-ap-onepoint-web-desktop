@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="8" height="11" viewBox="0 0 8 11">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="8" height="11" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="btn_txt_link_blue" clip-path="url(#clip-path)">
+    <rect id="area" width="8" height="11" fill="#ff2626" opacity="0"/>
+    <path id="ico_link" d="M309.822,1164.286l3,3-3,3" transform="translate(-307.322 -1161.286)" fill="none" stroke="#0093ff" stroke-linecap="square" stroke-linejoin="round" stroke-width="1.5"/>
+  </g>
+</svg>

@@ -1,0 +1,6 @@
+[submodule "cdk"]
+	path = cdk
+	url = git@bitbucket.org:airpremia/ap-onepoint-cdk.git
+[submodule "core"]
+	path = core
+	url = git@bitbucket.org:airpremia/ap-onepoint-core.git

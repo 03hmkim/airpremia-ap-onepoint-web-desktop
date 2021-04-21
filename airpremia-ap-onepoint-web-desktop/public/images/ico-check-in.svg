@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+    <defs>
+        <clipPath id="prefix__clip-path">
+            <path d="M0 0H26V26H0z" style="fill:none"/>
+        </clipPath>
+        <style>
+            .prefix__cls-3{fill:#222}
+        </style>
+    </defs>
+    <g id="prefix__ico_check_in">
+        <g id="prefix__ico" transform="translate(-362.336 -147.009)">
+            <g id="prefix__그룹_1088">
+                <path id="prefix__패스_1078" d="M383.336 172.042h-2v-20.033a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v20.033h-2v-20.033a4.005 4.005 0 0 1 4-4h8a4 4 0 0 1 4 4z" class="prefix__cls-3" />
+            </g>
+            <g id="prefix__그룹_1089">
+                <path id="prefix__사각형_1057" d="M0 0H14.249V2H0z" class="prefix__cls-3" transform="translate(368.336 153.792)"/>
+            </g>
+            <g id="prefix__그룹_1090">
+                <path id="prefix__패스_1079" d="M374.4 166.54l-2.826-2.826 1.414-1.414 1.412 1.412 3.536-3.536 1.414 1.414z" class="prefix__cls-3" />
+            </g>
+            <g id="prefix__그룹_1091">
+                <path id="prefix__사각형_1058" d="M0 0H1.998V1.5H0z" class="prefix__cls-3" transform="translate(374.325 151.25)"/>
+            </g>
+        </g>
+        <path id="prefix__area" d="M0 0H26V26H0z" style="fill:#fff;opacity:0"/>
+    </g>
+</svg>

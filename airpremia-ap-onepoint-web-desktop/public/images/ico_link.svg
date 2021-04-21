@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__ico_link" width="16" height="16" viewBox="0 0 16 16">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke:#191a1a;stroke-miterlimit:10;stroke-width:1.5px}
+        </style>
+    </defs>
+    <g id="prefix__asset_area" style="fill:#fff;stroke:#fff;opacity:0">
+        <path d="M0 0H16V16H0z" style="stroke:none"/>
+        <path d="M0.5 0.5H15.5V15.5H0.5z" style="fill:none"/>
+    </g>
+    <g id="prefix__그룹_2388" transform="translate(2.4 2.4)">
+        <path id="prefix__패스_1697" d="M500.747 296.033a2.65 2.65 0 0 0-3.747 0l-2.15 2.15a2.65 2.65 0 0 0 0 3.747 2.649 2.649 0 0 0 3.747 0l1.619-1.619" class="prefix__cls-2" transform="translate(-494.074 -291.506)"/>
+        <path id="prefix__패스_1698" d="M501.732 295.584a2.649 2.649 0 0 0 3.747 0l2.15-2.15a2.649 2.649 0 0 0 0-3.747 2.649 2.649 0 0 0-3.747 0l-1.619 1.619" class="prefix__cls-2" transform="translate(-497.206 -288.911)"/>
+    </g>
+</svg>
