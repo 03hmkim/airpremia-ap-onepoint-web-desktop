@@ -95,7 +95,6 @@ const S = {
     height: calc(100% - 200px);
     overflow-y: auto;
     padding-bottom: 50px;
-    padding-top:50px;
     box-sizing: border-box;
 
     &.tabIs {
