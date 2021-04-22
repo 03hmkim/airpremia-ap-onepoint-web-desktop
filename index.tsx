@@ -61,7 +61,7 @@ const Index: NextPage<IProps> = ({
 
 const S = {
   container: styled.div`
-    padding-top: 80px;
+    padding-top: 50px;
 
     @media only screen and (max-width: 1059px) {
       padding-top: 40px;
