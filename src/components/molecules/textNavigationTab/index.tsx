@@ -17,7 +17,7 @@ const TextNavigationTab: FC<IProps> = ({
     <S.container>
       {list.map((item, i) => {
         return (
-          <div key={`textNavigationTab${i.toString()}`}>
+          <div className="button" key={`textNavigationTab${i.toString()}`}>
             <TextTabButton
               isActive={i === currIdx}
               onClick={() => onClick(i)}
@@ -32,13 +32,23 @@ const TextNavigationTab: FC<IProps> = ({
 };
 
 const S = {
-  container: styled.div`
+  container: styled.div` 
     display: flex;
     align-items: center;
-    button {
-      width: fit-content;
-      display: flex;
-      align-items: center;
+
+    .button {
+      width: auto;
+      margin-right: 40px;
+    }
+
+    .button:last-child {
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: 767px){
+      .button {
+        margin-right: 25px;
+      }
     }
   `,
 };

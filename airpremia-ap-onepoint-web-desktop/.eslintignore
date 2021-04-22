@@ -1,6 +1,0 @@
-dist/*
-node_modules/*
-**/*.js
-README.md
-
-./packages/core/dist

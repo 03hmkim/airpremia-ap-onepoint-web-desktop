@@ -61,32 +61,36 @@ const S = {
 
   wrapper: styled.div`
     min-width: 320px;
-    max-width: 640px;
-    width: calc(100% - 290px);
-    padding: 0;
+    max-width: 800px;
+    width: calc(100% - 100px);
     min-height: 300px;
-    box-sizing: border-box;
-    /* max-height: 85vh; */
-    max-height: calc(100vh - 85px);
-    height: 100%;
-    display: inherit;
-    flex-direction: column;
+    height: calc(100vh - 85px);
+    padding-bottom: 102px;
+    position: relative;
+    overflow: ${prop('overflow', 'hidden')};
     background-color: ${WHITE1};
     border-radius: 16px;
     z-index: 110;
-    position: relative;
-    /* overflow: hidden; */
-    overflow: ${prop('overflow', 'hidden')};
-    &.min{
-      width: 480px;
-    }
-    &.max{
-      width: 640px;
-    }
-    &.hAuto{
+    box-sizing: border-box;
+    
+    &.hAuto {      
       height: auto;
-      > div:nth-child(2){
-        padding-bottom: 0;
+
+      .popup-title {
+        height: auto;
+        padding-bottom: 50px;
+      }
+    }
+
+    &.btnN{
+      padding-bottom: 0;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      &.hAuto {
+        .popup-title {
+          min-height: 60px;
+        }
       }
     }
   `,
@@ -96,8 +100,10 @@ const S = {
     right: 45px;
     top: 58px;
     z-index: 150;
+
     @media only screen and (max-width: 767px) { 
       top: 49px;
+      right: 25px;
     }
   `, 
 };

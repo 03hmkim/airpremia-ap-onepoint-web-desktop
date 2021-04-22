@@ -35,9 +35,10 @@ TextTabButton.defaultProps = {
 
 const S = {
   container: styled.button<IStyleProps>`
-    display: inline-block;
-    margin-right: 40px;
-    width: auto;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+
     span {
       position: relative;
       color: ${ifProp('isActive', ORANGE2, DARK_GRAY1)};
@@ -45,6 +46,7 @@ const S = {
       line-height: 1.36em;
       letter-spacing: 0;
       font-weight: 700;
+
       &::after{
         content: "";
         width: 100%;
@@ -57,8 +59,8 @@ const S = {
         background-color: ${ifProp('isActive', ORANGE2, 'transparent')};
       }
     }
+
     @media only screen and (max-width: 767px){
-      margin-right: 25px;
       span{
         font-size: 14px;
         letter-spacing: -0.28px;

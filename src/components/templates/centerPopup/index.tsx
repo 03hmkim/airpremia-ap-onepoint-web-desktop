@@ -1,174 +1,55 @@
-/** 기능 보수 해서 사용 (현재사용 X) */
-
 import { FC, ReactElement, Fragment } from 'react';
 import styled from 'styled-components';
+import { 
+  LIGHT_GRAY8, 
+  LIGHT_GRAY5,
+  DARK_GRAY1,
+ } from '@airpremia/cdk/styles/colors';
 
 export enum EScrollType {
-  /** 팝업내 스크롤 발생 X (브라우저스크롤발생), 하단 버튼 고정영역 X */
-  TYPE1,
-  /** 팝업내 스크롤 발생 O, 하단 버튼 고정영역 X */
-  TYPE2,
-  /** 팝업내 스크롤 발생 O, 하단 버튼 고정영역 O */
-  TYPE3,  
-
-  /** new 팝업내 스크롤 발생 X, 하단 버튼 고정영역 "상관없음", tabButton X */
-  TYPE4,
-  /** new 팝업내 스크롤 발생 X, 하단 버튼 고정영역 "상관없음", tabButton O */
-  TYPE5,
-  /** new 팝업내 스크롤 발생 O, 하단 버튼 고정영역 X, tabButton X */
-  TYPE6,
-  /** new 팝업내 스크롤 발생 O, 하단 버튼 고정영역 X, tabButton O */
-  TYPE7,
-  /** new 팝업내 스크롤 발생 O, 하단 버튼 고정영역 O, tabButton X */
-  TYPE8,    
-  /** new 팝업내 스크롤 발생 O, 하단 버튼 고정영역 O, tabButton O */
-  TYPE9,
-  
+  /** new 반응형 */
+  TYPE1  
 }
 
 interface IStyle {}
 
 interface IScrollProps extends IStyle {
-  body: ReactElement;
-  className: any;
+  className?: any;
+  body?: ReactElement;
+  sub?: ReactElement;
   button?: ReactElement;
+  tab?: any;
 }
 
 export interface IProps extends IScrollProps {
   title: ReactElement;
-
   type?: EScrollType;
 }
 
 const Type1: FC<IScrollProps> = ({
   body,
-  button,
-}: IScrollProps) => (
-  <S.top>
-    <S.body>{body}</S.body>
-    {button && <S.button>{button}</S.button>}
-  </S.top>
-);
-
-const Type2: FC<IScrollProps> = ({
-  body,
-  button,
-  ...props
-}: IScrollProps) => (
-  <S.scroll {...props}>
-    <S.body>{body}</S.body>
-    {button && <S.button>{button}</S.button>}
-  </S.scroll>
-);
-
-const Type3: FC<IScrollProps> = ({
-  body,
-  button,
-  ...props
+  tab,
 }: IScrollProps) => (
   <Fragment>
-    <S.scroll {...props}>
+    <S.scroll className={tab}>
       <S.body>{body}</S.body>
     </S.scroll>
-    {button && <S.button>{button}</S.button>}
-  </Fragment>
-);
-
-const Type4: FC<IScrollProps> = ({
-  body,
-  button,
-}: IScrollProps) => (
-  <Fragment>
-    <S.scroll4>
-      <S.bodyAuto>{body}</S.bodyAuto>
-    </S.scroll4>
-    {button && <S.button>{button}</S.button>}
-  </Fragment>
-);
-
-const Type5: FC<IScrollProps> = ({
-  body,
-  button,
-}: IScrollProps) => (
-  <Fragment>
-    <S.scroll5>
-      <S.bodyAuto>{body}</S.bodyAuto>
-    </S.scroll5>
-    {button && <S.button>{button}</S.button>}
-  </Fragment>
-);
-
-const Type6: FC<IScrollProps> = ({
-  body,
-  button,
-  ...props
-}: IScrollProps) => (
-  <Fragment>
-    <S.scroll6 {...props}>
-      <S.bodyFull>{body}</S.bodyFull>
-    </S.scroll6>
-    {button && <S.button>{button}</S.button>}
-  </Fragment>
-);
-
-const Type7: FC<IScrollProps> = ({
-  body,
-  button,
-  ...props
-}: IScrollProps) => (
-  <Fragment>
-    <S.scroll7 {...props}>
-      <S.bodyFull>{body}</S.bodyFull>
-    </S.scroll7>
-    {button && <S.button>{button}</S.button>}
-  </Fragment>
-);
-
-const Type8: FC<IScrollProps> = ({
-  body,
-  button,
-  ...props
-}: IScrollProps) => (
-  <Fragment>
-    <S.scroll8 {...props}>
-      <S.bodyFull>{body}</S.bodyFull>
-    </S.scroll8>
-    {button && <S.button>{button}</S.button>}
-  </Fragment>
-);
-
-const Type9: FC<IScrollProps> = ({
-  body,
-  button,
-  ...props
-}: IScrollProps) => (
-  <Fragment>
-    <S.scroll9 {...props}>
-      <S.bodyFull>{body}</S.bodyFull>
-      </S.scroll9>
-    {button && <S.button>{button}</S.button>}
   </Fragment>
 );
 
 const CenterPopupLayout: FC<IProps> = ({
   type = EScrollType.TYPE1,
   title,
-
+  sub,
+  button,
   ...props
 }: IProps) => {
   return (
     <S.container>
       <S.title>{title}</S.title>
-
+      <S.sub>{sub}</S.sub>
       {type === EScrollType.TYPE1 && <Type1 {...props} />}
-      {type === EScrollType.TYPE2 && <Type2 {...props} />}
-      {type === EScrollType.TYPE3 && <Type3 {...props} />}
-      {type === EScrollType.TYPE4 && <Type4 {...props} />}
-      {type === EScrollType.TYPE5 && <Type5 {...props} />}
-      {type === EScrollType.TYPE6 && <Type6 {...props} />}
-      {type === EScrollType.TYPE7 && <Type7 {...props} />}
-      {type === EScrollType.TYPE8 && <Type8 {...props} />}
-      {type === EScrollType.TYPE9 && <Type9 {...props} />}
+      {button && <S.button>{button}</S.button>}
     </S.container>
   );
 };
@@ -176,76 +57,100 @@ const CenterPopupLayout: FC<IProps> = ({
 const S = {
   container: styled.div`
     height: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
     box-sizing: border-box;
+
+    > div {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      > div {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
   `,
 
   title: styled.div.attrs(() => ({
     className: 'popup-title',
   }))`
-    padding: 0 50px;
+    padding-top: 50px;
     height: 150px;
+
     @media only screen and (max-height: 740px) { 
       height: auto;
     }
   `,
 
+  sub: styled.div.attrs(() => ({
+    className: 'pop-sub',
+  }))`
+    color: ${LIGHT_GRAY8};
+    font-size: 18px;
+  `,
+
   scroll: styled.div.attrs(() => ({
-    className: 'popup-scroll',
   }))<IStyle>`
-    height: calc(100% - 40px);
+    height: calc(100% - 200px);
     overflow-y: auto;
-    padding: 0 50px;
-    margin-top: 40px;
+    padding-bottom: 50px;
+    padding-top:50px;
+    box-sizing: border-box;
+
+    &.tabIs {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &.btnN{
+      height: calc(100% - 200px);
+    }
   `,
 
   body: styled.div.attrs(() => ({
     className: 'popup-body',
-  }))``,
+  }))`
+    color: ${DARK_GRAY1};
+    font-size: 18px;
+    line-height: 1.8;
+    letter-spacing: -0.3px;
 
-  top: styled.div`
-    margin-top: 40px;
+    @media only screen and (max-width: 767px) { 
+      font-size: 13px;
+      font-weight: 300;
+      line-height: 26px;
+    }
   `,
 
   button: styled.div.attrs(() => ({
     className: 'popup-button',
   }))`
-    margin-top: 40px;
-    padding: 0 50px;
-  `,
+    padding-top: 25px;
+    padding-bottom: 25px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align : center;
+    border-top: 1px solid ${LIGHT_GRAY5};
+    box-sizing: border-box;
 
+    &.static{
+      position: static;
+    }
 
+    .twin{
+      display: flex;
+      justify-content: space-between;
 
-  bodyAuto: styled.div.attrs(() => ({
-    className: 'popup-body-auto',
-  }))`
-    height: auto;
-  `,
-
-  bodyFull: styled.div`
-    height: 100%;
-  `,
-
-  scroll4: styled.div`
-    height: auto;
-  `,
-  scroll5: styled.div`
-    height: auto;
-  `,
-  scroll6: styled.div`
-    height: calc(100% - 150px);
-    overflow-y: auto;
-  `,
-  scroll7: styled.div`
-    height: calc(100% - 150px);
-  `,
-  scroll8: styled.div`
-    height: calc(100% - 252px);
-    overflow-y: auto;
-  `,
-  scroll9: styled.div`
-    height: calc(100% - 252px);
+      button{
+        margin-right: 10px;
+      }
+      button:last-child{
+        margin-right: 0;
+      }
+    }
   `,
 };
 

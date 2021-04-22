@@ -346,7 +346,7 @@ const S = {
   container: styled.div`
     height: calc(100% - 60px);
     margin-top: 30px;
-    padding: 40px 0px 50px;
+    padding-top: 40px;
     overflow-y: auto;
     border-top: 1px solid ${LIGHT_GRAY5};
     box-sizing: border-box;

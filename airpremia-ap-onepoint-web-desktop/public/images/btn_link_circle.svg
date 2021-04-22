@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-    <g id="prefix__btn_link_circle" transform="translate(-160 -1231)">
-        <g id="prefix__타원_207" transform="translate(160 1231)" style="stroke-width:1.8px;fill:#fff;stroke:#e5e5e5">
-            <circle cx="10" cy="10" r="10" style="stroke:none"/>
-            <circle cx="10" cy="10" r="9.1" style="fill:none"/>
-        </g>
-        <path id="prefix__패스_1055" d="M-327.775-6965.458l2.308 2.308-2.308 2.308" transform="translate(496.975 8204.15)" style="stroke:#222;stroke-linejoin:round;fill:none;stroke-width:1.8px"/>
-    </g>
-</svg>

@@ -54,7 +54,7 @@ const S = {
     }),
   )`
     width: 100%;
-    height: 100%;
+    height: 50px;
     padding: 14px 0;
     font-size: inherit;
     font-weight:  ${prop('fontWeight', 600)};

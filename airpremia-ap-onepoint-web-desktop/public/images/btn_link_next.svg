@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" id="prefix__btn_link_next" width="20" height="20" viewBox="0 0 20 20">
-    <path id="prefix__guide" d="M0 0H20V20H0z" style="opacity:0;fill:none"/>
-    <g id="prefix__ico_arrow">
-        <path id="prefix__ico_arrow-2" d="M0 0h7v7" data-name="ico_arrow" transform="rotate(45 -2.096 12.18)" style="stroke:#222;stroke-linejoin:round;fill:none"/>
-    </g>
-</svg>

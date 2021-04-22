@@ -125,8 +125,8 @@ const TicketSearchHorizontal: FC<IProps> = ({
           return(
             <S.container>
               <NewModal
-                className="max"
-                type={EScrollType.TYPE8}
+                className="hAuto"
+                type={EScrollType.TYPE1}
                 title={
                   <S.modalTitle>
                     <PopupTitle>국내선을 이용하시는 고객님께
@@ -135,21 +135,21 @@ const TicketSearchHorizontal: FC<IProps> = ({
                   </S.modalTitle>
                 }
                 body={
-                  <>
-                    <S.textArea className="auto">
-                      <Tab.box>
-                        {tabBox[0].text}
-                      </Tab.box>
-                    </S.textArea>
-                    <S.btnArea>
-                            <TaskButton 
-                              color={LIGHT_GRAY7}
-                              border={`solid 1px ${LIGHT_GRAY7}`}
-                              backgroundColor={WHITE1}
-                              onClick={onHideNewModal}>취소</TaskButton>
-                            <TaskButton onClick={goBooking}>확인</TaskButton>
-                    </S.btnArea>
-                  </>
+                  <S.textArea>
+                    <Tab.box>
+                      {tabBox[0].text}
+                    </Tab.box>
+                  </S.textArea>
+                }
+                button={
+                  <S.btnArea className="twin">
+                    <TaskButton 
+                      color={LIGHT_GRAY7}
+                      border={`solid 1px ${LIGHT_GRAY7}`}
+                      backgroundColor={WHITE1}
+                      onClick={onHideNewModal}>취소</TaskButton>
+                    <TaskButton onClick={goBooking}>확인</TaskButton>
+                  </S.btnArea>
                 }
               />
             </S.container>
@@ -580,27 +580,9 @@ const S = {
 
   //추가
   modalTitle : styled.div``,
-  textArea: styled.div`
-    min-width: 360px;
-    height: 100%;
-    &.auto{
-      padding: 0 50px 50px;
-      overflow-y: auto;
-      box-sizing: border-box;
-    }
-  `,
+  textArea: styled.div``,
 
   btnArea: styled.div`
-    text-align : center;
-    padding: 25px 50px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid ${LIGHT_GRAY5};
-    &.auto{
-      position: static;
-    }
   `,
   table: styled.div`
     text-align : center;
