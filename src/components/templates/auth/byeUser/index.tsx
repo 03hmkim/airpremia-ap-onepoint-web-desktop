@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {
   LIGHT_GRAY7,
 } from '@airpremia/cdk/styles/colors';
-// import { BLACK, WHITE, GRAY } from '@airpremia/cdk/styles/colors';
+//d import { BLACK, WHITE, GRAY } from '@airpremia/cdk/styles/colors';
 
 interface IProps {
   title: string;
