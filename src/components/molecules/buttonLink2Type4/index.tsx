@@ -59,6 +59,7 @@ const S = {
       long: '22px',
     })};
     .label {
+      text-align: left;
       font-size: 16px;
       font-weight: 600;
       letter-spacing: -0.32px;
@@ -72,8 +73,8 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) { 
-      padding-left: 20px;
-      padding-right: 12px;
+      padding-left: 10px;
+      padding-right: 8px;
       
       .label {
         font-size: 14px;

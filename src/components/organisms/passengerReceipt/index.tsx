@@ -364,7 +364,7 @@ const S = {
     .summaryWrapper {
       padding: 25px;
       .name {
-        font-size: 18px;
+        font-size: 22px;
         font-weight: 600;
         line-height: 1.44;
         letter-spacing: -0.36px;
@@ -372,7 +372,7 @@ const S = {
       }
       .passengerType {
         padding-top: 3px;
-        font-size: 13px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 2;
         letter-spacing: -0.26px;
@@ -386,13 +386,13 @@ const S = {
         justify-content: space-between;
         align-items: center;
         .label {
-          font-size: 13px;
+          font-size: 18px;
           font-weight: 600;
           letter-spacing: -0.26px;
           color: ${DARK_GRAY1};
         }
         .value {
-          font-size: 18px;
+          font-size: 22px;
           font-weight: 600;
           line-height: 1.44;
           letter-spacing: -0.36px;
@@ -403,13 +403,16 @@ const S = {
     .detailButtonWrapper {
       text-align: center;
       border-top: 1px solid ${LIGHT_GRAY6};
+
       button {
         display: inline-flex;
+        align-items: center;
         padding: 15px 0;
-        font-size: 13px;
+        font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.26px;
         color: ${DARK_GRAY1};
+
         .triangleWrapper {
           padding-left: 3px;
           padding-top: 1px;
@@ -429,6 +432,32 @@ const S = {
     hr.solid {
       margin: 0;
       border-top: 1px solid ${LIGHT_GRAY5};
+    }
+
+    @media only screen and (max-width: 767px) {
+      .summaryWrapper {
+        .name {
+          font-size: 18px;
+        }
+        .passengerType {
+          font-size: 13px;
+        }
+
+        .row {
+          .label {
+            font-size: 13px;
+          }
+          .value {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .detailButtonWrapper {
+        button {
+          font-size: 13px;
+        }
+      }
     }
   `,
   detailWrapper: styled.div<{ isShow: boolean }>`
@@ -455,17 +484,26 @@ const S = {
     justify-content: space-between;
     color: ${DARK_GRAY1};
     .label {
-      font-size: 13px;
+      font-size: 18px;
       line-height: 1.85;
       letter-spacing: -0.26px;
       text-align: left;
       font-weight: ${ifProp('isSubtotal', 600, 500)};
     }
     .value {
-      font-size: ${ifProp('isSubtotal', '18px', '16px')};
+      font-size: ${ifProp('isSubtotal', '22px', '18px')};
       font-weight: 600;
       letter-spacing: -0.32px;
       color: ${ifProp('isSubtotal', ORANGE2, DARK_GRAY1)};
+    }
+
+    @media only screen and (max-width: 767px) {
+      .label {
+        font-size: 13px;
+      }
+      .value {
+        font-size: ${ifProp('isSubtotal', '18px', '16px')};
+      }
     }
   `,
   subtotalItemsWrapper: styled.div<{ isShow: boolean }>`

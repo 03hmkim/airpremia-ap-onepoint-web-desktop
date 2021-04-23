@@ -50,13 +50,12 @@ const S = {
   `,
 
   wrapper: styled.div`
-    min-width: 480px;
+    min-width: 320px;
     max-width: 640px;
     padding: 0;
     min-height: 300px;
     box-sizing: border-box;
-    /* max-height: 85vh; */
-    max-height: calc(100vh - 200px);
+    max-height: calc(100vh - 85px);
     display: inherit;
     flex-direction: column;
     background-color: ${WHITE1};
@@ -64,6 +63,10 @@ const S = {
     z-index: 110;
     position: relative;
     overflow: hidden;
+
+    @media only screen and (max-width: 767px) {
+      width: calc(100% - 40px);
+    }
   `,
 
   xButtonWrapper: styled.div`

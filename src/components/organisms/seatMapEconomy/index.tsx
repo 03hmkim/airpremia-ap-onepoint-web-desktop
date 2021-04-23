@@ -48,7 +48,7 @@ function SeatMapEconomy({ seatMap, onClick }: IProps) {
             type={ESeatLandmarkType.TOILET_SINGLE}
           />
         </div>
-        <div className="labelsWrapper font-premia-bold">
+        <div className="labelsWrapper">
           <div className="columnLabelsWrapper">
             {/*TODO*/}
             {economyColumns.map(
@@ -108,7 +108,7 @@ function SeatMapEconomy({ seatMap, onClick }: IProps) {
           <ExitLabel direction={EPosition.LEFT} />
           <ExitLabel direction={EPosition.RIGHT} />
         </div>
-        <div className="labelsWrapper font-premia-bold">
+        <div className="labelsWrapper">
           <div className="columnLabelsWrapper">
             {/*TODO*/}
             {economyColumns.map(
@@ -186,6 +186,8 @@ const S = {
       justify-content: space-between;
     }
     .labelsWrapper {
+      font-family: 'Premia';
+      font-weight: 700;
       position: relative;
       .columnLabelsWrapper {
         display: flex;
@@ -204,7 +206,7 @@ const S = {
       }
       .rowLabelsWrapper {
         position: absolute;
-        top: 78px;
+        top: 74px;
         left: 131px;
         display: flex;
         .labelWrapper + .labelWrapper {
@@ -264,7 +266,7 @@ const S = {
         height: 106px;
       }
       .columnLabelsWrapper {
-        padding-top: 50px;
+        padding-top: 60px;
         .group:nth-child(2) {
           margin-top: -20px;
         }
@@ -290,6 +292,46 @@ const S = {
         }
         &.exitLabelsWrapper {
           margin-top: -10px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+
+      .labelsWrapper {
+        .columnLabelsWrapper {
+          span {
+            width: 24px;
+            font-size: 16px;
+          }
+        }
+        .rowLabelsWrapper {
+          top: 65px;
+          left: 91px;
+          .labelWrapper + .labelWrapper {
+            padding-left: 101px;
+          }
+        }
+      }
+      .landmarkWrapperMiddle {
+        .rowLabelsWrapper {
+          top: 70px;
+        }
+        .toiletWrapper:nth-child(odd) {
+          width: 56px;
+        }
+        .toiletWrapper:nth-child(2) {
+          width: 80px;
+        }
+        .columnLabelsWrapper {
+          padding-top: 45px;
+        }
+      }
+      .landmarkWrapperBottom {
+        .row {
+          .small {
+            width: 56px;
+          }
         }
       }
     }

@@ -235,8 +235,8 @@ const S = {
   container: styled.div``,
 
   label: styled.div`
-    font-size: 14px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 1.8;
     font-weight: 600;
     letter-spacing: -0.28px;
     margin-bottom: 4px;
@@ -273,7 +273,7 @@ const S = {
         border: solid 1px ${LIGHT_GRAY6};
         background-color: ${WHITE1};
         color: ${LIGHT_GRAY6};
-        font-size: 11px;
+        font-size: 18px;
         font-weight: 600;
         &.active {
           background-color: ${WHITE1};
@@ -287,7 +287,7 @@ const S = {
       sub {
         position: absolute;
         bottom: -10px;
-        font-size: 12px;
+        font-size: 18px;
         color: ${BLUE1};
       }
     }
@@ -323,10 +323,10 @@ const S = {
     padding: 0;
     top: 41px;
     right: 0;
-    width: 50px;
-    height: 24px;
-    border-radius: 12px;
-    font-size: 11px;
+    width: 65px;
+    height: 28px;
+    border-radius: 30px;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     background-color: ${WHITE1};
@@ -342,8 +342,8 @@ const S = {
       position: absolute;
       top: 6px;
       right: 0;
-      font-size: 12px;
-      line-height: 18px;
+      font-size: 18px;
+      line-height: 1.8;
       letter-spacing: -0.24px;
       color: ${BLUE1};
       margin-left: 196px;

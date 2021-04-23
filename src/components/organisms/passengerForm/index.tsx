@@ -863,6 +863,11 @@ const S = {
     padding: 60px 0 70px;
     display: flex;
 
+    @media only screen and (max-width: 1059px) {
+      padding: 60px 0;
+      flex-direction: column;
+    }
+
     @media only screen and (max-width: 767px) { 
       display: block;
       padding: 30px 0;
@@ -871,13 +876,27 @@ const S = {
 
   typeWrapper: styled.div`
     width: 320px;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 28px;
     letter-spacing: -0.44px;
+
+    @media only screen and (max-width: 1059px) {
+      flex-basis: 30px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 18px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
   `,
 
   infomationForm: styled.div`
     width: calc(100% - 320px);
+
+    @media only screen and (max-width: 1059px) {
+      width: 100%;
+    }
 
     @media only screen and (max-width: 767px) { 
       width: 100%;
@@ -892,7 +911,7 @@ const S = {
     border-bottom: solid 1px
       ${({ isError }) => (isError ? ORANGE1 : LIGHT_GRAY6)};
 
-    font-size: 15px;
+    font-size: 18px;
     letter-spacing: -0.3px;
 
     .textinput {
@@ -901,7 +920,7 @@ const S = {
 
     .dropdown-currency {
       width: fit-content;
-      font-size: 15px;
+      font-size: 18px;
 
       & > div {
         justify-content: unset;
@@ -914,7 +933,7 @@ const S = {
       left: -11px;
       top: 38px;
       padding: 15px 0;
-      font-size: 14px;
+      font-size: 18px;
       cursor: pointer;
 
       & > div {
@@ -922,6 +941,7 @@ const S = {
         padding: 0 25px;
         display: flex;
         align-items: center;
+
         &:hover {
           background-color: ${LIGHT_GRAY1};
         }
@@ -929,14 +949,34 @@ const S = {
     }
 
     @media only screen and (max-width: 1059px) {
+      height: 72px;
+      margin: 20px 0 0;
+      flex-direction: column;
+      align-items: inherit;
+
+      .dropdown-currency {
+        width: 100%;
+
+        & > div {
+          justify-content: space-between;
+          padding: 14px 30px 14px 0;
+        }
+      }
+
       .dropdown-currency-items {
+        width: 100%;
         left: 0;
       }
     }
 
     @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: -0.028em;
+
       .dropdown-currency {
         width: 100%;
+        font-size: 16px;
 
         .value {
           width: 100%;
@@ -952,6 +992,7 @@ const S = {
           }
         }
       }
+
       .dropdown-currency-items {
         width: 300px;
         max-height: 300px;
@@ -964,14 +1005,20 @@ const S = {
 
   question: styled.div`
     width: 195px;
+    font-size: 18px;
 
     @media only screen and (max-width: 767px) { 
       width: 100px;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 26px;
+      letter-spacing: -0.028em;
     }
   `,
 
   answer: styled.div<{ isSelected?: boolean }>`
-    width: calc(100% - 150px);
+    width: 100%;
+    margin-top: 6px;  
     font-weight: 600;
 
     .phone {
@@ -993,6 +1040,8 @@ const S = {
 
     .dropdown-currency .value {
       color: ${LIGHT_GRAY7};
+      font-size: 18px;
+      font-weight: 400;
     }
 
     ${({ isSelected }) =>
@@ -1003,37 +1052,70 @@ const S = {
         }
       `
     }
+    @media only screen and (max-width: 1059px) {
+      .radio-wrapper {
+        margin-right: 20px;
+      }
+    }
+    
 
     @media only screen and (max-width: 767px) { 
-      width: 100%;
+      font-size: 16px;
+      font-weight: 300;
+
       .phone {
         .textinput {
           width: 100%;
         }
       }
+
+      .dropdown-currency .value {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.028em;
+      }
     }
   `,
 
   errorMessage: styled.sub`
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 1.8;
     letter-spacing: -0.24px;
     bottom: 0;
     color: ${RED2};
     margin-left: 196px;
+
+    @media only screen and (max-width: 1059px){
+      margin-left: 0;
+    };
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: -0.028em;
+    }
   `,
 
   selectBox: styled.div`
     margin-bottom: 20px;
     height: 44px;
     display: flex;
+
     p {
-      font-size: 15px;
-      line-height: 28px;
+      font-size: 18px;
+      line-height: 26px;
       letter-spacing: -0.3px;
       color: ${DARK_GRAY1};
       margin-left: 4px;
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: 767px) {
+      p {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.028em;
+      }
     }
   `,
 
@@ -1046,8 +1128,8 @@ const S = {
     }
 
     p {
-      font-size: 15px;
-      line-height: 30px;
+      font-size: 18px;
+      line-height: 1.8;
       letter-spacing: -0.3px;
       &:first-of-type {
         flex-basis: 200px;
@@ -1056,10 +1138,22 @@ const S = {
         font-weight: 600;
       }
     }
+
+    @media only screen and (max-width: 767px) {
+      p {
+        font-size: 14px;
+        line-height: 26px;
+        letter-spacing: -0.028em;
+      }
+    }
   `,
 
   autoComplete: styled.div`
     padding: 14px 30px 14px 0;
+
+    @media only screen and (max-width: 767px) {
+      padding: 14px 0px;
+    }
   `,
 
   seperator: styled.div`

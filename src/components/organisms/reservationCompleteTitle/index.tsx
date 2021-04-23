@@ -12,13 +12,13 @@ interface IProps extends IStyleProps {}
 function ReservationCompleteTitle({}: IProps) {
   return (
     <S.container>
-      <h2 className="font-bold">
+      <h2>
         항공권 예약이
         <br />
         완료되었습니다 :-)
       </h2>
       <div className="descriptionWrapper">
-        <div className="svgWrapper">
+        <div className="svgWrapper noticeIcon">
           <SvgCautionGray />
         </div>
         <div className="description">
@@ -36,41 +36,81 @@ ReservationCompleteTitle.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
+    margin-top: 60px;
     position: relative;
-    height: 224px;
+
     display: flex;
     justify-content: center;
     flex-direction: column;
     h2 {
-      font-size: 30px;
-      line-height: 1.4;
-      letter-spacing: -0.6px;
+      font-size: 40px;
+      font-family: 'NotoSans';
+      font-weight: 700;
+      line-height: 48px;
+      letter-spacing: -0.03em;
+      font-weight: 600;
       color: ${DARK_GRAY2};
+      @media only screen and (max-width: 767px) {
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: -0.052em;
+      }
     }
     .descriptionWrapper {
       display: flex;
       align-items: center;
       padding-top: 15px;
+      position: relative;
       .description {
-        padding-left: 5px;
-        font-size: 14px;
-        line-height: 1.71;
+        padding-left: 15px;
+        font-size: 18px;
+        line-height: 26px;
         letter-spacing: -0.28px;
         color: ${LIGHT_GRAY8};
+
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+        }
       }
+
     }
     .imageWrapper {
       position: absolute;
       /* top: -59px; */
-      top: -5px;
-      left: 0;
+      top: -60px;
+      left: 25px;
       width: 426px;
       height: 224px;
       z-index: -1;
+
+      @media only screen and (max-width: 767px) {
+        width: 213px;
+        top: -30px;
+        left: 30px;
+      }
       img {
         display: block;
         width: 100%;
         height: 100%;
+
+        @media only screen and (max-width: 767px) {
+          height: auto;
+        }
+      }
+    }
+    .svgWrapper{
+
+      svg{
+        width: 20px;
+        height: 22px;
+      }
+    }
+    .noticeIcon{
+      position: absolute;
+      top: 20px;
+      svg{
+        width: 12px;
+        height: 15px;
       }
     }
   `,

@@ -134,6 +134,7 @@ const S = {
   `,
 
   labelWrapper: styled.div<{ hasLabel: boolean }>`
+    margin-bottom: 10px;
     display: ${ifProp('hasLabel', 'block', 'none')};
   `,
 
@@ -148,6 +149,12 @@ const S = {
   InputBox: styled(Input)<IInputProps>`
     width: 85%;
     height: 100%;
+    font-size: 18px;
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.032em;
+    }
   `,
 
   xButtonRoundWrapper: styled.div<{
@@ -167,9 +174,9 @@ const S = {
   message: styled.div`
     position: absolute;
     bottom: -16px;
-    font-size: 12px;
+    font-size: 18px;
     color: ${ORANGE1};
-    line-height: 11px;
+    line-height: 0.5;
   `,
 
   passwordToggleButton: styled.span<{

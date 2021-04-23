@@ -9,7 +9,7 @@ interface IProps {
 
 function SeatRowLabels({ rows }: IProps) {
   return (
-    <S.container className="font-premia-bold">
+    <S.container>
       {rows.map((rowNumber: number) => {
         return (
           <div key={`${rowNumber}`} className="row">
@@ -25,6 +25,7 @@ SeatRowLabels.defaultProps = {};
 
 const S = {
   container: styled.div`
+    font-weight: 700;
     display: flex;
     flex-direction: column;
     .row + .row {
@@ -37,6 +38,15 @@ const S = {
       span {
         font-size: 22px;
         color: ${LIGHT_GRAY6};
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      .row {
+        span {
+          font-size: 18px;
+          z-index: 1;
+        }
       }
     }
   `,

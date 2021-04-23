@@ -116,14 +116,16 @@ const S = {
     outline: 0;
     // opacity: ${ifProp('isHidden', 0, 1)};
     color: ${DARK_GRAY1};
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.28px;
     font-style: normal;
 
     &::placeholder {
       color: ${LIGHT_GRAY7};
-      font-size: 16px;
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
     }
   `,
 };

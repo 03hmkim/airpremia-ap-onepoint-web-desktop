@@ -32,23 +32,21 @@ const TicketCabinClassTemplate: FC<IProps> = ({
 };
 
 const defaultBox = css`
-  max-width: 1400px;
   box-sizing: border-box;
   margin: 80px auto 0;
-  padding: 0 100px;
-
-  @media only screen and (max-width: 1059px) {
-    padding: 0 40px;
-    margin: 3vw;
-  }
-  @media only screen and (max-width: 767px) { 
-    padding: 0 20px;
-  }
 `;
 
 const S = {
   container: styled.div`
-    margin-bottom: 160px;
+    margin-top: 160px !important;
+
+    @media only screen and (max-width: 1440px) {
+      margin-top: 60px !important;
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 20px !important;
+    }
   `,
 
   floatingFoldableItinerary: styled.div`
@@ -76,7 +74,8 @@ const S = {
     ${defaultBox};
 
     h3 {
-      font-family: 'NotoSansBold';
+      font-family: 'NotoSans';
+      font-weight: 700;
     }
   `,
 };

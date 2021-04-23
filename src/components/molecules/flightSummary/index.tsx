@@ -53,7 +53,9 @@ const S = {
   container: styled.div<IStyleProps>`
     .tagsWrapper {
       display: flex;
-      font-size: 13px;
+      font-size: 18px;
+      font-family: 'NotoSans';
+      font-weight: 700;
       line-height: 1.15;
       letter-spacing: -0.26px;
       .nonRefundable {
@@ -70,12 +72,17 @@ const S = {
           background-color: ${LIGHT_GRAY6};
         }
       }
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
     }
     .valueWrapper {
       padding-top: 14px;
       display: flex;
       font-size: 18px;
-      font-weight: 600;
+      font-family: 'NotoSans';
+      font-weight: 700;
       line-height: 1.5;
       letter-spacing: -0.36px;
       color: ${DARK_GRAY1};
@@ -92,6 +99,19 @@ const S = {
           background-color: ${LIGHT_GRAY6};
         }
       }
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+        display: block;
+        div + div {
+          margin-top: 10px;
+          padding-left: 0px;
+          &:before {
+            display: none;
+          }
+        }
+      }
+
     }
   `,
 };

@@ -136,13 +136,16 @@ const S = {
     background-color: #ffffff;
     padding: 30px;
     box-sizing: border-box;
+
     .expressionWrapper {
       padding-top: 49px;
+
       .itemsWrapper {
         .row + .row {
           padding-top: 15px;
         }
       }
+
       .sumsWrapper {
         margin-top: 26px;
         padding-top: 23px;
@@ -160,26 +163,29 @@ const S = {
           }
         }
       }
+
       .emptyDescription {
         padding: 32px 0 74px;
-        font-size: 14px;
+        font-size: 18px;
+        line-height: 26px;
         text-align: center;
         color: ${LIGHT_GRAY7};
       }
+
       .row {
         display: flex;
         justify-content: space-between;
         align-items: center;
         .label {
-          font-size: 13px;
-          line-height: 1.54;
+          font-size: 18px;
+          line-height: 26px;
           letter-spacing: -0.26px;
           color: ${DARK_GRAY1};
         }
         .value {
-          font-size: 14px;
+          font-size: 18px;
+          line-height: 26px;
           font-weight: 600;
-          line-height: 1.71;
           letter-spacing: -0.28px;
           color: ${DARK_GRAY1};
         }
@@ -188,12 +194,13 @@ const S = {
     .buttonWrapper {
       width: 100%;
       padding-top: 60px;
-      font-size: 15px;
+      font-size: 18px;
+      line-height: 26px;
     }
     .mileage {
       padding-top: 5px;
-      font-size: 13px;
-      line-height: 1.85;
+      font-size: 18px;
+      line-height: 26px;
       letter-spacing: -0.26px;
       text-align: right;
       color: ${LIGHT_GRAY7};
@@ -202,12 +209,26 @@ const S = {
     @media only screen and (max-width: 1059px) {
       width: 100%;
     }
+
+    @media only screen and (max-width: 767px) {
+      .expressionWrapper {
+        .row {
+          .label {
+            font-size: 14px;
+          }
+        }
+      }
+    }
   `,
   title: styled.div`
-    font-size: 18px;
+    font-size: 24px;
     line-height: 1.11;
     letter-spacing: -0.36px;
     color: ${DARK_GRAY1};
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+    }
   `,
 };
 

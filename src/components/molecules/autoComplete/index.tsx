@@ -17,6 +17,7 @@ import {
   LIGHT_GRAY7,
 } from '@airpremia/cdk/styles/colors';
 import { ICountryCodeDetailResp } from '@airpremia/core/api/auth/types';
+import SearchIcon from 'public/images/ico_input_search.png';
 
 interface IStyle {
   /** width */
@@ -363,17 +364,18 @@ export const CheckinAutoComplete: FC<IProps> = ({
 
 const S = {
   container: styled.div<IStyle>`
-    width: ${prop('width', '398px')};
+    width: ${prop('width', '100%')};
+    min-width: 500px;
     height: ${prop('height', '400px')};
     position: absolute;
     top: 10px;
     left: 0;
     z-index: 10;
-
-    @media only screen and (max-width: 767px) { 
-      width: ${prop('width', '300px')};
-      left: auto;
-      right: 0px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    @media only screen and (max-width: 1059px) {
+      width: 100%;
+      min-width: 100%;
     }
   `,
 
@@ -385,17 +387,21 @@ const S = {
     padding: 24px 0 22px;
     box-sizing: border-box;
     z-index: 81;
-    overflow: auto;
+    // overflow: auto;
+    @media only screen and (max-width: 1059px) {
+      min-width: 0;
+      overflow: inherit;
+    }
   `,
 
   search: styled.div`
-    width: 350px;
+    width: 90%;
     height: 48px;
-    margin: 0 24px;
-
+    // margin: 0 24px;
+    margin: 0 auto;
     input {
       box-sizing: border-box;
-      font-size: 14px;
+      font-size: 18px;
       color: ${DARK_GRAY1};
       width: 100%;
       height: 100%;
@@ -403,37 +409,54 @@ const S = {
       border-radius: 4px;
       z-index: 15;
       padding-inline-start: 14px;
+      background: url(${SearchIcon});
+      background-position: 98% 10px;
+      background-repeat: no-repeat;
+      box-sizing: border-box;
     }
 
-    @media only screen and (max-width: 767px) { 
-      width: calc(100% - 40px);
-      margin: 0 20px;
+    @media only screen and (max-width: 1059px) {
+      width: 90%;
+      margin: 0 auto;
     }
   `,
 
   searchList: styled.div`
-    overflow: scroll;
+    // overflow: scroll;
     max-height: 304px;
     .title {
       margin: 0 25px 15px;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 600;
       color: ${DARK_GRAY1};
       letter-spacing: -0.3px;
       line-height: normal;
       border-bottom: solid 1px ${LIGHT_GRAY6};
       padding: 25px 0 15px;
+      @media only screen and (max-width: 767px) {
+        font-size: 18px;
+        line-height: 1.8em;
+        letter-spacing: -0.028em;
+        font-weight: 700;
+      }
     }
 
     .filter {
       li {
         font-weight: 600;
         padding: 15px 24px;
-        font-size: 14px;
+        font-size: 18px;
         list-style: none;
         cursor: pointer;
         &:hover {
           background-color: ${LIGHT_GRAY1};
+        }
+        @media only screen and (max-width: 767px) {
+          padding: 15px 5%;
+          font-size: 14px;
+          line-height: 1.8em;
+          letter-spacing: -0.028em;
+          font-weight: 400;
         }
       }
 
@@ -450,10 +473,18 @@ const S = {
     }
 
     .not-found {
-      padding: 25px 65px;
+      width: 90%;
+      margin: 0 auto;
+      text-align: center;
+      padding-top: 30px;
       p {
-        font-size: 13px;
+        font-size: 18px;
+        line-height: 1.36em;
         color: ${LIGHT_GRAY7};
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+          line-height: 1.36em;
+        }
       }
     }
     .nowSelect{

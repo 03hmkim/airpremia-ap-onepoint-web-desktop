@@ -24,10 +24,16 @@ const S = {
       border-bottom: solid 2px ${DARK_GRAY1};
     }
     p {
-      font-size: 14px;
+      font-size: 18px;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY8};
       line-height: 20px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      p {
+        font-size: 14px;
+      }
     }
   `,
 };

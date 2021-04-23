@@ -202,7 +202,7 @@ const S = {
         color: ${DARK_GRAY1};
       }
       .defaultDescription {
-        font-size: 15px;
+        font-size: 18px;
         letter-spacing: -0.3px;
         color: ${LIGHT_GRAY7};
         padding-top: 5px;

@@ -54,9 +54,13 @@ const S = {
   `,
 
   label: styled.div`
-    font-size: 14px;
+    font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.28px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
 };
 

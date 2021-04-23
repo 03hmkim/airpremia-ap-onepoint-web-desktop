@@ -66,6 +66,7 @@ const SavedLoginInfoPopup: FC<IProps> = ({}: IProps) => {
 
 const S = {
   container: styled.div`
+    max-width: 480px;
     padding: 50px;
   `,
 
@@ -74,6 +75,7 @@ const S = {
     line-height: 38px;
     letter-spacing: -0.72px;
     margin-bottom: 5px;
+    padding-right: 20px;
   `,
 
   description: styled.div`
@@ -82,6 +84,10 @@ const S = {
     letter-spacing: -0.28px;
     font-weight: 600;
     margin-bottom: 100px;
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 40px;
+    }
   `,
 
   loginShortcutBox: styled.div`
@@ -98,6 +104,10 @@ const S = {
     u {
       font-weight: 600;
       cursor: pointer;
+    }
+
+    @media only screen and (max-width: 767px) {
+      display: block;
     }
   `,
 };

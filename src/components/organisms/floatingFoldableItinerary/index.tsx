@@ -322,23 +322,24 @@ const FloatingFoldableItinerary: FC<IProps> = ({
 const S = {
   container: styled.div`
     width: 100%;
-    /* height: 100%; */
     position: fixed;
-    /* top: 128px; */
+    top: 136px;
+    left: 0;
+    right: 0;
     z-index: 1;
     background-color: ${WHITE1};
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.02);
 
-    @media only screen and (max-width: 767px) { 
+    @media only screen and (max-width: 1440px) { 
+      position: sticky;
       box-shadow: none;
     }
   `,
 
   innerWrapper: styled.div<{ isShow: boolean }>`
     box-sizing: border-box;
-    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 100px;
+    padding: 0 80px;
     height: 64px;
     ${(isShow) => {
       if (isShow) {
@@ -352,12 +353,8 @@ const S = {
       }
     }}
 
-    @media only screen and (max-width: 1059px) {
-      padding: 0 40px
-    }
-
-    @media only screen and (max-width: 767px) {
-      padding: 0 20px
+    @media only screen and (max-width: 1440px) {
+      padding: 0;
     }
   `,
 
@@ -412,24 +409,33 @@ const S = {
   `,
 
   right: styled.div<{ isShow: boolean }>`
-    margin-left: 20px;
     display: flex;
     align-items: center;
     opacity: ${ifProp('isShow', 1, 0)};
     transition: opacity 0.5s linear;
 
     p {
-      font-size: 14px;
+      font-size: 18px;
       letter-spacing: -0.24px;
     }
 
     h3 {
-      font-size: 18px;
+      font-size: 21px;
       letter-spacing: -0.36px;
       color: ${ORANGE2};
       text-decoration: underline;
       margin-left: 15px;
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      p {
+        font-size: 14px;
+      }
+
+      h3 {
+        font-size: 18px;
+      }
     }
   `,
 
@@ -460,10 +466,17 @@ const S = {
     h3 {
       width: 100%;
       flex: 1;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY8};
+    }
+
+    @media only screen and (max-width: 767px) {
+      h3 {
+        font-size: 13px;
+        font-weight: 300;
+      }
     }
   `,
 
@@ -507,6 +520,11 @@ const S = {
   promotion: styled.div`
     position: relative;
     z-index: 100;
+
+    > button {
+      margin-left: 0;
+      margin-right: 10px;
+    }
   `,
 
   modalTitle : styled.div``,

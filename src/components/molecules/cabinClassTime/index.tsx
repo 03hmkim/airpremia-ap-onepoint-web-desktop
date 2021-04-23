@@ -132,28 +132,27 @@ const S = {
     padding-top: 15px;
 
     & > div {
-      &:nth-child(1) {
-        margin-right: 20px;
-      }
-      &:nth-child(2) {
-        margin-right: 20px;
-      }
-      &:nth-child(3) {
-        width: 120px;
+      margin-right: 20px;
+
+      &:last-child {
+        margin-right: 0px;
       }
     }
 
     .middle {
       position: relative;
+
       sub {
+        width: 100%;
         position: absolute;
         top: -12px;
-        left: 16px;
+        left: 0;
+        font-size: 18px;
+        text-align: center;
       }
     }
 
     .station {
-      width: 80px;
       display: flex;
       align-items: center;
 
@@ -174,14 +173,13 @@ const S = {
       justify-content: space-between;
 
       & > div {
-        &:nth-child(1) {
-          margin-right: 0px;
-        }
-        &:nth-child(2) {
-          margin-right: 0px;
-        }
-        &:nth-child(3) {
-          width: auto;
+        margin-right: 0px;
+      }
+
+      .middle {
+        sub {
+          font-size: 13px;
+          font-weight: 300;
         }
       }
     }
@@ -190,10 +188,11 @@ const S = {
   airplaneArea: styled.div`
     display: flex;
     margin-top: 18px;
+
     sub {
       bottom: 0;
       vertical-align: unset;
-      font-size: 13px;
+      font-size: 18px;
       letter-spacing: -0.26px;
       line-height: 28px;
       color: ${LIGHT_GRAY8};
@@ -205,6 +204,13 @@ const S = {
 
     .trip-infomation {
       cursor: pointer;
+    }
+
+    @media only screen and (max-width: 767px) {
+      sub {
+        font-size: 13px;
+        font-weight: 300;
+      }
     }
   `,
 

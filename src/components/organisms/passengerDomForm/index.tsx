@@ -900,8 +900,6 @@ const S = {
 
     .phone {
       display: flex;
-      align-items: center;
-
       .textinput {
         width: calc(100% - 150px);
       }

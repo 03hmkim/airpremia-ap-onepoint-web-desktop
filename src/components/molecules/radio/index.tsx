@@ -88,9 +88,15 @@ const S = {
   `,
   label: styled.div`
     margin-left: 10px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.28px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 26px;
+      letter-spacing: -0.032em;
+    }
   `,
 };
 

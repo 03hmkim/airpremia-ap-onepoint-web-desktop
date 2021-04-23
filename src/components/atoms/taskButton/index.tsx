@@ -57,7 +57,7 @@ const S = {
     width: 100%;
     height: 50px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight:  ${prop('fontWeight',600)};
     line-height: 1.47;
     letter-spacing: -0.3px;
     border-radius: 8px;
@@ -103,10 +103,11 @@ const S = {
     &.short{
       width: 140px;
     }
-
+    
     @media only screen and (max-width: 767px) {
       font-size: 16px;
       font-weight: 400;
+      letter-spacing: -0.032em;
     }
 
   `,

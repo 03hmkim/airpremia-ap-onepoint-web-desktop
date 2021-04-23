@@ -216,7 +216,6 @@ const S = {
     min-height: 800px;
   `,
   container: styled.div<IStyleProps>`
-    width: 1200px;
     margin: 0 auto;
   `,
 };

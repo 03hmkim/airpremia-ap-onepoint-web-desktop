@@ -75,6 +75,11 @@ const S = {
     overflow-y: auto;
     border-top: 1px solid ${LIGHT_GRAY5};
     box-sizing: border-box;
+
+    @media only screen and (max-width: 767px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   `,
 
 };

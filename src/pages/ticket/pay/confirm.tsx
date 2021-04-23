@@ -213,6 +213,7 @@ function Confirm({}: IProps) {
       case 'popDetailedCost':
         return(
           <NewModal
+            tabmenu="tabIs"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -320,15 +321,6 @@ Confirm.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
-    max-width: 1200px;
-    margin: 0 auto;
-
-    @media only screen and (max-width: 1059px) {
-      padding: 0 40px;
-    }
-    @media only screen and (max-width: 767px) { 
-      padding: 0 20px;
-    }
   `,
   modalTitle : styled.div``,
   textArea: styled.div`

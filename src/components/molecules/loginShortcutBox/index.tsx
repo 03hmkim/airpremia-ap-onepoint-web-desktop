@@ -44,11 +44,22 @@ const S = {
     border: solid 1px ${DARK_GRAY1};
     padding: 25px 20px;
     box-sizing: border-box;
+
+    @media only screen and (max-width: 767px) {
+      width: 100%;
+      height: auto;
+      flex-direction: column;
+    }
   `,
 
   icon: styled.div`
     flex-basis: 40px;
     margin-right: 20px;
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 10px;
+      margin-right: 0;
+    }
   `,
 
   wrapper: styled.div`
@@ -64,6 +75,14 @@ const S = {
       line-height: 30px;
       letter-spacing: -0.3px;
       color: ${BLUE1};
+    }
+
+    @media only screen and (max-width: 767px) {
+      p,
+      p .email {
+        font-size: 14px;
+        font-weight: 300;
+      }
     }
   `,
 

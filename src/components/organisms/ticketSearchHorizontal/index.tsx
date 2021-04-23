@@ -461,10 +461,12 @@ const S = {
         &.station {
           width: calc(100% - -42px);
           left: -21px;
+          top: 15px;
         }
 
         &.passenger {
           width: calc(100% - -42px);
+          top: 15px;
         }
 
         &.date {

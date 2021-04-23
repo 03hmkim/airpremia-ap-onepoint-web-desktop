@@ -48,7 +48,7 @@ function SeatMapPremium({ seatMap, onClick }: IProps) {
           </div>
         </div>
       </div>
-      <div className="labelsWrapper font-premia-bold">
+      <div className="labelsWrapper">
         <div className="columnLabelsWrapper">
           {/*TODO dataset 에 있는 객체 활용 */}
           <div className="group">
@@ -127,6 +127,8 @@ const S = {
       }
     }
     .labelsWrapper {
+      font-family: 'Premia';
+      font-weight: 700;
       padding: 0 38px;
       position: relative;
       .columnLabelsWrapper {
@@ -182,6 +184,45 @@ const S = {
         display: flex;
         justify-content: space-between;
         padding-top: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      .landmarkWrapperTop {
+        padding: 0 28px;
+        .row:nth-child(1) {
+          .toiletWrapper {
+            width: 52px;
+          }
+          .galleyWrapper {
+            width: 166px;
+          }
+        }
+        .row:nth-child(2) {
+          .galleyWrapper {
+            width: 80px;
+            padding-left: 92px;
+          }
+          .toiletWrapper {
+            width: 52px;
+          }
+        }
+      }
+      .labelsWrapper {
+        padding: 0 28px;
+        .columnLabelsWrapper {
+          span {
+            width: 24px;
+            font-size: 16px;
+          }
+        }
+        .rowLabelsWrapper {
+          top: 65px;
+          left: 97px;
+          .labelWrapper + .labelWrapper {
+            padding-left: 106px;
+          }
+        }
       }
     }
   `,

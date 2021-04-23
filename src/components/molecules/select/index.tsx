@@ -28,6 +28,7 @@ export interface IProps {
   isShowMenu?: boolean;
   menuClass?: string;
   onClick?: (e?: any) => void;
+  className?: string;
 }
 
 function Select({
@@ -59,7 +60,7 @@ function Select({
       {isShowMenu && (
         <div className="dim" onClick={onClick} />
       )}
-      <S.label onClick={onClick}>
+      <S.label onClick={onClick} className="jcNomal">
         <S.text
           isLabel={isLabel}
           color={color ? color : DARK_GRAY1}
@@ -132,8 +133,13 @@ const S = {
     align-items: center;
     height: 22px;
     cursor: pointer;
+
     > div {
       pointer-events: none;
+    }
+
+    &.jcNomal{
+      // justify-content: inherit;
     }
   `,
   text: styled.div<{ isLabel: boolean; color: string }>`
@@ -162,6 +168,10 @@ const S = {
       border: solid 1px ${DARK_GRAY1};
       background-color: ${WHITE1};
       z-index: 2;
+    }
+
+    @media only screen and (max-width: 1059px) {
+      // width: 35vh;
     }
   `,
 };

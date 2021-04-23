@@ -121,13 +121,14 @@ const S = {
         justify-content: space-between;
         align-items: center;
         color: ${DARK_GRAY1};
+
         .label {
-          font-size: 13px;
+          font-size: 18px;
           line-height: 1.85;
           letter-spacing: -0.26px;
         }
         .value {
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 600;
           line-height: 1.5;
           letter-spacing: -0.32px;
@@ -139,12 +140,36 @@ const S = {
       .totalWrapper {
         padding-top: 20px;
         .label {
+          font-size: 22px;
           font-weight: 600;
         }
         .value {
-          font-size: 20px;
+          font-size: 22px;
           letter-spacing: -0.4px;
           color: ${ORANGE2};
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      
+      .expressionWrapper {
+        .row {
+          .label {
+            font-size: 14px;
+          }
+          .value {
+            font-size: 16px;
+          }
+        }
+
+        .totalWrapper {
+          .label {
+            font-size: 16px;
+          }
+          .value {
+            font-size: 18px;
+          }
         }
       }
     }

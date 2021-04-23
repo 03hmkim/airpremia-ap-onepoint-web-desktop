@@ -44,7 +44,7 @@ function TicketPayComplete({
       </S.TicketPreview>
 
       <S.NextTripWrapper>
-        <h3 className="font-bold">
+        <h3>
           에어프레미아와
           <br />
           여행을 준비하세요 :-)
@@ -70,47 +70,120 @@ TicketPayComplete.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
-    margin-bottom: 160px;
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 0;
+    }
   `,
   TicketPreview: styled.div`
     margin-bottom: 120px;
+    @media only screen and (max-width: 1059px) {
+      margin-bottom: 60px;
+    }
   `,
   NextTripWrapper: styled.div`
     h3 {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 34px;
       letter-spacing: -0.44px;
-      margin-bottom: 70px;
+      font-weight: 700;
+      margin-bottom: 60px;
+      @media only screen and (max-width: 767px) {
+        font-size: 22px;
+        line-height: 28px;
+        letter-spacing: -0.04em;
+        margin-bottom: 30px;
+      }
     }
   `,
   reservationSummaryWrapper: styled.div`
-    margin-top: 32px;
+    margin-top: 80px;
   `,
   linkWrapper: styled.div`
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1059px) {
+      flex-direction: column;
+    }
+
     & > div {
       flex: 1;
       margin-right: 10px;
+      &:last-child {
+        margin-right: 0px;
+      }
+      
+      @media only screen and (max-width: 1059px) {
+        margin-right: 0;
+        margin-bottom: 20px;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
     }
   `,
   cardWrapper: styled.div`
-    padding: 70px 0 60px;
+    width: 100%;
+    padding: 60px 0;
     margin-bottom: 80px;
     border-bottom: solid 1px ${LIGHT_GRAY5};
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1059px) {
+      margin-bottom: 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      align-items: center;
+      flex-direction: column;
+    }
+    &>div{
+      width: calc(33.33% - 75px);
+
+      @media only screen and (max-width: 1059px) {
+        width: calc(33.33% - 40px);
+      }
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        margin-bottom: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
   `,
   buttonWrapper: styled.div`
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 18px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: -0.028em;
+      flex-direction: column;
+    }
     & > button {
       width: 240px;
       margin-right: 10px;
+
+      @media only screen and (max-width: 767px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
     }
   `,
 };

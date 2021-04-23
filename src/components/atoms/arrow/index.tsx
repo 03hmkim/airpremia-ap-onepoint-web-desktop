@@ -80,10 +80,9 @@ const S = {
         position: absolute;
         right: 0;
         top: 50%;
-        margin-top: -20px;
-        width: 40px;
-        height: 40px;
-        background: rgba(0,0,0,.2);
+        margin-top: -12px;
+        width: 24px;
+        height: 24px;
 
         &:first-child {
           left: 0;

@@ -22,16 +22,15 @@ Title.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
-    font-size: 30px;
-    line-height: 1.4;
     color: ${DARK_GRAY1};
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: 0.03em;
+    font-weight: 600;
 
-    media only screen and (max-width: 1059px) {
-      font-size:26px;
-    }
-    
-    @media only screen and (max-width: 767px) { 
-      font-size:20px;
+    @media only screen and (max-width: 767px) {
+      font-size: 26px;
+      line-height: 36px;
     }
   `,
 };

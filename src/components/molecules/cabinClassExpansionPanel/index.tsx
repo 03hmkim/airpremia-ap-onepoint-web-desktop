@@ -91,10 +91,10 @@ const S = {
   `,
 
   cabinClassSpec: styled.div`
-    padding: 40px 0 30px 30px;
+    padding: 40px 10px 30px 30px;
 
     @media only screen and (max-width: 767px) { 
-      padding: 20px 0 20px 10px;
+      padding: 20px 10px 20px 10px;
     }
   `,
 
@@ -111,6 +111,14 @@ const S = {
   cabinClassTicketCard: styled.div`
     flex: 1;
     border-left: dotted 1px ${LIGHT_GRAY6};
+
+    @media only screen and (max-width: 767px) {
+      border-top: dotted 1px ${LIGHT_GRAY6};
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
 
     @media only screen and (max-width: 479px) {
       width: 100%;

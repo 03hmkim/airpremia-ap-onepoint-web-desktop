@@ -15,6 +15,7 @@ import {
   ChangeEmail,
   ChangePhoneNumber,
   PopupTitle,
+  ComTitle,
 } from 'src/components';
 import {
   DARK_GRAY2,
@@ -255,10 +256,11 @@ const BookingPersonInfo: FC<IProps> = () => {
   return (
     <S.container>
       {isLogIn && onClickModal()}
-      <S.header>
-        <h2 className="font-bold">예매자 정보입력</h2>
-        <p>예매자의 연락처로 예약 결과를 보내드립니다.</p>
-      </S.header>
+      <ComTitle
+        title="예매자 정보입력"
+        description="예매자의 연락처로 예약 결과를 보내드립니다."
+        desColor="gray"
+      />
       <S.body>
         <S.subTitle>
           <h3 className="font-bold">예매자 정보</h3>
@@ -417,38 +419,71 @@ const S = {
 
   header: styled.div`
     h2 {
-      font-size: 30px;
+      font-size: 40px;
       line-height: 42px;
       letter-spacing: -0.6px;
       color: ${DARK_GRAY2};
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 10px;
+        font-size: 26px;
+        letter-spacing: -0.052em;
+        line-height: 36px;
+        &.subtxO{
+          margin-bottom: 10px;
+        }
+      }
     }
 
     p {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 22px;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY7};
       margin-top: 10px;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 80px;
+        font-size: 14px;
+        line-height: 1.36em;
+        letter-spacing: -0.028em;
+      }
     }
   `,
 
   body: styled.div`
-    margin-top: 70px;
-    padding: 60px 0;
+    margin-top: 80px;
+    padding: 80px 0;
     box-sizing: border-box;
     border-top: solid 2px ${DARK_GRAY1};
     border-bottom: solid 2px ${DARK_GRAY1};
     display: flex;
+    @media only screen and (max-width: 1059px) {
+      margin-top: 80px;
+      padding: 80px 0;
+      flex-direction: column;
+    }
   `,
   modalTitle: styled.div``,
 
   subTitle: styled.div`
     flex-basis: 220px;
     margin-right: 100px;
+
     h3 {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 28px;
       letter-spacing: -0.44px;
+    }
+
+
+    @media only screen and (max-width: 1059px) {
+      flex-basis: 48px;
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: 767px) {
+      h3 {
+        font-size: 18px;
+      }
     }
   `,
   content: styled.div`
@@ -460,12 +495,13 @@ const S = {
     align-items: center;
     justify-content: space-between;
     height: 42px;
+
     &:not(:last-of-type) {
       margin-bottom: 10px;
     }
 
     p {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 30px;
       letter-spacing: -0.3px;
       width: 200px;
@@ -482,34 +518,77 @@ const S = {
         font-weight: 600;
       }
       u {
-        font-size: 13px;
+        font-size: 18px;
         line-height: 1;
         letter-spacing: -0.26px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      > p {
+        width: 80px;
+        font-size: 13px;
+        font-weight: 300;
+      }
+
+      div {
+        p {
+          font-size: 16px;
+          font-weight: 300;          
+        }
+
+        u {
+          font-size: 13px;
+          font-weight: 300;
+        }
       }
     }
   `,
 
   wrapper: styled.div<{ isError?: boolean }>`
+    margin-bottom: 5px;
     display: flex;
     position: relative;
     align-items: center;
-    height: 62px;
+    height: 64px;
     border-bottom: solid 1px
       ${({ isError }) => (isError ? ORANGE1 : LIGHT_GRAY6)};
 
     .answer {
       width: calc(100% - 195px);
       font-weight: 600;
-    }
+      @media only screen and (max-width: 1059px) {
+        width: 100%;
+      };
+    };
+    @media only screen and (max-width: 1059px) {
+      height: 72px;
+      margin: 20px 0 5px;
+      align-items: inherit;
+      justify-content: space-around;
+      flex-direction: column;
+    };
+    @media only screen and (max-width: 767px) {
+      margin: 20px 0 0;
+    };
   `,
 
   question: styled.div`
     width: 195px;
+    font-size: 18px;
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+      line-height: 1.36em;
+      letter-spacing: -0.032em;
+    }
   `,
 
   answer: styled.div`
     width: calc(100% - 195px);
     font-weight: 600;
+    @media only screen and (max-width: 1059px) {
+      width: 100%;
+    };
     .textinput {
       border-bottom: 0;
     }
@@ -525,28 +604,42 @@ const S = {
   `,
 
   errorMessage: styled.sub`
-    font-size: 12px;
+    font-size: 18px;
     line-height: 18px;
     letter-spacing: -0.24px;
     bottom: 0;
     color: ${RED2};
     margin-left: 196px;
+    @media only screen and (max-width: 1059px) {
+      margin-left: 0;
+    };
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      line-height: 26px;
+      letter-spacing: -0.028em;
+    }
   `,
 
   autoComplete: styled.div`
     padding: 14px 30px 14px 0;
+    @media only screen and (max-width: 1059px) {
+      padding: 14px 0px;
+    }
   `,
 
   seperator: styled.div`
     margin: 2px 20px 0;
     height: 16px;
     border-right: solid 1px ${LIGHT_GRAY6};
+    @media only screen and (max-width: 1059px) {
+      margin: 2px 12px 0;
+    }
   `,
 
   authButton: styled.div<{ isActive: boolean }>`
     position: absolute;
     right: 0;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.28px;
     width: 66px;
@@ -572,11 +665,19 @@ const S = {
     DARK_GRAY1,
     LIGHT_GRAY6,
   )}; */
+  @media only screen and (max-width: 1059px) {
+    bottom: 10px;
+  };
+  @media only screen and (max-width: 767px) {
+    font-size: 14px;
+    line-height: 26px;
+    letter-spacing: -0.032em;;
+  }
   `,
 
   sendMessageArea: styled.div<{ isShow: boolean }>`
-    font-size: 12px;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 1.8;
     letter-spacing: -0.24px;
     color: ${BLUE1};
     margin-left: 196px;

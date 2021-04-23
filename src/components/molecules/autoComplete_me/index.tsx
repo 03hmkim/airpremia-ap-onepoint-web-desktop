@@ -371,6 +371,7 @@ export const CheckinAutoComplete: FC<IProps> = ({
 const S = {
   container: styled.div<IStyle>`
     width: ${prop('width', '398px')};
+    min-width: 200px;
     height: ${prop('height', '400px')};
     position: absolute;
     top: 10px;
@@ -393,7 +394,6 @@ const S = {
     width: 350px;
     height: 48px;
     margin: 0 24px;
-
     input {
       box-sizing: border-box;
       font-size: 14px;
@@ -419,6 +419,11 @@ const S = {
       line-height: normal;
       border-bottom: solid 1px ${LIGHT_GRAY6};
       padding: 25px 0 15px;
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+        line-height: 1.8em;
+        letter-spacing: -0.028em;
+      }
     }
 
     .filter {

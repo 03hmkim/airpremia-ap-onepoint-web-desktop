@@ -197,9 +197,7 @@ const C = {
   contWrap: styled.div`
     &>div>div{
       max-width: 1280px;
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 160px;
+      margin: 60px auto 160px;
       padding-left: 25px;
       padding-right: 25px;
 
@@ -212,6 +210,7 @@ const C = {
     
     @media only screen and (max-width: 1059px) {
       &>div>div {
+        margin-top: 20px;
         margin-bottom: 50px;
       }
     }

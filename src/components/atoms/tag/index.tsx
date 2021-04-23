@@ -31,13 +31,19 @@ const S = {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
-    padding: 0 4px;
+    height: 24px;
+    padding: 0 6px;
     background-color: ${prop('backgroundColor', WHITE1)};
     border-radius: 4px;
-    font-size: 12px;
+    font-size: 18px;
     font-weight: ${prop('weight', 600)};
     color: ${prop('color', WHITE1)};
+
+    @media only screen and (max-width: 767px) {
+      height: 20px;
+      padding: 0 4px;
+      font-size: 12px;
+    }
   `,
 };
 

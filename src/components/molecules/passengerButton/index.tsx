@@ -45,10 +45,15 @@ PassengerButton.defaultProps = {};
 const S = {
   container: styled.button<IStyleProps>`
     width: 100%;
-    height: 60px;
+    height: 70px;
     box-sizing: border-box;
     padding: 10px 15px 9px;
-    font-weight: bold;
+    margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    font-family: 'NotoSans';
+    font-weight: 700;
     border-radius: 8px;
     background-color: ${ifProp(
       'isActive',
@@ -61,7 +66,9 @@ const S = {
       pointer-events: none;
     }
     .name {
-      font-size: 18px;
+      font-size: 21px;
+      font-family: 'Premia';
+      font-weight: 700;
       letter-spacing: -0.36px;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -72,8 +79,8 @@ const S = {
       display: flex;
       height: 20px;
       padding-top: 3px;
-      font-size: 13px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       line-height: 20px;
       letter-spacing: -0.26px;
       .orange {
@@ -82,6 +89,70 @@ const S = {
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+      }
+    }
+
+    @media only screen and (max-width: 1059px) {
+      &:last-child {
+        margin-bottom: 0px;
+      }
+      > div {
+
+      }
+      .name {
+        font-size: 18px;
+      }
+      .label {
+        font-size: 14px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: calc(33.33% - 7px);
+      min-width: 110px;
+      margin-right: 10px;
+      float: left;
+      &:nth-child(3) {
+        margin-right: 0;
+      }
+      &:nth-child(6) {
+        margin-right: 0;
+      }
+      &:nth-child(7) {
+        margin-bottom: 0;
+      }
+      &:nth-child(8) {
+        margin-bottom: 0;
+      }
+      &:nth-child(9) {
+        margin-right: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: 599px) {
+      
+    }
+
+    @media only screen and (max-width: 479px) {
+      width: calc(50% - 5px);
+      &:nth-child(2) {
+        margin-right: 0;
+      }
+      &:nth-child(3) {
+        margin-right: 10px;
+      }
+      &:nth-child(4) {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+      &:nth-child(7) {
+        margin-right: 10px;
+        margin-bottom: 10px;
+      }
+      &:nth-child(8) {
+        margin-right: 0;
+        margin-bottom: 10px;
       }
     }
   `,

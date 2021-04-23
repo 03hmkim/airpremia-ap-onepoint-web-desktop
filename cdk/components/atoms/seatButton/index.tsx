@@ -117,6 +117,13 @@ const S = {
     &[disabeld] {
       cursor: default;
     }
+
+    @media only screen and (max-width: 479px) {
+      width: 24px;
+      .dot {
+        left: 10px;
+      }
+    }
   `,
 };
 

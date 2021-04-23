@@ -608,7 +608,7 @@ const S = {
         top: 33px;
         right: 0;
         button {
-          font-size: 12px;
+          font-size: 18px;
           font-weight: 600;
           line-height: 1.5;
           letter-spacing: -0.24px;
@@ -625,7 +625,7 @@ const S = {
       align-items: center;
       padding: 20px 0;
       border-bottom: 1px solid ${LIGHT_GRAY6};
-      font-size: 15px;
+      font-size: 18px;
       letter-spacing: -0.3px;
       color: ${DARK_GRAY1};
 
@@ -675,11 +675,13 @@ const S = {
       padding: 15px 0;
       top: 20px;
       left: -30px;
+
       .buttonWrapper {
         display: flex;
         align-items: center;
         height: 50px;
         padding-left: 25px;
+
         button {
           pointer-events: none;
           display: flex;
@@ -687,8 +689,9 @@ const S = {
           width: 100%;
           height: 100%;
           text-align: left;
-          font-size: 14px;
+          font-size: 18px;
           font-weight: 600;
+
           .label {
             padding-left: 8px;
           }
@@ -705,7 +708,17 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) { 
+      .subtitleWrapper {
+        .cardInfoButtonWrapper {
+          button {
+            font-size: 12px;
+          }
+        }
+      }
+
       .row {
+        font-size: 15px;
+
         .label {
           width: 90px;
           word-break: keep-all;
@@ -719,6 +732,7 @@ const S = {
           } 
         }
       }
+
       .selectButtonsWrapper {
         width: 200px;
 

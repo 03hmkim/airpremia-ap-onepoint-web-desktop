@@ -46,11 +46,19 @@ const S = {
       border: solid 1px ${DARK_GRAY1};
       background-color: ${WHITE1};
       .label {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 1.4;
         letter-spacing: -0.32px;
         color: ${DARK_GRAY1};
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      a {
+        .label {
+          font-size: 14px;
+        }
       }
     }
   `,

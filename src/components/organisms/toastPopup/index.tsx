@@ -50,6 +50,10 @@ const S = {
     z-index: ${ifProp('isShow', 1000, -5)};
     opacity: ${ifProp('isShow', 1, 0)};
     transition: ${ifProp('isShow', 'all 0.2s ease-in')};
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
   `,
 
   wrapper: styled.div`

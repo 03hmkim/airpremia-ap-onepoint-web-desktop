@@ -45,24 +45,38 @@ const S = {
 
   title: styled.div`
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 15px;
     margin-left: 3px;
 
     h3 {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 22px;
       margin-left: 5px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      h3 {
+        font-size: 14px;
+      }
     }
   `,
 
   body: styled.div`
     p {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 28px;
       color: ${LIGHT_GRAY8};
+
       &::before {
         content: '- ';
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      p {
+        font-size: 13px;
+        font-weight: 300;
       }
     }
   `,

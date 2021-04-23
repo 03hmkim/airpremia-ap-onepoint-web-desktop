@@ -268,20 +268,12 @@ function CabinClassOneWay({
 
 const S = {
   container: styled.div`
-    max-width: 1400px;
-    padding: 0 100px;
     margin: 0 auto 60px;
     box-sizing: border-box;
 
     & > div {
       max-width: 1200px;
       width: 100%;
-    }
-    @media only screen and (max-width: 1059px) {
-      padding: 0 40px;
-    }
-    @media only screen and (max-width: 767px) { 
-      padding: 0 20px;
     }
   `,
 
@@ -304,7 +296,6 @@ const S = {
   Tickets: styled.div``,
 
   Ticket: styled.div`
-    /* margin-bottom: 20px; */
     display: flex;
     position: relative;
     justify-content: space-between;

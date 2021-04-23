@@ -16,9 +16,9 @@ const S1 = {
     padding: 40px 30px 29px;
     box-sizing: border-box;
     .title {
-      font-size: 30px;
+      font-size: 40px;
       line-height: 1.2;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.3px;
       color: ${DARK_GRAY1};
     }
     .tabsWrapper {
@@ -26,6 +26,15 @@ const S1 = {
       .tabWrapper + .tabWrapper {
         padding-left: 30px;
       }
+    }
+
+    @media only screen and (max-width: 1059px) {
+      height: 160px;
+        .title {
+          font-size: 26px;
+          line-height: 36px;
+          letter-spacing: -0.52px;
+        }
     }
   `,
   middle: styled.div`
@@ -58,6 +67,7 @@ const S1 = {
         padding: 30px 50px;
         .inputsWrapper {
           width: 449px;
+          margin: 0 auto;
           .inputWrapper + .inputWrapper {
             padding-top: 40px;
           }
@@ -95,6 +105,50 @@ const S1 = {
         }
       }
     }
+
+    @media only screen and (max-width: 1059px) {
+      height: calc(100vh - 240px);
+    }
+
+    @media only screen and (max-width: 767px) {
+      .innerWrapper {
+        flex-direction: column;
+        >div {
+          height: auto;
+        }
+        .left {
+          width: 100%;
+          display: inline-block;
+          border-bottom: 1px solid #dddddd;
+          overflow-y: visible;
+          &:last-child {
+            margin-right: 0;
+          }
+          .buttonWrapper {
+            width: 100%;
+            display: inline-block;
+          }
+        }
+        .right {
+          padding: 30px 30px;
+          border: 0;
+          overflow:visible
+        }
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      height: calc(100vh - 242px);
+      .innerWrapper {
+        .right {
+          padding: 30px;
+          .inputsWrapper {
+            width: 315px;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
   `,
   bottom: styled.div`
     display: flex;
@@ -126,7 +180,23 @@ const S1 = {
       .buttonWrapper {
         width: 160px;
         height: 50px;
-        font-size: 16px;
+        font-size: 18px;
+      }
+    }
+
+    @media only screen and (max-width: 1059px) {
+      .buttonsWrapper {
+        .buttonWrapper {
+          font-size: 14px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      .buttonsWrapper {
+        .buttonWrapper {
+          width: 140px;
+        }
       }
     }
   `,

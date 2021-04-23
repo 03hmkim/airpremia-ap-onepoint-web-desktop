@@ -100,30 +100,31 @@ const S = {
         }
       }
       .title {
-        font-size: 20px;
+        font-size: 21px;
         font-weight: bold;
         letter-spacing: -0.4px;
         color: ${DARK_GRAY1};
       }
       .defaultDescription {
-        font-size: 15px;
+        padding-top: 5px;
+        font-size: 18px;
         letter-spacing: -0.3px;
         color: ${LIGHT_GRAY6};
-        padding-top: 5px;
+        line-height: 26px;
       }
     }
     .totalFeeRaw {
-      font-size: 14px;
-      line-height: 2.14;
+      font-size: 18px;
+      line-height: 26px;
       letter-spacing: -0.28px;
       text-align: right;
       color: ${LIGHT_GRAY7};
       text-decoration: line-through;
     }
     .totalFee {
-      font-size: 16px;
+      font-size: 18px;
+      line-height: 26px;
       font-weight: 600;
-      line-height: 1.65;
       letter-spacing: -0.32px;
       color: ${ORANGE2};
     }

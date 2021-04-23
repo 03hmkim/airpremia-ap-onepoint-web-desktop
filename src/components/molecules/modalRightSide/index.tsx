@@ -64,13 +64,22 @@ const S = {
     z-index: 110;
     position: fixed;
     right: 0;
+
+    @media only screen and (max-width: 1059px) {
+      width: 100%;
+      position: fixed;
+    }
   `,
 
   xButtonWrapper: styled.div`
     position: absolute;
     right: 45px;
-    top: 58px;
+    top: 48px;
     z-index: 150;
+
+    @media only screen and (max-width: 1059px) {
+      top: 42px;
+    }
   `,
 };
 

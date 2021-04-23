@@ -214,9 +214,6 @@ Footer.defaultProps = {};
 
 const S = {
   container: styled.footer`
-    /* max-width: 1920px; */
-    /* min-width: 1440px; */
-
     width: 100%;
     margin: 0 auto;
     background-color: ${LIGHT_GRAY1};
@@ -253,8 +250,6 @@ const S = {
     .wrapper {
       margin: 0 auto;
       padding: 50px 80px 60px;
-      max-width: 1920px;
-      box-sizing: border-box;
       z-index: -1;
 
       .top {
@@ -380,6 +375,13 @@ const S = {
       }
     }
 
+    @media only screen and (max-width: 1430px) {
+    .wrapper {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
     
     @media only screen and (max-width: 1380px) {
       .wrapper {

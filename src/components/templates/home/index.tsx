@@ -64,7 +64,7 @@ const S = {
   container: styled.div<IStyleProps>`
     max-width: 100% !important;
     padding: 0 !important;
-    margin-bottom: 160px;
+    margin-top: 0 !important;
 
     .innerWrapper {
       box-sizing: border-box;

@@ -42,10 +42,16 @@ TimeLimitPromotionCard.defaultProps = {};
 const S = {
   container: styled.div<IStyleProps>`
     .imgWrapper {
-      width: 350px;
+      min-width: 150px;
+      max-width: 350px;
       height: 500px;
       border-radius: 12px;
       overflow: hidden;
+      
+      @media only screen and (max-width: 1059px) {
+        width: 100%;
+        height: 100%;
+      }
       img {
         display: block;
         width: 100%;
@@ -55,18 +61,34 @@ const S = {
     .descriptionWrapper {
       padding-top: 30px;
       .title {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 18px;
+        font-family: 'NotoSans';
+        font-weight: 400;
         line-height: 1.5;
         letter-spacing: -0.32px;
         color: ${DARK_GRAY1};
+
+        @media only screen and (max-width: 767px) {
+          font-size: 16px;
+          line-height: 26px;
+          letter-spacing: -0.032em;
+          text-align: center;
+        }
       }
       .time {
         padding-top: 10px;
-        font-size: 13px;
-        line-height: 1.5;
+        font-size: 18px;
+        font-family: 'Heebo';
+        line-height: 1.8;
         letter-spacing: -0.26px;
         color: ${LIGHT_GRAY7};
+
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+          line-height: 26px;
+          letter-spacing: -0.028em;
+          text-align: center;
+        }
       }
     }
   `,

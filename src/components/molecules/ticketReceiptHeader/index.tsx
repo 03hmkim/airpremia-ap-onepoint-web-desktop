@@ -36,16 +36,20 @@ const S = {
   `,
 
   title: styled.div`
-    font-size: 18px;
+    font-size: 22px;
     line-height: 1.5;
     letter-spacing: -0.36px;
     color: ${DARK_GRAY1};
+
+    @media only screen and (max-width: 767px) {
+      font-size: 18px;
+    }
   `,
 
   row: styled.div`
     display: flex;
     padding-top: 5px;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: 600;
     line-height: 1.5;
     letter-spacing: -0.28px;
@@ -63,6 +67,10 @@ const S = {
         height: 10px;
         background-color: ${LIGHT_GRAY5};
       }
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
     }
   `,
 };

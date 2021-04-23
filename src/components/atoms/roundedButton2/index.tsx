@@ -52,8 +52,8 @@ const S = {
     height: 30px;
     padding: 0 19px;
     box-sizing: border-box;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
     text-align: center;
     border-radius: 15px;
     border: 1px solid;
@@ -74,6 +74,10 @@ const S = {
         border-color: ${BLUE1};
       `,
     })}
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
 };
 

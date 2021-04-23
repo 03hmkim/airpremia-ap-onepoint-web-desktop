@@ -135,6 +135,7 @@ const S = {
     /* height: 116px; */
     height: 100%;
     flex-wrap: wrap;
+
     .radio {
       display: flex;
 
@@ -147,6 +148,7 @@ const S = {
 
     .ey {
       border-right: dotted 1px ${LIGHT_GRAY6};
+
       .radio > div:last-of-type {
         color: ${BLUE1};
       }
@@ -155,6 +157,18 @@ const S = {
     .pe {
       .radio > div:last-of-type {
         color: ${ORANGE2};
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .ey {
+        border-right: 0;
+      }
+
+      .radio {  
+        & > div:last-of-type {
+          font-size: 14px;
+        }
       }
     }
   `,
@@ -167,6 +181,7 @@ const S = {
     height: 116px;
     border-radius: 12px;
     border: solid 1px ${LIGHT_GRAY4};
+
     & > div {
       flex: 1;
       padding: 36px 40px;
@@ -190,6 +205,7 @@ const S = {
   `,
 
   startPrice: styled.div`
+    font-family: 'heebo';
     font-size: 24px;
     line-height: 35px;
     letter-spacing: -0.48px;
@@ -197,10 +213,18 @@ const S = {
     color: ${DARK_GRAY1};
 
     span {
+      font-family: 'NotoSans';
       font-size: 16px;
       line-height: 35px;
       letter-spacing: -0.32px;
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      span {
+        font-size: 14px;
+      }
     }
   `,
 

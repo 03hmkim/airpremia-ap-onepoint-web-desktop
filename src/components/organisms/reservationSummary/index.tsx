@@ -71,7 +71,7 @@ function ReservationSummary({
   return (
     <S.container>
       <div className="titleWrapper">
-        <S.title className="font-bold">
+        <S.title>
           {ticketTitle}
         </S.title>
         {/* <div className="linkTextWrapper">
@@ -108,18 +108,23 @@ const S = {
       align-items: flex-end;
       .linkTextWrapper {
         padding-bottom: 1px;
-        font-size: 12px;
+        font-size: 18px;
         color: ${LIGHT_GRAY7};
       }
     }
     .descriptionWrapper {
       display: flex;
       padding-top: 10px;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 18px;
+      font-family: 'NotoSans';
+      font-weight: 700;
       line-height: 1.43;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY8};
+
+      @media only screen and (max-width: 767px) {
+        font-size: 14px;
+      }
       .recordLocator {
         position: relative;
         padding-left: 17px;
@@ -155,15 +160,24 @@ const S = {
         color: ${DARK_GRAY1};
         .label {
           font-size: 18px;
-          font-weight: 600;
+          font-family: 'NotoSans';
+          font-weight: 700;
           line-height: 1.56;
           letter-spacing: -0.36px;
+
+          @media only screen and (max-width: 767px) {
+            font-size: 14px;
+          }
         }
         .value {
           font-size: 26px;
           font-weight: 600;
           line-height: 1.04;
           letter-spacing: -0.52px;
+
+          @media only screen and (max-width: 767px) {
+            font-size: 14px;
+          }
           &.orange {
             color: ${ORANGE2};
           }
@@ -171,16 +185,25 @@ const S = {
             padding-left: 6px;
             font-size: 18px;
             letter-spacing: -0.36px;
+
+            @media only screen and (max-width: 767px) {
+              font-size: 14px;
+            }
           }
         }
       }
     }
   `,
   title: styled.div`
-    font-size: 22px;
+    font-size: 24px;
     line-height: 1.55;
     letter-spacing: -0.44px;
+    font-weight: 600;
     color: ${DARK_GRAY1};
+
+    @media only screen and (max-width: 767px) {
+      font-size: 20px;
+    }
   `,
 };
 

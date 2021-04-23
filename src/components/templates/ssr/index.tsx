@@ -101,7 +101,7 @@ const S = {
       }
     }
     .subtitle {
-      font-size: 18px;
+      font-size: 24px;
       letter-spacing: -0.36px;
       color: ${DARK_GRAY1};
     }
@@ -136,6 +136,10 @@ const S = {
 
     @media only screen and (max-width: 767px) { 
       padding: 20px 20px 0;
+
+      .subtitle {
+        font-size: 22px;
+      }
     }
   `,
 };
