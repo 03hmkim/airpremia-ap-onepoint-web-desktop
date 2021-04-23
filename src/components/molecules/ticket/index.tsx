@@ -138,6 +138,73 @@ const S = {
         padding-left: 4px;
       }
     }
+
+    @media only screen and (max-width: 1059px) { 
+      display: block;
+
+      .left{
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .right{
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      .left {
+        height: auto;
+        display: block;
+        overflow: hidden;
+
+        .value {
+          font-size: 16px;
+        }
+        .originWrapper {
+          width: calc( 50% - 70px );
+          float: left;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .flightIconWrapper {
+          width: 100px;
+          float: left;
+        }
+        .destinationWrapper {
+          width: calc(50% - 70px);
+          float: left;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          flex-direction: column;
+        }
+        .startTimeWrapper {
+          width: 50%;
+          margin-top: 20px;
+          clear: both;
+          float: left;          
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          flex-direction: column;
+        }
+        .classTypeWrapper{
+          width: 50%;
+          margin-top: 20px;
+          float: left;
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          flex-direction: column;
+        }
+      }
+    }
   `,
 };
 

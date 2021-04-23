@@ -46,6 +46,12 @@ const S = {
     display: flex;
     justify-content: space-between;
     margin-top: 65px;
+
+    @media only screen and (max-width: 1059px) {
+      height: auto;
+      display: block;
+      overflow: hidden;
+    }
   `,
   mileageWrapper: styled.div`
     margin-top: 80px;
@@ -55,6 +61,13 @@ const S = {
     margin-right: 60px;
     padding-bottom: 90px;
     border-bottom: 2px solid ${DARK_GRAY1};
+
+    @media only screen and (max-width: 1059px) {
+      width: 100%;
+      margin-right: 0;
+      padding-bottom: 0;
+      margin-bottom: 40px;
+    }
   `,
   payMethodWrapper: styled.div``,
 

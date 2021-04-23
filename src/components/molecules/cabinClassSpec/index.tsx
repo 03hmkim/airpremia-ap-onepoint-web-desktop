@@ -66,6 +66,10 @@ const S = {
     flex-direction: column;
     height: 253px;
     /* @TODO: 이렇게 분자 컴포넌트에서는 height 100%로 주는게 좋을듯 싶은데 storybook에서 깨지는 문제가 있어서 일단은 px로 줬음 */
+
+    @media only screen and (max-width: 767px) { 
+      height: auto;
+    }
   `,
 
   top: styled.div`
@@ -99,6 +103,11 @@ const S = {
       font-size: 14px;
       line-height: 25px;
       letter-spacing: -0.28px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      margin-top: 2vw;
+      margin-left: 10px;
     }
   `,
 };

@@ -120,8 +120,9 @@ const S = {
       display: flex;
       justify-content: space-between;
       padding-top: 30px;
+
       .agreeButtonWrapper {
-        width: 285px;
+        width: calc(25% - 10px);
       }
     }
     .agreeCheckboxWrapper {
@@ -132,6 +133,34 @@ const S = {
       width: 300px;
       margin: 0 auto;
     }
+
+    @media only screen and (max-width: 767px) { 
+      .tickets {
+        padding: 0 20px;
+        margin-top: 40px;
+      }
+      .agreeButtonsWrapper {
+        display: block;
+        height: auto;
+        overflow: hidden;
+
+        .agreeButtonWrapper {
+          width: calc(50% - 5px);
+          margin-bottom: 10px;
+          float: left;
+
+          &:nth-child(even){
+            float: right;
+          }
+        }
+      }
+      .agreeCheckboxWrapper {
+        padding-top: 10px;
+      }
+      .nextButtonWrapper {
+        padding-top:40px;
+      }
+  }
   `,
 };
 

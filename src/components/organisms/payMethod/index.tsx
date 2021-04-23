@@ -669,7 +669,7 @@ const S = {
       }
     }
     .selectButtonsWrapper {
-      width: 593px;
+      width: 400px;
       max-height: 209.8px;
       overflow: auto;
       padding: 15px 0;
@@ -702,6 +702,42 @@ const S = {
       position: absolute;
       top: 19px;
       right: 0;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      .row {
+        .label {
+          width: 90px;
+          word-break: keep-all;
+          line-height: 1.5em;
+        }
+        .value {
+          padding-left: 10px;
+          line-height: 1.5em;
+          input {
+            font-size: 14px;
+          } 
+        }
+      }
+      .selectButtonsWrapper {
+        width: 200px;
+
+        .buttonWrapper {
+          height: 40px;
+          padding-left: 15px;
+
+          button {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      .cashReceiptWrapper {
+        width: 90px;
+        top: 8px;
+      }
     }
   `,
   adoptButton: styled.button<IStyleProps>`

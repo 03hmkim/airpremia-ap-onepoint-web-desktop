@@ -60,6 +60,27 @@ const S = {
         font-weight: 600;
       }
     }
+
+    @media only screen and (max-width: 767px) { 
+      p {
+        width: 100%;
+        flex: 1;
+        line-height: 1.5em;
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      display: block;
+
+      .radio-wrapper {
+        width: 100%;
+        margin-top: 10px;
+        margin-right: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
   `,
 };
 

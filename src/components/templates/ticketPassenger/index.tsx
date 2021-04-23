@@ -43,6 +43,10 @@ const S = {
   euCitizenRadio: styled.div`
     padding-left: 320px;
     margin-bottom: 80px;
+
+    @media only screen and (max-width: 1059px) {
+      padding-left: 0px;
+    }
   `,
 
   taskButton: styled.div`

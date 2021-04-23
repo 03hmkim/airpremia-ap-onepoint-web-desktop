@@ -123,7 +123,8 @@ function CabinClassTicket({
 
 const S = {
   container: styled.div`
-    width: 800px;
+    width: 100%;
+    flex: 1;
   `,
 
   selectBox: styled.div`
@@ -174,6 +175,18 @@ const S = {
       justify-content: space-between;
       align-items: center;
     }
+
+    @media only screen and (max-width: 767px) { 
+      height: auto;
+      padding: 14px 0;
+      display: block;
+
+      & > div{
+        width: 100%;
+        padding: 6px 20px;
+        float: left;
+      }
+    }
   `,
 
   startPrice: styled.div`
@@ -192,10 +205,16 @@ const S = {
   `,
 
   expansionPanel: styled.div`
+    width: 100%;
+    max-width: 1200px;
     position: relative;
     top: 20px;
-    left: -400px;
-    width: 1200px;
+    left: 0px;
+    
+    @media only screen and (max-width: 1440px) { 
+      width: 100%;
+      left: 0px;      
+    }
   `,
 
   soldout: styled.div`
@@ -225,6 +244,10 @@ const S = {
     }};
     max-height: ${ifProp('isShow', '366', 0)}px;
     transition: all 0.3s;
+
+    @media only screen and (max-width: 767px) { 
+      max-height: ${ifProp('isShow', '1500', 0)}px;
+    }
   `,
 };
 

@@ -274,12 +274,29 @@ const S = {
     box-sizing: border-box;
 
     & > div {
-      width: 1200px;
+      max-width: 1200px;
+      width: 100%;
+    }
+    @media only screen and (max-width: 1059px) {
+      padding: 0 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 0 20px;
     }
   `,
 
   Title: styled.div`
     padding: 60px 0 100px;
+
+    @media only screen and (max-width: 1059px) {
+      font-size: 26px;
+      padding: 6vw 0 12vw;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 20px;
+      padding: 3vw 0 6vw;
+    }
   `,
 
   RowTablePriceByDate: styled.div``,
@@ -298,8 +315,13 @@ const S = {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
     & > div:not(:first-of-type) {
       margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 1440px) {
+      display: block;
     }
   `,
 

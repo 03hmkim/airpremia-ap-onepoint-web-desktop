@@ -369,6 +369,12 @@ const S = {
     top: 10px;
     left: 0;
     z-index: 10;
+
+    @media only screen and (max-width: 767px) { 
+      width: ${prop('width', '300px')};
+      left: auto;
+      right: 0px;
+    }
   `,
 
   wrapper: styled.div`
@@ -397,6 +403,11 @@ const S = {
       border-radius: 4px;
       z-index: 15;
       padding-inline-start: 14px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      width: calc(100% - 40px);
+      margin: 0 20px;
     }
   `,
 

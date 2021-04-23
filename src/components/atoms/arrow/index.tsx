@@ -76,6 +76,19 @@ const S = {
         stroke: ${prop('color', DARK_GRAY1)};
         stroke-linejoin: round;
       }
+      @media only screen and (max-width: 767px) { 
+        position: absolute;
+        right: 0;
+        top: 50%;
+        margin-top: -20px;
+        width: 40px;
+        height: 40px;
+        background: rgba(0,0,0,.2);
+
+        &:first-child {
+          left: 0;
+        }
+      }
     }
   `,
 };

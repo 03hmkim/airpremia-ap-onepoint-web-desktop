@@ -20,8 +20,11 @@ const S = {
     box-sizing: border-box;
     padding: 13px 20px 13px 30px;
     border-radius: 8px;
-
     background-color: ${prop('backgroundColor', WHITE1)};
+
+    @media only screen and (max-width: 767px) { 
+      height: auto;
+    }
   `,
 };
 
