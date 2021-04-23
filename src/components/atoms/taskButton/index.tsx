@@ -5,6 +5,7 @@ import { darken } from 'polished';
 import { prop } from 'styled-tools';
 import {
   LIGHT_GRAY6,
+  LIGHT_GRAY7,
   WHITE1,
   DARK_BLUE1,
 } from '@airpremia/cdk/styles/colors';
@@ -55,9 +56,8 @@ const S = {
   )`
     width: 100%;
     height: 50px;
-    padding: 14px 0;
-    font-size: inherit;
-    font-weight:  ${prop('fontWeight', 600)};
+    font-size: 18px;
+    font-weight: 700;
     line-height: 1.47;
     letter-spacing: -0.3px;
     border-radius: 8px;
@@ -70,6 +70,12 @@ const S = {
     )};
     color: ${prop('color', WHITE1)};
 
+    &.line {
+      color: ${LIGHT_GRAY7};
+      border: solid 1px ${LIGHT_GRAY7};
+      background-color: ${WHITE1};
+    }
+
     &:hover {
       ${(param) => {
         const bgColor = get(param, 'backgroundColor');
@@ -80,10 +86,6 @@ const S = {
           )};
         `;
       }}
-    }
-
-    @media only screen and (max-width: 1059px) {
-      padding: 8px 0;
     }
 
     ${({ disabled }) =>
@@ -100,6 +102,11 @@ const S = {
 
     &.short{
       width: 140px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+      font-weight: 400;
     }
 
   `,

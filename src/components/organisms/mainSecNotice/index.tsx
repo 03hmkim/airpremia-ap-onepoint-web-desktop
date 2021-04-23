@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { 
   DARK_GRAY1,
   LIGHT_GRAY5,
-  LIGHT_GRAY7, 
+  LIGHT_GRAY8, 
 } from '@airpremia/cdk/styles/colors';
 
 function MainSecNotice () {
@@ -79,7 +79,7 @@ const S = {
 
       .desc {
         margin-top: 10px;
-        color: ${LIGHT_GRAY7};
+        color: ${LIGHT_GRAY8};
         font-size: 18px;
         display: block;
         overflow: hidden;
@@ -92,7 +92,7 @@ const S = {
     .date {
       margin-top: 20px;
       float: right;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
       font-size: 18px;
     }
 

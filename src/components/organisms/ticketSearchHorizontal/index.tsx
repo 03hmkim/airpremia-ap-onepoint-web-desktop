@@ -17,7 +17,6 @@ import {
   LIGHT_GRAY5,
   LIGHT_GRAY8,
   LIGHT_GRAY1,
-  LIGHT_GRAY7,
 } from '@airpremia/cdk/styles/colors';
 import {
   DatePickerRange,
@@ -129,8 +128,11 @@ const TicketSearchHorizontal: FC<IProps> = ({
                 type={EScrollType.TYPE1}
                 title={
                   <S.modalTitle>
-                    <PopupTitle>국내선을 이용하시는 고객님께
-                      안내 드립니다.
+                    <PopupTitle>
+                      <>
+                        국내선을 이용하시는 고객님께<span className="textEnter" />
+                        안내 드립니다.
+                      </>
                     </PopupTitle>
                   </S.modalTitle>
                 }
@@ -143,11 +145,7 @@ const TicketSearchHorizontal: FC<IProps> = ({
                 }
                 button={
                   <S.btnArea className="twin">
-                    <TaskButton 
-                      color={LIGHT_GRAY7}
-                      border={`solid 1px ${LIGHT_GRAY7}`}
-                      backgroundColor={WHITE1}
-                      onClick={onHideNewModal}>취소</TaskButton>
+                    <TaskButton className="line" onClick={onHideNewModal}>취소</TaskButton>
                     <TaskButton onClick={goBooking}>확인</TaskButton>
                   </S.btnArea>
                 }
@@ -324,7 +322,7 @@ const S = {
     }
     .selectsWrapper {
       width: calc(100% - 170px);
-      height: 54px;
+      height: 48px;
       border: 1px solid ${DARK_GRAY1};
       border-radius: 8px;
       background-color: ${WHITE1};
@@ -372,7 +370,6 @@ const S = {
       font-size: 18px;
       padding-left: 10px;
       width: 160px;
-      height: 56px;
     }
 
     .currency {
@@ -420,79 +417,109 @@ const S = {
     }
 
     @media only screen and (max-width: 1059px) {
-    .bottom {
-      flex-direction: column;
-    }
-    .selectsWrapper {
-      width: calc(100% - 41px);
-      height: 40px;
-      flex-direction: column;
-      border: 0px;
-      .selectWrapper {
-        width: 100%;
-        padding: 8px 20px;
-        border: 1px solid #222222;
-        border-radius: 8px;
-        margin-bottom: 20px;
-        &:before {
-          display: none;
-        }
-        &:last-child {
-          margin-bottom: 0px;
-        }
+      .bottom {
+        flex-direction: column;
       }
-      .selectWrapper + .selectWrapper {
-        padding-left: 20px;
-      }
-    }
-    .buttonWrapper {
-      width: 100%;
-      height: 40px;
-      margin-top: 200px;
-      padding-left: 0px;
-      font-size: 16px;
-    }
-    .menuWrapper {
-      width: 100%;
-      &.station {
-        width: calc(100% - -42px);
-        left: -21px;
-      }
-      &.passenger {
-        width: calc(100% - -42px);
-      }
-      &.date {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border: 0;
-        z-index: 100;
-        border-radius: 0;
+      .selectsWrapper {
+        width: calc(100% - 41px);
+        height: 40px;
+        flex-direction: column;
+        border: 0px;
 
-        >div{
+        .selectWrapper {
           width: 100%;
-          height: 100%;
-          padding: 10px 10px 25px;
+          padding: 8px 20px;
+          border: 1px solid #222222;
+          border-radius: 8px;
+          margin-bottom: 20px;
 
-          .calendar-inner{
-            flex-direction: column;
+          &:before {
+            display: none;
+          }
 
-            .body {
-              .row .box{
-                width: 14.28%;
-                padding: 0;
+          &:last-child {
+            margin-bottom: 0px;
+          }
+        }
+
+        .selectWrapper + .selectWrapper {
+          padding-left: 20px;
+        }
+      }
+
+      .buttonWrapper {
+        width: 100%;
+        height: 40px;
+        margin-top: 200px;
+        padding-left: 0px;
+        font-size: 16px;
+      }
+
+      .menuWrapper {
+        width: 100%;
+
+        &.station {
+          width: calc(100% - -42px);
+          left: -21px;
+        }
+
+        &.passenger {
+          width: calc(100% - -42px);
+        }
+
+        &.date {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 0;
+          z-index: 100;
+          border-radius: 0;
+  
+          > div{
+            width: 100%;
+            height: 100%;
+            padding: 25px 25px 0;
+
+            .calendar-inner {
+              height: calc(100% - 91px);
+              padding-bottom: 25px;
+              overflow-y: auto;
+              overflow-x: hidden;
+              flex-direction: column;
+              box-sizing: border-box;
+
+              > div:first-of-type {
+                margin-right: 0;
+                margin-bottom: 20px;
               }
-              .row:first-of-type {
-                margin: 0;
-                height: 20px;
+  
+              .body {
+                .row .box{
+                  width: 14.28%;
+                  padding: 0;
+                }
+                .row:first-of-type {
+                  margin: 0;
+                  height: 20px;
+                }
               }
+            }
+
+            .calendar-info{
+              width: calc(100% - 50px);
+              height: 40px;
+              padding: 25px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              border-top: 1px solid ${LIGHT_GRAY5};
             }
           }
         }
       }
-    }
     }
     
     @media only screen and (max-width: 999px) {
@@ -508,6 +535,20 @@ const S = {
         .select {
           font-size: 16px;
           padding: 0 0 0 10px;
+        }
+      }
+
+      .menuWrapper {
+        &.date {
+          > div{
+            padding: 25px 10px 0;
+
+            .calendar-info{
+              width: calc(100% - 30px);
+              height: 60px;
+              padding: 15px 15px;
+            }
+          }
         }
       }
     }
@@ -579,7 +620,8 @@ const S = {
   `,
 
   //추가
-  modalTitle : styled.div``,
+  modalTitle : styled.div`
+  `,
   textArea: styled.div``,
 
   btnArea: styled.div`

@@ -19,7 +19,7 @@ export const CustomerAlert = [
     text: (
       <div>
         <U.text>
-          인터넷 국내선 항공권 구입시에는 예약과 동시에 구매하셔야합니다.
+          인터넷 국내선 항공권 구입시에는 예약과 동시에 구매하셔야합니다.<span className="textEnter" />
           구매하지 않으시면 예약이 완료되지 않습니다.
         </U.text>
       </div>

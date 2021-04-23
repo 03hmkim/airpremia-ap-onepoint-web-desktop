@@ -21,7 +21,7 @@ function TabContent({currIdxCont}: IProps) {
             변경 수수료
           </U.title>
           <U.text>
-            변경 수수료는 편도당 한 명의 승객에게 부과되는 비용입니다. 날짜 변경으로 발생하는<br />항공권 금액의 차이는 수수료와 별도로 결제하셔야 합니다.​
+            변경 수수료는 편도당 한 명의 승객에게 부과되는 비용입니다. 날짜 변경으로 발생하는<span className="block" />항공권 금액의 차이는 수수료와 별도로 결제하셔야 합니다.​
           </U.text>
           <U.content>
             <ul>
@@ -319,17 +319,35 @@ const U = {
   title: styled.p`
     margin-bottom: 20px;
     color: ${DARK_GRAY1};
-    font-size: 18px;
+    font-size: 21px;
     font-weight: bold;
-    line-height: 1.9;
+    line-height: 1.8em;
     letter-spacing: -0.4px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
   text: styled.div`
     margin-bottom: 30px;
     color: ${LIGHT_GRAY8};
-    font-size: 14px;
-    line-height: 1.9;
+    font-size: 18px;
+    line-height: 1.8em;
     letter-spacing: -0.3px;
+
+    .block {
+      display: block;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+      font-weight: 300;
+
+      .block {
+        margin-left: 4px;
+        display: inline-block;
+      }
+    }
   `,
   content: styled.div`
     border-top: 2px solid ${DARK_GRAY1};
@@ -337,6 +355,14 @@ const U = {
       li {
         padding: 30px 0;
         border-bottom: 1px solid ${LIGHT_GRAY5};
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      ul {
+        li {
+          padding: 20px 0;
+        }
       }
     }
   `
@@ -358,31 +384,54 @@ const T = {
   table: styled.div`
     table {
       width: 100%;
+
+      font-size: 18px;
+      line-height: 1.36em;
+
       th,
       td,
       td strong {
         color: ${DARK_GRAY1};
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 1.6;
         letter-spacing: -0.3px;
       }
+
       td strong {
         margin-top: 30px;
         display: block;
+
         &:first-of-type {
           margin-top: 0;
         }
       }
-      td{
+
+      th {
+        padding: 0 3px;
+        font-weight: 700;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+      }
+
+      td {
+        padding: 0 3px;
+
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child {
+          padding-right: 0;
+        }
+
         .txt {
           margin-top: 10px;
           p {
             position: relative;
             color: ${LIGHT_GRAY8};
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 1.9;
+            font-weight: 400;
             letter-spacing: -0.3px;
             &.iLine{
               padding-left: 8px;
@@ -396,6 +445,14 @@ const T = {
             }
           }
         }
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      table {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.36em;
       }
     }
   `,

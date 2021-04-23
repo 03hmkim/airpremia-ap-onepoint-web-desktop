@@ -18,7 +18,7 @@ interface IScrollProps extends IStyle {
   body?: ReactElement;
   sub?: ReactElement;
   button?: ReactElement;
-  tab?: any;
+  tabmenu?: string;
 }
 
 export interface IProps extends IScrollProps {
@@ -28,10 +28,10 @@ export interface IProps extends IScrollProps {
 
 const Type1: FC<IScrollProps> = ({
   body,
-  tab,
+  tabmenu,
 }: IScrollProps) => (
   <Fragment>
-    <S.scroll className={tab}>
+    <S.scroll className={tabmenu}>
       <S.body>{body}</S.body>
     </S.scroll>
   </Fragment>
@@ -78,8 +78,8 @@ const S = {
     padding-top: 50px;
     height: 150px;
 
-    @media only screen and (max-height: 740px) { 
-      height: auto;
+    @media only screen and (max-width: 767px) { 
+      height: 80px;
     }
   `,
 
@@ -102,8 +102,8 @@ const S = {
       padding-right: 0;
     }
 
-    &.btnN{
-      height: calc(100% - 200px);
+    @media only screen and (max-width: 767px) {
+      height: calc(100% - 130px);
     }
   `,
 

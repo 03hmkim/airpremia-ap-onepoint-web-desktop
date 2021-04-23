@@ -103,7 +103,8 @@ function Confirm({}: IProps) {
       case 'rulePop1':
         return(
           <NewModal
-            tab="tabIs"
+            className="max"
+            tabmenu="tabIs"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -129,7 +130,8 @@ function Confirm({}: IProps) {
       case 'rulePop2':
         return(
           <NewModal
-            tab="tabIs"
+            className="max"
+            tabmenu="tabIs"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -155,7 +157,8 @@ function Confirm({}: IProps) {
       case 'rulePop3':
         return(
           <NewModal
-            tab="tabIs"
+            className="max"
+            tabmenu="tabIs"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -181,7 +184,8 @@ function Confirm({}: IProps) {
       case 'rulePop4':
         return(
           <NewModal
-            tab="tabIs"
+            className="max"
+            tabmenu="tabIs"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>

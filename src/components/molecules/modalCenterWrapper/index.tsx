@@ -19,7 +19,7 @@ export interface IProps extends IStyle {
   hasCloseButton?: boolean;
   onClose: () => void;
   onClickBackground: () => void;
-  children: ReactElement | null;
+  children: ReactElement | string | null;
   className: any;
 }
 
@@ -61,7 +61,7 @@ const S = {
 
   wrapper: styled.div`
     min-width: 320px;
-    max-width: 800px;
+    max-width: 640px;
     width: calc(100% - 100px);
     min-height: 300px;
     height: calc(100vh - 85px);
@@ -80,6 +80,10 @@ const S = {
         height: auto;
         padding-bottom: 50px;
       }
+    }
+
+    &.max {
+      max-width: 800px;
     }
 
     &.btnN{

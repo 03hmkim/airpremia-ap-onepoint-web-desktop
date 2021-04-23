@@ -13,6 +13,7 @@ import {
 } from '@airpremia/core/stores/models/bookingSession';
 import { useBooking } from '@airpremia/core/hooks';
 import { useModal } from 'src/hooks';
+import { EScrollType } from 'src/components/templates/centerPopup';
 import {
   NewModal,
   PopupTitle,
@@ -170,6 +171,8 @@ function PassengersDropdown({
       case 'ageCalculator':
         return (
           <NewModal
+            className="hAuto btnN"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>나이계산기</PopupTitle>

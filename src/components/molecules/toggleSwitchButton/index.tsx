@@ -102,10 +102,14 @@ const S = {
 
   content: styled.p`
     font-weight: 600;
-    font-size: 13px;
+    font-size: 18px;
     margin-left: 52px;
     line-height: 21px;
     letter-spacing: -0.26px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 13px;
+    }
   `,
 };
 

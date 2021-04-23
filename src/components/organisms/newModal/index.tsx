@@ -10,6 +10,7 @@ import { IProps as ICenterPopupProps } from 'src/components/templates/centerPopu
 interface IStyle {
   overflow?: 'hidden' | 'initial' | string;
   className?: string;
+  tabmenu?: string;
 }
 
 interface IProps extends IStyle {
@@ -20,6 +21,7 @@ interface IProps extends IStyle {
   hasCloseButton?: boolean;
   onClose?: () => void;
   onClickBackground?: () => void;
+  
 }
 /**
  * 단일 모달을 위한 컴포넌트
@@ -28,6 +30,7 @@ const NewModal: FC<IProps> = ({
   onClose,
   onClickBackground,
   hasCloseButton,
+  tabmenu,
   ...props
 }) => {
   const { onHideNewModal } = useModal();
@@ -48,6 +51,7 @@ const NewModal: FC<IProps> = ({
         >
           <CenterPopup
             className={props.className}
+            tabmenu={tabmenu}
             {...props}
           />
         </ModalCenterWrapper>,

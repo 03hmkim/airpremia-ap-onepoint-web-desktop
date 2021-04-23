@@ -19,7 +19,7 @@ PopupTitle.defaultProps = {};
 const S = {
   container: styled.div<IStyleProps>`
     padding-right: 40px;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 700;
     line-height: 48px;
     letter-spacing: -0.3px;
