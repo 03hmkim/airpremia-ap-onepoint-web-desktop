@@ -4,7 +4,6 @@ import {
   DARK_GRAY2,
   LIGHT_GRAY1,
   LIGHT_GRAY5,
-  LIGHT_GRAY7,
   LIGHT_GRAY8,
   DARK_GRAY1,
 } from '@airpremia/cdk/styles/colors';
@@ -26,7 +25,7 @@ import {
 } from '@airpremia/core/hooks';
 import { EFlightType } from '@airpremia/core/stores/models/bookingSession';
 import { ESelectType } from 'src/hooks/useBooking/useBookingSession';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { ESelectPosition } from 'src/components/molecules/select';
 import { ifProp } from 'styled-tools';
 import { NewModal, PopupTitle } from 'src/components';
@@ -119,33 +118,30 @@ function TicketSearchVertical({}: IProps) {
       case 'rulePop1':
         return(
           <NewModal
-            className="max"
-            type={EScrollType.TYPE8}
+            className="hAuto"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
-                <PopupTitle>국내선을 이용하시는 고객님께
-                  안내 드립니다.
+                <PopupTitle>
+                  <>
+                    국내선을 이용하시는 고객님께<span className="textEnter" />
+                    안내 드립니다.
+                  </>
                 </PopupTitle>
               </S.modalTitle>
             }
             body={
-              <>
-                <S.textArea className="auto">
-                  <Tab.box>
-                    {tabBox[0].text}
-                  </Tab.box>
-                </S.textArea>
-                <Fragment>
-                  <S.btnArea>
-                    <TaskButton 
-                      color={LIGHT_GRAY7}
-                      border={`solid 1px ${LIGHT_GRAY7}`}
-                      backgroundColor={WHITE1}
-                      onClick={onHideNewModal}>취소</TaskButton>
-                    <TaskButton onClick={goBooking}>확인</TaskButton>
-                  </S.btnArea>
-                </Fragment>
-              </>
+              <S.textArea>
+                <Tab.box>
+                  {tabBox[0].text}
+                </Tab.box>
+              </S.textArea>
+            }
+            button={
+              <S.btnArea className="twin">
+                <TaskButton className="line" onClick={onHideNewModal}>취소</TaskButton>
+                <TaskButton onClick={goBooking}>확인</TaskButton>
+              </S.btnArea>
             }
           />
         );
@@ -349,7 +345,7 @@ const S = {
       font-weight: 700;
 
       button {
-        padding: 16px 0;
+        height: 60px;
         border-radius: 70px;
 
         p {
@@ -440,6 +436,67 @@ const S = {
       }
     }
 
+    @media only screen and (max-width: 1300px) {
+      .menuWrapper {
+        &.date {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border: 0;
+          z-index: 100;
+          border-radius: 0;
+  
+          > div{
+            width: 100%;
+            height: 100%;
+            padding: 25px 25px 0;
+
+            .btn-close {
+              display: block !important;
+            }
+
+            .calendar-inner {
+              height: calc(100% - 91px);
+              padding-bottom: 25px;
+              overflow-y: auto;
+              overflow-x: hidden;
+              flex-direction: column;
+              box-sizing: border-box;
+
+              > div:first-of-type {
+                margin-right: 0;
+                margin-bottom: 20px;
+              }
+  
+              .body {
+                .row .box{
+                  width: 14.28%;
+                  padding: 0;
+                }
+                .row:first-of-type {
+                  margin: 0;
+                  height: 20px;
+                }
+              }
+            }
+
+            .calendar-info{
+              width: calc(100% - 50px);
+              height: 40px;
+              padding: 25px;
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              border-top: 1px solid ${LIGHT_GRAY5};
+            }
+          }
+        }
+      }
+    }
+
     @media only screen and (max-width: 1059px) {
       .menuWrapper {
         &.passenger {
@@ -461,7 +518,7 @@ const S = {
 
       .bottom {
         button {
-          padding: 8px 0;
+          height: 50px;
 
           .text {
             font-size: 16px;
@@ -478,12 +535,25 @@ const S = {
           }
         }
       }
+
       .menuWrapper {
         &.station,
         &.passenger {
           width: 100%;
           top: 15px;
           left: 0;
+        }
+        
+        &.date {
+          > div{
+            padding: 25px 10px 0;
+
+            .calendar-info{
+              width: calc(100% - 30px);
+              height: 60px;
+              padding: 15px 15px;
+            }
+          }
         }
       }
     }
@@ -530,24 +600,9 @@ const S = {
    //추가
    modalTitle : styled.div``,
    textArea: styled.div`
-     height: 100%;
-     &.auto{
-       padding: 0 50px 50px;
-       overflow-y: auto;
-       box-sizing: border-box;
-     }
    `,
  
    btnArea: styled.div`
-     padding: 25px 50px;
-     position: absolute;
-     left: 0;
-     right: 0;
-     bottom: 0;
-     border-top: 1px solid ${LIGHT_GRAY5};
-     &.auto{
-       position: static;
-     }
    `,
 };
 const Tab = {

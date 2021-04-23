@@ -7,7 +7,6 @@ import {
   LIGHT_GRAY1,
   LIGHT_GRAY6,
   LIGHT_GRAY8,
-  LIGHT_GRAY7,
   LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
 
@@ -225,11 +224,11 @@ const S = {
       font-size: 18px;
     }
     a {
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
     }
     li {
       margin-bottom: 15px;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
       font-size: 16px;
       letter-spacing: -0.5px;
     }
@@ -374,7 +373,7 @@ const S = {
         }
         .copy-right {
           font-size: 16px;
-          color: ${LIGHT_GRAY7};
+          color: ${LIGHT_GRAY8};
           font-weight: 600;
           letter-spacing: -0.26px;
         }

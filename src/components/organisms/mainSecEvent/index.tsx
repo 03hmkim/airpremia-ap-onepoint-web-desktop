@@ -3,7 +3,7 @@ import {
   WHITE1,
   LIGHT_GRAY2,
   LIGHT_GRAY5,
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   DARK_GRAY1,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
@@ -113,7 +113,7 @@ const S = {
 
     .date {
       margin-top: 20px;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
       font-size: 18px;
       line-height: 1.3em;
     }

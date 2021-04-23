@@ -5,7 +5,7 @@ import {
   ORANGE1,
   DARK_GRAY1,
   LIGHT_GRAY2,
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
 } from '@airpremia/cdk/styles/colors';
 import { 
   BtnBlue,
@@ -68,7 +68,7 @@ const S = {
     .description {
       font-size: 18px;
       line-height: 30px;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
 
       strong{
         color: ${ORANGE1};

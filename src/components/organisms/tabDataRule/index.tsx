@@ -40,6 +40,13 @@ const S = {
       padding-left: 50px;
       padding-right: 50px;
     }
+
+    @media only screen and (max-width: 767px) { 
+      > div {
+        padding-left: 25px;
+        padding-right: 25px;
+      }
+    }
   `,
 };
 

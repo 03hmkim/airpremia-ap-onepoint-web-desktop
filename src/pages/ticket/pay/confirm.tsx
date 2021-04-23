@@ -25,7 +25,6 @@ import { TabDataRule } from 'src/components';
 import { EScrollType } from 'src/components/templates/centerPopup';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
   // ORANGE2
 } from '@airpremia/cdk/styles/colors';
 import { useScroll } from '@airpremia/core/hooks';
@@ -105,25 +104,26 @@ function Confirm({}: IProps) {
         return(
           <NewModal
             className="max"
-            type={EScrollType.TYPE8}
+            tabmenu="tabIs"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>항공권 규정</PopupTitle>
               </S.modalTitle>
             }
             body={
-              <>
-                <S.textArea>
-                  <Tab.textArea>
-                    <TabDataRule
-                      Idx={0}
-                    />
-                  </Tab.textArea>
-                </S.textArea>
-                <S.btnArea>
-                  <TaskButton onClick={onHideNewModal}>확인</TaskButton>
-                </S.btnArea>
-              </>
+              <S.textArea>
+                <Tab.textArea>
+                  <TabDataRule
+                    Idx={0}
+                  />
+                </Tab.textArea>
+              </S.textArea>
+            }
+            button={
+              <S.btnArea>
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+              </S.btnArea>
             }
           />
         );
@@ -131,25 +131,26 @@ function Confirm({}: IProps) {
         return(
           <NewModal
             className="max"
-            type={EScrollType.TYPE8}
+            tabmenu="tabIs"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>수하물 규정</PopupTitle>
               </S.modalTitle>
             }
             body={
-              <>
-                <S.textArea className="auto">
-                  <Tab.textArea>
-                    <TabDataRule
-                      Idx={1}
-                    />
-                  </Tab.textArea>
-                </S.textArea>
-                <S.btnArea>
-                  <TaskButton onClick={onHideNewModal}>확인</TaskButton>
-                </S.btnArea>
-              </>
+              <S.textArea>
+                <Tab.textArea>
+                  <TabDataRule
+                    Idx={1}
+                  />
+                </Tab.textArea>
+              </S.textArea>
+            }
+            button={
+              <S.btnArea>
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+              </S.btnArea>
             }
           />
         );
@@ -157,25 +158,26 @@ function Confirm({}: IProps) {
         return(
           <NewModal
             className="max"
-            type={EScrollType.TYPE8}
+            tabmenu="tabIs"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>항공 위험물품 안내</PopupTitle>
               </S.modalTitle>
             }
             body={
-              <>
-                <S.textArea className="auto">
-                  <Tab.textArea>
-                    <TabDataRule
-                      Idx={2}
-                    />
-                  </Tab.textArea>
-                </S.textArea>
-                <S.btnArea>
-                  <TaskButton onClick={onHideNewModal}>확인</TaskButton>
-                </S.btnArea>
-              </>
+              <S.textArea>
+                <Tab.textArea>
+                  <TabDataRule
+                    Idx={2}
+                  />
+                </Tab.textArea>
+              </S.textArea>
+            }
+            button={
+              <S.btnArea>
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+              </S.btnArea>
             }
           />
         );
@@ -183,7 +185,8 @@ function Confirm({}: IProps) {
         return(
           <NewModal
             className="max"
-            type={EScrollType.TYPE8}
+            tabmenu="tabIs"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>
@@ -192,26 +195,25 @@ function Confirm({}: IProps) {
               </S.modalTitle>
             }
             body={
-              <>
-                <S.textArea className="auto">
-                  <Tab.textArea>
-                    <TabDataRule
-                      Idx={3}
-                    />
-                  </Tab.textArea>
-                </S.textArea>
-                <S.btnArea>
-                  <TaskButton onClick={onHideNewModal}>확인</TaskButton>
-                </S.btnArea>
-              </>
+              <S.textArea>
+                <Tab.textArea>
+                  <TabDataRule
+                    Idx={3}
+                  />
+                </Tab.textArea>
+              </S.textArea>
+            }
+            button={
+              <S.btnArea>
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+              </S.btnArea>
             }
           />
         );
       case 'popDetailedCost':
         return(
           <NewModal
-            className="max"
-            type={EScrollType.TYPE9}
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>
@@ -220,16 +222,16 @@ function Confirm({}: IProps) {
               </S.modalTitle>
             }
             body={
-              <>
-                <S.textArea>
-                  <Tab.textArea>
-                    <TicketPayPopDetailedCost />
-                  </Tab.textArea>
-                </S.textArea>
-                <S.btnArea>
-                  <TaskButton onClick={onHideNewModal}>확인</TaskButton>
-                </S.btnArea>
-              </>
+              <S.textArea>
+                <Tab.textArea>
+                  <TicketPayPopDetailedCost />
+                </Tab.textArea>
+              </S.textArea>
+            }
+            button={
+              <S.btnArea>
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+              </S.btnArea>
             }
           />
         );
@@ -331,15 +333,6 @@ const S = {
   `,
 
   btnArea: styled.div`
-    padding: 25px 50px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid ${LIGHT_GRAY5};
-    &.auto{
-      position: static;
-    }
   `,
 };
 

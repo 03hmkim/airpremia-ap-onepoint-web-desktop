@@ -7,7 +7,7 @@ import { EPosition } from 'src/components/atoms/arrow';
 import { ifProp, prop } from 'styled-tools';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   WHITE1,
 } from '@airpremia/cdk/styles/colors';
 
@@ -144,7 +144,7 @@ const S = {
     color: ${ifProp(
       'isLabel',
       prop('color', DARK_GRAY1),
-      LIGHT_GRAY7,
+      LIGHT_GRAY8,
     )};
 
     @media only screen and (max-width: 767px) {

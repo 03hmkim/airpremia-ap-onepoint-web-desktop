@@ -29,15 +29,16 @@ import {
   useCommon,
   useBooking,
 } from '@airpremia/core/hooks';
-import { DARK_GRAY1 } from '@airpremia/cdk/styles/colors';
 import {
   BLUE1,
   LIGHT_GRAY6,
   LIGHT_GRAY7,
+  LIGHT_GRAY8,
   DARK_BLUE1,
   ORANGE2,
   LIGHT_BLUE3,
   WHITE1,
+  DARK_GRAY1,
 } from '@airpremia/cdk/styles/colors';
 
 interface IStyleProps {}
@@ -402,6 +403,7 @@ function DatePickerRange({
 
   return (
     <S.container>
+      <div className="btn-close">닫기</div>
       <div className="calendar-inner">
         {Array(2)
           .fill(0)
@@ -419,7 +421,7 @@ function DatePickerRange({
           </ToggleSwitchButton>
         </div>
         <div className="price-info">
-          <sub>예상 최저가 (성인 1인 기준)</sub>
+          <sub>예상 최저가<span className="textEnterM" />(성인 1인 기준)</sub>
           <em>
             {addComma(calendarTotalPrice)} {currencyCode}
           </em>
@@ -450,6 +452,39 @@ const S = {
     box-sizing: border-box;
     border-radius: 16px;
     padding: 30px 30px 25px;
+
+    .btn-close {
+      width: 36px;
+      height: 36px;
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      text-align: left;
+      text-indent: -9999px;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        width: 2px;
+        height: 20px;
+        position: absolute;
+        top: 8px;
+        right: 16px;
+        display: block;
+        background: ${DARK_GRAY1};
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+
     .calendar-inner {
       display: flex;
       & > div {
@@ -458,6 +493,7 @@ const S = {
         }
       }
     }
+
     .calendar-info {
       display: flex;
       justify-content: space-between;
@@ -472,8 +508,8 @@ const S = {
 
         sub {
           bottom: 0;
-          color: ${LIGHT_GRAY7};
-          font-size: 12px;
+          color: ${LIGHT_GRAY8};
+          font-size: 18px;
           margin-right: 10px;
           line-height: unset;
         }
@@ -491,7 +527,7 @@ const S = {
           border-radius: 8px;
           background-color: ${LIGHT_GRAY6};
           color: ${WHITE1};
-          font-size: 14px;
+          font-size: 18px;
           cursor: not-allowed;
           &.active {
             background-color: ${DARK_BLUE1};
@@ -501,22 +537,43 @@ const S = {
         }
       }
     }
-    @media only screen and (max-width: 767px) {
+
+    @media only screen and (max-width: 1059px) {
+
+      .btn-close{
+        display: block;
+      }
+
       .calendar-inner {
         & > div {
           &:first-of-type {
             margin-right: 0px;
+            margin-bottom: 40px;
           }
         }
       }
+
+      .calendar-info {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+
+      .btn-close {
+        right: 10px;
+      }
+
       .calendar-info {
         flex-direction: column;
         .price-info {
           sub {
-            font-size: 16px;
+            font-size: 13px;
           }
           em {
-            font-size: 16px;
             margin-left: auto;
             margin-right: 10px;
           }
@@ -526,13 +583,11 @@ const S = {
         }
       }
     }
+    
     @media only screen and (max-width: 599px) { 
       .calendar-info {
         .price-info {
           sub {
-            font-size: 14px;
-          }
-          em {
             font-size: 14px;
           }
           button {
@@ -553,7 +608,9 @@ const S = {
   `,
   calendarWrapper: styled.div<{ right: boolean }>`
     flex: 1;
+
     .head {
+      padding: 0 5px;
       display: flex;
       align-items: center;
       height: 24px;
@@ -570,8 +627,8 @@ const S = {
       }
 
       .title {
-        font-size: 16px;
-        font-weight: 600;
+        font-size: 18px;
+        font-weight: 700;
         line-height: 1.5;
         letter-spacing: -0.32px;
       }
@@ -581,12 +638,14 @@ const S = {
       margin-top: 20px;
       .row {
         display: flex;
+
         &:first-of-type {
           cursor: initial;
           color: ${LIGHT_GRAY7};
           margin: 20px 0 14px;
+
           .box {
-            font-size: 11px;
+            font-size: 16px;
             font-weight: bold;
             height: 20px;
           }
@@ -596,17 +655,19 @@ const S = {
         }
 
         .box {
+          width: 40px;
+          height: 50px;
+          padding: 0 5px;
           position: relative;
           display: flex;
           flex: 1;
           align-items: center;
           justify-content: center;
-          width: 40px;
-          height: 50px;
-          font-size: 13pt;
-          padding: 0 5px;
           color: ${DARK_GRAY1};
+          font-family: "Heebo";
+          font-size: 18px;
           cursor: pointer;
+
           &.is-edge {
             padding: 0;
           }
@@ -620,6 +681,7 @@ const S = {
             color: ${LIGHT_GRAY6};
             pointer-events: none;
           }
+
           &.is-hidden {
             pointer-events: none;
             cursor: initial;
@@ -627,6 +689,7 @@ const S = {
               display: none;
             }
           }
+
           &:hover {
             font-weight: 600;
             span.text {
@@ -634,48 +697,78 @@ const S = {
               font-weight: 600;
             }
           }
+
           &.selected {
             span.text {
               background-color: ${ORANGE2};
               color: white;
             }
           }
+
           .text {
-            &:hover {
-              font-weight: bold;
-            }
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
             width: 30px;
             height: 22px;
-            border-radius: 12px;
             position: absolute;
             top: 30%;
             left: 50%;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
             transform: translate(-50%, -50%);
+            border-radius: 12px;
+
             z-index: 1;
           }
+
           .price {
             position: absolute;
-            font-size: 11px;
-            bottom: 7px;
-            color: ${LIGHT_GRAY7};
-            letter-spacing: -0.4px;
+            font-size: 12px;
+            bottom: 4px;
+            color: ${LIGHT_GRAY8};
+            letter-spacing: -2px;
+
             &.is-disabled {
               display: none;
             }
+
             &.ey-lowest-price {
               color: ${BLUE1};
             }
+
             &.pe-lowest-price {
               color: ${ORANGE2};
             }
           }
         }
       }
-      @media only screen and (max-width: 767px) {
-        margin-top: 0px;
+    }
+
+    @media only screen and (max-width: 1059px) {
+      .head {
+        padding: 0 20px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .head {
+        padding: 0 5px;
+
+        .title {
+          font-size: 14px;
+        }
+      }
+
+      .body {
+        .row {
+            .box {
+              .price {
+                font-size: 11px;
+                font-weight: 300;
+              }
+            }
+          }
+        }
       }
     }
   `,
@@ -761,8 +854,11 @@ const S = {
         width: 100%;
         height: 23px;
         background-color: ${ORANGE2};
-        top: 9%;
+        top: 4%;
         color: ${WHITE1};
+        @media only screen and (max-width: 767px) {
+          top: 6%;
+        }
       `}
       @media only screen and (max-width: 767px) {
         height: 19px;

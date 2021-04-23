@@ -9,17 +9,38 @@ export default createGlobalStyle`
       font-family: 'NotoSans', sans-serif;
     }
     .font-bold {
-      font-family: 'NotoSans-Bold', sans-serif;
+      font-family: 'NotoSans', sans-serif;
+      font-weight: 700;
     }
     .font-premia-normal {
       font-family: 'Premia', sans-serif;
     }
     .font-premia-bold {
-      font-family: 'Premia-Bold', sans-serif;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
     }
     margin: 0;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     -webkit-touch-callout: none;
+
+    
+    .textEnter {
+      display: block;
+
+      @media only screen and (max-width: 767px) { 
+        margin-left: 4px;
+        display: inline-block;
+      }
+    }
+
+    .textEnterM {
+      display: inline-block;
+
+      @media only screen and (max-width: 767px) { 
+        margin-left: 4px;
+        display: block;
+      }
+    }
   }
   &.scrollHidden {
     overflow: hidden;

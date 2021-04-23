@@ -137,7 +137,7 @@ AgeCalculater.defaultProps = {};
 
 const S = {
   container: styled.div`
-    padding: 0 50px;
+  
     em {
       color: ${ORANGE2};
       font-style: normal;
@@ -176,7 +176,7 @@ const S = {
         padding-top: 60px;
         font-size: 18px;
         font-weight: 600;
-        line-height: 1.28;
+        line-height: 1.36em;
         text-align: center;
         color: ${DARK_GRAY1};
         span {
@@ -193,6 +193,7 @@ const S = {
         width: 100%;
       }
     }
+
     @media only screen and (max-width: 767px) { 
       h3 {
         font-size: 14px;
@@ -200,17 +201,32 @@ const S = {
           font-size: 14px;
         }
       }
+
+      .middle {
+        .label {
+          font-size: 14px;
+          font-weight: 300;
+        }
+
+        .display {
+          font-size: 14px;
+        }
+      }
+
       .bottom {
         font-size: 15px;
       }
     }
+
     @media only screen and (max-height: 740px) { 
+
       .middle {
         padding-top: 20px;
         .display {
           padding-top: 40px;
         }
       }
+
       .bottom {
         padding-top: 40px;
       }
