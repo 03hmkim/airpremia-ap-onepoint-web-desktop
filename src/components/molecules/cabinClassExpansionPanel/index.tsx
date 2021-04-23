@@ -72,7 +72,8 @@ function CabinClassExpansionPanel({
 
 const S = {
   container: styled.div<{ isShow: boolean }>`
-    width: 1200px;
+    max-width: 1200px;
+    width: 100%;
   `,
 
   contentWrapper: styled.div`
@@ -82,20 +83,39 @@ const S = {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+
+    @media only screen and (max-width: 767px) { 
+      display: block;
+      height: auto;
+    }
   `,
 
   cabinClassSpec: styled.div`
     padding: 40px 0 30px 30px;
+
+    @media only screen and (max-width: 767px) { 
+      padding: 20px 0 20px 10px;
+    }
   `,
 
   cardWrapper: styled.div`
-    width: 800px;
+    width: 100%;
     display: flex;
+    flex: 1;
+
+    @media only screen and (max-width: 479px) {
+      display: block;
+    }
   `,
 
   cabinClassTicketCard: styled.div`
     flex: 1;
     border-left: dotted 1px ${LIGHT_GRAY6};
+
+    @media only screen and (max-width: 479px) {
+      width: 100%;
+      border-left: 0;
+    }
   `,
 
   flightRule: styled.div`

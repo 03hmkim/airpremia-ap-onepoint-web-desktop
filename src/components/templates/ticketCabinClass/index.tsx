@@ -32,10 +32,18 @@ const TicketCabinClassTemplate: FC<IProps> = ({
 };
 
 const defaultBox = css`
-  /* width: 1400px; */
+  max-width: 1400px;
   box-sizing: border-box;
   margin: 80px auto 0;
   padding: 0 100px;
+
+  @media only screen and (max-width: 1059px) {
+    padding: 0 40px;
+    margin: 3vw;
+  }
+  @media only screen and (max-width: 767px) { 
+    padding: 0 20px;
+  }
 `;
 
 const S = {

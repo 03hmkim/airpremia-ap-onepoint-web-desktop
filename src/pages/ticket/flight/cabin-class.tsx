@@ -190,6 +190,10 @@ const S = {
     display: flex;
     align-content: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 767px) { 
+      display: block;
+    }
   `,
   left: styled.div`
     display: flex;
@@ -200,6 +204,12 @@ const S = {
       letter-spacing: -0.3px;
       font-weight: 600;
       color: ${DARK_GRAY1};
+    }
+
+    @media only screen and (max-width: 767px) { 
+      width: 100%;
+      display: block;
+      justify-content: center;
     }
   `,
   right: styled.div`
@@ -216,6 +226,16 @@ const S = {
       line-height: 28px;
       letter-spacing: -0.28px;
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      width: 100%;
+      margin-top: 10px;
+      display: block;
+
+      button {
+        margin: 0 auto;
+      }
     }
   `,
 };

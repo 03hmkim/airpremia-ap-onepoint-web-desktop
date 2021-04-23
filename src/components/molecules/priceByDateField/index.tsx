@@ -151,6 +151,23 @@ const S = {
     .premium-color {
       background-color: ${ORANGE2};
     }
+
+    @media only screen and (max-width: 1059px) { 
+      .date {
+        h3 {
+          font-size: 14px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      width: 25%;
+      float: left;
+    }
+
+    @media only screen and (max-width: 479px) {
+      width: 33.3%;
+    }
   `,
 };
 

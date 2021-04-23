@@ -116,6 +116,13 @@ const S = {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+
+    @media only screen and (max-width: 767px) { 
+      height: auto;
+      display: block;
+      overflow: hidden;
+      position: relative;
+    }
   `,
 };
 

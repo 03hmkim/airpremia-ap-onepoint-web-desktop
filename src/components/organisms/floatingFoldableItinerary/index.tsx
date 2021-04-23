@@ -328,6 +328,10 @@ const S = {
     z-index: 1;
     background-color: ${WHITE1};
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.02);
+
+    @media only screen and (max-width: 767px) { 
+      box-shadow: none;
+    }
   `,
 
   innerWrapper: styled.div<{ isShow: boolean }>`
@@ -347,6 +351,14 @@ const S = {
         `;
       }
     }}
+
+    @media only screen and (max-width: 1059px) {
+      padding: 0 40px
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 0 20px
+    }
   `,
 
   folderWrapper: styled.div`
@@ -354,13 +366,17 @@ const S = {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1059px) {
+      display: block;
+    }
   `,
 
   left: styled.div`
     display: flex;
     align-items: center;
     p {
-      font-size: 13px;
+      font-size: 18px;
       letter-spacing: -0.26px;
     }
 
@@ -381,6 +397,17 @@ const S = {
     .date {
       display: flex;
       align-items: center;
+    }
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 1.5vw;
+      justify-content: flex-start;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      p {
+        font-size: 14px;
+      }
     }
   `,
 
@@ -407,7 +434,8 @@ const S = {
   `,
 
   unFolderWrapper: styled.div<{ isShow: boolean }>`
-    height: 168px;
+    height: auto;
+    min-height: 168px;
     opacity: 0;
     transition: opacity 0.2s ease-out;
     overflow: unset;
@@ -424,10 +452,14 @@ const S = {
   `,
 
   caution: styled.div`
+    height: 27px;
     padding: 20px 0 50px;
     font-weight: normal;
-    height: 27px;
+    align-items: flex-start;
+
     h3 {
+      width: 100%;
+      flex: 1;
       font-size: 14px;
       line-height: 24px;
       letter-spacing: -0.28px;
@@ -448,12 +480,33 @@ const S = {
   rightWrap: styled.div`
     display: flex;
     justify-content: center;
+
+    button{
+      margin-left: 5px;
+    }
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 1.5vw;
+      justify-content: flex-start;
+
+      button{
+        margin: 0 5px 0 0;
+        justify-content: center;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      button{
+        padding: 0 8px;
+        font-size: 14px;
+        white-space: nowrap;
+      }
+    }
   `,
 
   promotion: styled.div`
     position: relative;
     z-index: 100;
-    margin-right: 20px;
   `,
 
   modalTitle : styled.div``,

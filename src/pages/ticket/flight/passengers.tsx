@@ -138,10 +138,19 @@ Passengers.defaultProps = {};
 
 const S = {
   container: styled.div`
-    width: 1360px;
+    max-width: 1360px;
     padding: 0 80px;
     margin: 124px auto 160px;
     box-sizing: border-box;
+
+    @media only screen and (max-width: 1059px) { 
+      padding: 0 40px;
+      margin: 80px auto;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 0 20px;
+      margin: 40px auto;
+    }
   `,
 };
 

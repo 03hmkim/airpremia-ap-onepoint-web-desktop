@@ -217,8 +217,16 @@ const PayCheckout: NextPage<IProps> = () => {
 
 const S = {
   container: styled.div`
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 100px;
+
+    @media only screen and (max-width: 1059px) {
+      padding: 0 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 0 20px;
+    }
   `,
 };
 

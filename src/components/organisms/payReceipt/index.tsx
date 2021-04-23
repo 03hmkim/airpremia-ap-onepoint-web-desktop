@@ -198,6 +198,10 @@ const S = {
       text-align: right;
       color: ${LIGHT_GRAY7};
     }
+
+    @media only screen and (max-width: 1059px) {
+      width: 100%;
+    }
   `,
   title: styled.div`
     font-size: 18px;

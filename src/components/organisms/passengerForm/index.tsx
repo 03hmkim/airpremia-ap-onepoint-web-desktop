@@ -862,6 +862,11 @@ const S = {
   container: styled.div<IStyleProps>`
     padding: 60px 0 70px;
     display: flex;
+
+    @media only screen and (max-width: 767px) { 
+      display: block;
+      padding: 30px 0;
+    }
   `,
 
   typeWrapper: styled.div`
@@ -873,6 +878,11 @@ const S = {
 
   infomationForm: styled.div`
     width: calc(100% - 320px);
+
+    @media only screen and (max-width: 767px) { 
+      width: 100%;
+      margin-top: 20px;
+    }
   `,
 
   wrapper: styled.div<{ isError?: boolean }>`
@@ -899,7 +909,7 @@ const S = {
     }
 
     .dropdown-currency-items {
-      width: 706px;
+      width: 500px;
       max-height: 600px;
       left: -11px;
       top: 38px;
@@ -917,10 +927,47 @@ const S = {
         }
       }
     }
+
+    @media only screen and (max-width: 1059px) {
+      .dropdown-currency-items {
+        left: 0;
+      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      .dropdown-currency {
+        width: 100%;
+
+        .value {
+          width: 100%;
+          flex: 1;
+        }
+
+        & > div {
+          width: 100%;
+          justify-content: unset;
+
+          & > div{
+            margin-right: 30px;
+          }
+        }
+      }
+      .dropdown-currency-items {
+        width: 300px;
+        max-height: 300px;
+        left: auto;
+        right: 30px;
+        overflow-y: auto;
+      }
+    }
   `,
 
   question: styled.div`
     width: 195px;
+
+    @media only screen and (max-width: 767px) { 
+      width: 100px;
+    }
   `,
 
   answer: styled.div<{ isSelected?: boolean }>`
@@ -954,7 +1001,17 @@ const S = {
         .dropdown-currency .value {
           color: ${DARK_GRAY1};
         }
-      `}
+      `
+    }
+
+    @media only screen and (max-width: 767px) { 
+      width: 100%;
+      .phone {
+        .textinput {
+          width: 100%;
+        }
+      }
+    }
   `,
 
   errorMessage: styled.sub`

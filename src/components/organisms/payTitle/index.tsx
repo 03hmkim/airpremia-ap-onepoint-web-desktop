@@ -39,7 +39,7 @@ const S = {
     }
     .description {
       padding-top: 15px;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 1.71;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY8};
@@ -54,6 +54,23 @@ const S = {
         color: ${LIGHT_GRAY7};
         border-bottom: 1px solid ${LIGHT_GRAY7};
       }
+    }
+
+    @media only screen and (max-width: 1059px) {
+      .title {
+        font-size: 30px;
+      }
+      .description {
+        font-size: 16px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+        .title {
+          font-size: 26px;
+        }
+        .description {
+          font-size: 14px;
+        }
     }
   `,
 };

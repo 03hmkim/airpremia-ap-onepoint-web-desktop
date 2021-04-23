@@ -25,6 +25,14 @@ const S = {
     font-size: 30px;
     line-height: 1.4;
     color: ${DARK_GRAY1};
+
+    media only screen and (max-width: 1059px) {
+      font-size:26px;
+    }
+    
+    @media only screen and (max-width: 767px) { 
+      font-size:20px;
+    }
   `,
 };
 

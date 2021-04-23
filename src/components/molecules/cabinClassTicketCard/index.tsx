@@ -152,7 +152,12 @@ const S = {
           pointer-events: none;
           cursor: default;
         }
-      `}
+      `
+    }
+
+    @media only screen and (max-width: 1059px) { 
+      padding: 10px;
+    }
   `,
 
   top: styled.div`
@@ -191,6 +196,21 @@ const S = {
           font-size: 14px;
           line-height: 26px;
           letter-spacing: -0.28px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      margin-top: 2vw;
+
+      div {
+        p {
+          &:nth-child(1) {
+            font-size: 11px;
+          }
+          &:nth-child(2) {
+            font-size: 12px;
+          }
         }
       }
     }
@@ -238,6 +258,10 @@ const S = {
         `;
       }
     }}
+
+    @media only screen and (max-width: 479px) {
+      margin-top: 10px;
+    }
   `,
 };
 

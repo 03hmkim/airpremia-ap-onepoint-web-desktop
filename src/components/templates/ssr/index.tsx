@@ -112,6 +112,31 @@ const S = {
       position: sticky;
       top: 130px;
     }
+
+    @media only screen and (max-width: 1059px) {
+      padding: 20px 40px 0;
+
+      .contentWrapper{
+        display: block;
+      }
+      .left {
+        width: 100%;
+
+        .original,
+        .special {
+          padding-top: 10vw;
+        }
+      }
+      .right {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 20px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      padding: 20px 20px 0;
+    }
   `,
 };
 

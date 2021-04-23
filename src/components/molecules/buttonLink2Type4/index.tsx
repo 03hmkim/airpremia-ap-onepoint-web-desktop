@@ -63,6 +63,22 @@ const S = {
       font-weight: 600;
       letter-spacing: -0.32px;
     }
+    .arrowWrapper{
+      div {
+        position: static;
+        background: transparent;
+        margin-top: 0;
+      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      padding-left: 20px;
+      padding-right: 12px;
+      
+      .label {
+        font-size: 14px;
+      }
+    }
   `,
 };
 

@@ -162,6 +162,11 @@ const S = {
     padding: 30px;
     box-sizing: border-box;
     align-items: center;
+
+    @media only screen and (max-width: 767px) { 
+      min-height: 0;
+      padding: 20px 15px 15px 15px;
+    }
   `,
   left: styled.div`
     display: flex;
@@ -170,6 +175,10 @@ const S = {
     width: 34px;
     height: 34px;
     padding-right: 35px;
+
+    @media only screen and (max-width: 767px) { 
+      padding-right: 20px;
+    }
   `,
   right: styled.div`
     flex: 1;
@@ -221,6 +230,18 @@ const S = {
         }
         .triangleWrapper {
           padding-left: 5px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      .titleWrapper {
+        .title {
+          font-size: 16px;
+        }
+        
+        .defaultDescription {
+          font-size: 12px;
         }
       }
     }

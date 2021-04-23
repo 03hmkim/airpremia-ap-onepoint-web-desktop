@@ -114,6 +114,16 @@ const S = {
       letter-spacing: -0.72px;
       font-size: 36px;
     }
+
+    @media only screen and (max-width: 1440px) {
+      margin:0 auto;
+      transform: translateX(30px);
+    }
+
+    @media only screen and (max-width: 767px) { 
+      width: 100%;
+      transform: translateX(0px);
+    }
   `,
 
   timeArea: styled.div`
@@ -157,6 +167,22 @@ const S = {
         line-height: 28px;
         color: ${DARK_GRAY1};
         margin-left: 6px;
+      }
+    }
+    
+    @media only screen and (max-width: 767px) { 
+      justify-content: space-between;
+
+      & > div {
+        &:nth-child(1) {
+          margin-right: 0px;
+        }
+        &:nth-child(2) {
+          margin-right: 0px;
+        }
+        &:nth-child(3) {
+          width: auto;
+        }
       }
     }
   `,

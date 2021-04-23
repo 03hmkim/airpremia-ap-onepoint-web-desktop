@@ -320,8 +320,15 @@ Confirm.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
+
+    @media only screen and (max-width: 1059px) {
+      padding: 0 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 0 20px;
+    }
   `,
   modalTitle : styled.div``,
   textArea: styled.div`
@@ -345,4 +352,5 @@ const Tab = {
       height: 100%;
     }
   `,
-};export default Confirm;
+};
+export default Confirm;
