@@ -92,6 +92,10 @@ const S = {
     line-height: 1.5;
     letter-spacing: -0.24px;
     color: ${LIGHT_GRAY7};
+
+    @media only screen and (max-width: 767px) {
+      font-size: 12px;
+    }
   `,
   buttonWrapper: styled.ul`
     display: flex;
@@ -103,6 +107,7 @@ const S = {
     li + li {
       position: relative;
       margin-left: 25px;
+
       &:before {
         content: '';
         position: absolute;
@@ -115,8 +120,6 @@ const S = {
     }
   `,
   loginText: styled.p`
-    font-size: 12px;
-    line-height: 18px;
     letter-spacing: -0.24px;
     font-weight: 600;
     em {

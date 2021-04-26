@@ -129,7 +129,7 @@ const S = {
 
   selectBox: styled.div`
     padding: 10px 0;
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     /* height: 116px; */
@@ -140,7 +140,7 @@ const S = {
       display: flex;
 
       & > div:last-of-type {
-        font-size: 18px;
+        font-size: 21px;
         line-height: 35px;
         letter-spacing: -0.36px;
       }
@@ -195,6 +195,7 @@ const S = {
       height: auto;
       padding: 14px 0;
       display: block;
+      overflow:hidden;
 
       & > div{
         width: 100%;
@@ -257,6 +258,8 @@ const S = {
     margin-bottom: ${ifProp('isShow', 80, 0)}px;
     opacity: ${ifProp('isShow', 1, 0)};
     position: relative;
+    left:-370px;
+    width:calc( 100% + 370px );
     bottom: ${ifProp('isShow', 0, -20)}px;
     bottom: ${ifProp('isAlreadyOpen', 0)};
     ${({ isShow, isAlreadyOpen }) => {
@@ -268,7 +271,11 @@ const S = {
     }};
     max-height: ${ifProp('isShow', '366', 0)}px;
     transition: all 0.3s;
-
+    
+    @media only screen and (max-width: 1059px) {
+      left:0px;
+      width:100%;
+    }
     @media only screen and (max-width: 767px) { 
       max-height: ${ifProp('isShow', '1500', 0)}px;
     }

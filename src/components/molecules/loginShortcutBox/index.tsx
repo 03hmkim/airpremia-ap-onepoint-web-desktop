@@ -64,14 +64,14 @@ const S = {
 
   wrapper: styled.div`
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 23px;
       letter-spacing: -0.32px;
       font-weight: 600;
     }
 
     .email {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 30px;
       letter-spacing: -0.3px;
       color: ${BLUE1};

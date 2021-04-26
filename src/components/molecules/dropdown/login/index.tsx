@@ -115,7 +115,7 @@ const S = {
         padding-right: 1px;
       }
       em {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 15px;
         letter-spacing: -0.3px;
         color: ${BLUE1};

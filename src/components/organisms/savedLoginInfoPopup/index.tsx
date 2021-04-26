@@ -10,6 +10,7 @@ import {
   initToken,
 } from '@airpremia/core/lib/storage';
 import { EModalType } from '@airpremia/core/stores/models/ui';
+import { LIGHT_GRAY8, DARK_GRAY1 } from '@airpremia/cdk/styles/colors';
 
 interface IProps {}
 
@@ -79,14 +80,15 @@ const S = {
   `,
 
   description: styled.div`
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
     letter-spacing: -0.28px;
     font-weight: 600;
     margin-bottom: 100px;
 
     @media only screen and (max-width: 767px) {
-      margin-bottom: 40px;
+      margin-bottom: 40px;      
+      font-size: 14px;
     }
   `,
 
@@ -97,7 +99,8 @@ const S = {
   anotherAccount: styled.div`
     display: flex;
     margin-top: 30px;
-    font-size: 13px;
+    color: ${LIGHT_GRAY8};
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.26px;
 
@@ -107,7 +110,9 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) {
-      display: block;
+      display: block;      
+      color: ${DARK_GRAY1};
+      font-size: 13px;
     }
   `,
 };

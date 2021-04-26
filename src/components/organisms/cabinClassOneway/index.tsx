@@ -306,13 +306,22 @@ const S = {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+    position:relative;
 
     & > div:not(:first-of-type) {
       margin-top: 20px;
+      width:calc( 100% - 370px );
+      padding-left: 370px;
     }
 
     @media only screen and (max-width: 1440px) {
       display: block;
+    }
+    @media only screen and (max-width: 1059px) {
+      & > div:not(:first-of-type) {
+        width:100%;
+        padding-left: 0px;
+      }
     }
   `,
 

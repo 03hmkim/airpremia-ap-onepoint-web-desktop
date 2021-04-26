@@ -156,14 +156,14 @@ const S = {
     }
 
     @media only screen and (max-width: 1059px) { 
-      padding: 10px;
+      padding: 30px 10px;
     }
   `,
 
   top: styled.div`
     padding: 0 10px;
     h5 {
-      font-size: 18px;
+      font-size: 21px;
       line-height: 27px;
       letter-spacing: -0.36px;
       font-weight: 600;
@@ -171,9 +171,19 @@ const S = {
 
     sub {
       color: ${LIGHT_GRAY8};
-      font-size: 13px;
+      font-size: 18px;
       line-height: 28px;
       letter-spacing: -0.26px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      h5 {
+        font-size: 15px;
+      }
+
+      sub {
+        font-size: 13px;
+      }
     }
   `,
 
@@ -187,13 +197,14 @@ const S = {
       align-items: center;
       p {
         &:nth-child(1) {
-          font-size: 13px;
+          color: ${LIGHT_GRAY8};
+          font-size: 18px;
           line-height: 19px;
           letter-spacing: -0.26px;
         }
         &:nth-child(2) {
           font-weight: 600;
-          font-size: 14px;
+          font-size: 18px;
           line-height: 26px;
           letter-spacing: -0.28px;
         }
@@ -206,6 +217,7 @@ const S = {
       div {
         p {
           &:nth-child(1) {
+            color: ${DARK_GRAY1};
             font-size: 11px;
           }
           &:nth-child(2) {
@@ -222,7 +234,7 @@ const S = {
     }
   >`
     height: 50px;
-    font-size: 16px;
+    font-size: 21px;
     line-height: 24px;
     letter-spacing: -0.32px;
     border-radius: 8px;
@@ -259,6 +271,9 @@ const S = {
       }
     }}
 
+    @media only screen and (max-width: 767px) {
+      font-size: 16px;
+    }
     @media only screen and (max-width: 479px) {
       margin-top: 10px;
     }

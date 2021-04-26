@@ -60,7 +60,7 @@ const S = {
     })};
     .label {
       text-align: left;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       letter-spacing: -0.32px;
     }

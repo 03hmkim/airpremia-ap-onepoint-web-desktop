@@ -71,6 +71,8 @@ function RowTableForPriceByDate({
           disabled={isDisabled}
         />
 
+          <div className="dateWrap">
+
         {map(list, (item, i) => {
           const [eyPrice, pePrice] = map(
             item.lowfareCabins,
@@ -90,6 +92,7 @@ function RowTableForPriceByDate({
             />
           );
         })}
+          </div>
 
         <Arrow
           position={EPosition.RIGHT}
@@ -116,12 +119,24 @@ const S = {
     justify-content: space-between;
     align-items: center;
     height: 100px;
+    .dateWrap{
+        width:100%;
+        flex:1;
+        height:auto;
+        overflow:hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
 
     @media only screen and (max-width: 767px) { 
       height: auto;
-      display: block;
-      overflow: hidden;
-      position: relative;
+      .dateWrap{
+        display:block;
+        width:calc( 100% - 40px );
+        height:auto;
+        overflow:hidden;
+       }
     }
   `,
 };

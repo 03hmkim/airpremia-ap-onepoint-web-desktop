@@ -4,39 +4,56 @@ import {
   LIGHT_GRAY5,
   LIGHT_GRAY8, 
 } from '@airpremia/cdk/styles/colors';
+import Link from 'next/link';
 
 function MainSecNotice () {
   return (
     <S.container>
       <S.listWrapper>
         <ul>
+            <li>
+              <Link href="">
+                <a>
+                  <div className="title">
+                    <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                    <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
+                  </div>
+                  <div className="date">2021.04.02</div>
+                </a>
+              </Link>
+            </li>
           <li>
-            <div className="title">
-              <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
-              <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
-            </div>
-            <div className="date">2021.04.02</div>
+              <Link href="">
+                <a>
+                  <div className="title">
+                    <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                    <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
+                  </div>
+                  <div className="date">2021.04.02</div>
+                </a>
+              </Link>
           </li>
           <li>
-            <div className="title">
-              <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
-              <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
-            </div>
-            <div className="date">2021.04.02</div>
+              <Link href="">
+                <a>
+                  <div className="title">
+                    <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                    <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
+                  </div>
+                  <div className="date">2021.04.02</div>
+                </a>
+              </Link>
           </li>
           <li>
-            <div className="title">
-              <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
-              <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
-            </div>
-            <div className="date">2021.04.02</div>
-          </li>
-          <li>
-            <div className="title">
-              <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
-              <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
-            </div>
-            <div className="date">2021.04.02</div>
+              <Link href="">
+                <a>
+                  <div className="title">
+                    <h4>맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                    <p className="desc">맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요! 맛있는 콜드브루 아이스 크림치즈 앙버터랑 먹으면 더 맛있어요!</p>
+                  </div>
+                  <div className="date">2021.04.02</div>
+                </a>
+              </Link>
           </li>
         </ul>
       </S.listWrapper>

@@ -51,7 +51,7 @@ function CabinClassSpec({ classType }: IProps) {
       <S.bottom>
         <Link href={'/ticket/flight/info-class'}>
           <a target="_blank">
-            에어프레미아 클래스 알아보기 {'>'}
+            에어프레미아 클래스<span className="enter" />알아보기 {'>'}
           </a>
         </Link>
       </S.bottom>
@@ -89,25 +89,51 @@ const S = {
 
       p {
         margin-left: 10px;
-        font-size: 13px;
+        font-size: 18px;
         line-height: 20px;
         letter-spacing: -0.26px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      h2 {
+        font-size: 26px;
+      }
+      div {
+        p {
+          font-size: 13px;
+        }
       }
     }
   `,
 
   bottom: styled.div`
-    height: 30px;
+    height: auto;
     a {
       color: ${BLUE1};
-      font-size: 14px;
+      font-size: 18px;
       line-height: 25px;
       letter-spacing: -0.28px;
+    }
+
+    @media only screen and (max-width: 1059px) {
+      .enter {
+        display: block;
+    }    
+    @media only screen and (max-width: 767px) { 
+      .enter {
+        margin-left: 4px;
+        display: inline-block;
+      }
     }
 
     @media only screen and (max-width: 767px) { 
       margin-top: 2vw;
       margin-left: 10px;
+
+      a {        
+        font-size: 14px;
+      }
     }
   `,
 };

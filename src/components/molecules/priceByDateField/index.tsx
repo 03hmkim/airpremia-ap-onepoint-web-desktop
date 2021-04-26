@@ -153,6 +153,11 @@ const S = {
     }
 
     @media only screen and (max-width: 1059px) { 
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      padding:0;
       .date {
         h3 {
           font-size: 14px;

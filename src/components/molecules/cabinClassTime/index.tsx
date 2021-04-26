@@ -106,6 +106,9 @@ function CabinClassTime({
 const S = {
   container: styled.div`
     width: 370px;
+    position:absolute;
+    left:0;
+    top:0;
     padding-top: 20px;
 
     h2 {
@@ -118,6 +121,9 @@ const S = {
     @media only screen and (max-width: 1440px) {
       margin:0 auto;
       transform: translateX(30px);
+    }
+    @media only screen and (max-width: 1059px) {
+      position:static;
     }
 
     @media only screen and (max-width: 767px) { 

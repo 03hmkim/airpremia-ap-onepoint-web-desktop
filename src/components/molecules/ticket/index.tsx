@@ -90,9 +90,14 @@ const S = {
       }
     }
     > .right {
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 600;
       letter-spacing: -0.28px;
+    }
+    @media only screen and (max-width: 767px) { 
+      > .right {
+        font-size: 13px;
+      }
     }
   `,
   bottom: styled.div`
@@ -103,7 +108,7 @@ const S = {
       display: flex;
       align-items: flex-end;
       .label {
-        font-size: 13px;
+        font-size: 18px;
         letter-spacing: -0.26px;
       }
       .value {
@@ -128,10 +133,13 @@ const S = {
       align-items: flex-end;
       padding-bottom: 5px;
       color: ${ORANGE2};
+      font-size:18px;
+
       .price {
         font-size: 26px;
         letter-spacing: -0.52px;
       }
+      
       .currency {
         padding-bottom: 2px;
         font-size: 18px;
@@ -142,12 +150,12 @@ const S = {
     @media only screen and (max-width: 1059px) { 
       display: block;
 
-      .left{
+      > .left{
         width: 100%;
         justify-content: space-between;
       }
 
-      .right{
+      > .right{
         margin-top: 20px;
         display: flex;
         justify-content: flex-end;
@@ -156,14 +164,19 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) { 
-      .left {
+      > .left {
         height: auto;
         display: block;
         overflow: hidden;
 
+        .label{
+          font-size:13px;
+        }
+
         .value {
           font-size: 16px;
         }
+
         .originWrapper {
           width: calc( 50% - 70px );
           float: left;
@@ -171,11 +184,17 @@ const S = {
           justify-content: center;
           align-items: flex-start;
           flex-direction: column;
+
+          .label{
+            font-size:13px;
+          }
         }
+
         .flightIconWrapper {
           width: 100px;
           float: left;
         }
+
         .destinationWrapper {
           width: calc(50% - 70px);
           float: left;
@@ -183,7 +202,12 @@ const S = {
           justify-content: center;
           align-items: flex-end;
           flex-direction: column;
+          
+          .label{
+            font-size:13px;
+          }
         }
+
         .startTimeWrapper {
           width: 50%;
           margin-top: 20px;
@@ -194,6 +218,7 @@ const S = {
           align-items: flex-start;
           flex-direction: column;
         }
+
         .classTypeWrapper{
           width: 50%;
           margin-top: 20px;
@@ -202,6 +227,18 @@ const S = {
           justify-content: center;
           align-items: flex-end;
           flex-direction: column;
+
+          .label{
+            font-size:13px;
+          }
+        }
+      }
+
+      > .right{
+        font-size:13px;
+
+        .price {
+          font-size: 21px;
         }
       }
     }
