@@ -395,6 +395,18 @@ const S = {
   li: styled.li`
     display: inline-block;
     padding-bottom: 40px;
+    width: calc(50% - 15px);
+    margin-right: 30px;
+    vertical-align: top;
+
+    &:nth-child(even){
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      width: 100%;
+      margin-right: 0;
+    }
   `,
 };
 
@@ -408,7 +420,6 @@ const C = {
     &:first-of-type{
       margin-top: 30px;
     }
-    
   `,
   bd: styled.div`
     margin-top: 150px;
@@ -427,26 +438,34 @@ const C = {
     }
   `,
   itemText: styled.p`
-    font-size: 16px;
-    line-height: 1.8;
+    font-size: 18px;
+    line-height: 1.8em;
     display: inline-block;
     :hover{
       color:${ORANGE2};
     }
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
   note: styled.p`
-    font-size: 15px;
+    font-size: 18px;
     color: ${DARK_GRAY1};
     font-weight: bold;
     display: flex;
     justify-align: center;
-    
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
   description: styled.p`
-    font-size: 14px;
+    font-size: 18px;
     color: ${LIGHT_GRAY8};
     margin-top: 10px;
-    line-height: 1.8;
+    line-height: 1.8em;
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
   bold: styled.span`
     font-weight: bold;
@@ -454,13 +473,19 @@ const C = {
   igr: styled.div`
     margin-top: 80px;
   `,
-  left:styled.div`
-    padding-right:80px;
+  left: styled.div`
+    img{
+      width: 100%;
+    }
   `,
-  right:styled.div`  
+  right: styled.div`
+    img{
+      width: 100%;
+    }
   `,
-  noneEvent:styled.div`
+  noneEvent: styled.div`
     display: none;
-  `,
+  `, 
 }
+
 export default TabContent;

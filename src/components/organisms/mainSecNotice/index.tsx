@@ -2,7 +2,8 @@ import styled from 'styled-components';
 import { 
   DARK_GRAY1,
   LIGHT_GRAY5,
-  LIGHT_GRAY8, 
+  LIGHT_GRAY8,
+  ORANGE1,
 } from '@airpremia/cdk/styles/colors';
 import Link from 'next/link';
 
@@ -82,6 +83,12 @@ const S = {
         content: "";
         display: block;
         clear: both;
+      }
+
+      a:hover {
+        h4 {          
+          color: ${ORANGE1};
+        }
       }
     }
     .title {

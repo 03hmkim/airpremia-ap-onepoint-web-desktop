@@ -23,7 +23,7 @@ function promotionList(){
 
 const C = {
   igr: styled.div`
-    margin-top: 80px;
+    
   `,
 }
 

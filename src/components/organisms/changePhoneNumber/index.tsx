@@ -115,29 +115,36 @@ const ChangePhoneNumber: FC<IProps> = ({
 };
 
 const pFont = `
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 1.8em;
   letter-spacing: -0.28px;
+
+  @media only screen and (max-width: 767px) {
+      font-size: 14px;
+  }
 `;
 
 const S = {
   container: styled.div`
-    & > div {
-      padding: 0 50px;
-    }
   `,
 
   top: styled.div`
-    margin: 80px 0 45px;
+    margin-bottom: 45px;
     p {
       ${pFont};
       margin-bottom: 12px;
     }
     b {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.28px;
       font-weight: 600;
+    }
+    
+    @media only screen and (max-width: 767px) {
+      b {
+        font-size: 16px;
+      }
     }
   `,
 
@@ -198,7 +205,7 @@ const S = {
         border: solid 1px ${LIGHT_GRAY6};
         background-color: ${WHITE1};
         color: ${LIGHT_GRAY6};
-        font-size: 11px;
+        font-size: 18px;
         font-weight: 600;
         &.active {
           background-color: ${WHITE1};
@@ -215,7 +222,7 @@ const S = {
         top: 15px;
         right: 0;
         p {
-          font-size: 12px;
+          font-size: 18px;
         }
         sub {
           font-size: 100%;
@@ -230,8 +237,34 @@ const S = {
       sub {
         position: absolute;
         bottom: 25px;
-        font-size: 12px;
+        font-size: 18px;
         color: #0093ff;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      h3 {
+        font-size: 14px;
+      }
+
+      .phone {
+        .send-btn {        
+          font-size: 11px;
+        }
+      }
+
+      .auth-number {
+        .time-guide {
+          p {
+            font-size: 12px;
+          }
+        }
+      }        
+
+      .phone-number-wrapper {
+        sub {
+          font-size: 12px;
+        }
       }
     }
   `,

@@ -38,7 +38,6 @@ const ChangeEmail2: FC<IProps> = ({ onChangeNewValue }) => {
 
   const emailData = {
     labelData: {
-      fontSize: '14px',
       children: '변경할 이메일 주소',
     },
     inputData: {
@@ -58,7 +57,6 @@ const ChangeEmail2: FC<IProps> = ({ onChangeNewValue }) => {
 
   const authCodeData = {
     labelData: {
-      fontSize: '14px',
       children: '인증번호',
     },
     inputData: {

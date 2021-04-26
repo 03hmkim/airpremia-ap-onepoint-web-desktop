@@ -1,21 +1,26 @@
-import { FC } from 'react';
+import styled from 'styled-components';
 import { Container } from 'src/styles/layout';
+import FareInformationTab from './fareInformationTab/index';
+import {
+  ComTitle,
+} from 'src/components';
 
-interface IProps {}
-
-const FlightStatus: FC<IProps> = ({}) => {
-  return (
+function fareInfomation(){
+    return (
     <Container>
-      <h1
-        style={{
-          textAlign: 'center',
-        }}
-        className="font-premia-bold"
-      >
-        퍼블변경예정
-      </h1>
+      <ComTitle
+        title="운임안내"
+      />
+      <C.igr>
+        <FareInformationTab />
+      </C.igr>
     </Container>
-  );
-};
+    )
+}
 
-export default FlightStatus;
+const C = {
+  igr: styled.div`
+  `,
+}
+
+export default fareInfomation;

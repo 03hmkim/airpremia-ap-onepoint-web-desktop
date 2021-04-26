@@ -57,7 +57,6 @@ const ChangePassword2: FC<IProps> = ({}) => {
 
   const currPasswordData = {
     labelData: {
-      fontSize: '14px',
       children: '현재 비밀번호',
     },
     inputData: {
@@ -86,7 +85,6 @@ const ChangePassword2: FC<IProps> = ({}) => {
 
   const passwordData = {
     labelData: {
-      fontSize: '14px',
       children: '새 비밀번호',
     },
     inputData: {
@@ -116,7 +114,6 @@ const ChangePassword2: FC<IProps> = ({}) => {
   };
   const newPasswordData = {
     labelData: {
-      fontSize: '14px',
       children: '새 비밀번호 확인',
     },
     inputData: {

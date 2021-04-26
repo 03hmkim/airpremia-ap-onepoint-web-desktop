@@ -43,8 +43,6 @@ function Label({ children, isRequired, ...props }: IProps) {
 
 Label.defaultProps = {
   children: '',
-  fontSize: '13px',
-  lineHeight: '28px',
   letterSpacing: '-0.26px',
   width: '100%',
   opacity: '1',
@@ -53,9 +51,9 @@ Label.defaultProps = {
 
 const S = {
   container: styled.label<IStyleProps>`
-    font-size: ${prop('fontSize', '13px')};
+    font-size: ${prop('fontSize', '18px')};
     color: ${prop('color', DARK_GRAY1)};
-    line-height: ${prop('lineHeight', '28px')};
+    line-height: ${prop('lineHeight', '1.8em')};
     letter-spacing: ${prop('letterSpacing', '-0.26px')};
     width: ${prop('width', '100%')};
     opacity: ${prop('opacity', '1')};
@@ -63,11 +61,19 @@ const S = {
 
     em {
       display: inline-block;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.28px;
       font-style: normal;
       color: ${ORANGE1};
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: ${prop('fontSize', '13px')};
+
+      em {
+        font-size: 14px;
+      }
     }
   `,
 };

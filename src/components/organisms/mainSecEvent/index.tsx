@@ -6,6 +6,7 @@ import {
   LIGHT_GRAY8,
   DARK_GRAY1,
   BLUE1,
+  ORANGE1,
 } from '@airpremia/cdk/styles/colors';
 import Link from 'next/link';
 
@@ -73,6 +74,12 @@ const S = {
 
     .list {
       width: calc(25% - 30px);
+
+      a:hover {
+        h4 {          
+          color: ${ORANGE1};
+        }
+      }
     }
 
     .image {

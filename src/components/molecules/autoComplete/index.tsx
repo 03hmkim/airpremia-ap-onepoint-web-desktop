@@ -375,7 +375,7 @@ const S = {
     overflow-y: scroll;
     @media only screen and (max-width: 1059px) {
       width: 100%;
-      min-width: 100%;
+      min-width: 280px;
     }
   `,
 

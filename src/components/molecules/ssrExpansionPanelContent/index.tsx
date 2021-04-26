@@ -57,7 +57,7 @@ const S = {
     .title {
       font-weight: 600;
       letter-spacing: -0.32px;
-      font-size: 16px;
+      font-size: 18px;
     }
     .itemWrapper {
       flex: 1;
@@ -97,6 +97,12 @@ const S = {
           font-size: 15px;
           padding-left: 48px;
         }
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .title {
+        font-size: 16px;
       }
     }
   `,

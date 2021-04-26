@@ -38,6 +38,7 @@ import {
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
 import { getTimeHumanize } from '@airpremia/core/lib/service';
+import { EScrollType } from 'src/components/templates/centerPopup';
 
 interface IProps {
   userEmail?: string;
@@ -137,6 +138,8 @@ const BookingPersonInfo: FC<IProps> = () => {
       case 'changeEmail':
         return (
           <NewModal
+            className="btnN hAuto"
+            type={EScrollType.TYPE1}
             title={<MakeTitleDom text="이메일 주소 변경" />}
             body={
               <ChangeEmail originEmail={userInfo?.email} />
@@ -147,6 +150,8 @@ const BookingPersonInfo: FC<IProps> = () => {
       case 'changePhoneNumber':
         return (
           <NewModal
+            className="btnN hAuto"
+            type={EScrollType.TYPE1}
             title={<MakeTitleDom text="휴대폰 번호 변경" />}
             body={
               <ChangePhoneNumber

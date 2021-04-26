@@ -74,21 +74,35 @@ const S = {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media only screen and (max-width: 767px) { 
+      display: block;
+      padding-bottom: 0;
+    }
   `,
 
   left: styled.div`
-    width: 350px;
-    height: 500px;
+    width: 33%;
     overflow: hidden;
 
     > img{
       width: 100%;
       height: auto;
     }
+    @media only screen and (max-width: 767px) { 
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
   `,
 
   right: styled.div`
-    margin-left: 80px;
+    margin-left: 60px;
+    width: 66%;
+    @media only screen and (max-width: 767px) {
+      margin-left: 0;
+      margin-top: 80px;
+      width: 100%;
+    }
   `,
 
   header: styled.div`
@@ -96,39 +110,66 @@ const S = {
 
     h5 {
       color: ${DARK_GRAY1};
-      font-size: 16px;
-      line-height: 25px;
-      letter-spacing: -0.28px;
+      font-size: 18px;
+      line-height: 26px;
+      letter-spacing: 0;
       
       &.gray{
         color: ${LIGHT_GRAY7};
       }
+      @media only screen and (max-width: 767px) { 
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      height: auto;
     }
   `,
 
   list: styled.div`
     strong {
       color: ${DARK_GRAY1};
-      font-size: 20px;
+      font-size: 21px;
       font-weight: 700;
       letter-spacing: -0.2px;
     }
+    @media only screen and (max-width: 767px) { 
+      font-size: 16px;
+    }  
 
     .listWrap {
       margin-top: 20px;
 
       dl {
         padding: 20px 0;
-        display: flex;
-        font-size: 16px;
+        display: table;
+        width: 100%;
+        font-size: 18px;
         border-bottom: 1px solid ${LIGHT_GRAY5};
   
         dt{
+          padding-right: 20px;
           width: 140px;
+          display: table-cell;
           margin-right: 10px;
           font-weight: 700;
+          @media only screen and (max-width: 767px) { 
+            width: 100px;
+          } 
+        }
+        dd{
+          display: table-cell;
+        }
+        @media only screen and (max-width: 767px) { 
+          font-size: 14px;
+          &:last-child{
+            border-bottom: 0;
+          }
         }  
       }
+    }
+    @media only screen and (max-width: 767px){
+      margin-top: 30px;
     }
   `,
 };

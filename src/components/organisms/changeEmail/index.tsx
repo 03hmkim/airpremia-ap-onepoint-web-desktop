@@ -87,31 +87,38 @@ const ChangeEmail: FC<IProps> = ({
 };
 
 const pFont = `
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 18px;
+  line-height: 1.8em;
   letter-spacing: -0.28px;
+
+  @media only screen and (max-width: 767px) {
+      font-size: 14px;
+  }
 `;
 
 const S = {
   container: styled.div`
-    & > div {
-      padding: 0 50px;
-    }
   `,
 
   title: styled.div``,
 
   top: styled.div`
-    margin: 80px 0 45px;
+    margin-bottom: 45px;
     p {
       ${pFont};
       margin-bottom: 12px;
     }
     b {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.28px;
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: 767px) {
+      b {
+        font-size: 16px;
+      }
     }
   `,
 

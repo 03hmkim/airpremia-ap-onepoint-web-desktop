@@ -28,6 +28,7 @@ import {
 import moment from 'moment';
 import { formattingDate } from '@airpremia/core/lib/me';
 import { BtnType11 } from '@airpremia/cdk/components';
+import { EScrollType } from 'src/components/templates/centerPopup';
 
 interface IProps {}
 
@@ -137,6 +138,8 @@ const ChangeUserInfomationPage: FC<IProps> = ({}) => {
       case 'changeEmail2':
         return (
           <NewModal
+            className="hAuto"
+            type={EScrollType.TYPE1}
             title={
               <PopupTitle>이메일 주소 변경</PopupTitle>
             }
@@ -151,6 +154,8 @@ const ChangeUserInfomationPage: FC<IProps> = ({}) => {
       case 'changePhoneNumber2':
         return (
           <NewModal
+            className="hAuto"
+            type={EScrollType.TYPE1}
             overflow="initial"
             title={
               <PopupTitle>휴대폰 번호 변경</PopupTitle>
@@ -166,6 +171,8 @@ const ChangeUserInfomationPage: FC<IProps> = ({}) => {
       case 'changePassword2':
         return (
           <NewModal
+            className="hAuto"
+            type={EScrollType.TYPE1}
             title={<PopupTitle>비밀번호 변경</PopupTitle>}
             body={<ChangePassword2 />}
           />

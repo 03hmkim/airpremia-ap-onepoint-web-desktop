@@ -3,13 +3,12 @@ import styled from 'styled-components';
 import {
   TextNavigationTab,
 } from 'src/components';
-import TabContent from './tabCont';
 
 interface IProps {}
 
-const promotionTab: FC<IProps> = ({}) => {
+const fareInformationTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['진행중', '종료됨', '응모함'];
+  const tabList = ['운임구성', '서비스 안내', '위약금 안내', '신분 할인'];
   
 
   return (
@@ -19,17 +18,14 @@ const promotionTab: FC<IProps> = ({}) => {
         list={tabList}
         onClick={setCurrIdx}
       />
-      <TabContent
-        currIdxCont={currIdx}
-      />
     </S.container>
   );
 };
 
 const S = {
   container: styled.div`
-    
+  padding-top: 15px;
   `,
 };
 
-export default promotionTab;
+export default fareInformationTab;

@@ -166,7 +166,7 @@ const FloatingFoldableItinerary: FC<IProps> = ({
       case 'promotion_login':
         return (
           <NewModal
-            className="min hAuto"
+            className="btnN hAuto"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -186,7 +186,7 @@ const FloatingFoldableItinerary: FC<IProps> = ({
       case 'promotion_code':
         return (
           <NewModal
-            className="min hAuto"
+            className="btnN hAuto"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -499,7 +499,7 @@ const S = {
     }
 
     @media only screen and (max-width: 1059px) {
-      margin-top: 1.5vw;
+      margin-top: 20px;
       justify-content: flex-start;
 
       button{
@@ -530,7 +530,6 @@ const S = {
   modalTitle : styled.div``,
 
   modalBody: styled.div`
-    padding: 40px 50px 0;
     .select {
       margin-top: 40px;
       font-size: 15px;
