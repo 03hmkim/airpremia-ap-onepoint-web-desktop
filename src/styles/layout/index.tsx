@@ -28,6 +28,7 @@ const Container = styled.div<IContainerStyle>`
   padding-right: ${prop('pr')}px;
   padding-left: ${prop('pl')}px;
   @media only screen and (max-width: 767px) {
+    padding-bottom: ${prop('pb', 40)}px;
   }
 `;
 
