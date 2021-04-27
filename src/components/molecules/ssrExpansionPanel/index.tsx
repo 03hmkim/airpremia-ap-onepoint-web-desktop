@@ -210,7 +210,7 @@ const S = {
     }
     .totalFeeWrapper {
       .totalFee {
-        font-size: 16px;
+        font-size: 18px;
         font-weight: 600;
         line-height: 1.65;
         letter-spacing: -0.32px;
@@ -220,7 +220,7 @@ const S = {
         padding-top: 7px;
         display: flex;
         margin-left: auto;
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.28px;
         color: ${DARK_GRAY1};
@@ -242,6 +242,15 @@ const S = {
         
         .defaultDescription {
           font-size: 12px;
+        }
+      }
+
+      .totalFeeWrapper {
+        .totalFee {
+          font-size: 16px;
+        }
+        .detailButtonWrapper {
+          font-size: 14px;
         }
       }
     }

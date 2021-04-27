@@ -130,6 +130,10 @@ const S = {
     .textinput {
       border-bottom: solid 1px ${DARK_GRAY1};
     }
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 40px;
+    }
   `,
 
   bottom: styled.div`
@@ -141,9 +145,19 @@ const S = {
 
   button: styled.div`
     margin-top: 80px;
+
+    @media only screen and (max-width: 767px) {
+      margin-top: 40px;
+    }
   `,
 
-  warning: styled.sub``,
+  warning: styled.sub`
+    font-size: 18px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
+  `,
 };
 
 export default ChangeEmail;

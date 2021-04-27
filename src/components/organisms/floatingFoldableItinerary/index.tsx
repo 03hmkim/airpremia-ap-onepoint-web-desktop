@@ -322,18 +322,7 @@ const FloatingFoldableItinerary: FC<IProps> = ({
 const S = {
   container: styled.div`
     width: 100%;
-    position: fixed;
-    top: 136px;
-    left: 0;
-    right: 0;
-    z-index: 1;
     background-color: ${WHITE1};
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.02);
-
-    @media only screen and (max-width: 1440px) { 
-      position: sticky;
-      box-shadow: none;
-    }
   `,
 
   innerWrapper: styled.div<{ isShow: boolean }>`

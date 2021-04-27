@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Link from 'next/link';
 import SvgLogo from 'public/images/btn_logo_JS.svg';
 import IcoNav1b1 from 'public/images/nav/ico_nav_1-1.svg';
@@ -33,6 +33,8 @@ import {
   DARK_GRAY2,
   PALE_BLUE6,
 } from '@airpremia/cdk/styles/colors';
+import { useState } from 'react';
+import { ERightDpType } from './types';
 
 interface IProps {
   resetData: () => void;
@@ -43,22 +45,35 @@ const GnbNew = ({ resetData }: IProps) => {
     resetData();
   }, [resetData]);
 
+  const { CLOSE, OPEN } = ERightDpType;
+  const [rightDp, setrightDp] = useState(CLOSE);
+
   return (
     <S.container id="gnbNew">
       <div className="innerWrapper">
         <S.logo>
           <Link href="/">
-            <a className="logo" onClick={linkOnClick}>
+            <a className="logo">
               <SvgLogo />
             </a>
           </Link>
         </S.logo>
-        <S.rightMenu>
-          <button className="btnMenu">
+        <S.rightMenu rightDp={rightDp}>
+          <button className="btnMenu open" onClick={() => setrightDp(OPEN)}>
             <span className="line"></span>
             <span className="line"></span>
             <span className="line"></span>
-          </button>
+          </button>          
+          <div className="rightMenuWrapper">
+            <button className="btnMenu close" onClick={() => setrightDp(CLOSE)}>
+              <span className="line"></span>
+              <span className="line"></span>
+              <span className="line"></span>
+            </button>
+            <div className="contents">
+              오른쪽메뉴
+            </div>  
+          </div>
         </S.rightMenu>
         <S.menusWrapper>
           <div className="mainMenu">
@@ -502,33 +517,126 @@ const S = {
       }
     }
   `,
-  rightMenu: styled.div`
+  rightMenu: styled.div<{
+    rightDp: ERightDpType;
+  }>`
     margin-right: -10px;
     display: none;
 
-    .btnMenu{
+    .btnMenu {
       padding: 10px;
 
-      .line{
-        width: 28px;
+      .line {
         height: 3px;
-        margin-bottom: 7px;
         display: block;
         background-color: ${DARK_GRAY2};
+      }
 
-        &:last-child{
-          margin-bottom: 0;
+      &.open {
+        .line {
+          width: 28px;
+          margin-bottom: 7px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &.close {
+        width: 40px;
+        height: 40px;
+        padding: 5px;
+        position: absolute;
+        top: 20px;
+        right: 15px;
+
+        .line {
+          width: 32px;
+
+          &:nth-child(2) {
+            display: none;
+          }
+          &:first-child {
+            transform: rotate(45deg);
+          }
+          &:last-child {
+            margin-top: -3px;
+            transform: rotate(-45deg);
+          }
         }
       }
     }
+
+    .rightMenuWrapper {
+      position: fixed;
+      display: none;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 100;
+      background: ${WHITE1};
+    }
+
+    ${({ rightDp }) => {
+      if (rightDp === ERightDpType.CLOSE) {
+        return css`
+          .btnMenu.open {
+            display: block;
+          }
+          .btnMenu.close,
+          .rightMenuWrapper {
+            display: none;
+          }
+        `;
+      }
+      return css`
+        .btnMenu.open {
+          display: none;
+        }
+        .btnMenu.close,
+        .rightMenuWrapper {
+          display: block;
+        }
+      `;
+    }}
+
+    @media only screen and (min-width: 1059px) {
+      .rightMenuWrapper {
+        display: none;
+      }
+    }
+
     @media only screen and (max-width: 1059px) {
       display: block;
     }
+
     @media only screen and (max-width: 767px) {
-      .btnMenu .line{
-        width: 20px;
-        height: 2px;
-        margin-bottom: 5px;
+      .btnMenu {
+        .line {
+          height: 2px;
+        }
+
+        &.open {
+          .line {
+            width: 20px;
+            margin-bottom: 5px;
+          }
+        }
+
+        &.close {
+          padding: 10px;
+
+          .line {
+            width: 24px;
+
+            &:last-child {
+              margin-top: -2px;
+            }
+          }
+        }
       }
     }
   `,

@@ -11,6 +11,7 @@ import { EDefaultModalTable } from '@airpremia/core/stores/models/ui';
 import TripInfomation from 'src/components/organisms/tripInfomation';
 import { NewModal } from 'src/components';
 import PopupTitle from '../popupTitle';
+import { EScrollType } from 'src/components/templates/centerPopup';
 
 interface IProps {
   journey: IFlightTicketSearchJourney;
@@ -41,6 +42,8 @@ function CabinClassTime({
       case journeyKey:
         return (
           <NewModal
+            className="hAuto"
+            type={EScrollType.TYPE1}            
             title={
               <S.header>
                 <PopupTitle>여정 정보</PopupTitle>
@@ -64,9 +67,15 @@ function CabinClassTime({
       <S.timeArea>
         <div className="station">
           <h2 className="font-premia-bold">
-          {moment(departureTime).format('MM-DD')}
+          <span className="day">
+            (
+            {moment(departureTime).format('M.D')}
+            )
+          </span>
           <br/>
-          {moment(departureTime).format('HH : mm')}
+          <span className="hour">
+            {moment(departureTime).format('HH : mm')}
+          </span>
           </h2>
         </div>
         <div className="middle">
@@ -79,9 +88,15 @@ function CabinClassTime({
         </div>
         <div className="station">
           <h2 className="font-premia-bold">
-            {moment(arrivalTime).format('MM-DD')}
+            <span className="day">
+              (
+              {moment(arrivalTime).format('M.D')}
+              )
+            </span>
             <br/>
-            {moment(arrivalTime).format('HH : mm')}
+            <span className="hour">
+              {moment(arrivalTime).format('HH : mm')}
+            </span>
           </h2>
           {!!dateChange ? (
             <sub>(+{dateChange}일)</sub>
@@ -116,6 +131,10 @@ const S = {
       line-height: 35px;
       letter-spacing: -0.72px;
       font-size: 36px;
+
+      .day {
+        font-size: 30px;
+      }
     }
 
     @media only screen and (max-width: 1440px) {
