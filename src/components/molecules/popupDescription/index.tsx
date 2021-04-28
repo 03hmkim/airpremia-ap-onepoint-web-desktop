@@ -15,7 +15,7 @@ PopupDescription.defaultProps = {};
 const S = {
   container: styled.div<IStyleProps>`
     font-size: 18px;
-    line-height: 36px;
+    line-height: 1.5em;
     letter-spacing: -0.28px;
     color: ${LIGHT_GRAY7};
     font-weight: 600;
@@ -24,7 +24,6 @@ const S = {
     }
     @media only screen and (max-width: 767px) {
       font-size: 14px;
-      line-height: 28px; 
       .spacing {
         display: none;
       }

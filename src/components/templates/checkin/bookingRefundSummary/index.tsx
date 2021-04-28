@@ -51,10 +51,22 @@ const S = {
 
   title: styled.div`
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-bottom: 40px;
+    }
   `,
 
   bookingCancelSummaryCard: styled.div`
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-bottom: 40px;
+    }
   `,
 
   paymentByPassenger: styled.div``,
@@ -66,6 +78,12 @@ const S = {
     h3 {
       font-weight: bold;
       color: ${DARK_GRAY1};
+    }
+    @media only screen and (max-width: 1059px) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-bottom: 40px;
     }
   `,
 

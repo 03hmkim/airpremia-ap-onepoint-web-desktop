@@ -207,7 +207,7 @@ const S = {
         border-bottom: 1px solid ${LIGHT_GRAY6};
         .label {
           width: 200px;
-          font-size: 15px;
+          font-size: 18px;
           letter-spacing: -0.3px;
         }
         .value {
@@ -217,6 +217,19 @@ const S = {
     }
     .checkboxWrapper {
       padding-top: 30px;
+    }
+    @media only screen and (max-width: 1059px) { 
+      .textInputsWrapper {
+        .row {
+          .label {
+            width: 100px;
+            font-size:15px;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+    
     }
   `,
 

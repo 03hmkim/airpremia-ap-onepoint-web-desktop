@@ -163,7 +163,7 @@ const S = {
     display: ${ifProp('isButtonShow', 'block', 'none')};
     position: absolute;
     height: 100%;
-    right: 40px;
+    right: 0px;
     top: 13px;
 
     img {
@@ -173,10 +173,17 @@ const S = {
 
   message: styled.div`
     position: absolute;
-    bottom: -16px;
+    bottom: -20px;
     font-size: 18px;
     color: ${ORANGE1};
     line-height: 0.5;
+    z-index:2;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
 
   passwordToggleButton: styled.span<{

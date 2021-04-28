@@ -39,16 +39,44 @@ const S = {
       line-height: 48px;
       letter-spacing: -0.72px;
     }
+    @media only screen and (max-width: 1059px) {
+        h1 {
+            font-size:30px;
+        }
+    }
+    @media only screen and (max-width: 767px) { 
+        h1 {
+            font-size:26px;
+        }
+    }
   `,
   reservationDetailInfoGroup: styled.div``,
   boardingPassInfo: styled.div`
     margin-top: 140px;
+    @media only screen and (max-width: 1059px) {
+        margin-top: 100px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 60px;
+    }
   `,
   passenger: styled.div`
     margin-top: 140px;
+    @media only screen and (max-width: 1059px) {
+        margin-top: 100px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 60px;
+    }
   `,
   payment: styled.div`
     margin-top: 140px;
+    @media only screen and (max-width: 1059px) {
+        margin-top: 100px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 60px;
+    }
   `,
 };
 

@@ -46,6 +46,7 @@ const S = {
     display: flex;
     align-items: center;
     cursor: pointer;
+    width:100%;
   `,
 
   checkbox: styled.div`
@@ -57,6 +58,9 @@ const S = {
     font-size: 18px;
     line-height: 23px;
     letter-spacing: -0.28px;
+    width:100%;
+    flex:1;
+    text-align:left;
 
     @media only screen and (max-width: 767px) {
       font-size: 14px;

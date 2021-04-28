@@ -38,6 +38,12 @@ const S = {
     .pricesWrapper {
       display: none;
     }
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
 
   button: styled.div`
@@ -47,6 +53,18 @@ const S = {
       width: 240px;
       &:first-of-type {
         margin-right: 10px;
+      }
+    }
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 40px;
+      button {
+        width: 200px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 20px;
+      button {
+        width: 130px;
       }
     }
   `,

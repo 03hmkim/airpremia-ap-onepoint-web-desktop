@@ -46,6 +46,7 @@ const S = {
     display: flex;
     align-items: center;
     cursor: pointer;
+    width:100%;
   `,
 
   checkbox: styled.div`

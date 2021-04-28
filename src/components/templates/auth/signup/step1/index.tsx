@@ -49,6 +49,12 @@ const S = {
   header: styled.div`
     position: relative;
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 60px;
+    }
   `,
 
   title: styled.div`
@@ -68,10 +74,22 @@ const S = {
 
     .text-input-message {
     }
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 40px;
+    }
   `,
 
   email: styled.div`
     margin-bottom: 45px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 35px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 25px;
+    }
   `,
 
   password: styled.div`
@@ -79,6 +97,12 @@ const S = {
 
     sub:not(:first-of-type) {
       margin-left: 10px;
+    }
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 48px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 38px;
     }
   `,
 

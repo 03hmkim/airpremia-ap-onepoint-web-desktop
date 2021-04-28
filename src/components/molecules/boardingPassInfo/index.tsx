@@ -117,9 +117,16 @@ const S = {
     border-radius: 8px;
     border: solid 1px ${LIGHT_GRAY6};
     padding: 0 30px;
+    @media only screen and (max-width: 767px) { 
+      padding: 0 20px;
+      height:auto;
+      overflow:hidden;
+    }
   `,
   wrapper: styled.div<{ isCanceled: boolean }>`
     padding-top: 30px;
+    height:auto;
+    overflow:hidden;
   `,
   top: styled.div`
     display: flex;
@@ -168,6 +175,53 @@ const S = {
       &:nth-child(2) {
         margin-right: 0;
       }
+    }
+    @media only screen and (max-width: 1059px) {
+      justify-content:space-between;
+      & > div {
+        width:auto;
+        min-width:0;
+        margin-right: 20px;
+        &:nth-child(1),
+        &:nth-child(2) {
+          margin-right: 0;
+        }
+        p{
+          margin:0;
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      height:auto;
+      overflow:hidden;
+      padding-bottom:0;
+      & > div {
+        width:40%;
+        float:left;
+        margin:0;
+        margin-bottom:10px;
+        &:nth-child(even){
+          float:right;
+          text-align:right;
+        }
+        p{
+          font-size:14px;
+        }
+      }
+      & > span {
+        width:20%;
+        float:left;
+        margin:0;
+        height:82px;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+      & > span + div{
+        text-align:right;
+      }
+      
     }
   `,
 

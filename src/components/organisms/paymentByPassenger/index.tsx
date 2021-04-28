@@ -82,8 +82,16 @@ const S = {
     padding: 40px 0 125px;
     border-top: solid 2px ${DARK_GRAY1};
     display: flex;
+    height:auto;
+    overflow:hidden;
     .wrapper {
       ${flex};
+    }
+    @media only screen and (max-width: 1059px) {
+      padding: 30px 0 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 20px 0 40px;
     }
   `,
 
@@ -91,13 +99,27 @@ const S = {
     flex-basis: 323px;
     h2 {
       font-size: 22px;
-      line-height: 34px;
+      line-height: 1.5em;
       letter-spacing: -0.44px;
+    }
+    @media only screen and (max-width: 1059px) {
+      h2 {
+        font-size: 18px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      flex-basis: 100px;
+      h2 {
+        font-size: 14px;
+      }
     }
   `,
 
   content: styled.div`
     flex: 1;
+    width:100%;
+    height:auto;
+    overflow:hidden;
   `,
 
   passengerWrapper: styled.div`
@@ -112,7 +134,8 @@ const S = {
       font-size: 15px;
       line-height: 22px;
       letter-spacing: -0.3px;
-      width: 280px;
+      width: 100%;
+      flex:1;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -124,6 +147,21 @@ const S = {
       letter-spacing: -0.36px;
       font-weight: 600;
       border-bottom: solid 1px ${DARK_GRAY1};
+    }
+    @media only screen and (max-width: 1059px) { 
+    
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom:10px;
+      .wrapper {
+        margin-bottom:5px;
+      }
+      .name {
+        font-size: 14px;
+      }
+      .price {
+        font-size: 14px;
+      }
     }
   `,
 
@@ -146,6 +184,20 @@ const S = {
       letter-spacing: -0.48px;
 
       color: ${ORANGE2};
+    }
+    @media only screen and (max-width: 1059px) { 
+    
+    }
+    @media only screen and (max-width: 767px) { 
+      .wrapper {
+        margin-bottom: 0px;
+      }
+      .label {
+        font-size: 14px;
+      }
+      .result {
+        font-size: 14px;
+      }
     }
   `,
 };

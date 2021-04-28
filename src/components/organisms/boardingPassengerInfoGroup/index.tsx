@@ -75,6 +75,12 @@ const S = {
 
   header: styled.div`
     margin-bottom: 60px;
+    @media only screen and (max-width: 1059px) {
+      margin-bottom: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 20px;
+    }
   `,
 
   title: styled.div`
@@ -83,18 +89,32 @@ const S = {
       line-height: 45px;
       letter-spacing: -0.6px;
     }
+    @media only screen and (max-width: 1059px) {
+      h2 {
+        font-size: 26px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      h2 {
+        font-size: 22px;
+      }
+    }
   `,
 
   description: styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-top: 15px;
+    svg{
+      margin-top:5px;
+    }
     p {
       margin-left: 5px;
       font-size: 15px;
       line-height: 25px;
       letter-spacing: -0.3px;
       font-weight: 600;
+      flex:1;
     }
   `,
 

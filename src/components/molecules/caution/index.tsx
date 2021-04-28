@@ -67,9 +67,14 @@ const S = {
       font-size: 18px;
       line-height: 28px;
       color: ${LIGHT_GRAY8};
+      position:relative;
+      padding-left:10px;
 
       &::before {
         content: '- ';
+        position:absolute;
+        left:0;
+        top:0;
       }
     }
 

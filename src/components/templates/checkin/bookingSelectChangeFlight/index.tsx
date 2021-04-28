@@ -48,10 +48,22 @@ const S = {
     font-size: 15px;
     color: gray;
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-bottom: 40px;
+    }
   `,
 
   bookingChangeSummaryCard: styled.div`
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) {
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-bottom: 40px;
+    }
   `,
 
   button: styled.div`

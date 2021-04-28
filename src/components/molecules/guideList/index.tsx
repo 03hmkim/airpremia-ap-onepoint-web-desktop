@@ -34,12 +34,15 @@ const S = {
     ul {
       padding-top: 10px;
       li {
-        font-size: 15px;
-        line-height: 36px;
+        font-size: 18px;
+        line-height: 1.5em !important;
         letter-spacing: -0.3px;
         color: ${DARK_GRAY1};
         display: flex;
         align-items: center;
+        width:calc( 100% - 10px );
+        padding-left:10px;
+        position:relative;
         &:not(:last-of-type) {
           margin-bottom: 15px;
         }
@@ -50,7 +53,16 @@ const S = {
           background-color: ${DARK_GRAY1};
           display: inline-block;
           border-radius: 50%;
-          margin-right: 10px;
+          position:absolute;
+          left:0;
+          top:8px;
+        }
+      }
+    }
+    @media only screen and (max-width: 1059px) { 
+      ul {
+          li {
+            font-size: 15px;
         }
       }
     }
@@ -64,6 +76,18 @@ const S = {
       letter-spacing: -0.44px;
       margin-left: 5px;
       color: ${DARK_GRAY1};
+    }
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 10px;
+      h3 {
+        font-size: 20px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 0px;
+      h3 {
+        font-size: 18px;
+      }
     }
   `,
 };

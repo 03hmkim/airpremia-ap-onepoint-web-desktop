@@ -275,7 +275,7 @@ const T = {
         thead td,
         td strong {
           color: ${LIGHT_GRAY7};
-          font-size: 14px;
+          font-size: 18px;
           line-height: 1.6;
           letter-spacing: -0.3px;
           text-align: center;
@@ -352,6 +352,28 @@ const T = {
         margin:0;
       }
     }
+    @media only screen and (max-width: 1059px) { 
+      table {
+        thead th,
+        tbody th{
+          padding-right:20px;
+        }
+        tbody th,
+        tbody td{
+          padding-top:10px;
+          padding-bottom:10px;
+        }
+      }
+    }
+    @media only screen and (max-width: 479px) { 
+      table {
+        thead th,
+        thead td,
+        td strong {
+          font-size: 14px;
+        }
+      }
+    }
   `,
   };
   
@@ -404,20 +426,50 @@ const T = {
         .displayNone{
           display: none;
         }
+      @media only screen and (max-width: 1059px) { 
+        margin-top: 40px;
+      }
+      @media only screen and (max-width: 767px) { 
+        margin-top: 20px;
+      }
     `,
     sbody: styled.div`
       margin-top: 100px;
+      @media only screen and (max-width: 1059px) { 
+        margin-top: 80px;
+      }
+      @media only screen and (max-width: 767px) { 
+        margin-top: 60px;
+      }
     `,
     title: styled.h4`
       font-size: 22px;
       font-weight: bold;
+      @media only screen and (max-width: 1059px) { 
+        font-size: 20px;
+      }
+      @media only screen and (max-width: 767px) { 
+        font-size: 18px;
+      }
     `,
     itemTitle: styled.h5`
       font-size: 20px;
       font-weight: bold;
+      @media only screen and (max-width: 1059px) { 
+        font-size: 18px;
+      }
+      @media only screen and (max-width: 767px) { 
+        font-size: 16px;
+      }
     `,
     sb: styled.div`
       margin-top: 60px;
+      @media only screen and (max-width: 1059px) { 
+        margin-top: 40px;
+      }
+      @media only screen and (max-width: 767px) { 
+        margin-top: 20px;
+      }
     `,
     p: styled.p`
       margin-top: 20px;
@@ -432,22 +484,35 @@ const T = {
     `,
     itemText: styled.p`
       display: inline-block;
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.8;
       &.mt20{
         margin-top:20px;
+      }
+      @media only screen and (max-width: 1059px) { 
+        font-size: 16px;
+      }
+      @media only screen and (max-width: 767px) { 
+        font-size: 14px;
       }
     `,
     description: styled.p`
       margin-top: 10px;
       color: ${LIGHT_GRAY7};
-      font-size: 13px;
+      font-size: 18px;
       line-height: 28px;
       &.center{
         text-align:center;
       }
       &.mt20{
         margin-top:20px;
+      }
+      @media only screen and (max-width: 1059px) { 
+        font-size: 16px;
+      }
+      @media only screen and (max-width: 767px) { 
+        font-size: 14px;
+        margin-top:0;
       }
     `,
     bold: styled.span`
@@ -480,7 +545,7 @@ const T = {
       margin: 0 auto;
       padding: 2px;
       color: #fff;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 23px;
       text-align: center;
       border-radius: 4px;
@@ -494,23 +559,47 @@ const T = {
         &.red{
           background-color: ${RED2};
         }
+      @media only screen and (max-width: 1059px) { 
+        font-size: 16px;
+      }
+      @media only screen and (max-width: 767px) { 
+        font-size: 14px;
+      }
       `,
     line:styled.div`
       width: 83px;
       height: 1px;
       margin: 10px 20px 14px;
       background: ${LIGHT_GRAY9};
+      @media only screen and (max-width: 767px) { 
+        margin: 10px 0px;
+        width:100%;
+      }
       `,
     textBox:styled.div`
       width: auto;
       display: inline-block;
       text-align: left;
+      @media only screen and (max-width: 767px) { 
+        width:calc( 100% - 20px );
+        float:left;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+      }
+      @media only screen and (max-width: 479px) {
+        display:block;
+      }
       `,
     textBoxCenter:styled.div`
       width: auto;
       display: inline-block;
       vertical-align: middle;
       text-align: center;
+      @media only screen and (max-width: 767px) { 
+        width:calc( 100% - 20px );
+        float:left;
+      }
     `,
     bannerBox:styled.div`
       margin-top: 20px;
@@ -533,9 +622,15 @@ const T = {
       padding: 13px 47px;
       border-radius: 12px;
       border: solid 1px ${WHITE1};
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 600;
       color: ${DARK_GRAY1};
+      @media only screen and (max-width: 1059px) { 
+        font-size: 16px;
+      }
+      @media only screen and (max-width: 767px) { 
+        
+      }
   `,
   }
 

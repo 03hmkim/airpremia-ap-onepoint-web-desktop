@@ -26,12 +26,24 @@ const S = {
   title: styled.div``,
   table: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) {
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
   button: styled.div`
     margin-top: 60px;
     text-align: center;
     button {
       width: 300px;
+    }
+    @media only screen and (max-width: 1059px) {
+      margin-top: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 20px;
     }
   `,
 };

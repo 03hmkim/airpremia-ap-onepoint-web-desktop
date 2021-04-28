@@ -43,14 +43,36 @@ const S = {
       line-height: 50px;
       letter-spacing: -0.72px;
     }
+    @media only screen and (max-width: 1059px) {
+        h1 {
+            font-size:30px;
+        }
+    }
+    @media only screen and (max-width: 767px) { 
+        h1 {
+            font-size:26px;
+        }
+    }
   `,
 
   tab: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) {
+        margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 40px;
+    }
   `,
 
   table: styled.div`
     margin: 60px 0 80px;
+    @media only screen and (max-width: 1059px) {
+        margin: 40px 0 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin: 20px 0 40px;
+    }
   `,
 
   // Pagination: styled.div``,

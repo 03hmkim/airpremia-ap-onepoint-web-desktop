@@ -48,6 +48,12 @@ const S = {
   `,
   header: styled.div`
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 60px;
+    }
   `,
 
   title: styled.div`
@@ -60,11 +66,25 @@ const S = {
 
   email: styled.div`
     margin-bottom: 65px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 45px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 35px;
+    }
   `,
 
   phoneAuthForm: styled.div`
     label {
-      font-size: 14px;
+      font-size: 18px;
+    }
+    @media only screen and (max-width: 1059px) { 
+      label {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      
     }
   `,
 
@@ -80,10 +100,18 @@ const S = {
   goBack: styled.div`
     text-align: center;
     u {
-      font-size: 13px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 1.5em;
       letter-spacing: -0.26px;
       font-weight: 600;
+    }
+    @media only screen and (max-width: 1059px) { 
+      u {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      
     }
   `,
 };

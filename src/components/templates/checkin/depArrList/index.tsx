@@ -53,6 +53,17 @@ const S = {
       line-height: 50px;
       letter-spacing: -0.72px;
     }
+    @media only screen and (max-width: 1059px) { 
+      h1 {
+        font-size: 30px;
+        line-height: 1.5em;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      h1 {
+        font-size: 26px;
+      }
+    }
   `,
 
   tab: styled.div`
@@ -61,6 +72,12 @@ const S = {
 
   table: styled.div`
     margin: 60px 0 80px;
+    @media only screen and (max-width: 1059px) { 
+      margin: 40px 0 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin: 20px 0 40px;
+    }
   `,
 
   // Pagination: styled.div``,
@@ -69,6 +86,12 @@ const S = {
 
   cautionGuide: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
   paging: styled.div`
     // padding: 200px 0;
@@ -76,6 +99,18 @@ const S = {
       margin-bottom: 100px;
       font-size: 30px;
       text-align: center;
+    }
+    @media only screen and (max-width: 1059px) { 
+      p {
+        margin-bottom: 80px;
+        font-size: 26px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      p {
+        margin-bottom: 60px;
+        font-size: 22px;
+      }
     }
   `
 };

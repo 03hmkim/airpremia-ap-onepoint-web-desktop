@@ -128,7 +128,7 @@ const S = {
     .labelWrapper {
       display: flex;
       padding-top: 10px;
-      font-size: 14px;
+      font-size: 18px;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY8};
       .gender {
@@ -144,6 +144,14 @@ const S = {
           background-color: ${LIGHT_GRAY6};
         }
       }
+    }
+    @media only screen and (max-width: 1059px) { 
+      .labelWrapper {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+    
     }
   `,
   right: styled.div<{ disabled: boolean }>`
@@ -174,6 +182,12 @@ const S = {
     padding-top: ${ifProp('isOpen', '30px', '0')};
     .innerWrapper {
       /* border-top: 1px solid ${LIGHT_GRAY5}; */
+    }
+    @media only screen and (max-width: 1059px) { 
+      margin-left:0px;
+    }
+    @media only screen and (max-width: 767px) { 
+    
     }
   `,
 };

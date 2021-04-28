@@ -59,16 +59,25 @@ const S = {
 
     color: ${ifProp('isEmphasisRow', BLUE1)};
     ${flex};
+    @media only screen and (max-width: 767px) { 
+      display:block;
+    }
   `,
 
   left: styled.div`
     flex: 1;
     font-weight: 600;
+    @media only screen and (max-width: 767px) { 
+      width:100%;margin-bottom:5px;
+    }
   `,
 
   right: styled.div`
     flex: 1;
     ${flex};
+    @media only screen and (max-width: 767px) { 
+      width:100%;
+    }
   `,
 
   description: styled.div``,

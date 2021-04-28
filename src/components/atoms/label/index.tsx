@@ -51,7 +51,7 @@ Label.defaultProps = {
 
 const S = {
   container: styled.label<IStyleProps>`
-    font-size: ${prop('fontSize', '18px')};
+    font-size: 18px;
     color: ${prop('color', DARK_GRAY1)};
     line-height: ${prop('lineHeight', '1.8em')};
     letter-spacing: ${prop('letterSpacing', '-0.26px')};

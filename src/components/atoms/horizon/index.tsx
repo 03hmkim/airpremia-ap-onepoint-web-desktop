@@ -32,6 +32,12 @@ const S = {
     margin: ${prop('top', 10)}px 0 ${prop('bottom', 10)}px;
 
     border-bottom: 0;
+    @media only screen and (max-width: 1059px) { 
+        margin:10px 0 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin:10px 0 20px;
+    }
   `,
 };
 

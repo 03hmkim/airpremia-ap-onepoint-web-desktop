@@ -20,6 +20,12 @@ const LoginTemplate: FC<IProps> = ({ title, form }) => {
 const S = {
   title: styled.div`
     margin-bottom: 120px;
+    @media only screen and (max-width: 1059px) { 
+        margin-bottom: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-bottom: 60px;
+    }
   `,
 
   form: styled.div``,

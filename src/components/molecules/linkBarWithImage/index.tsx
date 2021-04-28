@@ -46,6 +46,12 @@ const S = {
     padding: 30px 30px;
     border-radius: 8px;
     background-color: ${LIGHT_BLUE1};
+    @media only screen and (max-width: 1059px) { 
+      padding: 25px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding:20px;
+    }
   `,
   left: styled.div<IStyleProps>`
     display: flex;
@@ -55,11 +61,28 @@ const S = {
     }
     .text,
     a {
-      font-size: 15px;
-      line-height: 28px;
+      font-size: 18px;
+      line-height: 1.5em;
       letter-spacing: -0.3px;
       font-weight: 600;
       padding-right: 10px;
+    }
+    @media only screen and (max-width: 1059px) {
+      width:calc( 100% - 40px ); 
+      a {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      font-size:16px;
+      .text{
+        font-size:16px;
+        word-break:keep-all;
+      }
+      .link{
+        margin-top:10px;
+      }
     }
   `,
   right: styled.div<IStyleProps>`
@@ -72,6 +95,16 @@ const S = {
         display: block;
         width: 140px;
         height: 140px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      .img {
+        right:-30px;
+        bottom:-20px;
+        img {
+          width: 100px;
+          height: 100px;
+        }
       }
     }
   `,

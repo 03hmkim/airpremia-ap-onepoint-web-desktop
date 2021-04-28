@@ -63,6 +63,15 @@ const S = {
     padding: 25px 0 30px;
     border-top: solid 2px ${DARK_GRAY1};
     border-bottom: solid 2px ${DARK_GRAY1};
+    @media only screen and (max-width: 1059px) {
+        margin: 60px 0 10px;
+        height:auto;
+        overflow:hidden;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin: 40px 0 10px;
+        padding-bottom: 10px;
+    }
   `,
   buttonGroup: styled.div`
     display: flex;
@@ -71,6 +80,26 @@ const S = {
       &:not(:last-of-type) {
         margin-right: 20px;
       }
+    }
+    @media only screen and (max-width: 1059px) {
+        display:block;
+        height:auto;
+        overflow:hidden;
+        margin-top:20px;
+        & > div {
+          width:calc( 50% - 7px );
+          float:left;
+          margin-bottom:15px;
+          margin-right:0 !important;
+          &:nth-child(even){
+            float:right;
+          }
+        }
+    }
+    @media only screen and (max-width: 479px) { 
+         & > div {
+          width:100%;
+        }
     }
   `,
 };

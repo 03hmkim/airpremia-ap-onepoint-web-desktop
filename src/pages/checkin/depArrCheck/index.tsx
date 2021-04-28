@@ -50,6 +50,12 @@ const C = {
   ComTitles:styled.div`
     font-size:36px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+        font-size:30px;
+    }
+    @media only screen and (max-width: 767px) { 
+        font-size:26px;
+    }
   `,
   content: styled.div`
     margin-top: 10px;
@@ -59,10 +65,16 @@ const C = {
   `,
   igr: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+        margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 40px;
+    }
   `,
   note: styled.p`
     position: relative;
-    font-size: 15px;
+    font-size: 18px;
     color: ${DARK_GRAY1};
     line-height: 36px;
       &.point{
@@ -85,19 +97,31 @@ const C = {
       .blue {
         color: ${BLUE1};
       }
+    @media only screen and (max-width: 1059px) { 
+        font-size: 15px;
+    }
+    @media only screen and (max-width: 767px) { 
+        
+    }
 `,
   image: styled.p`
     margin-right: 5px;
     display:inline-block;
   `,
   description: styled.p`
-    font-size: 14px;
+    font-size: 18px;
     color: ${LIGHT_GRAY8};
     margin-top: 10px;
     line-height: 28px;
       &.center{
         text-align:center;
       }
+    @media only screen and (max-width: 1059px) { 
+        font-size: 15px;
+    }
+    @media only screen and (max-width: 767px) { 
+        
+    }
   `,
   linkTitle: styled.a`
     margin-left: 4px;

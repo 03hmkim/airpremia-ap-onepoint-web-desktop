@@ -174,6 +174,9 @@ const S = {
     &.infant {
       margin-top: 20px;
     }
+    @media only screen and (max-width: 767px) { 
+      font-size:18px;
+    }
   `,
   name: styled.div`
     display: flex;
@@ -218,9 +221,18 @@ const S = {
     display: flex;
     padding: 25px 0;
     margin-bottom: 25px;
+    height:auto;
+    overflow:hidden;
     border-bottom: solid 1px ${LIGHT_GRAY5};
     & > div {
       flex: 1;
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      padding-bottom:15px;
+      & > div {
+        width:100%;
+      }
     }
   `,
 
@@ -230,12 +242,18 @@ const S = {
         margin-bottom: 0;
       }
     }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom:10px;
+    }
   `,
 
   tag: styled.div`
     margin-bottom: 20px;
     & > div {
       padding: 0 5px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom:5px;
     }
   `,
 

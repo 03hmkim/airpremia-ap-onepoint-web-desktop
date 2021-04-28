@@ -27,7 +27,9 @@ const S = {
     line-height: 48px;
     letter-spacing: 0.03em;
     font-weight: 600;
-
+    @media only screen and (max-width: 1059px) {
+        margin-bottom: 30px;
+    }
     @media only screen and (max-width: 767px) {
       font-size: 26px;
       line-height: 36px;

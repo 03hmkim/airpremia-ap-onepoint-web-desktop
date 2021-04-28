@@ -96,10 +96,16 @@ const S = {
     border-radius: 8px;
     padding: 0 30px;
     margin: 20px 0;
+    @media only screen and (max-width: 767px) { 
+      padding: 0;
+    }
   `,
   wrapper: styled.div<{ isRefundable: boolean }>`
     padding-top: 30px;
     color: ${ifProp('isRefundable', LIGHT_GRAY6)};
+    @media only screen and (max-width: 767px) { 
+      padding-top: 20px;
+    }
   `,
   bottom: styled.div`
     .tag-group {
@@ -111,6 +117,8 @@ const S = {
     }
     display: flex;
     padding-bottom: 34px;
+    width:100%;
+    justify-content:space-between;
     span {
       display: flex;
       flex-direction: column;
@@ -124,6 +132,22 @@ const S = {
         margin-right: 0;
       }
     }
+    @media only screen and (max-width: 1059px) {
+      & > div {
+        width:auto;
+        min-width:0;
+        margin-right: 0px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      & > div {
+        width:100%;
+        float:left;
+        text-align:left;
+        margin-bottom:10px;
+      }
+    }
   `,
 
   column: styled.div<{ width?: number }>`
@@ -132,7 +156,7 @@ const S = {
     min-width: ${prop('width')}px;
 
     h6 {
-      font-size: 13px;
+      font-size: 18px;
       line-height: 35px;
       letter-spacing: -0.26px;
     }
@@ -142,6 +166,15 @@ const S = {
       line-height: 35px;
       letter-spacing: -0.36px;
       font-weight: 600;
+    }
+    @media only screen and (max-width: 767px) { 
+      h6 {
+        font-size: 14px;
+      }
+      p {
+        margin-top:-10px;
+        font-size: 16px;
+      }
     }
   `,
 };

@@ -56,6 +56,12 @@ const S = {
   header: styled.div`
     margin-bottom: 80px;
     position: relative;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 40px;
+    }
   `,
 
   title: styled.div`
@@ -111,14 +117,40 @@ const S = {
         }
       }
     }
+    @media only screen and (max-width: 1059px) { 
+      & > div {
+        div {
+          height: 44px;
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+       & > div {
+        div {
+          height: 34px;
+        }
+      }
+    }
   `,
 
   name: styled.div`
     margin-bottom: 45px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 35px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 25px;
+    }
   `,
 
   birth: styled.div`
     margin-bottom: 60px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 20px;
+    }
   `,
 
   privacyCheckGroup: styled.div``,
@@ -131,14 +163,26 @@ const S = {
       width: 300px;
       height: 50px;
     }
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 20px;
+    }
   `,
 
   goBack: styled.div`
-    font-size: 13px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 1.5em;
     letter-spacing: -0.26px;
     font-weight: 600;
     text-align: center;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
 };
 

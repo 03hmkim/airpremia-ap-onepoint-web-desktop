@@ -91,9 +91,25 @@ const S = {
       line-height: 36px;
       letter-spacing: -0.3px;
     }
+    @media only screen and (max-width: 1059px) {
+        h2 {
+            font-size:26px;
+        }
+    }
+    @media only screen and (max-width: 767px) { 
+        h2 {
+            font-size:22px;
+        }
+    }
   `,
   boardingPassInfo: styled.div`
     margin-top: 60px;
+    @media only screen and (max-width: 1059px) {
+        margin-top: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 20px;
+    }
   `,
 };
 

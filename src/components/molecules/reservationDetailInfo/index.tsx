@@ -99,11 +99,23 @@ const S = {
       color: ${DARK_GRAY1};
     }
     margin-bottom: 40px;
+    @media only screen and (max-width: 1059px) {
+      h4 {
+        font-size: 18px;
+      }
+      margin-bottom:20px;
+    }
   `,
 
   info: styled.div`
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 1059px) {
+        justify-content:space-between;
+    }
+    @media only screen and (max-width: 767px) { 
+        display: block;
+    }
   `,
 
   column: styled.div`
@@ -112,17 +124,40 @@ const S = {
     margin-right: 80px;
     font-weight: 600;
     h5 {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 20px;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY7};
     }
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.32px;
       margin-top: 8px;
     }
+    @media only screen and (max-width: 1059px) {
+       margin-right: 20px;
+       h5 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+       margin-right:0;
+       width:50%;
+       float:left;
+       margin-bottom:20px;
+       &:nth-child(even){
+        float:right;
+        text-align:right;
+       }
+       p{
+        margin:0;
+      }
+    }
+    
   `,
   columnOrange: styled.div`
     display: flex;
@@ -130,17 +165,35 @@ const S = {
     margin-right: 80px;
     font-weight: 600;
     h5 {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 20px;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY7};
     }
     p {
       color: ${ORANGE2};
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.32px;
       margin-top: 8px;
+    }
+    @media only screen and (max-width: 1059px) {
+      margin-right: 20px;
+      h5 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-right:0;
+      width:50%;
+      float:right;
+      text-align:right;
+      p{
+        margin:0;
+      }
     }
   `,
 };

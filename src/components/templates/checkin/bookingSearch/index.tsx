@@ -33,6 +33,16 @@ const S = {
       line-height: 50px;
       letter-spacing: -0.72px;
     }
+    @media only screen and (max-width: 1059px) { 
+        h1 {
+          font-size: 30px;
+        }
+    }
+    @media only screen and (max-width: 767px) { 
+        h1 {
+          font-size: 26px;
+        }
+    }
   `,
 
   form: styled.div`
@@ -42,6 +52,12 @@ const S = {
       &::placeholder {
         font-weight: normal;
       }
+    }
+    @media only screen and (max-width: 1059px) { 
+        margin: 80px 0 50px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin: 40px 0 30px;
     }
   `,
 

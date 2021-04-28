@@ -69,38 +69,88 @@ const S = {
     border-radius: 12px;
     border: solid 1px ${LIGHT_GRAY6};
     padding: 30px;
+    height:auto;
+    overflow:hidden;
     box-sizing: border-box;
 
     h3 {
       font-size: 20px;
+      line-height:1.5em;
+    }
+    @media only screen and (max-width: 1059px) {
+      padding: 20px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 20px 20px 0 20px;
+      h3 {
+        font-size: 16px;
+      }
     }
   `,
 
   header: styled.div`
     margin-bottom: 50px;
+    @media only screen and (max-width: 1059px) {
+      margin-bottom: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 20px;
+    }
   `,
 
   wrapper: styled.div`
+    width:100%;
     display: flex;
     & > div:not(:last-of-type) {
       margin-right: 100px;
+    }
+    @media only screen and (max-width: 1059px) {
+      justify-content:space-between;
+      & > div:not(:last-of-type) {
+        margin-right: 40px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      & > div {
+        width:50%;
+        float:left;
+        margin-bottom:20px;
+        &:nth-child(even){
+          float:right;
+          text-align:right;
+        }
+      }
+      & > div:not(:last-of-type) {
+        margin-right: 0px;
+      }
     }
   `,
 
   content: styled.div``,
 
   rowTitle: styled.div`
-    font-size: 13px;
+    font-size: 18px;
     line-height: 19px;
     letter-spacing: -0.26px;
     margin-bottom: 12px;
+    @media only screen and (max-width: 767px) { 
+      font-size: 13px;
+      margin-bottom:5px;
+    }
   `,
 
   rowBody: styled.div`
-    font-size: 18px;
+    font-size: 22px;
     line-height: 27px;
     letter-spacing: -0.36px;
     font-weight: 600;
+    @media only screen and (max-width: 767px) { 
+      font-size: 16px;
+    }
   `,
 };
 

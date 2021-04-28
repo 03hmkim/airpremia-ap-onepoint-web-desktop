@@ -110,7 +110,7 @@ const S = {
     border-top: solid 2px ${DARK_GRAY1};
     display: flex;
     .label {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 20px;
       letter-spacing: -0.28px;
     }
@@ -123,6 +123,18 @@ const S = {
     .wrapper {
       ${flex};
     }
+    @media only screen and (max-width: 1059px) {
+      padding-top: 30px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding-top:20px;
+      .label {
+        font-size: 14px;
+      }
+      .price {
+        font-size: 14px;
+      }
+    }
   `,
 
   aside: styled.div`
@@ -131,6 +143,17 @@ const S = {
       font-size: 22px;
       line-height: 34px;
       letter-spacing: -0.44px;
+    }
+    @media only screen and (max-width: 1059px) {
+      h2 {
+        font-size: 20px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      flex-basis: 100px;
+      h2 {
+        font-size: 16px;
+      }
     }
   `,
 
@@ -142,6 +165,10 @@ const S = {
     padding-bottom: 25px;
     margin-bottom: 25px;
     border-bottom: dashed 1px ${LIGHT_GRAY6};
+    @media only screen and (max-width: 767px) { 
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+    }
   `,
 
   paymentAmountDetail: styled.div`
@@ -150,6 +177,13 @@ const S = {
     border-bottom: solid 1px ${LIGHT_GRAY6};
     & > div:not(:last-of-type) {
       margin-bottom: 15px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+      & > div:not(:last-of-type) {
+        margin-bottom: 0px;
+      }
     }
   `,
 
@@ -192,6 +226,20 @@ const S = {
       font-size: 18px;
       line-height: 27px;
       letter-spacing: -0.36px;
+    }
+    @media only screen and (max-width: 1059px) { 
+    
+    }
+    @media only screen and (max-width: 767px) { 
+      .wrapper {
+        margin-bottom:0px;
+      }
+      .title {
+        font-size: 14px;
+      }
+      .result {
+        font-size: 14px;
+      }
     }
   `,
 };

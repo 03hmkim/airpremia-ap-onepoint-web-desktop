@@ -201,6 +201,18 @@ const S = {
       letter-spacing: -0.8px;
       margin-bottom: 80px;
     }
+    @media only screen and (max-width: 1059px) { 
+      h2 {
+        font-size: 36px;
+        margin-bottom: 40px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      h2 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+    }
   `,
 
   subTitle: styled.div`
@@ -210,14 +222,35 @@ const S = {
       line-height: 36px;
       letter-spacing: -0.44px;
     }
+    @media only screen and (max-width: 1059px) { 
+      padding: 20px 0 40px;
+      h3 {
+        font-size: 18px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 10px 0 20px;
+    }
   `,
 
   bookingChangeCaution: styled.div`
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 40px;
+    }
   `,
 
   bookingChangeFee: styled.div`
     margin-bottom: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 40px;
+    }
   `,
 
   narrowTableRow: styled.div`
@@ -227,6 +260,12 @@ const S = {
 
   ssrRefund: styled.div`
     margin-bottom: 140px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 100px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 60px;
+    }
   `,
 
   link: styled.div`

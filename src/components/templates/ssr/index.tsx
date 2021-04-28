@@ -132,6 +132,9 @@ const S = {
         padding-left: 0;
         margin-top: 20px;
       }
+      .contentWrapper {
+        padding-top: 80px;
+      }
     }
 
     @media only screen and (max-width: 767px) { 
@@ -139,6 +142,9 @@ const S = {
 
       .subtitle {
         font-size: 22px;
+      }
+      .contentWrapper {
+        padding-top: 60px;
       }
     }
   `,

@@ -53,7 +53,7 @@ const S = {
     border-radius: 8px;
     background-color: ${LIGHT_BLUE1};
     .description {
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 600;
       letter-spacing: -0.3px;
     }
@@ -77,6 +77,28 @@ const S = {
           line-height: 1;
         }
       }
+    }
+    @media only screen and (max-width: 1059px) { 
+      display:block;
+      height:auto;
+      padding:20px;
+      .description {
+        font-size:15px;
+        line-height:1.5em;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+      .buttonWrapper {
+        margin-top:20px;
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+    
     }
   `,
 };

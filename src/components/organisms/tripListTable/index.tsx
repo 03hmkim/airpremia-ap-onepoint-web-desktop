@@ -111,8 +111,19 @@ const TripListTable: FC<IProps> = ({
 };
 
 const S = {
-  container: styled.div``,
-  header: styled.div``,
+  container: styled.div`
+    @media only screen and (max-width: 767px) {
+      border-top:solid 2px #222222;
+    }
+  `,
+  header: styled.div`
+    >div{
+      width:100%;
+    }
+    @media only screen and (max-width: 767px) {
+      display:none;
+    }
+  `,
   body: styled.div``,
   wrapper: styled.div`
     border-bottom: solid 1px ${LIGHT_GRAY5};
@@ -121,14 +132,35 @@ const S = {
     display: flex;
     align-items: center;
     cursor: pointer;
+    @media only screen and (max-width: 1059px) {
+      justify-content:space-between;
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      height:auto;
+      overflow:hidden;
+      padding:15px 0;
+    }
   `,
 
   bodyItem: styled.p<{ width: number; color?: string }>`
     flex-basis: ${prop('width')}px;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 22px;
     font-weight: 600;
     color: ${prop('color')};
+    @media only screen and (max-width: 1059px) {
+      font-size:14px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size:14px;
+      width:50%;
+      float:left;
+      margin-right:0px;
+      &:nth-child(even){
+        text-align:right;
+      }
+    }
   `,
 
   emptyMessage: styled.div`
@@ -138,7 +170,7 @@ const S = {
     color: ${LIGHT_GRAY7};
     border-bottom: solid 1px ${LIGHT_GRAY5};
     p {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 20px;
       letter-spacing: -0.28px;
     }

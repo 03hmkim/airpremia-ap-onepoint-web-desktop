@@ -237,7 +237,8 @@ const S = {
       padding-top: 30px;
     }
     .selectsWrapper {
-      width: 988px;
+      width: 100%;
+      flex:1;
       height: 54px;
       border: 1px solid ${DARK_GRAY1};
       border-radius: 8px;
@@ -260,7 +261,8 @@ const S = {
         }
       }
       .selectWrapper {
-        width: 515px;
+        width: 100%;
+        flex:1;
         padding: 14px 0;
         &.passenger {
           flex: 1;
@@ -313,6 +315,38 @@ const S = {
         }
       }
     }
+    @media only screen and (max-width: 767px) { 
+      .menuWrapper {
+        &.station {
+          width: 300px;
+        }
+      }
+    }
+    @media only screen and (max-width: 599px) {
+      .menuWrapper {
+        top:10px;
+        &.station {
+          width: 100%;
+        }
+      }
+      .bottom {
+        display:block;
+      }
+      .selectsWrapper {
+        height:auto;
+        width:calc( 100% - 42px );
+        display:block;
+        .selectWrapper + .selectWrapper {
+          margin:0;
+          padding:0 0 14px 0;
+        }
+      }
+      .buttonWrapper{
+        width:100%;
+        padding-left:0;
+        margin-top:10px;
+      }
+    }
   `,
 
   stBox:styled.div`
@@ -324,6 +358,11 @@ const S = {
       border: 1px solid ${ORANGE1};
       border-radius: 28px;
     }
+  @media only screen and (max-width: 599px) { 
+    display:block;
+    height:auto;
+    overflow:hidden;
+  }
 `,
 
 
@@ -362,17 +401,41 @@ const C = {
       .displayNone{
         display: none;
       }
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 20px;
+    }
   `,
   sbody: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 60px;
+    }
   `,
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+    }
   `,
   itemTitle: styled.h5`
     font-size: 20px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 18px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 16px;
+    }
   `,
   sb: styled.div`
     margin-top: 60px;
@@ -390,22 +453,34 @@ const C = {
   `,
   itemText: styled.p`
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
     &.mt20{
       margin-top:20px;
+    }
+    @media only screen and (max-width: 1059px) { 
+      font-size: 16px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
     }
   `,
   description: styled.p`
     margin-top: 10px;
     color: ${LIGHT_GRAY7};
-    font-size: 13px;
+    font-size: 18px;
     line-height: 28px;
     &.center{
       text-align:center;
     }
     &.mt20{
       margin-top:20px;
+    }
+    @media only screen and (max-width: 1059px) { 
+      font-size: 14px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 13px;
     }
   `,
   bold: styled.span`
@@ -438,7 +513,7 @@ const C = {
     margin: 0 auto;
     padding: 2px;
     color: #fff;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 23px;
     text-align: center;
     border-radius: 4px;
@@ -452,6 +527,12 @@ const C = {
       &.red{
         background-color: ${RED2};
       }
+    @media only screen and (max-width: 1059px) { 
+      font-size: 14px;
+    }
+    @media only screen and (max-width: 767px) { 
+       
+    }
     `,
   line:styled.div`
     width: 83px;
@@ -491,9 +572,21 @@ const C = {
     padding: 13px 47px;
     border-radius: 12px;
     border: solid 1px ${WHITE1};
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     color: ${DARK_GRAY1};
+    @media only screen and (max-width: 1059px) { 
+      font-size: 16px;
+      padding: 13px 30px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 13px 10px;
+    }
+    @media only screen and (max-width: 599px) { 
+      float:left;
+      width:calc( 100% / 3 );
+      text-align:center;
+    }
 `,
 }
 

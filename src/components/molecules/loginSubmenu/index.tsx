@@ -46,6 +46,9 @@ const S = {
     align-items: center;
     justify-content: space-between;
     height: 34px;
+    @media only screen and (max-width: 479px) {
+        display:block;
+    }
   `,
 
   left: styled.div`
@@ -55,10 +58,16 @@ const S = {
   right: styled.div`
     a {
       margin-left: 25px;
-      font-size: 13px;
+      font-size: 18px;
       line-height: 23px;
       letter-spacing: -0.26px;
       color: ${LIGHT_GRAY8};
+    }
+    @media only screen and (max-width: 479px) {
+        margin-top:20px;
+        a{
+            font-size:14px;
+        }
     }
   `,
 };

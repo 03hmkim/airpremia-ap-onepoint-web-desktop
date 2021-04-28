@@ -97,6 +97,14 @@ const S = {
     font-size: 22px;
     line-height: 54px;
     letter-spacing: -0.44px;
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 40px;
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
   `,
 
   passengersCheckbox: styled.div`
@@ -115,6 +123,31 @@ const S = {
         margin-bottom: 10px;
       }
     }
+    @media only screen and (max-width: 1059px) { 
+      padding-bottom: 35px;
+      .children {
+        font-size: 20px;
+      }
+      & > button {
+        height: 52px;
+        &:not(:last-of-type) {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      padding-bottom: 25px;
+      .children {
+        font-size: 14px;
+        width:100%;
+        p{
+          width:100%;
+        }
+      }
+      & > button {
+        height: 42px;
+      }
+    }
   `,
 
   ssrCheckboxAll: styled.div`
@@ -124,6 +157,24 @@ const S = {
     & > button {
       height: 72px;
       margin-bottom: 10px;
+    }
+    @media only screen and (max-width: 1059px) {
+      .children {
+        font-size: 16px;
+      }
+      & > button {
+        height: 52px;
+        margin-bottom: 5px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      .children {
+        font-size: 14px;
+        width:100%;
+      }
+      & > button {
+        height: 42px;
+      }
     }
   `,
 
@@ -146,6 +197,18 @@ const S = {
       line-height: 36px;
       letter-spacing: -0.32px;
       font-weight: 600;
+    }
+    @media only screen and (max-width: 1059px) {
+      padding: 20px 0 40px;
+      p {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 10px 0 20px;
+      p {
+        font-size: 13px;
+      }
     }
   `,
 };

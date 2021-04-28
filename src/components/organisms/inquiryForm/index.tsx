@@ -269,6 +269,43 @@ const S = {
       width: 300px;
       height: 50px;
     }
+    @media only screen and (max-width: 1059px) { 
+      .title {
+        font-size: 20px;
+      }
+      padding: 40px;
+      .formWrapper {
+        padding-top: 40px;
+        .row {
+          .label {
+            width: 150px;
+          }
+        }
+      }
+      .buttonWrapper {
+        margin: 40px auto 0;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      .title {
+        font-size: 18px;
+        line-height:1.5em;
+      }
+      padding: 30px;
+      .formWrapper {
+        padding-top: 20px;
+        .row {
+          .label {
+            width: 100px;
+          }
+        }
+      }
+      .buttonWrapper {
+        margin: 30px auto 0;
+        max-width:300px;
+        width:100%;
+      }
+    }
   `,
 };
 

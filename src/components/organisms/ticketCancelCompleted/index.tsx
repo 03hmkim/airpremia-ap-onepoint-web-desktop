@@ -94,6 +94,12 @@ const S = {
     border-radius: 8px;
     border: solid 1px ${DARK_GRAY1};
     padding: 30px;
+    @media only screen and (max-width: 1059px) { 
+      padding: 25px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 20px;
+    }
   `,
 
   title: styled.div`
@@ -128,12 +134,19 @@ const S = {
     border-bottom: dashed 2px ${LIGHT_GRAY6};
     display: flex;
     align-items: center;
+    @media only screen and (max-width: 1059px) { 
+      padding: 40px 0 20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      padding: 10px 0 20px;
+    }
   `,
 
   box: styled.div`
     margin-right: 80px;
     p {
-      font-size: 13px;
+      font-size: 18px;
       line-height: 19px;
       letter-spacing: -0.26px;
     }
@@ -154,12 +167,55 @@ const S = {
         top: 1px;
       }
     }
+    @media only screen and (max-width: 1059px) { 
+      margin-right: 40px;
+      p {
+        font-size: 14px;
+      }
+      h4 {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-right:0;
+      width:100%;
+      display:flex;justify-content:space-between;align-items:center;
+      p{
+        font-size:14px;
+      }
+      h4 {
+        margin:0;
+        text-align:right;
+        font-size:14px;
+      }
+    }
+    @media only screen and (max-width: 479px) {
+      display:block;
+      margin-top:20px;
+      h4 {
+        text-align:left;
+        .line{
+          display:none;
+        }
+        span{
+          display:block;
+        }
+      }
+      
+      
+    }
   `,
 
   result: styled.div`
     margin-top: 35px;
     & > div:first-of-type {
       margin-bottom: 21px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 10px;
+      & > div:first-of-type {
+        margin-bottom: 0px;
+      }
     }
   `,
 
@@ -179,6 +235,14 @@ const S = {
       letter-spacing: -0.52px;
       font-weight: 600;
       color: ${ORANGE2};
+    }
+    @media only screen and (max-width: 767px) { 
+      h2 {
+        font-size: 14px;
+      }
+      output {
+        font-size: 18px;
+      }
     }
   `,
 };
