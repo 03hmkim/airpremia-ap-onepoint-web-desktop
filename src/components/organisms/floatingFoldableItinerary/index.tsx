@@ -328,7 +328,6 @@ const S = {
   innerWrapper: styled.div<{ isShow: boolean }>`
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 0 80px;
     height: 64px;
     ${(isShow) => {
       if (isShow) {
@@ -507,9 +506,6 @@ const S = {
   `,
 
   promotion: styled.div`
-    position: relative;
-    z-index: 100;
-
     > button {
       margin-left: 0;
       margin-right: 10px;

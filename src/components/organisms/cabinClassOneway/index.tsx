@@ -272,7 +272,6 @@ const S = {
     box-sizing: border-box;
 
     & > div {
-      max-width: 1200px;
       width: 100%;
     }
   `,

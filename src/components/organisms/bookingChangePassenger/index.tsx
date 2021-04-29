@@ -114,8 +114,8 @@ const S = {
       font-size: 22px;
       line-height: 24px;
       letter-spacing: -0.44px;
-      font-family: 'Premia-Bold', sans-serif;
-      font-weight: 500;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
     }
     & > button {
       height: 72px;

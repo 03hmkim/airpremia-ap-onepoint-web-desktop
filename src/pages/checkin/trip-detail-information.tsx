@@ -19,6 +19,7 @@ import {
   BoardingPassengerInfoGroup,
 } from 'src/components';
 import Failpage from './failpage';
+// import Failpage2 from './failpage2';
 
 interface IProps {}
 
@@ -28,6 +29,8 @@ const TripDetailInformation: FC<IProps> = ({}) => {
   const { upScroll } = useScroll();
   const { queries } = useUrl();
   const { bookingDetailInfo } = bookingStore;
+
+  const balanceDue = bookingDetailInfo?.breakdown.balanceDue
 
   const list = [
     {
@@ -55,7 +58,9 @@ const TripDetailInformation: FC<IProps> = ({}) => {
       text: '부가서비스 관리',
       isShow: true,
       disabled: false,
-      onClick: () => { alert('서비스 준비 중입니다') },
+      onClick: () => router.push(
+        `/checkin/ssr`,
+      ),
     },
     {
       SvgIcon: SvgReservationCancel,
@@ -103,8 +108,11 @@ const TripDetailInformation: FC<IProps> = ({}) => {
   }, []);
 
   if (!bookingDetailInfo) {
-
     return <Failpage />;
+  }
+
+  if (balanceDue) {
+    return <Failpage2/>;
   }
 
   console.log(

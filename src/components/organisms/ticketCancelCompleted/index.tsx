@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import {
   DARK_GRAY1,
   LIGHT_GRAY6,
-  LIGHT_GRAY7,
   ORANGE2,
   LIGHT_GRAY8,
 } from '@airpremia/cdk/styles/colors';
@@ -94,9 +93,7 @@ const S = {
     border-radius: 8px;
     border: solid 1px ${DARK_GRAY1};
     padding: 30px;
-    @media only screen and (max-width: 1059px) { 
-      padding: 25px;
-    }
+    
     @media only screen and (max-width: 767px) { 
       padding: 20px;
     }
@@ -106,7 +103,7 @@ const S = {
     display: flex;
     justify-content: space-between;
     h3 {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 34px;
       letter-spacing: -0.44px;
     }
@@ -116,17 +113,27 @@ const S = {
       line-height: 24px;
       letter-spacing: -0.24px;
       cursor: pointer;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
+    }
+
+    @media only screen and (max-width: 767px) {
+      h3 {
+        font-size: 22px;
+      }
     }
   `,
 
   passengers: styled.div`
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 20px;
     letter-spacing: -0.28px;
     font-weight: 600;
     color: ${LIGHT_GRAY8};
+
+    @media only screen and (max-width: 1059px) {
+      font-size: 14px;
+    }
   `,
 
   description: styled.div`
@@ -134,9 +141,7 @@ const S = {
     border-bottom: dashed 2px ${LIGHT_GRAY6};
     display: flex;
     align-items: center;
-    @media only screen and (max-width: 1059px) { 
-      padding: 40px 0 20px;
-    }
+
     @media only screen and (max-width: 767px) { 
       display:block;
       padding: 10px 0 20px;

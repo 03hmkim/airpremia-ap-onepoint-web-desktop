@@ -239,7 +239,7 @@ const S = {
     .selectsWrapper {
       width: 100%;
       flex:1;
-      height: 54px;
+      height: 48px;
       border: 1px solid ${DARK_GRAY1};
       border-radius: 8px;
       background-color: ${WHITE1};
@@ -317,21 +317,17 @@ const S = {
     }
     @media only screen and (max-width: 767px) { 
       .menuWrapper {
-        &.station {
-          width: 300px;
-        }
-      }
-    }
-    @media only screen and (max-width: 599px) {
-      .menuWrapper {
         top:10px;
+
         &.station {
-          width: 100%;
+          width: calc(100% + 40px);
         }
       }
+
       .bottom {
         display:block;
       }
+
       .selectsWrapper {
         height:auto;
         width:calc( 100% - 42px );
@@ -341,6 +337,7 @@ const S = {
           padding:0 0 14px 0;
         }
       }
+
       .buttonWrapper{
         width:100%;
         padding-left:0;
@@ -575,12 +572,10 @@ const C = {
     font-size: 18px;
     font-weight: 600;
     color: ${DARK_GRAY1};
-    @media only screen and (max-width: 1059px) { 
-      font-size: 16px;
-      padding: 13px 30px;
-    }
+
     @media only screen and (max-width: 767px) { 
-      padding: 13px 10px;
+      padding: 6px 10px;
+      font-size: 16px;
     }
     @media only screen and (max-width: 599px) { 
       float:left;

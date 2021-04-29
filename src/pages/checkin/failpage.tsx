@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { WHITE1 } from '@airpremia/cdk/styles/colors';
+import { TaskButton } from 'src/components';
 
 function goBack(){
   window.history.go(-1);
@@ -9,11 +11,10 @@ const Failpage = () => {
   return (
     <>
    <S.container>
-      <div>
+      <div className="content">
         <h1>예약번호를 확인해주세요</h1>
         {"\n"}
-        <hr></hr>
-        <h3><button onClick={goBack}>뒤로가기</button></h3>
+        <h3><TaskButton onClick={goBack}>뒤로가기</TaskButton></h3>
       </div>
    </S.container>
    </>
@@ -30,8 +31,27 @@ const S = {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(34, 34, 34, 0.8);
     z-index: 50;
+
+    .content {
+      min-width: 320px;
+      max-width: 480px;
+      width: calc(100% - 100px);
+      padding: 50px;
+      overflow: hidden;
+      background-color: ${WHITE1};
+      border-radius: 16px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 30px;
+    }
+
+    h3 {
+      padding-top: 60px;
+    }
   `,
   
 };

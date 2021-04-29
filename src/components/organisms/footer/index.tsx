@@ -184,7 +184,7 @@ function Footer({}: IProps) {
               <ul>
                 <li>
                   <span>에어프레미아(주)</span>
-                  <span>대표이사: 김세영, 심주엽</span>
+                  <span>대표이사: 심주엽</span>
                   <span className="block"></span>
                   <span>사업자등록번호: 864-81-00738</span>
                   <span>통신판매업신고: 업데이트 필요</span>
@@ -194,7 +194,7 @@ function Footer({}: IProps) {
                     서울특별시 강서구 공항대로 248, 4층
                   </span>
                   <span>대표번호 +82 2-6953-6115</span>
-                  <span>개인정보보호책임자: 김세영</span>
+                  <span>개인정보보호책임자: 심주엽</span>
                 </li>
               </ul>
             </div>

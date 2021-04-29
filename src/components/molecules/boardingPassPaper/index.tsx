@@ -156,7 +156,8 @@ const S = {
       font-size: 36px;
       line-height: 35px;
       letter-spacing: -0.72px;
-      font-family: 'Premia-Bold', sans-serif;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
     }
 
     span {

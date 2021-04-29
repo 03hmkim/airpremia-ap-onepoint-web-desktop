@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   DARK_GRAY1,
 } from '@airpremia/cdk/styles/colors';
 
@@ -81,7 +81,7 @@ const S = {
         font-family: 'Heebo';
         line-height: 1.8;
         letter-spacing: -0.26px;
-        color: ${LIGHT_GRAY7};
+        color: ${LIGHT_GRAY8};
 
         @media only screen and (max-width: 767px) {
           font-size: 14px;

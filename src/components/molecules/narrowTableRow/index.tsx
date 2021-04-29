@@ -51,32 +51,40 @@ const flex = `
 `;
 const S = {
   container: styled.div<{ isEmphasisRow: boolean }>`
-    font-size: 14px;
+    font-size: 18px;
     letter-spacing: -0.28px;
     line-height: 20px;
-    padding: 18px 0;
+    padding: 25px 0;
     border-bottom: solid 1px ${LIGHT_GRAY5};
 
     color: ${ifProp('isEmphasisRow', BLUE1)};
     ${flex};
+    
     @media only screen and (max-width: 767px) { 
       display:block;
+      font-size: 14px;
     }
   `,
 
   left: styled.div`
+    padding-right: 5px;
     flex: 1;
     font-weight: 600;
+    line-height: 1.8em;
+
     @media only screen and (max-width: 767px) { 
-      width:100%;margin-bottom:5px;
+      width: 100%;
+      margin-bottom: 5px;
     }
   `,
 
   right: styled.div`
+    line-height: 1.8em;
     flex: 1;
     ${flex};
+
     @media only screen and (max-width: 767px) { 
-      width:100%;
+      width: 100%;
     }
   `,
 

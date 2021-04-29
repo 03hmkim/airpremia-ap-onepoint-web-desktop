@@ -74,16 +74,17 @@ const S = {
       }
     }
 
-    @media only screen and (max-width: 1059px) {
+    @media only screen and (max-width: 767px) {
       .title {
         span {
-          font-size: 16px;
+          font-size: 14px;
         }
       }
       ul {
         li {
-          font-size: 14px;
-          line-height: 1.8;
+          font-size: 13px;
+          font-weight: 300;
+          line-height: 26px;
         }
       }
     }

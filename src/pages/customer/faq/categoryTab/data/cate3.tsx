@@ -135,7 +135,8 @@ const T = {
         position: absolute;
         left: 20px;
         top: 0px;
-        font-family: 'Premia-Bold', sans-serif;
+        font-family: 'Premia', sans-serif;
+        font-weight: 700;
         font-size: 44px;
         line-height: 100px;
       }

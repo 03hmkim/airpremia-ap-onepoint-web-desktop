@@ -81,24 +81,24 @@ const S = {
     justify-content: space-between;
     align-items: flex-end;
     h2 {
-      font-size: 30px;
-      line-height: 45px;
+      font-size: 24px;
+      line-height: 1.8em;
       letter-spacing: -0.6px;
     }
 
     .right {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 36px;
       letter-spacing: -0.3px;
     }
-    @media only screen and (max-width: 1059px) {
-        h2 {
-            font-size:26px;
-        }
-    }
+
     @media only screen and (max-width: 767px) { 
         h2 {
             font-size:22px;
+        }
+
+        .right {
+          font-size: 14px;
         }
     }
   `,

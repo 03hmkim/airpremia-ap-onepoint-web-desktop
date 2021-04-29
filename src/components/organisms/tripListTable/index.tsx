@@ -149,9 +149,7 @@ const S = {
     line-height: 22px;
     font-weight: 600;
     color: ${prop('color')};
-    @media only screen and (max-width: 1059px) {
-      font-size:14px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size:14px;
       width:50%;

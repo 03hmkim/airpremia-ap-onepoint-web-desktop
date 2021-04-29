@@ -168,9 +168,10 @@ const bookingCancelCaution: FC<IProps> = () => {
             );
           })}
         </S.narrowTableRow>
+        {/*  20210428 삭제요청
         <S.link>
           <a onClick={onPopup}>예약 변경 규정 및 수수료 상세보기</a>
-        </S.link>
+        </S.link> */}
       </S.ssrRefund>
     </S.container>
   );
@@ -180,15 +181,20 @@ const S = {
   container: styled.div`
     .unordered-list {
       h3 {
-        font-size: 18px;
+        font-size: 21px;
         font-weight: 600;
         font-family: 'NotoSans', sans-serif;
         line-height: 27px;
       }
       ul {
         padding-top: 0;
-        & > li {
-          line-height: 15px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .unordered-list {
+        h3 {
+          font-size: 16px;
         }
       }
     }
@@ -202,43 +208,36 @@ const S = {
       letter-spacing: -0.8px;
       margin-bottom: 80px;
     }
-    @media only screen and (max-width: 1059px) { 
-      h2 {
-        font-size: 36px;
-        margin-bottom: 40px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       h2 {
-        font-size: 30px;
+        font-size: 26px;
         margin-bottom: 20px;
       }
     }
   `,
 
   subTitle: styled.div`
-    padding: 30px 0 60px;
+    padding: 20px 0 60px;
+    
     h3 {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 36px;
       letter-spacing: -0.44px;
     }
-    @media only screen and (max-width: 1059px) { 
-      padding: 20px 0 40px;
-      h3 {
-        font-size: 18px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
-      padding: 10px 0 20px;
+      padding-bottom: 40px;
+
+      h3 {
+        font-size: 22px;
+      }
     }
   `,
 
   bookingCancelCaution: styled.div`
     margin-bottom: 100px;
-    @media only screen and (max-width: 1059px) { 
-      margin-bottom: 60px;
-    }
+
     @media only screen and (max-width: 767px) { 
       margin-bottom: 40px;
     }
@@ -246,9 +245,7 @@ const S = {
 
   bookingChangeFee: styled.div`
     margin-bottom: 100px;
-    @media only screen and (max-width: 1059px) { 
-      margin-bottom: 60px;
-    }
+
     @media only screen and (max-width: 767px) { 
       margin-bottom: 40px;
     }
@@ -261,9 +258,7 @@ const S = {
 
   ssrRefund: styled.div`
     margin-bottom: 140px;
-    @media only screen and (max-width: 1059px) { 
-      margin-bottom: 100px;
-    }
+
     @media only screen and (max-width: 767px) { 
       margin-bottom: 60px;
     }
@@ -275,10 +270,16 @@ const S = {
     text-decoration: underline;
     cursor: pointer;
     a {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 36px;
       letter-spacing: -0.3px;
       color: ${BLUE1};
+    }
+
+    @media only screen and (max-width: 767px) {
+      a {
+        font-size: 14px;
+      }
     }
   `,
   modalTitle : styled.div``,

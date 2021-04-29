@@ -38,15 +38,6 @@ const defaultBox = css`
 
 const S = {
   container: styled.div`
-    margin-top: 160px !important;
-
-    @media only screen and (max-width: 1440px) {
-      margin-top: 60px !important;
-    }
-
-    @media only screen and (max-width: 767px) {
-      margin-top: 20px !important;
-    }
   `,
 
   floatingFoldableItinerary: styled.div`

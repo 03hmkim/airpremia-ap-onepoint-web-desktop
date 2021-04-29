@@ -8,6 +8,7 @@ import { getStationLabel } from '@airpremia/core/lib/booking';
 import {
   DARK_GRAY1,
   LIGHT_GRAY6,
+  LIGHT_GRAY8,
   ORANGE2,
 } from '@airpremia/cdk/styles/colors';
 import FlightIcon from 'public/images/ticket/ico-flight.svg';
@@ -63,16 +64,18 @@ const BoardingPassInfo: FC<IProps> = ({
             </div>
           </S.top>
           <S.bottom>
-            <S.column width={53}>
+            <S.column width={150}>
               <h6>{getStationLabel(origin)}</h6>
               <p>
                 {moment(item.departure).format('HH : mm')}
               </p>
             </S.column>
-            <span>
-              <FlightIcon />
-            </span>
-            <S.column width={76}>
+            <S.column className="flightIcon" width={200}>
+              <span>
+                <FlightIcon />
+              </span>
+              </S.column>
+            <S.column width={150}>
               <h6>{getStationLabel(item.destination)}</h6>
               <p>
                 {moment(item.arrival).format('HH : mm')}
@@ -82,7 +85,7 @@ const BoardingPassInfo: FC<IProps> = ({
                   : ''}
               </p>
             </S.column>
-            <S.column width={124}>
+            <S.column width={300}>
               <h6>출발일</h6>
               <p>
                 {moment(item.departure)
@@ -90,11 +93,11 @@ const BoardingPassInfo: FC<IProps> = ({
                   .format('YYYY. M. D (dd)')}
               </p>
             </S.column>
-            <S.column width={134}>
+            <S.column width={280}>
               <h6>클래스</h6>
               <p>{item.cabinClassText}</p>
             </S.column>
-            <S.column width={134}>
+            <S.column width={200}>
               <h6>항공편명</h6>
               <p>{item.identifier}</p>
             </S.column>
@@ -117,6 +120,7 @@ const S = {
     border-radius: 8px;
     border: solid 1px ${LIGHT_GRAY6};
     padding: 0 30px;
+
     @media only screen and (max-width: 767px) { 
       padding: 0 20px;
       height:auto;
@@ -129,8 +133,10 @@ const S = {
     overflow:hidden;
   `,
   top: styled.div`
+    margin-bottom: 40px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     .tag-group {
       display: flex;
@@ -148,10 +154,10 @@ const S = {
       text-align: center;
       font-weight: 600;
       height: 30px;
-      width: 94px;
+      width: 100px;
       border-radius: 300px;
       border: solid 1px ${LIGHT_GRAY6};
-      font-size: 14px;
+      font-size: 18px;
       line-height: 28px;
       letter-spacing: -0.28px;
       cursor: pointer;
@@ -159,88 +165,94 @@ const S = {
         text-decoration: underline;
       }
     }
+
+    @media only screen and (max-width: 767px) { 
+      margin-bottom: 20px;
+
+      .boarding-pass {
+        width: 80px;
+        height: 24px;
+        font-size: 13px;
+        line-height: 24px;
+      }
+    }
   `,
   bottom: styled.div`
     display: flex;
     padding-bottom: 34px;
-    span {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      margin: 0 20px 6px;
-    }
-    & > div {
-      margin-right: 70px;
-      &:nth-child(1),
-      &:nth-child(2) {
-        margin-right: 0;
-      }
-    }
+
+
+
     @media only screen and (max-width: 1059px) {
-      justify-content:space-between;
-      & > div {
-        width:auto;
-        min-width:0;
-        margin-right: 20px;
-        &:nth-child(1),
-        &:nth-child(2) {
-          margin-right: 0;
-        }
-        p{
-          margin:0;
-        }
-      }
+      justify-content: space-between;
     }
+
     @media only screen and (max-width: 767px) { 
-      display:block;
-      height:auto;
-      overflow:hidden;
-      padding-bottom:0;
-      & > div {
-        width:40%;
-        float:left;
-        margin:0;
-        margin-bottom:10px;
-        &:nth-child(even){
-          float:right;
-          text-align:right;
-        }
-        p{
-          font-size:14px;
-        }
-      }
-      & > span {
-        width:20%;
-        float:left;
-        margin:0;
-        height:82px;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-      }
-      & > span + div{
-        text-align:right;
-      }
-      
+      display: block;
+      height: auto;
+      overflow: hidden;
+      padding-bottom: 0;    
     }
   `,
 
   column: styled.div<{ width?: number }>`
     display: flex;
     flex-direction: column;
-    min-width: ${prop('width')}px;
+    flex-basis: ${prop('width')}px;
+
+    &.flightIcon {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
 
     h6 {
-      font-size: 13px;
-      line-height: 35px;
+      color: ${LIGHT_GRAY8};
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 20px;
       letter-spacing: -0.26px;
     }
     p {
-      margin-top: 12px;
+      margin-top: 8px;
       font-size: 18px;
-      line-height: 35px;
+      line-height: 24px;
       letter-spacing: -0.36px;
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: 767px) {
+
+      
+      width: 50%;
+      float: left;
+      margin: 0;
+      margin-bottom: 20px;
+
+      &:nth-child(3),
+      &:nth-child(5){
+        float: right;
+        text-align: right;
+      }
+
+      &.flightIcon {
+        width: 20%;
+        height: 44px;
+        margin: 0;
+        float: left;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      } 
+
+      h6 {
+        font-size: 14px;
+      }
+      p {
+        margin-top: 0;
+        font-size: 16px;
+      }
     }
   `,
 };

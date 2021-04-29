@@ -3,6 +3,7 @@ import {
   DARK_GRAY1,
   WHITE1,
   LIGHT_GRAY6,
+  RED2
 } from '@airpremia/cdk/styles/colors';
 import { TextInput } from 'src/components';
 import { TaskButton } from 'src/components';
@@ -75,49 +76,37 @@ function InquiryForm({
 
   return (
     <S.container>
-      <div className="title font-bold">{title}</div>
+      <div className="title">{title}</div>
       <div className="formWrapper">
         <div className="row">
           <div className="label">성</div>
           <div className="input">
-            <TextInput
-              borderColor={'transparent'}
-              inputProps={lastNameData}
-            >
-              <sub className="warning">
-                {lastName.error && lastName.msg}
-              </sub>
-            </TextInput>
+            <TextInput borderColor={'transparent'}inputProps={lastNameData}></TextInput>
           </div>
         </div>
+        <sub className="warning">
+          {lastName.error && lastName.msg}
+        </sub>
         <div className="row">
           <div className="label">이름</div>
           <div className="input">
-            <TextInput
-              borderColor={'transparent'}
-              inputProps={firstNameData}
-            >
-              <sub className="warning">
-                {firstName.error && firstName.msg}
-              </sub>
-            </TextInput>
+            <TextInput borderColor={'transparent'}inputProps={firstNameData}></TextInput>
           </div>
         </div>
+        <sub className="warning">
+          {firstName.error && firstName.msg}
+        </sub>
         {needReservationNumber && (
           <div className="row">
             <div className="label">예약번호</div>
             <div className="input">
-              <TextInput
-                borderColor={'transparent'}
-                inputProps={reservationNumberData}
-              >
-                <sub className="warning">
-                  {recordLocator.error && recordLocator.msg}
-                </sub>
-              </TextInput>
+              <TextInput borderColor={'transparent'}inputProps={reservationNumberData}></TextInput>
             </div>
           </div>
         )}
+        <sub className="warning">
+          {recordLocator.error && recordLocator.msg}
+        </sub>
       </div>
       <div className="buttonWrapper">
         <TaskButton onClick={onClick} disabled={!isActive}>
@@ -181,7 +170,7 @@ export function CheckinInquiryForm({
 
   return (
     <S.container>
-      <div className="title font-bold">{title}</div>
+      <div className="title">{title}</div>
       <div className="formWrapper">
         <div className="row">
           <div className="label">성</div>
@@ -189,26 +178,24 @@ export function CheckinInquiryForm({
             <TextInput
               borderColor={'transparent'}
               inputProps={lastNameData}
-            >
-              <sub className="warning">
-                {lastName.error && lastName.msg}
-              </sub>
-            </TextInput>
+            />
           </div>
         </div>
+        <sub className="warning">
+          {lastName.error && lastName.msg}
+        </sub>
         <div className="row">
           <div className="label">이름</div>
           <div className="input">
             <TextInput
               borderColor={'transparent'}
               inputProps={firstNameData}
-            >
-              <sub className="warning">
-                {firstName.error && firstName.msg}
-              </sub>
-            </TextInput>
+            />
           </div>
         </div>
+        <sub className="warning">
+          {firstName.error && firstName.msg}
+        </sub>
         {needReservationNumber && (
           <div className="row">
             <div className="label">예약번호</div>
@@ -216,14 +203,13 @@ export function CheckinInquiryForm({
               <TextInput
                 borderColor={'transparent'}
                 inputProps={reservationNumberData}
-              >
-                <sub className="warning">
-                  {recordLocator.error && recordLocator.msg}
-                </sub>
-              </TextInput>
+              />
             </div>
           </div>
         )}
+        <sub className="warning textEnterM">
+          {recordLocator.error && recordLocator.msg}
+        </sub>
       </div>
       <div className="buttonWrapper">
         <TaskButton onClick={onClick} disabled={!isActive}>
@@ -252,16 +238,24 @@ const S = {
         display: flex;
         align-items: center;
         padding: 10px 0;
+        margin-bottom: 5px;
         border-bottom: 1px solid ${LIGHT_GRAY6};
         .label {
           width: 200px;
+          font-size: 18px;
         }
         .input {
           flex: 1;
-          .warning {
-            display: block;
-          }
         }
+      }
+      .warning {
+        font-size: 18px;
+        line-height: 18px;
+        letter-spacing: -0.24px;
+        margin-left: 198px;
+        bottom: 0;
+        color: ${RED2};
+        display: block;
       }
     }
     .buttonWrapper {
@@ -269,41 +263,43 @@ const S = {
       width: 300px;
       height: 50px;
     }
-    @media only screen and (max-width: 1059px) { 
-      .title {
-        font-size: 20px;
-      }
-      padding: 40px;
-      .formWrapper {
-        padding-top: 40px;
-        .row {
-          .label {
-            width: 150px;
-          }
-        }
-      }
-      .buttonWrapper {
-        margin: 40px auto 0;
-      }
-    }
-    @media only screen and (max-width: 767px) { 
+
+    @media only screen and (max-width: 1059px) {
       .title {
         font-size: 18px;
-        line-height:1.5em;
       }
-      padding: 30px;
-      .formWrapper {
-        padding-top: 20px;
+      .formWrapper  {
+        padding-top: 40px;
         .row {
-          .label {
-            width: 100px;
+          margin: 20px 0 5px 0;
+          padding-bottom: 0px;
+          display: block;
+          &:first-child {
+            margin-top: 0px;
           }
         }
+        .warning {
+          margin-left: 0px;
+        }
       }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .formWrapper {
+        .row {
+          .label {
+            font-size: 14px;
+          }
+        }
+        .warning {
+          font-size: 14px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
       .buttonWrapper {
-        margin: 30px auto 0;
-        max-width:300px;
-        width:100%;
+        width: calc(100% - 52px);
       }
     }
   `,

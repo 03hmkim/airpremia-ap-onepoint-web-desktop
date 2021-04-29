@@ -132,28 +132,39 @@ const S = {
     justify-content: space-between;
     .titleWrapper {
       .title {
-        font-size: 20px;
-        font-weight: 600;
+        font-size: 24px;
+        font-weight: 700;
         line-height: 1.45;
         letter-spacing: -0.4px;
       }
     }
     .passengerInfo {
       padding-top: 5px;
-      font-size: 14px;
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       line-height: 1.43;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY7};
     }
     .right {
-      font-size: 16px;
+      font-size: 18px;
       position: relative;
       right: -10px;
       top: 2px;
     }
     .connectionMark {
       padding: 0 4px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      .titleWrapper {
+        .title {
+          font-size: 18px;
+        }
+      }
+      .passengerInfo {
+        font-size: 14px;
+      }
     }
   `,
   bottom: styled.div<IStyleProps>`
@@ -168,14 +179,14 @@ const S = {
       }
       .info {
         .label {
-          font-size: 13px;
+          font-size: 18px;
           line-height: 1.46;
           letter-spacing: -0.26px;
         }
         .value {
           padding-top: 10px;
           font-size: 18px;
-          font-weight: 600;
+          font-weight: 700;
           line-height: 1.5;
           letter-spacing: -0.36px;
         }
@@ -184,6 +195,29 @@ const S = {
     .buttonWrapper {
       width: 174px;
       height: 50px;
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      .infosWrapper {
+        display: block;
+        .info + .info {
+          margin-top: 20px;
+          padding-left: 0px;
+        }
+        .info {
+          .label {
+            font-size: 14px;
+          }
+          .value {
+            font-size: 14px;
+          }
+        }
+        }
+      .buttonWrapper {
+        width: 110px;
+        font-size: 14px;
+      }
     }
   `,
 };

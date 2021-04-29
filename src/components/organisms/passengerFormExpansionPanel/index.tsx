@@ -131,6 +131,7 @@ const S = {
       font-size: 18px;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY8};
+
       .gender {
         position: relative;
         padding-left: 13px;
@@ -145,29 +146,33 @@ const S = {
         }
       }
     }
-    @media only screen and (max-width: 1059px) { 
+
+    @media only screen and (max-width: 767px) { 
       .labelWrapper {
         font-size: 14px;
       }
-    }
-    @media only screen and (max-width: 767px) { 
-    
     }
   `,
   right: styled.div<{ disabled: boolean }>`
     display: flex;
     align-items: center;
-    color: ${ifProp('disabled', LIGHT_GRAY7, DARK_GRAY1)};
+    color: ${ifProp('disabled', LIGHT_GRAY8, DARK_GRAY1)};
     cursor: ${ifProp('disabled', 'reset', 'pointer')};
     text-align: right;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: -0.32px;
+
     .canReason {
       padding-top: 12px;
     }
+
     .arrowWrapper {
       padding-left: 20px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
     }
   `,
   body: styled.div<{

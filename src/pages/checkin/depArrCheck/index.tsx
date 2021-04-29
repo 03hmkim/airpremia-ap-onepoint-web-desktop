@@ -7,7 +7,7 @@ import {
   BLUE1,
  } from '@airpremia/cdk/styles/colors';
 import DepartureArrivalCheckTab from './dacTab/index';
-import { Caution } from 'src/components';
+import { Caution, ComTitle } from 'src/components';
 import Link from 'next/link';
 // import Caution from 'public/images/support/ico_caution.svg';
 
@@ -16,7 +16,9 @@ const title = '유의사항';
 function DepArrCheck(){
     return (
     <Container>
-      <C.ComTitles>출도착 조회</C.ComTitles>
+      <ComTitle
+        title="출도착 조회"
+      />
       <C.igr>
           <DepartureArrivalCheckTab />
       </C.igr>

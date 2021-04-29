@@ -95,12 +95,9 @@ const S = {
   title: styled.div`
     margin-bottom: 60px;
     font-size: 22px;
-    line-height: 54px;
+    line-height: 1.8em;
     letter-spacing: -0.44px;
-    @media only screen and (max-width: 1059px) { 
-      margin-bottom: 40px;
-      font-size: 20px;
-    }
+
     @media only screen and (max-width: 767px) { 
       margin-bottom: 20px;
       font-size: 18px;
@@ -114,8 +111,8 @@ const S = {
       font-size: 22px;
       line-height: 24px;
       letter-spacing: -0.44px;
-      font-family: 'Premia-Bold', sans-serif;
-      font-weight: 500;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
     }
     & > button {
       height: 72px;
@@ -140,6 +137,7 @@ const S = {
       .children {
         font-size: 14px;
         width:100%;
+
         p{
           width:100%;
         }
@@ -193,17 +191,12 @@ const S = {
     padding: 30px 0 60px;
 
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 36px;
       letter-spacing: -0.32px;
       font-weight: 600;
     }
-    @media only screen and (max-width: 1059px) {
-      padding: 20px 0 40px;
-      p {
-        font-size: 14px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       padding: 10px 0 20px;
       p {

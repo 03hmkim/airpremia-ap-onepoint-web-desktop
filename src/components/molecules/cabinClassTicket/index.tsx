@@ -231,7 +231,6 @@ const S = {
 
   expansionPanel: styled.div`
     width: 100%;
-    max-width: 1200px;
     position: relative;
     top: 20px;
     left: 0px;

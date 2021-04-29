@@ -24,12 +24,12 @@ const OnlineCheckInfo: FC<IProps> = ({}) => {
       </S.left>
       <S.right>
         <div className="info">
-          <div className="subtitle font-bold">
+          <div className="subtitle">
             예매 직후부터 출발 24시간 전까지
           </div>
           <div className="stepsWrapper">
             <div className="step">
-              <div className="label font-premia-bold">
+              <div className="label">
                 STEP 01
               </div>
               <div className="svgWrapper">
@@ -40,7 +40,7 @@ const OnlineCheckInfo: FC<IProps> = ({}) => {
               </div>
             </div>
             <div className="step">
-              <div className="label font-premia-bold">
+              <div className="label">
                 STEP 02
               </div>
               <div className="svgWrapper">
@@ -51,7 +51,7 @@ const OnlineCheckInfo: FC<IProps> = ({}) => {
               </div>
             </div>
             <div className="step">
-              <div className="label font-premia-bold">
+              <div className="label">
                 STEP 03
               </div>
               <div className="svgWrapper">
@@ -64,12 +64,12 @@ const OnlineCheckInfo: FC<IProps> = ({}) => {
           </div>
         </div>
         <div className="info">
-          <div className="subtitle font-bold">
+          <div className="subtitle">
             출발 24시간 전부터 1시간 전까지
           </div>
           <div className="stepsWrapper">
             <div className="step">
-              <div className="label font-premia-bold">
+              <div className="label font">
                 STEP 01
               </div>
               <div className="svgWrapper">
@@ -80,7 +80,7 @@ const OnlineCheckInfo: FC<IProps> = ({}) => {
               </div>
             </div>
             <div className="step">
-              <div className="label font-premia-bold">
+              <div className="label">
                 STEP 02
               </div>
               <div className="svgWrapper">
@@ -89,7 +89,7 @@ const OnlineCheckInfo: FC<IProps> = ({}) => {
               <div className="description">탑승권 발급</div>
             </div>
             <div className="step">
-              <div className="label font-premia-bold">
+              <div className="label">
                 STEP 03
               </div>
               <div className="svgWrapper">
@@ -112,6 +112,10 @@ const S = {
   container: styled.div<IStyleProps>`
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 1059px) { 
+      display: block;
+    }
   `,
   left: styled.div<IStyleProps>`
     width: 220px;
@@ -121,10 +125,20 @@ const S = {
     }
     .description {
       padding-top: 10px;
-      font-size: 14px;
+      font-size: 18px;
       line-height: 1.57;
       letter-spacing: -0.28px;
       color: ${LIGHT_GRAY7};
+    }
+
+    @media only screen and (max-width: 1059px) {
+      width: 100%;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .description {
+        font-size: 14px;
+      }
     }
   `,
   right: styled.div<IStyleProps>`
@@ -134,6 +148,7 @@ const S = {
     }
     .subtitle {
       font-size: 16px;
+      font-weight: 700;
       line-height: 1.75;
       letter-spacing: -0.32px;
     }
@@ -146,7 +161,8 @@ const S = {
         border-bottom: 1px solid ${LIGHT_GRAY6};
         .label {
           font-size: 20px;
-          font-weight: 500;
+          font-family: 'Premia';
+          font-weight: 700;
           letter-spacing: -0.4px;
           color: ${BLUE1};
         }
@@ -157,9 +173,31 @@ const S = {
         .description {
           padding-left: 15px;
           height: 20px;
-          font-size: 16px;
+          font-size: 18px;
           font-weight: 600;
           letter-spacing: -0.32px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1059px) { 
+      width: auto;
+      padding-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      .stepsWrapper {
+        padding-top: 20px;
+        .step {
+          .label {
+            min-width: 55px;
+          }
+          .svgWrapper {
+            padding-left: 20px;
+          }
+          .description {
+            font-size: 14px;
+          }
         }
       }
     }

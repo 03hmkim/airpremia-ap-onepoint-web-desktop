@@ -14,7 +14,7 @@ import {
   EModalPosition,
   EModalAnimationType,
 } from '@airpremia/core/stores/models/ui';
-import { useScroll, useSsr, useLoading } from '@airpremia/core/hooks';
+import { useScroll, useSsr, useLoading, useBooking } from '@airpremia/core/hooks';
 import {
   PayReceipt,
   ModalRightSide,
@@ -27,6 +27,8 @@ import {
   ssrOriginalPanelResources,
   ssrSpecialPanelResources,
 } from 'src/hooks/useSsr/dataset';
+import { flow, find, get } from 'lodash/fp'
+import lodashMap from 'lodash/map';
 
 const modalOptions = {
   isOpen: true,
@@ -48,7 +50,7 @@ const Index: NextPage = () => {
     </Fragment>
   );
   const { onHandleUpdateSsr } = useSsr();
-  const { isLoading, showLoading, hideLoading } = useLoading();
+  const { isLoading, hideLoading } = useLoading();
   const {
     ssrUpdate,
     onLoadSsr,
@@ -61,6 +63,14 @@ const Index: NextPage = () => {
     passengers,
   } = useSsrLocal();
   // TODO bundle checkbox 기능
+
+  const {
+    bookingSessionStore,
+    bookingStore,
+  } = useBooking();
+
+
+  const { bookingDetailInfo } = bookingStore;
 
   const [modalName, setModalName] = useState<string>('');
 
@@ -102,10 +112,26 @@ const Index: NextPage = () => {
     closeModal();
   };
 
-  const onClickPayReceipt = useCallback(async () => {
-    await showLoading();
-    await router.push('/ticket/pay/confirm');
-  }, []);
+  console.log("bookingSessionStore: " ,bookingSessionStore)
+
+  console.log("priceDataset : ", priceDataset)
+
+  const refundFee = flow(
+    find(['label', '총 결제 금액']),
+    get('price')
+  )(priceDataset)
+  console.log("refundFee : ", refundFee)
+
+  const onClickPayReceipt = useCallback(() => {
+    // showLoading();
+    console.log("refundFee : ", refundFee)
+    // if (refundFee < 0) {
+    //   console.log("!!")
+    //   router.push('/checkin/change/confirmRefund');
+    // } else {
+      router.push('/ticket/pay/confirm');
+    // }
+  }, [refundFee]);
 
   const onClickBundles = useCallback(() => {
     // TODO onClickBundles
@@ -116,6 +142,20 @@ const Index: NextPage = () => {
 
     if (isLoading) hideLoading();
   }, []);
+
+  const passengersInfo = bookingDetailInfo?.passengers!!
+
+  const allPassengerList = useMemo(
+    () =>
+      lodashMap(
+        passengersInfo,
+        (item) => item.passengerKey,
+      ),
+    [passengersInfo],
+  );
+
+  console.log("allPassengerList : ", allPassengerList)
+
 
   useEffect(() => {
     onLoadSsr();

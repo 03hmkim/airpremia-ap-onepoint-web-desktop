@@ -35,14 +35,9 @@ const BookingDetailInfoTemplate: FC<IProps> = ({
 const S = {
   title: styled.div`
     h1 {
-      font-size: 36px;
+      font-size: 40px;
       line-height: 48px;
       letter-spacing: -0.72px;
-    }
-    @media only screen and (max-width: 1059px) {
-        h1 {
-            font-size:30px;
-        }
     }
     @media only screen and (max-width: 767px) { 
         h1 {

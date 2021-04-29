@@ -13,7 +13,6 @@ import {
   WHITE1,
   DARK_GRAY1,
   LIGHT_GRAY5,
-  LIGHT_GRAY7,
   LIGHT_GRAY8,
   LIGHT_GRAY9,
   BLUE1,
@@ -249,7 +248,7 @@ const DepArrListTable: FC<IProps> = ({
 //     padding: 100px 0;
 //     width: 100%;
 //     text-align: center;
-//     color: ${LIGHT_GRAY7};
+//     color: ${LIGHT_GRAY8};
 //     border-bottom: solid 1px ${LIGHT_GRAY5};
 //     p {
 //       font-size: 14px;
@@ -274,7 +273,7 @@ const T = {
         thead th,
         thead td,
         td strong {
-          color: ${LIGHT_GRAY7};
+          color: ${LIGHT_GRAY8};
           font-size: 18px;
           line-height: 1.6;
           letter-spacing: -0.3px;
@@ -285,7 +284,7 @@ const T = {
           display: block;
         }
         th,td{
-          font-size: 14px;
+          font-size: 18px;
           font-weight: 400;
           line-height: 1.9;
           letter-spacing: -0.3px;
@@ -365,11 +364,13 @@ const T = {
         }
       }
     }
-    @media only screen and (max-width: 479px) { 
+    @media only screen and (max-width: 767px) { 
       table {
         thead th,
         thead td,
-        td strong {
+        td strong,
+        th,
+        td {
           font-size: 14px;
         }
       }
@@ -394,7 +395,7 @@ const T = {
   //    padding: 100px 0;
   //    width: 100%;
   //    text-align: center;
-  //    color: ${LIGHT_GRAY7};
+  //    color: ${LIGHT_GRAY8};
   //    border-bottom: solid 1px ${LIGHT_GRAY5};
   //    p {
   //      font-size: 14px;
@@ -489,16 +490,14 @@ const T = {
       &.mt20{
         margin-top:20px;
       }
-      @media only screen and (max-width: 1059px) { 
-        font-size: 16px;
-      }
+
       @media only screen and (max-width: 767px) { 
         font-size: 14px;
       }
     `,
     description: styled.p`
       margin-top: 10px;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
       font-size: 18px;
       line-height: 28px;
       &.center{
@@ -507,9 +506,7 @@ const T = {
       &.mt20{
         margin-top:20px;
       }
-      @media only screen and (max-width: 1059px) { 
-        font-size: 16px;
-      }
+
       @media only screen and (max-width: 767px) { 
         font-size: 14px;
         margin-top:0;
@@ -540,13 +537,13 @@ const T = {
   
     `,
     Badge:styled.div`
-      width: 60px;
-      height: 24px;
+      width: 70px;
+      height: 26px;
       margin: 0 auto;
       padding: 2px;
       color: #fff;
       font-size: 18px;
-      line-height: 23px;
+      line-height: 24px;
       text-align: center;
       border-radius: 4px;
       box-sizing: border-box;
@@ -559,11 +556,12 @@ const T = {
         &.red{
           background-color: ${RED2};
         }
-      @media only screen and (max-width: 1059px) { 
-        font-size: 16px;
-      }
+
       @media only screen and (max-width: 767px) { 
+        width: 58px;
+        height: 22px;
         font-size: 14px;
+        line-height: 20px;
       }
       `,
     line:styled.div`

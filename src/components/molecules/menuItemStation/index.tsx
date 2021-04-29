@@ -53,7 +53,8 @@ const S = {
       pointer-events: none;
     }
     .comingSoon {
-      font-family: 'Premia-Bold', serif;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
       color: ${ORANGE1};
     }
 

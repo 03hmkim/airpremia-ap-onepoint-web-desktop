@@ -42,7 +42,8 @@ const S = {
     background-color: ${WHITE1};
     box-sizing: border-box;
     .title {
-      font-family: 'Premia-Bold', 'NotoSans', serif;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
       font-size: 50px;
       line-height: 1.1;
       color: ${ORANGE1};

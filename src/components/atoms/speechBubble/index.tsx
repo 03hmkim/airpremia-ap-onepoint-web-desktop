@@ -44,7 +44,8 @@ const S = {
     justify-content: center;
     align-items: center;
     font-size: 18px;
-    font-family: 'Premia-Bold', sans-serif;
+    font-family: 'Premia', sans-serif;
+    font-weight: 700;
 
     span {
       width: 0;

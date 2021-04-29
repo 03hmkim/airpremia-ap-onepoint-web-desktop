@@ -85,15 +85,11 @@ const S = {
 
   title: styled.div`
     h2 {
-      font-size: 30px;
-      line-height: 45px;
+      font-size: 24px;
+      line-height: 1.8em;
       letter-spacing: -0.6px;
     }
-    @media only screen and (max-width: 1059px) {
-      h2 {
-        font-size: 26px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       h2 {
         font-size: 22px;
@@ -105,16 +101,29 @@ const S = {
     display: flex;
     align-items: flex-start;
     margin-top: 15px;
-    svg{
-      margin-top:5px;
+
+    svg {
+      margin-top: 5px;
     }
+    
     p {
       margin-left: 5px;
-      font-size: 15px;
+      font-size: 18px;
       line-height: 25px;
       letter-spacing: -0.3px;
       font-weight: 600;
       flex:1;
+    }
+
+    @media only screen and (max-width: 767px) {
+      svg{
+        margin-top: 8px;
+      }
+      p {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 28px;
+      }
     }
   `,
 

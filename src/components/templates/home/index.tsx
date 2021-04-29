@@ -1,8 +1,5 @@
 import styled from 'styled-components';
-import ImgMainBgCloud from 'public/images/main_bg_cloud.gif';
-import {
-
-} from '@airpremia/cdk/styles/colors';
+import randomIMG from './randomImage';
 import {
   MainSecTitle,
   MainSecEvent,
@@ -32,7 +29,7 @@ function Home({
       </div>
       <div className="sectionWrapper max">
         <div className="title">
-          <MainSecTitle title="EVENT" />
+          <MainSecTitle title="EVENT" goto="/ticket/promotion" />
         </div>
         <div className="cont">
           <MainSecEvent />
@@ -40,7 +37,7 @@ function Home({
       </div>
       <div className="sectionWrapper max">
         <div className="title">
-          <MainSecTitle title="NOTICE" />
+          <MainSecTitle title="NOTICE" goto="/customer/notice" />
         </div>
         <div className="cont">
           <MainSecNotice />
@@ -77,7 +74,7 @@ const S = {
       width: 100%;
       /* min-width: 1440px; */
       height: 800px;
-      background-image: url(${ImgMainBgCloud});
+      background-image: url(${randomIMG});
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;

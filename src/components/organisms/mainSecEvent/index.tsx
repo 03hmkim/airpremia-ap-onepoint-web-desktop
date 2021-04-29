@@ -9,6 +9,10 @@ import {
   ORANGE1,
 } from '@airpremia/cdk/styles/colors';
 import Link from 'next/link';
+import eventImg01 from 'public/images/ticket/promotion/list/promotion_bg_01.png';
+import eventImg02 from 'public/images/ticket/promotion/list/promotion_bg_02.png';
+import eventImg03 from 'public/images/ticket/promotion/list/promotion_bg_03.png';
+import eventImg04 from 'public/images/ticket/promotion/list/promotion_bg_04.png';
 
 function MainSecEvent () {
   return (
@@ -16,41 +20,41 @@ function MainSecEvent () {
       <S.banner>
         <ul>
           <li className="list">
-            <Link href="">
+            <Link href="/ticket/promotion">
               <a>
-                <div className="image"></div>
-                <p className="badgeWrap"><span className="badge blue">D-13</span></p>
-                <h4>맛있는 콜드브루 아이스. 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                <div className="img num01"></div>
+                <p className="badgeWrap"><span className="badge blue">D-5</span></p>
+                <h4>산호세 신규 취항 기념, 산호세행 15% 할인 이벤트</h4>
                 <p className="date">2021. 3.12. ~ 2021. 5. 1.</p>
               </a>
             </Link>
           </li>
           <li className="list">
-            <Link href="">
+            <Link href="/ticket/promotion">
               <a>
-                <div className="image"></div>
-                <p className="badgeWrap"><span className="badge blue">D-13</span></p>
-                <h4>맛있는 콜드브루 아이스. 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                <div className="img num02"></div>
+                <p className="badgeWrap"><span className="badge blue">D-8</span></p>
+                <h4>기내면세품 예약하고 무료 호치민 여행 떠나자!</h4>
                 <p className="date">2021. 3.12. ~ 2021. 5. 1.</p>
               </a>
             </Link>
           </li>
           <li className="list">
-            <Link href="">
+            <Link href="/ticket/promotion">
               <a>
-                <div className="image"></div>
+                <div className="img num03"></div>
                 <p className="badgeWrap"><span className="badge blue">D-13</span></p>
-                <h4>맛있는 콜드브루 아이스. 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                <h4>퀴즈 맞추고 마일리지 받아가세요!</h4>
                 <p className="date">2021. 3.12. ~ 2021. 5. 1.</p>
               </a>
             </Link>
           </li>
           <li className="list">
-            <Link href="">
+            <Link href="/ticket/promotion">
               <a>
-                <div className="image"></div>
-                <p className="badgeWrap"><span className="badge blue">D-13</span></p>
-                <h4>맛있는 콜드브루 아이스. 크림치즈 앙버터랑 먹으면 더 맛있어요!</h4>
+                <div className="img num04"></div>
+                <p className="badgeWrap"><span className="badge blue">D-15</span></p>
+                <h4>퀴즈 맞추고 함께 샌프란시스코로 떠나요 :-)</h4>
                 <p className="date">2021. 3.12. ~ 2021. 5. 1.</p>
               </a>
             </Link>
@@ -82,12 +86,28 @@ const S = {
       }
     }
 
-    .image {
+    .img {
       width: 100%;
       height: 210px;
       display: block;
+      overflow: hidden;
       background: ${LIGHT_GRAY2};
+      background-size: cover;
+      background-position: center;
       border-radius: 20px;
+
+      &.num01 {
+        background-image: url(${eventImg01});
+      }
+      &.num02 {
+        background-image: url(${eventImg02});
+      }
+      &.num03 {
+        background-image: url(${eventImg03});
+      }
+      &.num04 {
+        background-image: url(${eventImg04});
+      }
     }
 
     .badgeWrap{

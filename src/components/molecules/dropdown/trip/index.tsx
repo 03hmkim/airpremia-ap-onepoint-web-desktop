@@ -87,7 +87,8 @@ const S = {
       }
     }
     .coming_soon {
-      font-family: 'Premia-Bold', serif;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
       font-size: 14px;
       letter-spacing: -0.28px;
       text-align: right;

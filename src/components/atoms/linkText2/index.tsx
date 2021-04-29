@@ -30,7 +30,8 @@ const S = {
     display: flex;
     align-items: center;
     span {
-      font-weight: 600;
+      font-size: 18px;
+      font-weight: 700;
       letter-spacing: -0.26px;
       text-align: right;
     }
@@ -38,6 +39,12 @@ const S = {
       position: relative;
       margin-left: -2px;
       margin-top: 1px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      span {
+        font-size: 14px;
+      }
     }
   `,
 };

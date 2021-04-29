@@ -33,6 +33,7 @@ const S = {
   container: styled.div<IStyleProps>`
     ul {
       padding-top: 10px;
+
       li {
         font-size: 18px;
         line-height: 1.5em !important;
@@ -43,9 +44,11 @@ const S = {
         width:calc( 100% - 10px );
         padding-left:10px;
         position:relative;
+
         &:not(:last-of-type) {
           margin-bottom: 15px;
         }
+
         &:before {
           content: '';
           width: 4px;
@@ -53,16 +56,26 @@ const S = {
           background-color: ${DARK_GRAY1};
           display: inline-block;
           border-radius: 50%;
-          position:absolute;
-          left:0;
-          top:8px;
+          position: absolute;
+          left: 0;
+          top: 12px;
         }
       }
     }
-    @media only screen and (max-width: 1059px) { 
+    @media only screen and (max-width: 767px) { 
       ul {
-          li {
-            font-size: 15px;
+        li {
+          font-size: 14px;
+          font-weight: 300;
+          line-height: 28px;
+
+          &:not(:last-of-type) {
+            margin-bottom: 20px;
+          }
+
+          &:before {
+            top: 9px;
+          }            
         }
       }
     }
@@ -71,22 +84,15 @@ const S = {
     margin-bottom: 20px;
 
     h3 {
-      font-size: 22px;
+      font-size: 21px;
       line-height: 34px;
       letter-spacing: -0.44px;
-      margin-left: 5px;
       color: ${DARK_GRAY1};
     }
-    @media only screen and (max-width: 1059px) { 
-      margin-bottom: 10px;
-      h3 {
-        font-size: 20px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
-      margin-bottom: 0px;
       h3 {
-        font-size: 18px;
+        font-size: 16px;
       }
     }
   `,

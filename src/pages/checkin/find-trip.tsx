@@ -81,7 +81,7 @@ const FindTrip: FC<IProps> = () => {
     '일정',
     '상태',
   ];
-  const widthList = [163, 180, 380, 411, 66, 1134];
+  const widthList = [150, 100, 380, 544, 106, 1134];
 
   const description = [
     '타 서비스를 통해 항공권을 예약하신 경우, 예약 내용이 정확하지 않을 수 있습니다.',

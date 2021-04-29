@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { prop } from 'styled-tools';
 import { FC } from 'react';
 import {
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   DARK_GRAY1,
 } from '@airpremia/cdk/styles/colors';
 
@@ -37,18 +37,23 @@ const TableHeaderWithList: FC<IProps> = ({
 const S = {
   container: styled.div<IStyle>`
     height: 42px;
-    width: 1200px;
     display: flex;
-    color: ${prop('color', LIGHT_GRAY7)};
+    color: ${prop('color', LIGHT_GRAY8)};
+    border-bottom: solid 2px ${DARK_GRAY1};
   `,
 
   header: styled.div<{ width: number }>`
     flex-basis: ${prop('width')}px;
-    border-bottom: solid 2px ${DARK_GRAY1};
     h6 {
-      font-size: 14px;
+      font-size: 18px;
       line-height: 20px;
       letter-spacing: -0.28px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      h6 {
+        font-size: 14px;
+      }
     }
   `,
 };

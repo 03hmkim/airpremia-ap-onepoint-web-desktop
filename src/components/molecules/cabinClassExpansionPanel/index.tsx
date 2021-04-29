@@ -5,6 +5,7 @@ import {
   DARK_GRAY1,
 } from '@airpremia/cdk/styles/colors';
 import {
+  Arrow,
   CabinClassSpec,
   CabinClassTicketCard,
 } from 'src/components';
@@ -60,9 +61,7 @@ function CabinClassExpansionPanel({
       </S.contentWrapper>
       <S.flightRule>
         <p onClick={onClickFlightRule}>
-          {/* 요기수정하기☆ */} 
-          항공권 규정 자세히 보기 {'>'}
-          {/* Arrow로 바꾸기 */}
+          항공권 규정 자세히 보기 <Arrow />
         </p>
       </S.flightRule>
     </S.container>
@@ -72,7 +71,6 @@ function CabinClassExpansionPanel({
 
 const S = {
   container: styled.div<{ isShow: boolean }>`
-    max-width: 1200px;
     width: 100%;
   `,
 

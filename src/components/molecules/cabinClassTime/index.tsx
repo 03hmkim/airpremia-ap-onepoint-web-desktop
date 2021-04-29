@@ -9,8 +9,11 @@ import { IFlightTicketSearchJourney } from '@airpremia/core/api/ticket/types';
 import { getHumanizeTime } from '@airpremia/core/lib/booking';
 import { EDefaultModalTable } from '@airpremia/core/stores/models/ui';
 import TripInfomation from 'src/components/organisms/tripInfomation';
-import { NewModal } from 'src/components';
-import PopupTitle from '../popupTitle';
+import { 
+  NewModal,
+  PopupTitle,
+  PopupDescription,
+ } from 'src/components';
 import { EScrollType } from 'src/components/templates/centerPopup';
 
 interface IProps {
@@ -42,14 +45,12 @@ function CabinClassTime({
       case journeyKey:
         return (
           <NewModal
-            className="hAuto"
+            className="hAuto btnN"
             type={EScrollType.TYPE1}            
             title={
               <S.header>
                 <PopupTitle>여정 정보</PopupTitle>
-                <S.description>
-                  모든 시간은 현지 시간 기준입니다.
-                </S.description>
+                <PopupDescription>모든 시간은 현지 시간 기준입니다.</PopupDescription>
               </S.header>
             }
             body={<TripInfomation legs={legs} />}
@@ -68,9 +69,7 @@ function CabinClassTime({
         <div className="station">
           <h2 className="font-premia-bold">
           <span className="day">
-            (
             {moment(departureTime).format('M.D')}
-            )
           </span>
           <br/>
           <span className="hour">
@@ -89,9 +88,7 @@ function CabinClassTime({
         <div className="station">
           <h2 className="font-premia-bold">
             <span className="day">
-              (
               {moment(arrivalTime).format('M.D')}
-              )
             </span>
             <br/>
             <span className="hour">

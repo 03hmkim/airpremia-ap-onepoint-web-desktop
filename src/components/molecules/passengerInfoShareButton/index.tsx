@@ -71,34 +71,43 @@ const S = {
         }
         .label {
           padding-left: 6px;
-          font-size: 15px;
+          font-size: 18px;
           font-weight: 600;
           letter-spacing: -0.3px;
           line-height: 1;
         }
       }
     }
+
     @media only screen and (max-width: 1059px) { 
       display:block;
       height:auto;
       padding:20px;
-      .description {
-        font-size:15px;
-        line-height:1.5em;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-      }
+
       .buttonWrapper {
         margin-top:20px;
         width:100%;
         display:flex;
         justify-content:center;
         align-items:center;
+
+        button .label {
+          font-size: 14px;
+        }
+      }
+
+      .description {
+        display:flex;
+        justify-content:center;
+        align-items:center;
       }
     }
+
     @media only screen and (max-width: 767px) { 
-    
+      .description {
+        font-size:15px;
+        line-height:1.5em;
+      }
     }
   `,
 };

@@ -28,6 +28,7 @@ const S = {
       width: 140px;
       height: 140px;
     }
+
     .description {
       padding-top: 20px;
       font-size: 18px;
@@ -35,6 +36,10 @@ const S = {
       line-height: 1.44;
       letter-spacing: -0.36px;
       text-align: center;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 16px;
     }
   `,
 };

@@ -55,7 +55,7 @@ const S = {
 
   euCitizenRadio: styled.div`
     padding-left: 320px;
-    margin-bottom: 80px;
+
     @media only screen and (max-width: 1059px) {
       padding-left: 0;
       margin-bottom: 100px;
@@ -63,7 +63,8 @@ const S = {
   `,
 
   taskButton: styled.div`
-    text-align: center;
+    text-align: center;    
+    margin-top: 80px;
     margin-bottom: 80px;
     button {
       width: 300px;

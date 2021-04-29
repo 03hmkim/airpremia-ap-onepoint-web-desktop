@@ -98,17 +98,14 @@ const S = {
   aside: styled.div`
     flex-basis: 323px;
     h2 {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 1.5em;
       letter-spacing: -0.44px;
     }
-    @media only screen and (max-width: 1059px) {
-      h2 {
-        font-size: 18px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       flex-basis: 100px;
+
       h2 {
         font-size: 14px;
       }
@@ -131,7 +128,7 @@ const S = {
     }
 
     .name {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 22px;
       letter-spacing: -0.3px;
       width: 100%;
@@ -148,9 +145,7 @@ const S = {
       font-weight: 600;
       border-bottom: solid 1px ${DARK_GRAY1};
     }
-    @media only screen and (max-width: 1059px) { 
-    
-    }
+
     @media only screen and (max-width: 767px) { 
       margin-bottom:10px;
       .wrapper {
@@ -185,9 +180,7 @@ const S = {
 
       color: ${ORANGE2};
     }
-    @media only screen and (max-width: 1059px) { 
-    
-    }
+
     @media only screen and (max-width: 767px) { 
       .wrapper {
         margin-bottom: 0px;

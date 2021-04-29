@@ -104,7 +104,8 @@ const S = {
     .title {
       padding-bottom: 20px;
       border-bottom: 1px solid ${DARK_GRAY1};
-      font-family: 'Premia-Bold',sans-serif;
+      font-family: 'Premia', sans-serif;
+      font-weight: 700;
       font-weight: 600;
       font-size: 22px;
       line-height: 1.27;

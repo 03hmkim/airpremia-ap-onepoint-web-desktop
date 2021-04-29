@@ -66,9 +66,15 @@ const S = {
     display: flex;
     align-items: center;
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
       margin-left: 10px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      p {
+        font-size: 15px;
+      }
     }
   `,
 

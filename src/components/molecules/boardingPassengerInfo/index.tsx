@@ -12,7 +12,6 @@ import {
 } from '@airpremia/core/lib/service';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY7,
   LIGHT_GRAY6,
   LIGHT_GRAY8,
   LIGHT_GRAY5,
@@ -180,8 +179,9 @@ const S = {
   `,
   name: styled.div`
     display: flex;
+
     h3 {
-      font-size: 20px;
+      font-size: 21px;
       line-height: 26px;
       letter-spacing: -0.4px;
     }
@@ -191,6 +191,7 @@ const S = {
       line-height: 26px;
       letter-spacing: -0.36px;
     }
+
     span {
       font-size: 16px;
       line-height: 26px;
@@ -199,14 +200,24 @@ const S = {
       color: ${RED2};
       margin-left: 10px;
     }
+
+    @media only screen and (max-width: 767px) {
+      h3 {
+        font-size: 18px;
+      }
+
+      h4 {
+        font-size: 16px;
+      }
+    }
   `,
   email: styled.div`
-    font-size: 14px;
+    font-size: 18px;
     line-height: 26px;
     letter-spacing: -0.28px;
     font-weight: 600;
     p {
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
     }
     div {
       box-sizing: border-box;
@@ -214,6 +225,10 @@ const S = {
       padding: 0 18px;
       border-radius: 300px;
       border: solid 1px ${LIGHT_GRAY6};
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
     }
   `,
 
@@ -260,7 +275,7 @@ const S = {
   content: styled.div<{ isCanceled: boolean }>`
     align-items: center;
     display: flex;
-    font-size: 15px;
+    font-size: 18px;
     line-height: 22px;
     letter-spacing: -0.3px;
     margin-bottom: 15px;
@@ -272,6 +287,10 @@ const S = {
     }
     p {
       font-weight: 600;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 15px;
     }
 
     ${({ isCanceled }) =>
@@ -293,14 +312,14 @@ const S = {
       align-items: center;
       font-weight: 600;
       h5 {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 26px;
         letter-spacing: -0.32px;
         font-weight: 600;
         margin-right: 30px;
       }
       output {
-        font-size: 18px;
+        font-size: 21px;
         line-height: 26px;
         letter-spacing: -0.36px;
         /* color: ${ORANGE2}; */
@@ -312,20 +331,39 @@ const S = {
       display: flex;
       align-items: center;
       p {
-        font-size: 14px;
+        font-size: 18px;
         line-height: 26px;
         letter-spacing: -0.28px;
         font-weight: 600;
       }
 
       .mileage {
-        font-size: 15px;
+        font-size: 18px;
         line-height: 26px;
         letter-spacing: -0.3px;
         font-weight: 600;
       }
       svg {
         margin-left: 3px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .left {
+        h5 {
+          font-size: 16px;
+        }
+        output {
+          font-size: 18px;
+        }
+      }
+      .right {
+        p {
+          font-size: 14px;
+        }
+        .mileage {
+          font-size: 15px;
+        }
       }
     }
   `,

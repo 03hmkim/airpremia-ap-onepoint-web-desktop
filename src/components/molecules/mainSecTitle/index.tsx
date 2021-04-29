@@ -4,15 +4,19 @@ import {
   LIGHT_GRAY8,
 } from '@airpremia/cdk/styles/colors';
 import IcoRight from 'public/images/btn_dropdown_able_right_gray.svg';
+import Link from 'next/link';
 
 interface IStyleProps {}
 interface IProps extends IStyleProps {
   /** 제목 */
   title?: string;
+  /** 링크 */
+  goto?: string;
 }
 
 function MainSecTitle({
   title,
+  goto,
 }: IProps) {
   return (
     <S.container>
@@ -20,7 +24,11 @@ function MainSecTitle({
         <h3>{title}</h3>
       </div>
       <div className="more">
-        <button>더보기 <IcoRight /></button>
+        <Link href={goto}>
+          <a>
+            <button>더보기 <IcoRight /></button>
+          </a>
+        </Link>
       </div>
     </S.container>
   );

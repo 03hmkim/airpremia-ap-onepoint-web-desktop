@@ -91,8 +91,6 @@ const TripInfomation: FC<IProps> = ({ legs }) => {
 
 const S = {
   container: styled.div`
-    padding: 0 50px;
-    width: 540px;
   `,
 
   header: styled.div``,
@@ -125,16 +123,27 @@ const S = {
     }
     p {
       &:first-of-type {
-        font-size: 13px;
+        font-size: 18px;
         line-height: 24px;
         letter-spacing: -0.26px;
         margin-bottom: 7px;
       }
       &:last-of-type {
-        font-size: 16px;
+        font-size: 21px;
         line-height: 24px;
         letter-spacing: -0.32px;
         font-weight: 600;
+      }
+    }
+
+    @media only screen and (max-width:767px) {
+      p {
+        &:first-of-type {
+          font-size: 13px;
+        }
+        &:last-of-type {
+          font-size: 16px;
+        }
       }
     }
   `,

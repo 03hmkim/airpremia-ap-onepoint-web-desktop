@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { IMeState } from '@airpremia/core/stores/models/me';
 import { IAuthState } from '@airpremia/core/stores/models/auth';
 import {
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   LIGHT_GRAY5,
   ORANGE1,
 } from '@airpremia/cdk/styles/colors';
@@ -91,7 +91,7 @@ const S = {
     font-weight: 300;
     line-height: 1.5;
     letter-spacing: -0.24px;
-    color: ${LIGHT_GRAY7};
+    color: ${LIGHT_GRAY8};
 
     @media only screen and (max-width: 767px) {
       font-size: 12px;

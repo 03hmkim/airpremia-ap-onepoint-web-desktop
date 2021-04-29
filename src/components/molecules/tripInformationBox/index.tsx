@@ -2,7 +2,7 @@ import { FC } from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
 import {
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   DARK_GRAY1,
 } from '@airpremia/cdk/styles/colors';
 import SvgDottedLine from 'public/images/shape_dotted_line.svg';
@@ -100,7 +100,7 @@ const S = {
   `,
 
   description: styled.div`
-    color: ${LIGHT_GRAY7};
+    color: ${LIGHT_GRAY8};
     margin-bottom: 26px;
     ${flex};
   `,
@@ -112,6 +112,7 @@ const S = {
   figure: styled.div`
     flex-basis: 30px;
     .svg-wrapper {
+      height: 25px;
     }
 
     .circle {
@@ -133,21 +134,24 @@ const S = {
     flex: 1;
     & > div {
       ${flex};
+
       p {
+        font-size: 18px;
         font-weight: 600;
-        &:first-of-type {
-          font-size: 15px;
-          line-height: 26px;
-          letter-spacing: -0.3px;
-        }
-        &:last-of-type {
-          font-size: 16px;
-          line-height: 26px;
-          letter-spacing: -0.32px;
-        }
+        line-height: 1.36em;
+        letter-spacing: -0.3px;
       }
+
       &:first-of-type {
         margin-bottom: 17px;
+      }
+    }
+
+    @media only screen and (max-width:767px) {
+      & > div {
+        p {
+          font-size: 14px;
+        }
       }
     }
   `,

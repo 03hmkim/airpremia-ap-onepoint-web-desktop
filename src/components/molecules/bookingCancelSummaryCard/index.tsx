@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
-import { LIGHT_GRAY6 } from '@airpremia/cdk/styles/colors';
+import { LIGHT_GRAY6, LIGHT_GRAY8 } from '@airpremia/cdk/styles/colors';
 
 interface IProps {
   bookingInfo: any;
@@ -74,15 +74,10 @@ const S = {
     box-sizing: border-box;
 
     h3 {
-      font-size: 20px;
+      font-size: 24px;
       line-height:1.5em;
     }
-    @media only screen and (max-width: 1059px) {
-      padding: 20px;
-      h3 {
-        font-size: 18px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       padding: 20px 20px 0 20px;
       h3 {
@@ -93,9 +88,7 @@ const S = {
 
   header: styled.div`
     margin-bottom: 50px;
-    @media only screen and (max-width: 1059px) {
-      margin-bottom: 40px;
-    }
+
     @media only screen and (max-width: 767px) { 
       margin-bottom: 20px;
     }
@@ -133,10 +126,12 @@ const S = {
   content: styled.div``,
 
   rowTitle: styled.div`
+    color: ${LIGHT_GRAY8};
     font-size: 18px;
     line-height: 19px;
     letter-spacing: -0.26px;
     margin-bottom: 12px;
+
     @media only screen and (max-width: 767px) { 
       font-size: 13px;
       margin-bottom:5px;
@@ -148,6 +143,7 @@ const S = {
     line-height: 27px;
     letter-spacing: -0.36px;
     font-weight: 600;
+    
     @media only screen and (max-width: 767px) { 
       font-size: 16px;
     }

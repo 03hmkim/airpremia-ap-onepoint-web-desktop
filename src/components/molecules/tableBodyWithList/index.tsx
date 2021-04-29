@@ -21,10 +21,12 @@ const TableBodyWithList: FC<IProps> = ({ children }) => {
 
 const S = {
   container: styled.div<IStyle>`
-    width: 1200px;
     display: flex;
     flex-wrap: wrap;
     color: ${prop('color', DARK_GRAY1)};
+    @media only screen and (max-width: 1059px) {
+      display:block;
+    }
   `,
 
   header: styled.div<{ width: number }>`
