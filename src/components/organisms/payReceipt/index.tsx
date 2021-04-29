@@ -216,6 +216,9 @@ const S = {
           .label {
             font-size: 14px;
           }
+          .value {
+            font-size: 14px;
+          }
         }
       }
     }

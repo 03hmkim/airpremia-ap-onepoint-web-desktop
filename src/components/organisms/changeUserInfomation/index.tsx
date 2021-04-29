@@ -397,20 +397,23 @@ const ChangeUserInfomation: FC<IProps> = ({
           </S.title>
         </S.left>
         <S.right noPadding>
-          <S.content>
-            <b>
-              에어프레미아 이용에 도움이 되는 특가, 이벤트
-              정보를 보내드립니다.
-            </b>
-            <S.radioWrapper>
-              <Radio {...agreeRadioData}>
-                <p>동의함</p>
-              </Radio>
-              <Radio {...disagreeRadioData}>
-                <p>동의하지 않음</p>
-              </Radio>
-            </S.radioWrapper>
-          </S.content>
+            <S.content>
+                <div className="agree-wrap">
+                    <b>
+                        에어프레미아 이용에 도움이 되는 특가, 이벤트
+                        정보를 보내드립니다.
+                    </b>
+                    <S.radioWrapper>
+                        <Radio {...agreeRadioData}>
+                            <p>동의함</p>
+                        </Radio>
+                        <Radio {...disagreeRadioData}>
+                            <p>동의하지 않음</p>
+                        </Radio>
+                    </S.radioWrapper>
+                </div>
+            </S.content>
+
         </S.right>
       </S.advSubscribe>
     </S.container>
@@ -420,30 +423,70 @@ const ChangeUserInfomation: FC<IProps> = ({
 const S = {
   container: styled.div`
     padding: 60px 0 66px;
+    @media only screen and (max-width: 1059px) { 
+      padding: 40px 0 46px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 20px 0 26px;
+    }
   `,
   basicInfo: styled.div`
     display: flex;
     padding-bottom: 70px;
     border-bottom: solid 1px ${LIGHT_GRAY5};
+    @media only screen and (max-width: 1059px) { 
+      padding-bottom: 50px;
+      display:block;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding-bottom: 30px;
+    }
   `,
   passportInfo: styled.div`
     display: flex;
     padding: 60px 0 80px;
     border-bottom: solid 1px ${LIGHT_GRAY5};
+    @media only screen and (max-width: 1059px) { 
+      padding: 40px 0 60px;
+      display:block;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 20px 0 40px;
+    }
   `,
   advSubscribe: styled.div`
     display: flex;
     padding-top: 63px;
+    @media only screen and (max-width: 1059px) { 
+      padding-top: 43px;
+      display:block;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding-top: 23px;
+    }
   `,
   title: styled.div`
     font-size: 22px;
     line-height: 28px;
     letter-spacing: -0.44px;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+      line-height: 1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+      line-height: 1.5em;
+    }
   `,
   left: styled.div`
     flex-basis: 220px;
     width: 220px;
     margin-right: 100px;
+    @media only screen and (max-width: 767px) { 
+      width:100%;
+      margin-right:0;
+      flex-basis:100%;
+    }
   `,
   right: styled.div<{ noPadding?: boolean }>`
     flex: 1;
@@ -451,6 +494,12 @@ const S = {
 
     & > div:not(:first-of-type) {
       margin-top: 10px;
+    }
+    @media only screen and (max-width: 1059px) { 
+      margin-top:20px;
+    }
+    @media only screen and (max-width: 767px) { 
+
     }
   `,
   row: styled.div<{ hasBorder?: boolean }>`
@@ -464,10 +513,20 @@ const S = {
         padding-bottom: 10px;
         border-bottom: solid 1px ${LIGHT_GRAY6};
       `}
+    @media only screen and (max-width: 599px) {
+      height: auto;
+      padding:10px 0;
+    }
   `,
   label: styled.div`
     flex-basis: 200px;
     width: 200px;
+    font-size:18px;
+    @media only screen and (max-width: 767px) { 
+      flex-basis: 90px;
+      width: 90px;
+      font-size:14px;
+    }
   `,
   content: styled.div`
     flex: 1;
@@ -481,24 +540,54 @@ const S = {
         font-weight: normal;
       }
     }
+    .agree-wrap{
+      width:100%;
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
     u {
-      font-size: 13px;
+      font-size: 18px;
       line-height: 30px;
       letter-spacing: -0.26px;
       cursor: pointer;
     }
     b {
       font-weight: 600;
-      font-size: 15px;
+      font-size: 18px;
       line-height: 22px;
       letter-spacing: -0.33px;
+      width:100%;
+      flex:1;
+      display:flex;
+      margin-right:20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      u {
+        font-size: 13px;
+      }
+      b {
+        font-size: 15px;
+      }
+    }
+    @media only screen and (max-width: 599px) {
+      .agree-wrap{
+        display:block;
+      }
+      b {
+        margin-right:0;
+      }
     }
   `,
   text: styled.div`
-    font-size: 15px;
+    font-size: 18px;
     line-height: 30px;
     letter-spacing: -0.3px;
     font-weight: 600;
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
   autoComplete: styled.div``,
   radioWrapper: styled.div`
@@ -509,6 +598,12 @@ const S = {
     }
     p {
       font-weight: 600;
+    }
+    @media only screen and (max-width: 599px) {
+      margin-top:10px;
+      p {
+        font-size:14px;
+      }
     }
   `,
 };

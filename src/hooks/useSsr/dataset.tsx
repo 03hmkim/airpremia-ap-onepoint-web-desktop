@@ -4,10 +4,10 @@ import SvgSeat from 'public/images/ico_seat.svg';
 // import SvgWifi from 'public/images/ico_wifi.svg';
 // import SvgRestaurant from 'public/images/ico_restaurant.svg';
 // import SvgEvent from 'public/images/ico_event.svg';
-import SvgPregnant from 'public/images/ico_disabledperson.svg';
+import SvgPregnant from 'public/images/ico_pregnant.svg';
 import SvgDisabledPerson from 'public/images/ico_disabledperson.svg';
 // import SvgBed from 'public/images/ico_bed.svg';
-import SvgOxygenTank from 'public/images/ico_disabledperson.svg';
+import SvgOxygenTank from 'public/images/ico_oxygentank.svg';
 import { ISsrPanel } from 'src/components/molecules/ssrPanel';
 
 export const ssrBundlePanelResources: ISsrPanel[] = [

@@ -186,7 +186,7 @@ const GradeDashboard: FC<IProps> = ({
 
 const S = {
   container: styled.div`
-    width: 1200px;
+    max-width: 1200px;
     min-height: 200px;
     border-radius: 12px;
     border: solid 1px ${LIGHT_GRAY6};
@@ -194,6 +194,13 @@ const S = {
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
+    @media only screen and (max-width: 1059px) { 
+    
+    }
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      padding: 20px 30px 20px 20px;
+    }
   `,
 
   left: styled.div`
@@ -207,17 +214,29 @@ const S = {
       margin-top: 8px;
     }
     h4 {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.32px;
       font-weight: 600;
     }
     p {
-      font-size: 15px;
+      font-size: 18px;
       line-height: 17px;
       letter-spacing: -0.3px;
       color: ${LIGHT_GRAY7};
       font-weight: 600;
+    }
+    @media only screen and (max-width: 767px) { 
+      width:100%;
+      h2 {
+        font-size: 22px;
+      }
+      h4 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 14px;
+      }
     }
   `,
 
@@ -257,6 +276,26 @@ const S = {
         }
       }
     }
+    @media only screen and (max-width: 1059px) { 
+      div:not(:nth-child(3n)) {
+        margin-right: 30px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      width:100%;
+      min-height:0;
+      padding-top:20px;
+      margin-top:20px;
+      border-top:1px solid #f1f1f1;
+    }
+    @media only screen and (max-width: 599px) {
+      padding-top:0px;
+      div:not(:nth-child(3n)) {
+        width:100% !important;
+        margin-top:20px;
+        margin-right: 0px;
+      }
+    }
   `,
 
   box: styled.div`
@@ -280,6 +319,15 @@ const S = {
     }
     .gray {
       color: ${LIGHT_GRAY7};
+    }
+    @media only screen and (max-width: 1059px) { 
+    
+    }
+    @media only screen and (max-width: 767px) { 
+    
+    }
+    @media only screen and (max-width: 599px) {
+
     }
   `,
 };

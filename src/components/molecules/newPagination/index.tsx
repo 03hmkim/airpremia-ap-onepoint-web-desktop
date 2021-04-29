@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import Pagination from '@material-ui/core/Pagination';
 import styled from 'styled-components';
 import {
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   DARK_GRAY1,
 } from '@airpremia/cdk/styles/colors';
 
@@ -67,10 +67,10 @@ const P = {
         min-width: auto;
         height: 32px;
         position: relative;
-        color: ${LIGHT_GRAY7};
+        color: ${LIGHT_GRAY8};
         font-weight: 400;
         font-family: 'Premia', 'NotoSans', serif;
-        font-size: 16px;
+        font-size: 20px;
         text-align: center;
         line-height: 30px;
         border: 2px solid transparent;
@@ -115,7 +115,7 @@ const P = {
         min-width: auto;
         margin: 0;
         padding: 0;
-        color: ${LIGHT_GRAY7};
+        color: ${LIGHT_GRAY8};
         font-family: 'Premia', 'NotoSans', serif;
         font-size: 16px;
         line-height: 30px;

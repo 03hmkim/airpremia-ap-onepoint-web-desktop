@@ -48,9 +48,19 @@ const S = {
       box-shadow: 7px 7px 7px 0 rgba(0, 0, 0, 0.03);
       border: solid 1px ${DARK_GRAY1};
       background-color: ${WHITE1};
-      font-size: 13px;
+      font-size: 18px;
       line-height: 1.67;
       color: ${DARK_GRAY1};
+    }
+    @media only screen and (max-width: 767px) { 
+      .description {
+        font-size: 14px;
+      }
+    }
+    @media only screen and (max-width: 599px) {
+      .description {
+        width: 230px;
+      }
     }
   `,
 };

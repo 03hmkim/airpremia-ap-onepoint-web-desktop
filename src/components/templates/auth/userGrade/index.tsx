@@ -43,6 +43,16 @@ const S = {
       letter-spacing: -0.72px;
     }
     margin-bottom: 80px;
+    
+    @media only screen and (max-width: 1059px) { 
+        margin-bottom: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        h1 {
+          font-size: 26px;
+        }
+        margin-bottom: 40px;
+    }
   `,
 
   gradeDashboard: styled.div``,
@@ -53,10 +63,22 @@ const S = {
 
   userGradeGuideTable: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+        margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 40px;
+    }
   `,
 
   caution: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+        margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 40px;
+    }
   `,
 };
 

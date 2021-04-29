@@ -135,7 +135,7 @@ const MembershipDashboard: FC<IProps> = ({
 
 const S = {
   container: styled.div`
-    width: 1200px;
+    max-width: 1200px;
     min-height: 200px;
     border-radius: 12px;
     border: solid 1px ${LIGHT_GRAY6};
@@ -143,6 +143,10 @@ const S = {
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
+    @media only screen and (max-width: 767px) { 
+      display:block;
+      padding: 20px 30px 20px 20px;
+    }
   `,
 
   tooltip: styled.span``,
@@ -169,17 +173,29 @@ const S = {
       margin-top: 8px;
     }
     h4 {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 1.2;
       letter-spacing: -0.32px;
       font-weight: 600;
     }
     p {
       font-weight: 600;
-      font-size: 13px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.26px;
       cursor: pointer;
+    }
+    @media only screen and (max-width: 767px) { 
+      width:100%;
+      h2 {
+        font-size: 22px;
+      }
+      h4 {
+        font-size: 14px;
+      }
+      p {
+        font-size: 13px;
+      }
     }
   `,
 
@@ -191,6 +207,17 @@ const S = {
 
     & > div {
       bottom: -13px;
+    }
+    @media only screen and (max-width: 1059px) { 
+       flex-basis: calc( 100% - 200px );
+       width: calc( 100% - 200px );
+    }
+    @media only screen and (max-width: 767px) { 
+       flex-basis: 100%;
+       width: 100%;
+    }
+    @media only screen and (max-width: 599px) {
+       
     }
   `,
 

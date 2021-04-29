@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import {
-  LIGHT_GRAY7,
-  LIGHT_GRAY6,
+  LIGHT_GRAY8
 } from '@airpremia/cdk/styles/colors';
 import { commaNumber } from '@airpremia/core/lib/util';
 import React from 'react';
@@ -80,7 +79,7 @@ const S = {
             left: -15px;
             width: 1px;
             height: 11px;
-            background-color: ${LIGHT_GRAY6};
+            background-color: ${LIGHT_GRAY8};
           }
         }
         .productLabel {
@@ -91,7 +90,7 @@ const S = {
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          color: ${LIGHT_GRAY7};
+          color: ${LIGHT_GRAY8};
         }
         .price {
           font-size: 15px;

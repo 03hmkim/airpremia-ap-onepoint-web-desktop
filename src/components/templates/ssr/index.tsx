@@ -38,7 +38,7 @@ function Ssr({
       <div className="contentWrapper">
         <div className="left">
           {/* <div className="bundle">
-            <div className="subtitle font-bold">
+            <div className="subtitle">
               번들 서비스
             </div>
             <div className="panels">
@@ -46,7 +46,7 @@ function Ssr({
             </div>
           </div> */}
           <div className="original">
-            <div className="subtitle font-bold">
+            <div className="subtitle">
               부가 서비스
             </div>
             <div className="panels">
@@ -54,7 +54,7 @@ function Ssr({
             </div>
           </div>
           <div className="special">
-            <div className="subtitle font-bold">
+            <div className="subtitle">
               특별 서비스
             </div>
             <div className="panels">
@@ -102,6 +102,8 @@ const S = {
     }
     .subtitle {
       font-size: 24px;
+      font-family: 'NotoSans';
+      font-weight: 700;
       letter-spacing: -0.36px;
       color: ${DARK_GRAY1};
     }

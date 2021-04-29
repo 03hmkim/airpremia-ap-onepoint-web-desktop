@@ -222,7 +222,7 @@ const S = {
     align-items: center;
 
     span {
-      height: 15px;
+      height: 18px;
       border-right: solid 1px ${LIGHT_GRAY6};
       margin: 0 10px;
       width: 1px;
@@ -230,6 +230,17 @@ const S = {
 
     .label {
       justify-content: flex-start;
+    }
+    @media only screen and (max-width: 767px) { 
+      span {
+        height: 14px;
+      }
+    }
+    @media only screen and (max-width: 599px) {
+      display:block;
+      span{
+        display:none;
+      }
     }
   `,
 
@@ -252,6 +263,9 @@ const S = {
           }
         }
       `}
+    @media only screen and (max-width: 767px) { 
+      height: 32px;
+    }
   `,
 };
 export default BirthDateSelectorGroup;

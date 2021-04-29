@@ -132,6 +132,29 @@ const commonTableStyle = css`
   &:nth-child(4) {
     width: 280px;
   }
+  @media only screen and (max-width: 767px) { 
+    &:nth-child(1) {
+      width: 60px;
+      margin-right: 20px;
+      word-break:keep-all;
+    }
+    &:nth-child(2) {
+      width: 60px;
+      margin-right: 20px;
+      word-break:keep-all;
+    }
+    &:nth-child(3) {
+      width: 100%;
+      flex:1;
+      margin-right: 20px;
+      word-break:keep-all;
+    }
+    &:nth-child(4) {
+      width: 100%;
+      flex:1;
+      word-break:keep-all;
+    }
+  }
 `;
 
 const S = {
@@ -143,6 +166,16 @@ const S = {
       font-size: 22px;
       line-height: 33px;
       letter-spacing: -0.44px;
+    }
+    @media only screen and (max-width: 1059px) { 
+      h3 {
+        font-size: 20px;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      h3 {
+        font-size: 18px;
+      }
     }
   `,
 
@@ -158,6 +191,7 @@ const S = {
     display: flex;
     align-items: center;
     & > div {
+      font-size:18px;
       ${commonTableStyle};
       ${({ selected }) => {
         if (selected) {
@@ -173,15 +207,30 @@ const S = {
       border-bottom: solid 1px ${LIGHT_GRAY5};
       & > div {
         &:nth-child(1) {
-          font-size: 14px;
+          font-size: 18px;
           line-height: 20px;
           letter-spacing: -0.28px;
           text-align: left;
         }
         &:not(:first-of-type) {
-          font-size: 15px;
+          font-size: 18px;
           line-height: 22px;
           letter-spacing: -0.3px;
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      & > div {
+        font-size:14px;  
+      }
+      &.body-row {
+        & > div {
+          &:nth-child(1) {
+            font-size: 14px;
+          }
+          &:not(:first-of-type) {
+            font-size: 14px;
+          }
         }
       }
     }
@@ -193,12 +242,20 @@ const S = {
     color: ${ifProp('blur', LIGHT_GRAY7, DARK_GRAY1)};
     font-weight: 600;
     .header-item {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.32px;
     }
     .body-item {
       padding: 25px 0;
+    }
+    @media only screen and (max-width: 767px) { 
+      .header-item {
+        font-size: 14px;
+      }
+      .body-item {
+        padding: 15px 0;
+      }
     }
   `,
 };

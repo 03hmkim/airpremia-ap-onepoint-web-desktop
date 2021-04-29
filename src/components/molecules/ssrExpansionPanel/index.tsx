@@ -6,8 +6,7 @@ import React, {
 import styled from 'styled-components';
 
 import {
-  LIGHT_GRAY6,
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   WHITE1,
   DARK_GRAY1,
   ORANGE2,
@@ -130,7 +129,7 @@ const S = {
   container: styled.div`
     width: 100%;
     border-radius: 12px;
-    border: solid 1px ${LIGHT_GRAY6};
+    border: solid 1px ${LIGHT_GRAY8};
     background-color: ${WHITE1};
     text-align: left;
     cursor: pointer;
@@ -143,10 +142,10 @@ const S = {
     .contentsWrapper {
       border-bottom-left-radius: 12px;
       border-bottom-right-radius: 12px;
-      border-top: 1.4px dashed ${LIGHT_GRAY6};
+      border-top: 1.4px dashed ${LIGHT_GRAY8};
       background-color: ${LIGHT_GRAY1};
       .contentWrapper + .contentWrapper {
-        border-top: 1px solid ${LIGHT_GRAY6};
+        border-top: 1px solid ${LIGHT_GRAY8};
       }
 
       .contentWrapper {
@@ -165,7 +164,7 @@ const S = {
 
     @media only screen and (max-width: 767px) { 
       min-height: 0;
-      padding: 20px 15px 15px 15px;
+      padding: 15px;
     }
   `,
   left: styled.div`
@@ -204,31 +203,35 @@ const S = {
       .defaultDescription {
         font-size: 18px;
         letter-spacing: -0.3px;
-        color: ${LIGHT_GRAY7};
+        color: ${LIGHT_GRAY8};
         padding-top: 5px;
       }
     }
     .totalFeeWrapper {
       .totalFee {
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 600;
         line-height: 1.65;
         letter-spacing: -0.32px;
         color: ${ORANGE2};
       }
       .detailButtonWrapper {
-        padding-top: 7px;
         display: flex;
         margin-left: auto;
         font-size: 18px;
         font-weight: 600;
         letter-spacing: -0.28px;
         color: ${DARK_GRAY1};
+        .label {
+          font-size: 18px;
+        }
         .count {
+          font-size: 18px;
           padding-left: 2px;
           color: ${ORANGE2};
         }
         .triangleWrapper {
+          padding-top: 3px;
           padding-left: 5px;
         }
       }
@@ -244,13 +247,18 @@ const S = {
           font-size: 12px;
         }
       }
-
       .totalFeeWrapper {
-        .totalFee {
-          font-size: 16px;
-        }
         .detailButtonWrapper {
           font-size: 14px;
+          .label {
+            font-size: 14px;
+          }
+          .count {
+            font-size: 14px;
+          }
+          .triangleWrapper {
+            padding-top: 2px;
+          }
         }
       }
     }
