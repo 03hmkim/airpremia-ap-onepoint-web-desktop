@@ -96,17 +96,10 @@ const S = {
     p {
       font-size: 18px;
       color: ${LIGHT_GRAY7};
-      width: 380px;
       line-height: 23px;
     }
     @media only screen and (max-width: 1059px) { 
       margin-top: 60px;
-      h5 {
-        font-size: 16px;
-      }
-      p {
-        font-size: 16px;
-      }
     }
     @media only screen and (max-width: 767px) { 
       margin-top: 40px;

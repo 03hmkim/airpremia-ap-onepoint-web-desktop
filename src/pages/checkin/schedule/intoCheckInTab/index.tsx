@@ -9,8 +9,7 @@ interface IProps {}
 
 const eventTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['김포', '인천', '제주도','취항 예정 노선'];
-  
+  const tabList = ['김포', '인천', '제주도','취항 예정 노선'];  
 
   return (
     <S.container>      

@@ -50,24 +50,24 @@ const BookingChangeSummaryCard: FC<IProps> = ({
                 isRefundable={!item.isRefundable}
               >
                 <S.bottom>
-                  <S.column width={430}>
+                  <S.column width={530}>
                     <h6 className="tag-group">
                       { boardingPassInfo.tripType ==='OneWay' ||
-                       (boardingPassInfo.tripType === 'Round' && i === 0) ? <S.column width={40}><Tag color="white" backgroundColor="black">가는날</Tag></S.column> : null}
-                      {boardingPassInfo.tripType === 'Round' && i === 1 ? <S.column width={40}><Tag color="white" backgroundColor="black">오는날</Tag></S.column> : null}
-                      {item.isRefundable ? null : <S.column width={0}><Tag color="white" backgroundColor="red">변경불가</Tag></S.column>}
+                       (boardingPassInfo.tripType === 'Round' && i === 0) ? <S.column><Tag color="white" backgroundColor="black">가는날</Tag></S.column> : null}
+                      {boardingPassInfo.tripType === 'Round' && i === 1 ? <S.column><Tag color="white" backgroundColor="black">오는날</Tag></S.column> : null}
+                      {item.isRefundable ? null : <S.column><Tag color="white" backgroundColor="red">변경불가</Tag></S.column>}
                     </h6>
                     <p>
                       {item.originText}({item.origin}) -&gt; {item.destinationText}({item.destination})
                     </p>
                   </S.column>
-                  <S.column width={150}>
+                  <S.column width={225}>
                     <h6>출발일</h6>
                     <p>
                       {moment(item.departure).locale('ko').format(formatDate)}
                     </p>
                   </S.column>
-                  <S.column width={150}>
+                  <S.column width={225}>
                     <h6>비행시간</h6>
                     <p>
                       {moment(item.departure).format(formatTime)}
@@ -77,7 +77,7 @@ const BookingChangeSummaryCard: FC<IProps> = ({
                       {item.dateChange ? `+${item.dateChange}` : ''}
                     </p>
                   </S.column>
-                  <S.column width={150}>
+                  <S.column width={225}>
                     <h6>클래스</h6>
                     <p>{item.cabinClassText}</p>
                   </S.column>
@@ -94,11 +94,7 @@ const BookingChangeSummaryCard: FC<IProps> = ({
 const S = {
   container: styled.div`
     border-radius: 8px;
-    padding: 0 30px;
     margin: 20px 0;
-    @media only screen and (max-width: 767px) { 
-      padding: 0;
-    }
   `,
   wrapper: styled.div<{ isRefundable: boolean }>`
     padding-top: 30px;
@@ -125,18 +121,11 @@ const S = {
       justify-content: flex-end;
       margin: 0 20px 6px;
     }
-    & > div {
-      margin-right: 70px;
-      &:nth-child(1),
-      &:nth-child(2) {
-        margin-right: 0;
-      }
-    }
+    
     @media only screen and (max-width: 1059px) {
       & > div {
         width:auto;
         min-width:0;
-        margin-right: 0px;
       }
     }
     @media only screen and (max-width: 767px) { 
@@ -153,7 +142,7 @@ const S = {
   column: styled.div<{ width?: number }>`
     display: flex;
     flex-direction: column;
-    min-width: ${prop('width')}px;
+    flex-basis: ${prop('width')}px;
 
     h6 {
       font-size: 18px;

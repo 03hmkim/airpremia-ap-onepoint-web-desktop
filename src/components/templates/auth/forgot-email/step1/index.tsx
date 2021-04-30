@@ -98,12 +98,12 @@ const S = {
     }
     @media only screen and (max-width: 1059px) { 
       margin-bottom: 40px;
-      label {
-        font-size: 14px;
-      }
     }
     @media only screen and (max-width: 767px) { 
       margin-bottom: 20px;
+      label {
+        font-size: 14px;
+      }
     }
   `,
 
@@ -112,9 +112,8 @@ const S = {
     justify-content: space-between;
     align-items: center;
 
-    label,
-    p {
-      flex: 1;
+    > label {
+      width: auto;
     }
 
     p {
@@ -124,13 +123,18 @@ const S = {
       color: ${LIGHT_GRAY7};
     }
     @media only screen and (max-width: 1059px) { 
+      label {
+        flex: 1;
+      }
+      p {
+        flex: 5;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
       p {
         font-size: 14px;
         line-height: 1.5em;
       }
-    }
-    @media only screen and (max-width: 767px) { 
-     
     }
   `,
 
@@ -157,14 +161,16 @@ const S = {
       letter-spacing: -0.26px;
       font-weight: 600;
     }
+
     @media only screen and (max-width: 1059px) { 
+
+    }
+
+    @media only screen and (max-width: 767px) { 
       u {
         font-size: 14px;
         line-height: 1.5em;
       }
-    }
-    @media only screen and (max-width: 767px) { 
-     
     }
   `,
 };

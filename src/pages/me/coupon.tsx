@@ -42,7 +42,7 @@ const Coupon: FC<IProps> = ({}) => {
       case 'couponDetail':
         return (
           <NewModal
-            type={EScrollType.TYPE2}
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>나의 쿠폰 상세</PopupTitle>
@@ -55,7 +55,7 @@ const Coupon: FC<IProps> = ({}) => {
       case 'couponRegistration':
         return (
           <NewModal
-            type={EScrollType.TYPE2}
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>쿠폰 등록</PopupTitle>

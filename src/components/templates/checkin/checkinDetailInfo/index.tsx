@@ -63,13 +63,12 @@ const S = {
       line-height: 48px;
       letter-spacing: -0.72px;
       margin-bottom: 10px;
-    }horizon
+    }
+
     @media only screen and (max-width: 1059px) { 
         margin-bottom: 60px;
-        h2 {
-          font-size: 30px;
-        }
     }
+
     @media only screen and (max-width: 767px) { 
         margin-bottom: 40px;
         h2 {

@@ -94,16 +94,17 @@ const S = {
 
   title: styled.div`
     margin-bottom: 60px;
-    font-size: 22px;
-    line-height: 54px;
+    font-size: 24px;
+    line-height: 1.8em;
     letter-spacing: -0.44px;
+
     @media only screen and (max-width: 1059px) { 
       margin-bottom: 40px;
-      font-size: 20px;
     }
+
     @media only screen and (max-width: 767px) { 
       margin-bottom: 20px;
-      font-size: 18px;
+      font-size: 22px;
     }
   `,
 
@@ -125,9 +126,7 @@ const S = {
     }
     @media only screen and (max-width: 1059px) { 
       padding-bottom: 35px;
-      .children {
-        font-size: 20px;
-      }
+
       & > button {
         height: 52px;
         &:not(:last-of-type) {
@@ -159,9 +158,7 @@ const S = {
       margin-bottom: 10px;
     }
     @media only screen and (max-width: 1059px) {
-      .children {
-        font-size: 16px;
-      }
+
       & > button {
         height: 52px;
         margin-bottom: 5px;
@@ -193,21 +190,20 @@ const S = {
     padding: 30px 0 60px;
 
     p {
-      font-size: 16px;
+      font-size: 18px;
       line-height: 36px;
       letter-spacing: -0.32px;
       font-weight: 600;
     }
+
     @media only screen and (max-width: 1059px) {
       padding: 20px 0 40px;
-      p {
-        font-size: 14px;
-      }
     }
+    
     @media only screen and (max-width: 767px) { 
       padding: 10px 0 20px;
       p {
-        font-size: 13px;
+        font-size: 14px;
       }
     }
   `,

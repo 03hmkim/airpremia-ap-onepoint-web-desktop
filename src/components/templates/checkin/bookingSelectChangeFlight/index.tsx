@@ -45,14 +45,17 @@ const S = {
   `,
 
   subTitle: styled.div`
-    font-size: 15px;
+    font-size: 18px;
     color: gray;
     margin-bottom: 100px;
+
     @media only screen and (max-width: 1059px) {
-        margin-bottom: 60px;
+      margin-bottom: 60px;
     }
+
     @media only screen and (max-width: 767px) { 
-        margin-bottom: 40px;
+      margin-bottom: 40px;
+      font-size: 14px;
     }
   `,
 
@@ -69,7 +72,7 @@ const S = {
   button: styled.div`
     text-align: center;
     button {
-      width: 300px;
+      max-width: 300px;
     }
   `,
 };

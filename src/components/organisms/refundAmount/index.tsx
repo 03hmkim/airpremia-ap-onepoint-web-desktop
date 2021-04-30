@@ -144,11 +144,7 @@ const S = {
       line-height: 34px;
       letter-spacing: -0.44px;
     }
-    @media only screen and (max-width: 1059px) {
-      h2 {
-        font-size: 20px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       flex-basis: 100px;
       h2 {

@@ -6,6 +6,7 @@ import { prop } from 'styled-tools';
 import {
   LIGHT_GRAY6,
   LIGHT_GRAY7,
+  LIGHT_GRAY8,
   WHITE1,
   DARK_BLUE1,
 } from '@airpremia/cdk/styles/colors';
@@ -71,9 +72,13 @@ const S = {
     color: ${prop('color', WHITE1)};
 
     &.line {
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
       border: solid 1px ${LIGHT_GRAY7};
       background-color: ${WHITE1};
+
+      &:hover {
+        background-color: ${WHITE1};
+      }
     }
 
     &:hover {

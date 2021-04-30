@@ -219,6 +219,9 @@ const S = {
       padding-top: 30px;
     }
     @media only screen and (max-width: 1059px) { 
+
+    }
+    @media only screen and (max-width: 767px) { 
       .textInputsWrapper {
         .row {
           .label {
@@ -227,9 +230,6 @@ const S = {
           }
         }
       }
-    }
-    @media only screen and (max-width: 767px) { 
-    
     }
   `,
 

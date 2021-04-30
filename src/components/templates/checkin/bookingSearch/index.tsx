@@ -33,11 +33,7 @@ const S = {
       line-height: 50px;
       letter-spacing: -0.72px;
     }
-    @media only screen and (max-width: 1059px) { 
-        h1 {
-          font-size: 30px;
-        }
-    }
+
     @media only screen and (max-width: 767px) { 
         h1 {
           font-size: 26px;

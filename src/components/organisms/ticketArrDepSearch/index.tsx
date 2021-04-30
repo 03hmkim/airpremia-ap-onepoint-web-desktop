@@ -246,6 +246,7 @@ const S = {
       display: flex;
       align-items: center;
       padding: 0 20px;
+      
       .selectWrapper + .selectWrapper {
         position: relative;
         padding-left: 40px;
@@ -261,7 +262,6 @@ const S = {
         }
       }
       .selectWrapper {
-        width: 100%;
         flex:1;
         padding: 14px 0;
         &.passenger {
@@ -272,7 +272,7 @@ const S = {
     .menuWrapper {
       top: 22px;
       &.station {
-        left: -20px;
+        left: -21px;
         width: 515px;
         padding: 15px 26px;
         box-sizing: border-box;
@@ -315,12 +315,13 @@ const S = {
         }
       }
     }
-    @media only screen and (max-width: 767px) { 
+        
+    @media only screen and (max-width: 1059px) { 
       .menuWrapper {
-        top:10px;
+        top: 15px;
 
         &.station {
-          width: calc(100% + 40px);
+          width: calc(100% + 42px);
         }
       }
 
@@ -329,12 +330,18 @@ const S = {
       }
 
       .selectsWrapper {
-        height:auto;
-        width:calc( 100% - 42px );
-        display:block;
-        .selectWrapper + .selectWrapper {
-          margin:0;
-          padding:0 0 14px 0;
+        width: 100%;
+        height: auto;
+        padding: 0;
+        display: block;
+        border: 0;
+
+        .selectWrapper,
+        .selectWrapper + .selectWrapper  {
+          padding: 8px 20px;
+          margin-bottom: 20px;
+          border: 1px solid ${DARK_GRAY1};
+          border-radius: 8px;
         }
       }
 
@@ -417,9 +424,7 @@ const C = {
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
-    @media only screen and (max-width: 1059px) { 
-      font-size: 20px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 18px;
     }
@@ -427,9 +432,7 @@ const C = {
   itemTitle: styled.h5`
     font-size: 20px;
     font-weight: bold;
-    @media only screen and (max-width: 1059px) { 
-      font-size: 18px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 16px;
     }
@@ -455,9 +458,7 @@ const C = {
     &.mt20{
       margin-top:20px;
     }
-    @media only screen and (max-width: 1059px) { 
-      font-size: 16px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 14px;
     }
@@ -473,9 +474,7 @@ const C = {
     &.mt20{
       margin-top:20px;
     }
-    @media only screen and (max-width: 1059px) { 
-      font-size: 14px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 13px;
     }
@@ -525,10 +524,10 @@ const C = {
         background-color: ${RED2};
       }
     @media only screen and (max-width: 1059px) { 
-      font-size: 14px;
+      
     }
     @media only screen and (max-width: 767px) { 
-       
+      font-size: 14px;
     }
     `,
   line:styled.div`
@@ -566,21 +565,27 @@ const C = {
     `,
   btn:styled.button`
     display: inline-block;
-    padding: 13px 47px;
+    padding: 13px 40px;
     border-radius: 12px;
     border: solid 1px ${WHITE1};
     font-size: 18px;
     font-weight: 600;
     color: ${DARK_GRAY1};
 
+
+    @media only screen and (max-width: 1059px) {
+      padding: 10px 16px;
+    }
+
     @media only screen and (max-width: 767px) { 
-      padding: 6px 10px;
+      padding: 6px 8px;
       font-size: 16px;
     }
+
     @media only screen and (max-width: 599px) { 
-      float:left;
-      width:calc( 100% / 3 );
-      text-align:center;
+      float: left;
+      width: 50%;
+      text-align: center;
     }
 `,
 }

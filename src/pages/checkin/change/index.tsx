@@ -16,6 +16,8 @@ import {
 import { useModal } from 'src/hooks';
 import { Container } from 'src/styles/layout';
 import styled from 'styled-components';
+import { EScrollType } from 'src/components/templates/centerPopup';
+import { DARK_GRAY1 } from '@airpremia/cdk/styles/colors';
 
 interface IProps {}
 
@@ -173,28 +175,31 @@ const Change: FC<IProps> = () => {
       case 'onPopup':
         return (
           <NewModal
+            className="hAuto"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>부가서비스 환불 불가 안내</PopupTitle>
+                <PopupDescription>
+                  기존 신청한 서비스 중에 부가서비스 환불 규정에 따라 환불 불가능한 서비스가 있습니다. 일정 변경을 진행하시겠습니까?
+                </PopupDescription>
               </S.modalTitle>
             }
             body={
               <S.modalBody>
-                <PopupDescription>
-                  기존 신청한 서비스 중에 부가서비스 환불 규정에 따라 환불 불가능한 서비스가 있습니다. 일정 변경을 진행하시겠습니까?
-                </PopupDescription>
                 <h4>환불 불가 항목</h4>
-                <hr></hr>
-                <ol>
+                <div className="listWrap">
                   {lists.map((li, idx) => {
-                    return <li key={idx.toString()}>{li}</li>
+                    return <p key={idx.toString()}>{li}</p>
                   })}
-                </ol>
-                <S.btnArea>
-                  <S.btn1><TaskButton onClick={onHideNewModal}>취소</TaskButton></S.btn1>
-                  <S.btn2><TaskButton onClick={doDividePassenger}>계속하기</TaskButton></S.btn2>
-                </S.btnArea>
+                </div>
               </S.modalBody>
+            }
+            button={
+              <S.btnArea className="twin">
+                <TaskButton className="line" onClick={onHideNewModal}>취소</TaskButton>
+                <TaskButton onClick={doDividePassenger}>계속하기</TaskButton>
+              </S.btnArea>
             }
           />
         );
@@ -322,61 +327,55 @@ const S = {
   `,
   modalTitle : styled.div``,
   modalBody : styled.div`
-    width: 450px;
-    padding: 0 50px;
-    div {
-    },
     h4 { 
-      color: black;
-      font-size: 18px;
-      margin:50px 0 0 0;
+      margin-bottom: 20px;
+      font-size: 21px;
       font-weight: 600;
-    },
-    hr {
-      margin: 10px 0
-    },
-    ol {
-      margin: 5px 30px;
-      list-style-type : disc;
-    },
-    li {
-      color: black;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: 400;
-    },
-  `,  
+    }
+
+    .listWrap {
+
+      p {
+        padding-left: 10px;
+        position: relative;
+        font-size: 18px;
+
+        &:before {
+          content: '';
+          width: 4px;
+          height: 4px;
+          background-color: ${DARK_GRAY1};
+          display: inline-block;
+          border-radius: 50%;
+          position: absolute;
+          left: 0;
+          top: 14px;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) {       
+
+      h4 {
+        font-size: 16px;
+      }
+
+      .listWrap {
+
+        p {
+          font-size: 14px;
+
+          &:before {
+            width: 3px;
+            height: 3px;
+            top: 13px;
+          }
+        }
+      }
+    }
+  `,
+
   btnArea : styled.div`
-    width:400px;
-    text-align: center;
-    margin: 40px auto;
-    button{
-      width: 180px;
-      height: 50px;
-      margin: 10px;
-      float:left;
-    }
-  `,
-  btn1 : styled.div`
-    button{
-      background-color: gray;
-    }
-  `,
-  btn2 : styled.div`
-  `,
-  button : styled.div`
-    text-align: center;
-    margin-top: 30px;
-    button{
-      width: 300px;
-      height: 50px;
-    }
-  `,
-  lis : styled.li`
-    color: black;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 400;
   `,
   
 };

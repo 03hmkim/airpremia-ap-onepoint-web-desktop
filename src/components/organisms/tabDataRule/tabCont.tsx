@@ -1,10 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
+  BLUE1,
   DARK_GRAY1,
   LIGHT_GRAY8,
   LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
+import { ListGlobal } from 'src/components';
+import Link from 'next/link';
 
 export interface IStyleProps {}
 export interface IProps extends IStyleProps {
@@ -297,7 +300,105 @@ function TabContent({currIdxCont}: IProps) {
   } else if ( currIdxCont === 2 ) {
     return (
       <S.container>
-        항공 위험물품 안내
+        <U.wrap>
+          <U.title>
+            항공 위험물 안내
+          </U.title>
+          <U.content className="notBd">
+            <div className="listWrap">
+              <ListGlobal level="fst" body={
+                <p>폭발물, 압축가스, 인화성 물질, 부식성 물질, 자극성 물질, 자기성 물질, 방사성 물질 등 항공기 및 개인의 재산에 위험을 가져올 수 있는 항공위험물은 수하물로 운송 될 수 없습니다.</p>
+              }/>
+              <ListGlobal level="fst" body={
+                <p>[항공보안법] 제44조에 따라 2년 이상 5년 이하의 징역 또는 2천만원 이상 5천만원 이하의 벌금에 처할 수 있으니 금지 물품을 항공기로 반입하지 않도록 유의해 주시기 바랍니다.</p>
+              }/>
+              <ListGlobal level="fst" body={
+                <p>무기로 사용될 수 있는 물품은 기내 휴대하실 수 없습니다.</p>
+              }/>
+              <ListGlobal level="fst" body={
+                <p>보조배터리, 전자담배, 라이터 등 위탁운송이 금지된 물품을 수하물로 위탁하여 적발된 경우 해당 물품은 폐기됩니다.</p>
+              }/>
+              <ListGlobal level="fst" body={
+                <p>자세한 사항은 <Link href="/support/baggage/prohibition"><a target="_blank" className="link">운송제한물품</a></Link>을 확인해 주시기 바랍니다.</p>
+              }/>
+            </div>
+          </U.content>
+        </U.wrap>
+        <U.wrap>
+          <U.title>
+            항공기 반입금지 물품
+          </U.title>
+          <U.content>
+          <ul>
+              <li>
+                <T.table>
+                  <table>
+                    <colgroup>
+                      <col width="170px"></col>
+                      <col width="560px"></col>
+                    </colgroup>
+                    <tr>
+                      <th>폭팔물류</th>
+                      <td>
+                        수류탄, 다이너마이트, 화약류, 연막탄, 조명탄, 폭죽, 지뢰,뇌관,신관,도화선, 발파캡 등 폭발장치
+                      </td>
+                    </tr>
+                  </table>
+                </T.table>
+              </li>
+              <li>
+                <T.table>
+                  <table>
+                    <colgroup>
+                      <col width="170px"></col>
+                      <col width="560px"></col>
+                    </colgroup>
+                    <tr>
+                      <th>인화성 물질</th>
+                      <td>
+                        성냥, 라이터, 부탄가스 등 인화성가스, 휘발유 ·페인트 등 인화성 액체, 70% 이상의 알코올성 음료 등<br /><br />
+                        <span className="gray">(단, 소형안전성냥 및 휴대용라이터는 각 1개에 한해 객실 반입 가능)</span>
+                      </td>
+                    </tr>
+                  </table>
+                </T.table>
+              </li>
+              <li>
+                <T.table>
+                  <table>
+                    <colgroup>
+                      <col width="170px"></col>
+                      <col width="560px"></col>
+                    </colgroup>
+                    <tr>
+                      <th>방사성 ·전염성·독성 물질</th>
+                      <td>
+                        염소, 표백제, 산화제, 수은, 하수구 청소재제, 독극물, 의료용 ·상업용 방사성 동위원소, 전염성 ·생물학적 위험물질 등
+                      </td>
+                    </tr>
+                  </table>
+                </T.table>
+              </li>
+              <li>
+                <T.table>
+                  <table>
+                    <colgroup>
+                      <col width="170px"></col>
+                      <col width="560px"></col>
+                    </colgroup>
+                    <tr>
+                      <th>기타 위험물질</th>
+                      <td>
+                        소화기, 드라이아이스, 최루가스 등<br /><br />
+                        <span className="gray">(단, 드라이아이스는 1인당 2.5kg에 한해 이산화탄소 배출이 용이하도록 안전하게 포장된 경우 항공사 승인 하에 반입이 가능)</span>
+                      </td>
+                    </tr>
+                  </table>
+                </T.table>
+              </li>
+            </ul>
+          </U.content>
+        </U.wrap>
       </S.container>
     )
   } else {
@@ -351,6 +452,16 @@ const U = {
   `,
   content: styled.div`
     border-top: 2px solid ${DARK_GRAY1};
+
+    &.notBd {
+      border-top: 0;
+    }
+
+    .link {
+      color: ${BLUE1};
+      border-bottom: 1px solid ${BLUE1};
+    }
+
     ul {
       li {
         padding: 30px 0;
@@ -388,22 +499,6 @@ const T = {
       font-size: 18px;
       line-height: 1.36em;
 
-      th,
-      td,
-      td strong {
-        color: ${DARK_GRAY1};
-        letter-spacing: -0.3px;
-      }
-
-      td strong {
-        margin-top: 30px;
-        display: block;
-
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-
       th {
         padding: 0 3px;
         font-weight: 700;
@@ -426,24 +521,8 @@ const T = {
           padding-right: 0;
         }
 
-        .txt {
-          margin-top: 10px;
-          p {
-            position: relative;
-            color: ${LIGHT_GRAY8};
-            font-weight: 400;
-            letter-spacing: -0.3px;
-            &.iLine{
-              padding-left: 8px;
-            }
-            &.iLine::after{
-              content: "-";
-              position: absolute;
-              left: 0;
-              top: 0;
-              display: block;
-            }
-          }
+        .gray {
+          color: ${LIGHT_GRAY8};
         }
       }
     }

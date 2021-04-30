@@ -19,9 +19,9 @@ import eventImg04 from 'public/images/ticket/promotion/list/promotion_bg_04.png'
 import Link from 'next/link';
 
 
-interface IProps {}
 
-function PromotionalCardEvent({}: IProps) {
+
+function PromotionalCardEvent() {
   const min = 1;
   const max = 4;
   const rand = toInteger(min + Math.random() * (max - min));

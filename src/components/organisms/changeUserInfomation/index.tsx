@@ -469,10 +469,7 @@ const S = {
     font-size: 22px;
     line-height: 28px;
     letter-spacing: -0.44px;
-    @media only screen and (max-width: 1059px) { 
-      font-size: 20px;
-      line-height: 1.5em;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 18px;
       line-height: 1.5em;

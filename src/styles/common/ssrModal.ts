@@ -28,13 +28,14 @@ const S1 = {
       }
     }
 
-    @media only screen and (max-width: 1059px) {
+    @media only screen and (max-width: 767px) {
       height: 160px;
-        .title {
-          font-size: 26px;
-          line-height: 36px;
-          letter-spacing: -0.52px;
-        }
+
+      .title {
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: -0.52px;
+      }
     }
   `,
   middle: styled.div`
@@ -184,18 +185,11 @@ const S1 = {
       }
     }
 
-    @media only screen and (max-width: 1059px) {
-      .buttonsWrapper {
-        .buttonWrapper {
-          font-size: 14px;
-        }
-      }
-    }
-
     @media only screen and (max-width: 479px) {
       .buttonsWrapper {
         .buttonWrapper {
           width: 140px;
+          font-size: 14px;
         }
       }
     }

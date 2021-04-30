@@ -122,9 +122,7 @@ const S = {
     }
     @media only screen and (max-width: 1059px) { 
       padding-bottom: 35px;
-      .children {
-        font-size: 20px;
-      }
+
       & > button {
         height: 52px;
         &:not(:last-of-type) {
@@ -157,9 +155,7 @@ const S = {
       margin-bottom: 10px;
     }
     @media only screen and (max-width: 1059px) {
-      .children {
-        font-size: 16px;
-      }
+
       & > button {
         height: 52px;
         margin-bottom: 5px;

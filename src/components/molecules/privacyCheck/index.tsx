@@ -9,15 +9,17 @@ interface IProps {
   isBold?: boolean;
   checkboxProps: ICheckboxProps;
   onClickDescription?: () => void;
+  arrow?: string;
 }
 
 const PrivacyCheck: FC<IProps> = ({
   isBold = false,
   checkboxProps,
+  arrow,
   onClickDescription = () => {},
 }: IProps) => {
   return (
-    <S.container>
+    <S.container className={arrow}>
       <S.left>
         <Checkbox {...checkboxProps}>
           <p className={isBold ? 'font-bold' : ''}>
@@ -25,7 +27,7 @@ const PrivacyCheck: FC<IProps> = ({
           </p>
         </Checkbox>
       </S.left>
-      <S.right>
+      <S.right className="right">
         <Arrow
           position={EPosition.RIGHT}
           onClick={onClickDescription}
@@ -38,16 +40,23 @@ const PrivacyCheck: FC<IProps> = ({
 const S = {
   container: styled.div`
     display: flex;
-    justify-content: space-between;
     align-items: center;
+
+    @media only screen and (max-width: 767px) {
+      justify-content: space-between;
+    }
+
+    &.arrowN .right {
+      display: none;
+    }
   `,
 
   left: styled.div``,
 
   right: styled.div`
     svg {
-      width: 8px;
-      height: 11px;
+      width: 12px;
+      height: 16.5px;
     }
   `,
 };

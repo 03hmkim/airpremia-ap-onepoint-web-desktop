@@ -79,12 +79,12 @@ const S = {
       font-size: 18px;
     }
     @media only screen and (max-width: 1059px) { 
+
+    }
+    @media only screen and (max-width: 767px) { 
       label {
         font-size: 14px;
       }
-    }
-    @media only screen and (max-width: 767px) { 
-      
     }
   `,
 
@@ -106,12 +106,12 @@ const S = {
       font-weight: 600;
     }
     @media only screen and (max-width: 1059px) { 
+
+    }
+    @media only screen and (max-width: 767px) { 
       u {
         font-size: 14px;
       }
-    }
-    @media only screen and (max-width: 767px) { 
-      
     }
   `,
 };

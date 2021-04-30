@@ -167,11 +167,7 @@ const S = {
       line-height: 33px;
       letter-spacing: -0.44px;
     }
-    @media only screen and (max-width: 1059px) { 
-      h3 {
-        font-size: 20px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       h3 {
         font-size: 18px;

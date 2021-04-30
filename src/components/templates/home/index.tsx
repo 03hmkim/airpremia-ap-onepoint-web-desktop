@@ -1,11 +1,12 @@
 import styled from 'styled-components';
-import randomIMG from './randomImage';
+
 import {
   MainSecTitle,
   MainSecEvent,
   MainSecNotice,
   QuickMenu,
 } from 'src/components';
+import randomIMG from './randomImage';
 
 interface IStyleProps {}
 interface IProps extends IStyleProps {

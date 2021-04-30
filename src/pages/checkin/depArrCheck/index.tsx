@@ -52,9 +52,7 @@ const C = {
   ComTitles:styled.div`
     font-size:36px;
     font-weight: bold;
-    @media only screen and (max-width: 1059px) { 
-        font-size:30px;
-    }
+
     @media only screen and (max-width: 767px) { 
         font-size:26px;
     }
@@ -79,29 +77,28 @@ const C = {
     font-size: 18px;
     color: ${DARK_GRAY1};
     line-height: 36px;
-      &.point{
-        line-height: 22px;
-      }
-      &.bold{
-        font-weight: bold;
-      }
-      .line{
-        content: "";
-        width: 1px;
-        height: 50%;
-        top: 5px;
-        right: 0;
-        text-indent: -9999px;
-        display: flex;
-        position: absolute;
-        background-color: #dddddd;
-      }
-      .blue {
-        color: ${BLUE1};
-      }
-    @media only screen and (max-width: 1059px) { 
-        font-size: 15px;
+
+    &.point{
+      line-height: 22px;
     }
+    &.bold{
+      font-weight: bold;
+    }
+    .line{
+      content: "";
+      width: 1px;
+      height: 50%;
+      top: 5px;
+      right: 0;
+      text-indent: -9999px;
+      display: flex;
+      position: absolute;
+      background-color: #dddddd;
+    }
+    .blue {
+      color: ${BLUE1};
+    }
+
     @media only screen and (max-width: 767px) { 
         
     }
@@ -118,11 +115,9 @@ const C = {
       &.center{
         text-align:center;
       }
-    @media only screen and (max-width: 1059px) { 
-        font-size: 15px;
-    }
+
     @media only screen and (max-width: 767px) { 
-        
+      font-size: 15px;        
     }
   `,
   linkTitle: styled.a`

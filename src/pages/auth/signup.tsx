@@ -548,8 +548,7 @@ const Signup: FC<IProps> = ({}: IProps) => {
                   <p>
                     인증 번호를 받지 못하셨다면, 휴대 전화
                     번호를 한번 더 확인하거나 고객센터로
-                    연락주세요. 고객 센터 전화 번호 2345 -
-                    0000
+                    연락주세요. 고객 센터 전화 번호 02-6953-6115
                   </p>
                 </Fragment>
               ) : null
@@ -637,6 +636,7 @@ const Signup: FC<IProps> = ({}: IProps) => {
                 {Object.keys(checkboxData).map(
                   (item, i) => (
                     <PrivacyCheck
+                      arrow="arrowN"
                       key={`privacyCheckboxData${i.toString()}`}
                       checkboxProps={checkboxData[item]}
                       onClickDescription={() => {}}
@@ -679,12 +679,20 @@ const S = {
     display: flex;
     align-items: center;
     justify-content: center;
+
     p,
     a {
       font-weight: 600;
-      font-size: 13px;
+      font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.26px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      p,
+      a {
+        font-size: 13px;
+      }
     }
   `,
 
@@ -698,7 +706,7 @@ const S = {
     status: boolean;
     fillError: boolean;
   }>`
-    font-size: 12px;
+    font-size: 16px;
     ${({ status, fillError }) => {
       if (fillError) {
         if (!status) {
@@ -717,9 +725,15 @@ const S = {
         color: ${LIGHT_GRAY7};
       `;
     }}
+
+    @media only screen and (max-width: 767px) {
+      font-size: 12px;
+    }
   `,
   label: styled.div`
     margin-bottom: 10px;
+
+
   `,
 
   textInputWrapper: styled.div`

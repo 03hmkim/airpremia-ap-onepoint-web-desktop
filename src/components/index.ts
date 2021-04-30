@@ -36,6 +36,7 @@ export { default as PagingButton } from './atoms/pagingButton';
 export { default as TextTabButton } from './atoms/textTabButton';
 export { default as BtnBlue } from './atoms/btnBlue';
 export { default as BadgeArrow } from './atoms/badgeArrow';
+export { default as ListGlobal } from './atoms/listGlobal';
 
 // Molecules
 export { default as Checkbox } from 'src/components/molecules/checkbox';
@@ -303,4 +304,5 @@ export {default as DepArrListTemplate} from 'src/components/templates/checkin/de
 export {default as DepArrResultTemplate} from 'src/components/templates/checkin/depArrResult';
 
 export {default as ByeUserTemplate} from 'src/components/templates/auth/byeUser/index';
+
 //

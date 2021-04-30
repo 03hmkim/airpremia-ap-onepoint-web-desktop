@@ -77,14 +77,14 @@ const S = {
         stroke-linejoin: round;
       }
       @media only screen and (max-width: 767px) { 
-        position: absolute;
-        right: 0;
-        top: 50%;
-        margin-top: -10px;
+        // position: absolute;
+        // right: 0;
+        // top: 50%;
+        // margin-top: -10px;
 
-        &:first-child {
-          left: 0;
-        }
+        // &:first-child {
+        //   left: 0;
+        // }
       }
     }
   `,

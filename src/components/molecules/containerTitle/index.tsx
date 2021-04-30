@@ -41,15 +41,7 @@ const S = {
       color: ${LIGHT_GRAY7};
       margin-top: 10px;
     }
-    @media only screen and (max-width: 1059px) { 
-      h2 {
-        font-size: 26px;
-        line-height: 1.5em;
-      }
-      p {
-        font-size: 14px;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       h2 {
         font-size: 22px;

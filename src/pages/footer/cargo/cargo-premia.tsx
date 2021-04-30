@@ -34,7 +34,7 @@ function CargoPremia(){
         return (
           <NewModal
             className="min hAuto"
-            type={EScrollType.TYPE4}
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>기다려주세요 :-)</PopupTitle>

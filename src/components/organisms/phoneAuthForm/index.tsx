@@ -240,9 +240,7 @@ const S = {
     font-weight: 600;
     letter-spacing: -0.28px;
     margin-bottom: 4px;
-    @media only screen and (max-width: 1059px) { 
-      font-size: 16px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 14px;
     }
@@ -299,16 +297,6 @@ const S = {
     }
     @media only screen and (max-width: 1059px) { 
       margin-bottom: 30px;
-      .phone {
-        .send-btn {
-          font-size: 16px;
-        }
-      }
-      .phone-number-wrapper {
-        sub {
-          font-size: 16px;
-        }
-      }
     }
     @media only screen and (max-width: 767px) { 
       margin-bottom: 20px;
@@ -364,7 +352,10 @@ const S = {
     background-color: ${WHITE1};
     color: ${DARK_GRAY1};
     border: solid 1px ${LIGHT_GRAY6};
+    
     @media only screen and (max-width: 767px) { 
+      width: 54px;
+      height: 22px;
       top:32px;
       font-size: 14px;
     }

@@ -131,9 +131,7 @@ const S = {
     font-weight: 600;
     color: ${LIGHT_GRAY8};
 
-    @media only screen and (max-width: 1059px) {
-      font-size: 14px;
-    }
+
   `,
 
   description: styled.div`
@@ -174,12 +172,7 @@ const S = {
     }
     @media only screen and (max-width: 1059px) { 
       margin-right: 40px;
-      p {
-        font-size: 14px;
-      }
-      h4 {
-        font-size: 14px;
-      }
+
     }
     @media only screen and (max-width: 767px) { 
       margin-right:0;

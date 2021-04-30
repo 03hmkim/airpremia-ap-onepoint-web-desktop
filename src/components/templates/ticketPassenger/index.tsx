@@ -47,9 +47,10 @@ const S = {
 
   boardingPersonInfo: styled.div`
     margin-top: 100px;
+    
     @media only screen and (max-width: 1059px) {
-    margin-top: 60px;
-    margin-bottom: 80px;
+      margin-top: 60px;
+      margin-bottom: 80px;
     }
   `,
 

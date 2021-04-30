@@ -53,15 +53,11 @@ const S = {
       line-height: 50px;
       letter-spacing: -0.72px;
     }
-    @media only screen and (max-width: 1059px) { 
-      h1 {
-        font-size: 30px;
-        line-height: 1.5em;
-      }
-    }
+
     @media only screen and (max-width: 767px) { 
       h1 {
         font-size: 26px;
+        line-height: 1.5em;
       }
     }
   `,
@@ -103,7 +99,6 @@ const S = {
     @media only screen and (max-width: 1059px) { 
       p {
         margin-bottom: 80px;
-        font-size: 26px;
       }
     }
     @media only screen and (max-width: 767px) { 

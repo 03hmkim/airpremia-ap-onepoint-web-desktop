@@ -80,6 +80,8 @@ const S = {
 
   gender: styled.div`
     margin-bottom: 45px;
+    font-size: 18px;
+
     .selected {
       border-color: ${ORANGE1};
       z-index: 1;
@@ -125,6 +127,8 @@ const S = {
       }
     }
     @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+
        & > div {
         div {
           height: 34px;
@@ -177,9 +181,7 @@ const S = {
     letter-spacing: -0.26px;
     font-weight: 600;
     text-align: center;
-    @media only screen and (max-width: 1059px) { 
-      font-size: 16px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 14px;
     }

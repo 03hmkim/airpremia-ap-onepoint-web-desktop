@@ -158,16 +158,17 @@ const S = {
       align-items:center;
       flex-direction:column;
       padding:0;
-      .date {
-        h3 {
-          font-size: 14px;
-        }
-      }
     }
 
     @media only screen and (max-width: 767px) { 
       width: 25%;
       float: left;
+
+      .date {
+        h3 {
+          font-size: 14px;
+        }
+      }
     }
 
     @media only screen and (max-width: 479px) {

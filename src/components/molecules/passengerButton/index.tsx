@@ -99,12 +99,6 @@ const S = {
       > div {
 
       }
-      .name {
-        font-size: 18px;
-      }
-      .label {
-        font-size: 14px;
-      }
     }
 
     @media only screen and (max-width: 767px) {
@@ -112,6 +106,15 @@ const S = {
       min-width: 110px;
       margin-right: 10px;
       float: left;
+
+      .name {
+        font-size: 18px;
+      }
+      
+      .label {
+        font-size: 14px;
+      }
+
       &:nth-child(3) {
         margin-right: 0;
       }

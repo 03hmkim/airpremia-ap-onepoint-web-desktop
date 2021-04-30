@@ -224,14 +224,17 @@ InquiryForm.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
-    .title {
-      font-size: 22px;
-      letter-spacing: -0.44px;
-    }
     padding: 50px;
     border-radius: 12px;
     border: solid 2px ${DARK_GRAY1};
     background-color: ${WHITE1};
+
+    .title {
+      font-size: 22px;
+      letter-spacing: -0.44px;
+      line-height: 1.8em;
+    }
+
     .formWrapper {
       padding-top: 60px;
       .row {
@@ -265,9 +268,7 @@ const S = {
     }
 
     @media only screen and (max-width: 1059px) {
-      .title {
-        font-size: 18px;
-      }
+
       .formWrapper  {
         padding-top: 40px;
         .row {
@@ -285,6 +286,12 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) {
+      padding: 25px;
+
+      .title {
+        font-size: 18px;
+      }
+
       .formWrapper {
         .row {
           .label {
@@ -299,7 +306,7 @@ const S = {
 
     @media only screen and (max-width: 479px) {
       .buttonWrapper {
-        width: calc(100% - 52px);
+        width: 100%;
       }
     }
   `,

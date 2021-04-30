@@ -9,7 +9,7 @@ interface IProps extends IStyleProps {
   descriptions: string[];
 }
 
-function WarningList({
+function guideList({
   title = '온라인 체크인 신청 안내',
   descriptions,
 }: IProps) {
@@ -27,7 +27,7 @@ function WarningList({
   );
 }
 
-WarningList.defaultProps = {};
+guideList.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
@@ -36,7 +36,7 @@ const S = {
 
       li {
         font-size: 18px;
-        line-height: 1.5em !important;
+        line-height: 2em !important;
         letter-spacing: -0.3px;
         color: ${DARK_GRAY1};
         display: flex;
@@ -44,10 +44,6 @@ const S = {
         width:calc( 100% - 10px );
         padding-left:10px;
         position:relative;
-
-        &:not(:last-of-type) {
-          margin-bottom: 15px;
-        }
 
         &:before {
           content: '';
@@ -58,7 +54,7 @@ const S = {
           border-radius: 50%;
           position: absolute;
           left: 0;
-          top: 12px;
+          top: 16px;
         }
       }
     }
@@ -69,12 +65,10 @@ const S = {
           font-weight: 300;
           line-height: 28px;
 
-          &:not(:last-of-type) {
-            margin-bottom: 20px;
-          }
-
           &:before {
-            top: 9px;
+            width: 3px;
+            height: 3px;
+            top: 13px;
           }            
         }
       }
@@ -98,4 +92,4 @@ const S = {
   `,
 };
 
-export default WarningList;
+export default guideList;

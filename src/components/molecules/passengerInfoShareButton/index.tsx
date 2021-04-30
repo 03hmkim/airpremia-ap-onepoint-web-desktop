@@ -90,10 +90,6 @@ const S = {
         display:flex;
         justify-content:center;
         align-items:center;
-
-        button .label {
-          font-size: 14px;
-        }
       }
 
       .description {
@@ -104,9 +100,15 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) { 
+      .buttonWrapper {
+        button .label {
+          font-size: 14px;
+        }
+      }
+
       .description {
-        font-size:15px;
-        line-height:1.5em;
+        font-size: 15px;
+        line-height: 1.5em;
       }
     }
   `,

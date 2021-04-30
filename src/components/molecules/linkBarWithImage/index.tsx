@@ -69,17 +69,20 @@ const S = {
     }
     @media only screen and (max-width: 1059px) {
       width:calc( 100% - 40px ); 
-      a {
-        font-size: 14px;
-      }
     }
     @media only screen and (max-width: 767px) { 
       display:block;
       font-size:16px;
+
+      a {
+        font-size: 14px;
+      }
+
       .text{
         font-size:16px;
         word-break:keep-all;
       }
+      
       .link{
         margin-top:10px;
       }

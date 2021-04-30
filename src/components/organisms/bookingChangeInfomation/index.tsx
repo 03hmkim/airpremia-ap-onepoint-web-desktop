@@ -16,6 +16,7 @@ import {
   DARK_GRAY1,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
+import { EScrollType } from 'src/components/templates/centerPopup';
 
 interface IProps {}
 
@@ -55,6 +56,8 @@ const bookingChangeCaution: FC<IProps> = () => {
       case 'onRoolPopup':
         return (
           <NewModal
+            className="max"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>일정 변경 규정 및 수수료 상세</PopupTitle>
@@ -62,7 +65,7 @@ const bookingChangeCaution: FC<IProps> = () => {
             }
             body={
               <S.modalBody>
-                <S.ssrRefund className="unordered-list">
+                <S.ssrRefundModal className="unordered-list">
                   <GuideList
                     title={fee.title}
                     descriptions={fee.descriptions}
@@ -79,8 +82,8 @@ const bookingChangeCaution: FC<IProps> = () => {
                       );
                     })}
                   </S.narrowTableRow>
-                </S.ssrRefund>
-                <S.ssrRefund className="unordered-list">
+                </S.ssrRefundModal>
+                <S.ssrRefundModal className="unordered-list">
                   <GuideList
                     title={ssr.title}
                     descriptions={ssr.descriptions}
@@ -98,9 +101,13 @@ const bookingChangeCaution: FC<IProps> = () => {
                       );
                     })}
                   </S.narrowTableRow>
-                </S.ssrRefund>
-                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+                </S.ssrRefundModal>
               </S.modalBody>
+            }
+            button={
+              <S.btnArea>
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+              </S.btnArea>
             }
           />
         );
@@ -222,16 +229,16 @@ const S = {
     padding: 20px 0 60px;
     
     h3 {
-      font-size: 22px;
+      font-size: 24px;
       line-height: 36px;
       letter-spacing: -0.44px;
     }
 
     @media only screen and (max-width: 767px) { 
-      padding: 10px 0 20px;
+      padding: 30px 0 40px;
 
       h3 {
-        font-size: 18px;
+        font-size: 22px;
       }
     }
   `,
@@ -240,7 +247,7 @@ const S = {
     margin-bottom: 100px;
 
     @media only screen and (max-width: 767px) { 
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
   `,
 
@@ -248,13 +255,17 @@ const S = {
     margin-bottom: 100px;
 
     @media only screen and (max-width: 767px) { 
-      margin-bottom: 40px;
+      margin-bottom: 60px;
     }
   `,
 
   narrowTableRow: styled.div`
     margin-top: 30px;
     border-top: solid 1px ${DARK_GRAY1};
+
+    @media only screen and (max-width: 767px) { 
+      margin-top: 20px;
+    }
   `,
 
   ssrRefund: styled.div`
@@ -265,44 +276,45 @@ const S = {
     }
   `,
 
+  ssrRefundModal: styled.div`
+    &:not(:last-of-type) {
+      margin-bottom: 100px;
+    }
+
+    ul {
+      padding-top: 0;
+    }
+
+    @media only screen and (max-width: 767px) {
+      &:not(:last-of-type) {
+        margin-bottom: 60px;
+      }
+    }
+  `,
+
   link: styled.div`
     margin-top: 20px;
     font-weight: 600;
     text-decoration: underline;
     cursor: pointer;
+    a {
+      font-size: 18px;
+      line-height: 36px;
+      letter-spacing: -0.3px;
+      color: ${BLUE1};
+    }
+
+    @media only screen and (max-width: 767px) {
       a {
         font-size: 15px;
-        line-height: 36px;
-        letter-spacing: -0.3px;
-        color: ${BLUE1};
       }
-    `,
+    }
+  `,
   modalTitle : styled.div``,
-  modalBody : styled.div`
-    width: 600px;
-    padding: 0 50px;
-    div {
-    },
-    h4 { 
-      color: black;
-      font-size: 18px;
-      margin:50px 0 0 0;
-      font-weight: 600;
-    },
-    hr {
-      margin: 10px 0
-    },
-    ol {
-      margin: 5px 30px;
-      list-style-type : disc;
-    },
-    li {
-      color: black;
-      padding: 10px;
-      font-size: 15px;
-      font-weight: 400;
-    },
-  `,  
+
+  modalBody : styled.div``,  
+
+  btnArea : styled.div``, 
   };
 
 export default bookingChangeCaution;

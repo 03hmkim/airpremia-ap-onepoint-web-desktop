@@ -11,40 +11,46 @@ import {
   LIGHT_GRAY9,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
-import { TaskButton } from 'src/components';
+import { 
+  TaskButton,
+  WarningList,
+ } from 'src/components';
 import SelectDateOn from 'public/images/select_date_on.svg';
 import SelectDateOff from 'public/images/select_date_off.svg';
-import Caution from 'public/images/support/ico_caution.svg';
 
 
 function TabContent({currIdxCont}: IProps) {
+
+  const description = [
+    '항공 스케줄은 정부인가 조건이며, 스케줄과 기종은 예고없이 변경될 수 있습니다.',
+    '스케줄 재확인이나 기타 문의사항이 있으시면 고객센터 (02-6953-6115)로 문의하여 주십시오.',
+  ];
+
   if ( currIdxCont === 0 ) {
     return (
     <C.sb>
       <C.flex>
         <C.title>서울/김포(GMP) - 제주(CJU)</C.title>
-        <C.titleLine />
-        <C.titleMain className="font-premia-bold"><C.blueEmp>D-30</C.blueEmp></C.titleMain>
+        
+        <C.titleMain><C.blueEmp>D-30</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
         <table>
           <colgroup>
+            <col width="15%"></col>
             <col width="25%"></col>
-            <col width="25%"></col>
-            <col width="6.25%"></col>
-            <col width="6.25%"></col>
-            <col width="6.25%"></col>
-            <col width="6.25%"></col>
-            <col width="6.25%"></col>
-            <col width="6.25%"></col>
-            <col width="6.25%"></col>
-            <col width="6.25%"></col>
+            <col width="8%"></col>
+            <col width="8%"></col>
+            <col width="8%"></col>
+            <col width="8%"></col>
+            <col width="8%"></col>
+            <col width="8%"></col>
+            <col width="8%"></col>
           </colgroup>
           <thead>
             <tr>
               <th>항공편</th>
               <td>시간</td>
-              <td></td>
               <td>월</td>
               <td>화</td>
               <td>수</td>
@@ -74,7 +80,6 @@ function TabContent({currIdxCont}: IProps) {
                   </C.textBox>
                 </div>
               </td>
-              <td></td>
               <td><SelectDateOn /></td>
               <td><SelectDateOff /></td>
               <td><SelectDateOn /></td>
@@ -102,7 +107,6 @@ function TabContent({currIdxCont}: IProps) {
                   </C.textBox>
                 </div>
               </td>
-              <td></td>
               <td><SelectDateOff /></td>
               <td><SelectDateOn /></td>
               <td><SelectDateOn /></td>
@@ -130,7 +134,6 @@ function TabContent({currIdxCont}: IProps) {
                   </C.textBox>
                 </div>
               </td>
-              <td></td>
               <td><SelectDateOn /></td>
               <td><SelectDateOff /></td>
               <td><SelectDateOff /></td>
@@ -149,22 +152,20 @@ function TabContent({currIdxCont}: IProps) {
         <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -194,7 +195,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -220,7 +220,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -246,7 +245,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -259,11 +257,10 @@ function TabContent({currIdxCont}: IProps) {
           </table>
         </T.table>
         <C.mt50>
-          <C.note><C.image><Caution /></C.image>꼭 확인해주세요!</C.note>
-              <div style={{marginTop:'15px'}}>
-                <C.description>- 항공 스케줄은 정부인가 조건이며, 스케줄과 기종은 예고없이 변경될 수 있습니다.</C.description>
-                <C.description>- 스케줄 재확인이나 기타 문의사항이 있으시면 고객센터 (1234-1234)로 문의하여 주십시오.</C.description>
-              </div>
+          <WarningList
+            title = '꼭 확인해주세요!'
+            descriptions={description}
+          />
         </C.mt50>
         <C.igr>
           <div style={{width:'300px', margin: '0 auto'}}>
@@ -278,28 +275,26 @@ function TabContent({currIdxCont}: IProps) {
     <C.sb>
       <C.flex>
         <C.title>서울/인천(ICN) - 제주(CJU)</C.title>
-        <C.titleLine />
-        <C.titleMain className="font-premia-bold"><C.blueEmp>D-10</C.blueEmp></C.titleMain>
+        
+        <C.titleMain><C.blueEmp>D-10</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -329,7 +324,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -355,7 +349,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOn /></td>
@@ -381,7 +374,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -400,22 +392,20 @@ function TabContent({currIdxCont}: IProps) {
         <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -445,7 +435,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -473,7 +462,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -501,7 +489,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -514,15 +501,14 @@ function TabContent({currIdxCont}: IProps) {
           </table>
         </T.table>
         <C.mt50>
-          <C.note><C.image><Caution /></C.image>꼭 확인해주세요!</C.note>
-              <div style={{marginTop:'15px'}}>
-                <C.description>- 항공 스케줄은 정부인가 조건이며, 스케줄과 기종은 예고없이 변경될 수 있습니다.</C.description>
-                <C.description>- 스케줄 재확인이나 기타 문의사항이 있으시면 고객센터 (1234-1234)로 문의하여 주십시오.</C.description>
-              </div>
+          <WarningList
+            title = '꼭 확인해주세요!'
+            descriptions={description}
+          />
         </C.mt50>
         <C.igr>
           <div style={{width:'300px', margin: '0 auto'}}>
-          <TaskButton fontWeight ={"normal"}>제주(CJU)행 예매하러 가기</TaskButton>
+          <TaskButton fontWeight ={"normal"}>인천(ICN)행 예매하러 가기</TaskButton>
         </div>
         </C.igr>
       </C.wrap>
@@ -532,29 +518,26 @@ function TabContent({currIdxCont}: IProps) {
     return (
     <C.sb>
       <C.flex>
-        <C.title>제주(CJU) - 서울/인천(ICN)</C.title>
-        <C.titleLine />
-        <C.titleMain className="font-premia-bold"><C.blueEmp>D-2</C.blueEmp></C.titleMain>
+        <C.title>제주(CJU) - 서울/인천(ICN)</C.title>        
+        <C.titleMain><C.blueEmp>D-2</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -584,7 +567,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -612,7 +594,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOn /></td>
@@ -640,7 +621,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -659,22 +639,20 @@ function TabContent({currIdxCont}: IProps) {
         <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -704,7 +682,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -732,7 +709,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -760,7 +736,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -773,11 +748,10 @@ function TabContent({currIdxCont}: IProps) {
           </table>
         </T.table>
         <C.mt50>
-          <C.note><C.image><Caution /></C.image>꼭 확인해주세요!</C.note>
-              <div style={{marginTop:'15px'}}>
-                <C.description>- 항공 스케줄은 정부인가 조건이며, 스케줄과 기종은 예고없이 변경될 수 있습니다.</C.description>
-                <C.description>- 스케줄 재확인이나 기타 문의사항이 있으시면 고객센터 (1234-1234)로 문의하여 주십시오.</C.description>
-              </div>
+          <WarningList
+            title = '꼭 확인해주세요!'
+            descriptions={description}
+          />
         </C.mt50>
         <C.igr>
           <div style={{width:'300px', margin: '0 auto'}}>
@@ -787,35 +761,30 @@ function TabContent({currIdxCont}: IProps) {
       </C.wrap>
     </C.sb>
     )
-  }
-  
-  else {
+  } else {
     return (
     <C.sb>
       <C.flex>
-        <C.title>서울/인천(ICN) - 뮌헨(MUC)</C.title>
-        <C.titleLine />
-        <C.titleMain className="font-premia-bold"><C.blueEmp>D-30</C.blueEmp></C.titleMain>
+        <C.title>서울/인천(ICN) - 뮌헨(MUC)</C.title>        
+        <C.titleMain><C.blueEmp>D-30</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -845,7 +814,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOn /></td>
@@ -873,7 +841,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOn /></td>
@@ -887,29 +854,26 @@ function TabContent({currIdxCont}: IProps) {
         </T.table>
       <C.mt50>
         <C.flex>
-          <C.title>뮌헨(MUC) - 서울/인천(ICN)</C.title>
-          <C.titleLine />
-          <C.titleMain className="font-premia-bold"><C.blueEmp>D-30</C.blueEmp></C.titleMain>
+          <C.title>뮌헨(MUC) - 서울/인천(ICN)</C.title>          
+          <C.titleMain><C.blueEmp>D-30</C.blueEmp></C.titleMain>
         </C.flex>
         <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -939,7 +903,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -967,7 +930,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -982,29 +944,26 @@ function TabContent({currIdxCont}: IProps) {
       </C.mt50>
       <C.mt50>
         <C.flex>
-          <C.title>서울/인천(ICN) - 벤쿠버(YVR)</C.title>
-          <C.titleLine />
-          <C.titleMain className="font-premia-bold"><C.blueEmp>Comming Soon!</C.blueEmp></C.titleMain>
+          <C.title>서울/인천(ICN) - 벤쿠버(YVR)</C.title>          
+          <C.titleMain><C.blueEmp>Comming Soon!</C.blueEmp></C.titleMain>
         </C.flex>
         <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
               <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -1034,7 +993,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
@@ -1062,7 +1020,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -1077,29 +1034,26 @@ function TabContent({currIdxCont}: IProps) {
       </C.mt50>
       <C.mt50>
         <C.flex>
-          <C.title>벤쿠버(YVR) - 서울/인천(ICN)</C.title>
-          <C.titleLine />
-          <C.titleMain className="font-premia-bold"><C.blueEmp>Comming Soon!</C.blueEmp></C.titleMain>
+          <C.title>벤쿠버(YVR) - 서울/인천(ICN)</C.title>          
+          <C.titleMain><C.blueEmp>Comming Soon!</C.blueEmp></C.titleMain>
         </C.flex>
         <T.table>
           <table>
             <colgroup>
+              <col width="15%"></col>
               <col width="25%"></col>
-              <col width="25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
-              <col width="6.25%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
+              <col width="8%"></col>
             </colgroup>
             <thead>
               <tr>
                 <th>항공편</th>
                 <td>시간</td>
-                <td></td>
                 <td>월</td>
                 <td>화</td>
                 <td>수</td>
@@ -1129,7 +1083,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
@@ -1157,7 +1110,6 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
@@ -1171,11 +1123,10 @@ function TabContent({currIdxCont}: IProps) {
         </T.table>
       </C.mt50>
       <C.mt50>
-        <C.note><C.image><Caution /></C.image>꼭 확인해주세요!</C.note>
-        <div style={{marginTop:'15px'}}>
-          <C.description>- 항공 스케줄은 정부인가 조건이며, 스케줄과 기종은 예고없이 변경될 수 있습니다.</C.description>
-          <C.description>- 스케줄 재확인이나 기타 문의사항이 있으시면 고객센터 (1234-1234)로 문의하여 주십시오.</C.description>
-        </div>
+        <WarningList
+          title = '꼭 확인해주세요!'
+          descriptions={description}
+        />
       </C.mt50>
     </C.sb>
     )
@@ -1197,7 +1148,7 @@ const T = {
       thead td,
       td strong {
         color: ${DARK_GRAY1};
-        font-size: 15px;
+        font-size: 18px;
         font-weight: bold;
         line-height: 1.6;
         letter-spacing: -0.3px;
@@ -1211,7 +1162,7 @@ const T = {
         }
       }
       th,td{
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
         line-height: 1.9;
         letter-spacing: -0.3px;
@@ -1262,6 +1213,45 @@ const T = {
         border-bottom: 1px solid ${LIGHT_GRAY5};
       }
     }
+
+    @media only screen and (max-width: 1059px) { 
+      table {
+        td:nth-child(2) {
+          text-align: center;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding: 10px 0 5px;
+
+      table {
+        td strong {
+          font-size: 14px;
+        }
+
+        td strong {
+          margin-top: 10px;
+        }
+        th,
+        td {
+          font-size: 14px;
+
+          & > p {
+            margin-top: 10px;
+            font-size: 14px;
+          } 
+        }
+
+        thead th,
+        thead td,
+        tbody th,
+        tbody td {
+          padding: 10px 0;
+          font-size: 14px;
+        }
+      }
+    }
   `,
 };
   
@@ -1270,39 +1260,84 @@ const C = {
   wrap: styled.div`
     margin-top: 70px;
   `,
-  titleLine:styled.div`
-  width: 1px;
-  height: 18px;
-  background:${LIGHT_GRAY6};
-  margin: 6px 10px;
+  flex:styled.div`
+    display: flex;
+    align-items: center;
+
+    &:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+
+    @media only screen and (max-width: 767px) {
+      display: block;
+    }
   `,
-  titleMain: styled.h3`
+  titleMain: styled.h3`  
+    margin-left: 10px;
+    padding-left: 11px;
+    position: relative;
     font-size: 30px;
     font-weight: bold;
+
+    &:before {
+      content: "";
+      width: 1px;
+      height: 18px;
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 6px;
+      background:${LIGHT_GRAY6};
+    }
+
+    @media only screen and (max-width: 767px) { 
+      margin-top: 3px;
+      float: right;
+      font-size: 22px;
+      text-align: right;
+
+      &:before {
+        height: 14px;
+      }
+    }
   `,
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
+    line-height: 1.8em;
+
+    @media only screen and (max-width: 767px) { 
+      display: inline-block;
+      font-size: 18px;
+    }
   `,
   itemTitle: styled.h5`
     margin-top: 5px;
     font-size: 18px;
     font-weight: bold;
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 0px;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
   sb: styled.div`
     margin-top: 60px;
-  `,
-  flex:styled.div`
-  display: flex;
-  align-items: center;
   `,
   p: styled.p`
     margin-top: 20px;
     margin-bottom: 15px;
     line-height: 1.8;
+
     &:first-child{
       margin-top: 20px;
     }
+
     &:last-child{
       margin-bottom: 0px;
     }
@@ -1316,9 +1351,13 @@ const C = {
     
   `,
   description: styled.p`
-  font-size: 14px;
-  color: ${LIGHT_GRAY8};
-  line-height: 1.8;
+    font-size: 18px;
+    color: ${LIGHT_GRAY8};
+    line-height: 1.8;
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
 `,
   image: styled.p`
     margin-right: 5px;
@@ -1333,29 +1372,47 @@ const C = {
     vertical-align: middle;
   `,
   mt50:styled.div`
-  margin-top: 50px;
+    margin-top: 50px;
   `,
   blueEmp:styled.span`
       color: ${BLUE1};
-      font-weight: 400;
+      font-family: 'premia';
+      font-weight: 700;
   `,
   line:styled.div`
-      width: 83px;
-      height: 1px;
-      margin: 10px 20px 14px;
-      background: ${LIGHT_GRAY9};
+    width: 83px;
+    height: 1px;
+    margin: 10px 20px 14px;
+    background: ${LIGHT_GRAY9};
+    
+    @media only screen and (max-width: 1059px) { 
+      margin: 10px auto;
+    }
   `,
   textBox:styled.div`
-  width: auto;
-  display: inline-block;
-  text-align: center;
+    width: auto;
+    display: inline-block;
+    text-align: center;
+
+    @media only screen and (max-width: 1059px) { 
+      width: 100%;
+
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+    }
   `,
 
   textBoxCenter:styled.div`
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
+    width: auto;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+
+    @media only screen and (max-width: 1059px) { 
+      width: 100%;
+      display: none;
+    }
   `
 }
 export default TabContent;

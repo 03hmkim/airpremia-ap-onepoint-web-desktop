@@ -446,9 +446,7 @@ const T = {
     title: styled.h4`
       font-size: 22px;
       font-weight: bold;
-      @media only screen and (max-width: 1059px) { 
-        font-size: 20px;
-      }
+
       @media only screen and (max-width: 767px) { 
         font-size: 18px;
       }
@@ -456,9 +454,7 @@ const T = {
     itemTitle: styled.h5`
       font-size: 20px;
       font-weight: bold;
-      @media only screen and (max-width: 1059px) { 
-        font-size: 18px;
-      }
+
       @media only screen and (max-width: 767px) { 
         font-size: 16px;
       }
@@ -623,11 +619,9 @@ const T = {
       font-size: 18px;
       font-weight: 600;
       color: ${DARK_GRAY1};
-      @media only screen and (max-width: 1059px) { 
-        font-size: 16px;
-      }
+
       @media only screen and (max-width: 767px) { 
-        
+        font-size: 16px;
       }
   `,
   }

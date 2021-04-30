@@ -56,14 +56,7 @@ const S = {
       }
     }
 
-    @media only screen and (max-width: 1059px) {
-      .title {
-        font-size: 30px;
-      }
-      .description {
-        font-size: 16px;
-      }
-    }
+ 
     @media only screen and (max-width: 767px) { 
         .title {
           font-size: 26px;

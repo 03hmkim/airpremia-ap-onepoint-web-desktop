@@ -40,7 +40,7 @@ function archivelist(){
           return (
             <NewModal
               className="max hAuto"
-              type={EScrollType.TYPE4}
+              type={EScrollType.TYPE1}
               title={
                 <S.modalTitle>
                   <PopupTitle>건강상태 서약서가 필요한 고객</PopupTitle>

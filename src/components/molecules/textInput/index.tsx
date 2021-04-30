@@ -178,9 +178,7 @@ const S = {
     color: ${ORANGE1};
     line-height: 0.5;
     z-index:2;
-    @media only screen and (max-width: 1059px) { 
-      font-size: 16px;
-    }
+
     @media only screen and (max-width: 767px) { 
       font-size: 14px;
     }

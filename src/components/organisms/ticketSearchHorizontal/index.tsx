@@ -452,7 +452,6 @@ const S = {
         height: 40px;
         margin-top: 200px;
         padding-left: 0px;
-        font-size: 16px;
       }
 
       .menuWrapper {
