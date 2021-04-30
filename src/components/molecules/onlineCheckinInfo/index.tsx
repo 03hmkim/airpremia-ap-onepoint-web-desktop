@@ -4,7 +4,7 @@ import SvgCheckin from 'public/images/ico_checkin.svg';
 import SvgTicket from 'public/images/ico_ticket.svg';
 import SvgFlight from 'public/images/ico_flight.svg';
 import {
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   BLUE1,
   LIGHT_GRAY6,
 } from '@airpremia/cdk/styles/colors';
@@ -118,7 +118,7 @@ const S = {
     }
   `,
   left: styled.div<IStyleProps>`
-    width: 220px;
+    width: calc(100% - 860px);
     h3 {
       font-size: 22px;
       letter-spacing: -0.44px;
@@ -128,7 +128,11 @@ const S = {
       font-size: 18px;
       line-height: 1.57;
       letter-spacing: -0.28px;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
+    }
+
+    @media only screen and (max-width: 1200px) {
+      width: calc(100% - 760px);
     }
 
     @media only screen and (max-width: 1059px) {
@@ -147,7 +151,7 @@ const S = {
       padding-top: 60px;
     }
     .subtitle {
-      font-size: 16px;
+      font-size: 18px;
       font-weight: 700;
       line-height: 1.75;
       letter-spacing: -0.32px;
@@ -180,12 +184,21 @@ const S = {
       }
     }
 
+    @media only screen and (max-width: 1200px) {
+      width: 700px;
+    }
+
     @media only screen and (max-width: 1059px) { 
       width: auto;
       padding-top: 60px;
     }
 
     @media only screen and (max-width: 767px) { 
+
+      .subtitle {
+        font-size: 16px;
+      }
+      
       .stepsWrapper {
         padding-top: 20px;
         .step {

@@ -63,7 +63,7 @@ const S = {
     }
 
     @media only screen and (max-width: 599px) {
-      padding: 10px 0;
+      padding: 0;
     }
   `,
   label: styled.div<IStyleProps>`

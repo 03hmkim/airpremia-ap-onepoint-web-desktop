@@ -133,9 +133,6 @@ const S = {
       }
     }
 
-    @media only screen and (max-width: 599px) {
-      
-    }
 
     @media only screen and (max-width: 479px) {
       width: calc(50% - 5px);

@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled, { css } from 'styled-components';
 import Link from 'next/link';
 import { Arrow } from 'src/components';
-import { ORANGE1 } from '@airpremia/cdk/styles/colors';
+import { ORANGE1, LIGHT_GRAY8 } from '@airpremia/cdk/styles/colors';
 
 interface IStyle {
   isEmphasis?: boolean;
@@ -48,11 +48,12 @@ const S = {
 
   title: styled.div<IStyle>`
     h3 {
-      font-size: 13px;
+      font-size: 18px;
       line-height: 17px;
       letter-spacing: -0.26px;
       font-weight: 600;
       position: relative;
+      color: ${LIGHT_GRAY8};
 
       ${({ isEmphasis }) =>
         isEmphasis &&
@@ -69,6 +70,12 @@ const S = {
           }
         `}
     }
+
+    @media only screen and (max-width: 767px) {
+      h3 {
+        font-size: 13px;
+      }
+    }
   `,
 
   description: styled.div`
@@ -78,6 +85,10 @@ const S = {
     line-height: 30px;
     letter-spacing: -0.6px;
     margin-top: 10px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 24px;
+    }
   `,
 };
 

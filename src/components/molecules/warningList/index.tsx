@@ -14,7 +14,7 @@ interface IProps extends IStyleProps {
   /** 제목 */
   title?: string;
   /** 설명 list */
-  descriptions: string[];
+  descriptions: string[] | React.ReactElement[];
 }
 
 function WarningList({
@@ -29,7 +29,7 @@ function WarningList({
         <span>{title}</span>
       </div>
       <ul>
-        {descriptions.map((description: string, index) => (
+        {descriptions.map((description: any, index: number) => (
           <li key={index}>{description}</li>
         ))}
       </ul>
@@ -62,14 +62,20 @@ const S = {
     ul {
       padding-top: 10px;
       li {
+        padding-left: 10px;
+        position: relative;
         font-size: 18px;
         line-height: 1.8;
         font-family: 'NotoSans';
         font-weight: 400;
         letter-spacing: -0.28px;
         color: ${LIGHT_GRAY8};
+
         &:before {
           content: '- ';
+          position: absolute;
+          left: 0;
+          top: 0;
         }
       }
     }

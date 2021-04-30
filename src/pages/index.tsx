@@ -7,7 +7,9 @@ import {
   EventNavigation,
   Home,
   NoticeNavigation,
+  PromotionalCardEvent,
 } from 'src/components';
+import randomIMG from './randomImage';
 
 import {
   useAccident,
@@ -19,6 +21,10 @@ import { dummyNoticeNavigation } from 'src/components/organisms/noticeNavigation
 interface IProps {
   isDarksite?: boolean;
 }
+
+const randomBG = randomIMG();
+
+const randomEvent = PromotionalCardEvent({});
 
 const Index: NextPage<IProps> = ({
   isDarksite,
@@ -48,23 +54,63 @@ const Index: NextPage<IProps> = ({
 
   return (
     <S.container>
-      <Home
-        hero={<Hero />}
-        eventNavigation={<EventNavigation />}
-        noticeNavigation={
-          <NoticeNavigation {...dummyNoticeNavigation} />
-        }
-      />
+      <div className="mainWrap">
+        <Home
+          hero={<Hero />}
+          eventNavigation={<EventNavigation />}
+          noticeNavigation={
+            <NoticeNavigation {...dummyNoticeNavigation} />
+          }
+        />
+        <div className="eventWrap">
+          {randomEvent}
+        </div>
+        <div className="mainBg" />
+      </div>
     </S.container>
   );
 };
 
 const S = {
   container: styled.div`
-    padding-top: 80px;
+
+    .mainWrap {
+      max-width: 100% !important;
+      padding: 80px 0 0 !important;
+      margin-top: 0 !important;
+      position: relative;
+    }
+
+    .mainBg {
+      width: 100%;
+      height: 800px;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background-image: url(${randomBG});
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      z-index: -1;
+    }
+
+    .eventWrap {
+      position: absolute;
+      top: 60px;
+      right: 80px;
+    }
 
     @media only screen and (max-width: 1059px) {
       padding-top: 40px;
+
+      .mainBg {
+        height: 600px;
+        top: 80px;
+      }
+
+      .eventWrap {
+        display: none;
+      }
     }
 
     @media only screen and (max-width: 767px) {

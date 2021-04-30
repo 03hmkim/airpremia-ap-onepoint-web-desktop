@@ -126,7 +126,6 @@ const S = {
     }}
     & > div {
       height: 24px;
-      font-size: 15px;
       line-height: 30px;
       letter-spacing: -0.3px;
       padding: 0 10px;

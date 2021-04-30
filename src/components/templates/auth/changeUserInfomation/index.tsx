@@ -48,19 +48,25 @@ const S = {
 
   description: styled.div`
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.28px;
     color: ${LIGHT_GRAY7};
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
 
   content: styled.div`
     margin: 100px 0 80px;
     border-top: solid 2px ${DARK_GRAY1};
     border-bottom: solid 2px ${DARK_GRAY1};
+
     @media only screen and (max-width: 1059px) { 
       margin: 80px 0 60px;
     }
+
     @media only screen and (max-width: 767px) { 
       margin: 60px 0 40px;
     }

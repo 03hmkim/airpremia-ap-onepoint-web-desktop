@@ -83,11 +83,15 @@ const S = {
     margin-top: 40px;
   `,
   forgotPassword: styled.div`
-    font-size: 13px;
+    font-size: 18px;
     line-height: 24px;
     letter-spacing: -0.26px;
     font-weight: 600;
     margin-top: 80px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 13px;
+    }
   `,
 };
 

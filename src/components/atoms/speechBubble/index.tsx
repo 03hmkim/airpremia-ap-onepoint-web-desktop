@@ -43,7 +43,7 @@ const S = {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    font-size: 22px;
     font-family: 'Premia', sans-serif;
     font-weight: 700;
 

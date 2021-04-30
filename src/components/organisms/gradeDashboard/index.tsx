@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import {
   LIGHT_GRAY6,
   LIGHT_GRAY7,
+  LIGHT_GRAY8,
 } from '@airpremia/cdk/styles/colors';
 
 interface IInnerProps {
@@ -194,10 +195,8 @@ const S = {
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
+
     @media only screen and (max-width: 1059px) { 
-    
-    }
-    @media only screen and (max-width: 767px) { 
       display:block;
       padding: 20px 30px 20px 20px;
     }
@@ -208,26 +207,33 @@ const S = {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
     h2 {
       font-size: 32px;
       line-height: 47px;
       margin-top: 8px;
     }
+
     h4 {
       font-size: 18px;
       line-height: 24px;
       letter-spacing: -0.32px;
       font-weight: 600;
     }
+
     p {
       font-size: 18px;
       line-height: 17px;
       letter-spacing: -0.3px;
-      color: ${LIGHT_GRAY7};
+      color: ${LIGHT_GRAY8};
       font-weight: 600;
     }
-    @media only screen and (max-width: 767px) { 
+
+    @media only screen and (max-width: 1059px) { 
       width:100%;
+    }
+
+    @media only screen and (max-width: 767px) { 
       h2 {
         font-size: 22px;
       }
@@ -247,10 +253,13 @@ const S = {
     height: 100%;
     align-items: flex-end;
     min-height: 140px;
-    /* justify-content: flex-end; */
 
-    div:not(:nth-child(3n)) {
+    div {
       margin-right: 75px;
+
+      &:last-child {
+        margin-right: 0;
+      }
     }
 
     &.gold {
@@ -277,22 +286,23 @@ const S = {
       }
     }
     @media only screen and (max-width: 1059px) { 
-      div:not(:nth-child(3n)) {
+      width: 100%;
+      min-height: 0;
+      padding-top: 20px;
+      margin-top: 20px;
+      justify-content: space-between;
+      border-top: 1px solid #f1f1f1;
+
+      div {
         margin-right: 30px;
       }
     }
-    @media only screen and (max-width: 767px) { 
-      width:100%;
-      min-height:0;
-      padding-top:20px;
-      margin-top:20px;
-      border-top:1px solid #f1f1f1;
-    }
     @media only screen and (max-width: 599px) {
-      padding-top:0px;
-      div:not(:nth-child(3n)) {
-        width:100% !important;
-        margin-top:20px;
+      padding-top: 0px;
+
+      div {
+        width: 100% !important;
+        margin-top: 20px;
         margin-right: 0px;
       }
     }
@@ -300,34 +310,44 @@ const S = {
 
   box: styled.div`
     p {
-      font-size: 13px;
+      color: ${LIGHT_GRAY8};
+      font-size: 18px;
       line-height: 19px;
       letter-spacing: -0.26px;
     }
+
     h3 {
-      font-size: 18px;
+      font-size: 21px;
       line-height: 27px;
       letter-spacing: -0.36px;
       font-weight: 600;
       margin-top: 12px;
     }
+
     span {
-      font-size: 13px;
+      font-size: 18px;
       line-height: 19px;
       letter-spacing: -0.26px;
       vertical-align: unset;
     }
+
     .gray {
       color: ${LIGHT_GRAY7};
     }
-    @media only screen and (max-width: 1059px) { 
-    
-    }
-    @media only screen and (max-width: 767px) { 
-    
-    }
-    @media only screen and (max-width: 599px) {
 
+    @media only screen and (max-width: 767px) {
+
+      h3 {
+        font-size: 16px;
+      }
+
+      span {
+        font-size: 18px;
+      }
+
+      p {
+        font-size: 13px;
+      }
     }
   `,
 };

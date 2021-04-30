@@ -2,7 +2,7 @@ import { FC, useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY7,
+  LIGHT_GRAY8,
   LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
 import { ifProp } from 'styled-tools';
@@ -235,7 +235,7 @@ const S = {
   item: styled.div<{ blur?: boolean }>`
     text-align: center;
     padding: 20px 0;
-    color: ${ifProp('blur', LIGHT_GRAY7, DARK_GRAY1)};
+    color: ${ifProp('blur', LIGHT_GRAY8, DARK_GRAY1)};
     font-weight: 600;
     .header-item {
       font-size: 18px;

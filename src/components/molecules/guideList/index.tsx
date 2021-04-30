@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from 'styled-components';
 import { DARK_GRAY1 } from '@airpremia/cdk/styles/colors';
 
@@ -6,7 +7,7 @@ interface IProps extends IStyleProps {
   /** 제목 */
   title?: string;
   /** 설명 list */
-  descriptions: string[];
+  descriptions: string[] | React.ReactElement[];
 }
 
 function guideList({
@@ -19,7 +20,7 @@ function guideList({
         <h3>{title}</h3>
       </S.title>
       <ul>
-        {descriptions.map((description: string, index) => (
+        {descriptions.map((description: any, index: number) => (
           <li key={index}>{description}</li>
         ))}
       </ul>

@@ -46,6 +46,7 @@ const S = {
     align-items: center;
     justify-content: space-between;
     height: 34px;
+
     @media only screen and (max-width: 479px) {
         display:block;
     }
@@ -62,12 +63,21 @@ const S = {
       line-height: 23px;
       letter-spacing: -0.26px;
       color: ${LIGHT_GRAY8};
+
+      &:first-child {
+        margin-left: 0;
+      }
     }
+
+    @media only screen and (max-width: 767px) {
+      a {
+        font-size:14px;
+      }
+    }
+
     @media only screen and (max-width: 479px) {
-        margin-top:20px;
-        a{
-            font-size:14px;
-        }
+      margin-top:20px;
+      text-align: center;
     }
   `,
 };

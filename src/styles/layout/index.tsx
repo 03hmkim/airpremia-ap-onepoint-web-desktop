@@ -33,7 +33,7 @@ const Container = styled.div<IContainerStyle>`
 `;
 
 const AuthWrapper = styled.div`
-  max-width: 540px;
+  max-width: 600px !important;
   margin: 0 auto;
 `;
 

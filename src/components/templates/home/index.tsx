@@ -6,7 +6,7 @@ import {
   MainSecNotice,
   QuickMenu,
 } from 'src/components';
-import randomIMG from './randomImage';
+// import randomIMG from './randomImage';
 
 interface IStyleProps {}
 interface IProps extends IStyleProps {
@@ -60,25 +60,19 @@ Home.defaultProps = {};
 
 const S = {
   container: styled.div<IStyleProps>`
-    max-width: 100% !important;
-    padding: 0 !important;
-    margin-top: 0 !important;
-
     .innerWrapper {
       box-sizing: border-box;
       max-width: 1920px;
-      /* min-width: 1440px; */
       margin: 0 auto;
       padding: 0 80px;
     }
     .heroWrapper {
       width: 100%;
-      /* min-width: 1440px; */
       height: 800px;
-      background-image: url(${randomIMG});
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+      // background-image: url();
+      // background-size: cover;
+      // background-repeat: no-repeat;
+      // background-position: center;
     }
     .navigationWrapper {
       padding-top: 800px;

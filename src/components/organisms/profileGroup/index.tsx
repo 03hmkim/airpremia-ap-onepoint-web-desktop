@@ -12,6 +12,7 @@ import {
   PopupDescription,
   PreCheckModalForUserInfoChange,
 } from 'src/components';
+import { EScrollType } from 'src/components/templates/centerPopup';
 
 interface ILinkButtonData {
   title: string;
@@ -50,6 +51,8 @@ const ProfileGroup: FC<IProps> = ({ linkButtonList }) => {
       case 'changeMyInfomation':
         return (
           <NewModal
+            className="hAuto btnN"
+            type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>회원정보변경</PopupTitle>
@@ -110,7 +113,10 @@ const S = {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 1200px;
+
+    @media only screen and (max-width: 767px) { 
+      display:block;
+    }
   `,
 
   profile: styled.div``,
@@ -131,11 +137,23 @@ const S = {
         margin-right: 60px;
       }
     }
+
+    @media only screen and (max-width: 767px) { 
+      margin-top:40px;
+      
+      & > div {
+        &:nth-child(1),
+        &:nth-child(2),
+        &:nth-child(3) {
+          margin-right: 0px;
+        }
+      }
+    }
   `,
+
   modalTitle: styled.div``,
-  modalBody: styled.div`
-    padding: 40px 50px 0;
-  `,
+
+  modalBody: styled.div``,
 };
 
 export default ProfileGroup;

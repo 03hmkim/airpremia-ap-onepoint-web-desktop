@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 import {
-  PromotionalCardEvent,
-  PromotionalCardHanoi,
-  PromotionalCardPalmTree,
+  // PromotionalCardEvent,
+  // PromotionalCardHanoi,
+  // PromotionalCardPalmTree,
   TicketSearchVertical,
 } from 'src/components';
 import ImgAngle from 'public/images/angle.svg';
@@ -42,7 +42,7 @@ function Hero({}: IProps) {
           </div>
         </div>
       </S.homeTicketSearchWrapper>
-      <div className="cardScrollWrapper">
+      {/* <div className="cardScrollWrapper">
         <div className="event row">
           <PromotionalCardEvent />
         </div>
@@ -52,7 +52,7 @@ function Hero({}: IProps) {
         <div className="palmtree row">
           <PromotionalCardPalmTree />
         </div>
-      </div>
+      </div> */}
     </S.container>
   );
 }

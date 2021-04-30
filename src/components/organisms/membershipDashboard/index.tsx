@@ -11,6 +11,7 @@ import {
 } from 'src/components';
 import Tooltip from 'src/components/molecules/tooltip';
 import { TaskButton } from 'src/components';
+import { EScrollType } from 'src/components/templates/centerPopup';
 
 interface IProps {
   grade: string;
@@ -40,16 +41,14 @@ const MembershipDashboard: FC<IProps> = ({
       case 'userGradeGuideInfomation':
         return (
           <NewModal
+            className="hAuto btnN"
+            type={EScrollType.TYPE1}
             title={<PopupTitle>승급 안내</PopupTitle>}
             body={
               <S.modalBody>
                 <GradeUpgradeOrStay grade={grade} />
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
               </S.modalBody>
-            }
-            button={
-              <TaskButton onClick={onHideNewModal}>
-                확인
-              </TaskButton>
             }
           />
         );
@@ -143,8 +142,9 @@ const S = {
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
+
     @media only screen and (max-width: 767px) { 
-      display:block;
+      display: block;
       padding: 20px 30px 20px 20px;
     }
   `,
@@ -156,9 +156,11 @@ const S = {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+
     .title {
       display: flex;
       align-items: center;
+
       span {
         margin-left: 3px;
 
@@ -167,17 +169,20 @@ const S = {
         }
       }
     }
+
     h2 {
       font-size: 32px;
       line-height: 47px;
       margin-top: 8px;
     }
+
     h4 {
       font-size: 18px;
       line-height: 1.2;
       letter-spacing: -0.32px;
       font-weight: 600;
     }
+
     p {
       font-weight: 600;
       font-size: 18px;
@@ -185,6 +190,7 @@ const S = {
       letter-spacing: -0.26px;
       cursor: pointer;
     }
+
     @media only screen and (max-width: 767px) { 
       width:100%;
       h2 {
@@ -208,24 +214,24 @@ const S = {
     & > div {
       bottom: -13px;
     }
+
     @media only screen and (max-width: 1059px) { 
        flex-basis: calc( 100% - 200px );
        width: calc( 100% - 200px );
     }
+
     @media only screen and (max-width: 767px) { 
        flex-basis: 100%;
        width: 100%;
     }
-    @media only screen and (max-width: 599px) {
-       
-    }
+
   `,
 
   bottomInfo: styled.div<{ curr: number; total: number }>`
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
-    font-size: 13px;
+    font-size: 18px;
     line-height: 19px;
     letter-spacing: -0.26px;
 
@@ -235,11 +241,7 @@ const S = {
     }
   `,
 
-  modalBody: styled.div`
-    padding: 40px 50px 0;
-
-    width: 540px;
-  `,
+  modalBody: styled.div``,
 };
 
 export default MembershipDashboard;
