@@ -53,7 +53,7 @@ const EticketTemplate: FC<IProps> = ({
             <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, lineHeight: 2}}>
               ·궁금하신 점이나 불편한 사항은 고객센터 1:1 문의하기를 이용해주시기 바랍니다.
             </p>
-            <div style={{height: 1, margin: '50px 0 30px', backgroundColor: '#e5e5e5'}} />
+            <div className="line-item" style={{height: 1, margin: '50px 0 30px', backgroundColor: '#e5e5e5'}} />
             <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400, lineHeight: 2}}>
               에어프레미아(주) Air Premia Inc. &nbsp; 대표 : 김세영, 심주엽 <br />
               서울특별시 강서구 공항대로 248, 대방건설빌딩 4층
@@ -69,14 +69,41 @@ const EticketTemplate: FC<IProps> = ({
 
 const S = {
   container: styled.div`
+    @media only screen and (max-width: 767px) { 
+      table{
+        colgroup{
+          col:nth-child(1){
+            width:24%;
+          }
+          col:nth-child(2){
+            width:24%;
+          }
+          col:nth-child(3){
+            width:4%;
+          }
+          col:nth-child(4){
+            width:24%;
+          }
+          col:nth-child(5){
+            width:24%;
+          }
+        }
+        td{
+          line-height:1.5em;
+        }
+      }
+    }
   `,
   wrapper: styled.div`
     display: flex;
     justify-content: center;
     margin-top: 50px;
+    @media only screen and (max-width: 767px) { 
+      margin-top: 30px;
+    }
   `,
   iconArea: styled.div`
-    width: 615x;
+    max-width: 615x;
     margin: 50px 0;
     display: flex;
     justify-content: center;
@@ -100,19 +127,28 @@ const S = {
       height: 12px;
       margin: 0 15px;
     }
+    @media only screen and (max-width: 767px) { 
+      margin: 30px 0;
+    }
   `,
 
   eticketArea: styled.div`
-    width: 615px;
+    max-width: 615px;
     margin: 50px 0;
+    @media only screen and (max-width: 767px) { 
+      margin: 30px 0;
+    }
   `,
   paymentWrapper: styled.div`
-    width: 615px;
+    max-width: 615px;
     margin-top: 80px;
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
 
   guideArea: styled.div`
-    width: 615px;
+    max-width: 615px;
     margin: 0 auto;
     p {
       font-size: 15px;
@@ -120,6 +156,12 @@ const S = {
       letter-spacing: -0.3px;
       color: ${LIGHT_GRAY8};
     }
+    @media only screen and (max-width: 767px) { 
+      .line-item{
+        margin:10px 0 !important;
+      }
+    } 
+    
   `,
 };
 

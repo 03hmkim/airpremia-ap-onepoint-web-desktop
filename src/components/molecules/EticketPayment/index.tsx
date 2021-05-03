@@ -78,7 +78,7 @@ const EticketPayment: FC<IProps> = ({
             <th style={{padding: '20px 0', textAlign: 'left'}}>
               <div>
                 <p style={{margin: 0, fontSize: 13}}>항공운임</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Fare</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Fare</p>
               </div>
             </th>
             <td>
@@ -88,7 +88,7 @@ const EticketPayment: FC<IProps> = ({
             <th>
               <div style={{textAlign: 'left'}}>
                 <p style={{margin: 0, fontSize: 13}}>세금/기타비용</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Tax/Fee/charge</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Tax/Fee/charge</p>
               </div>
             </th>
             <td>
@@ -99,7 +99,7 @@ const EticketPayment: FC<IProps> = ({
             <th style={{padding: '20px 0', textAlign: 'left'}}>
               <div>
                 <p style={{margin: 0, fontSize: 13}}>유류할증료</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Fuel Surcharge</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Fuel Surcharge</p>
               </div>
             </th>
             <td>
@@ -109,7 +109,7 @@ const EticketPayment: FC<IProps> = ({
             <th>
               <div style={{textAlign: 'left'}}>
                 <p style={{margin: 0, fontSize: 13}}>부가 서비스료</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Service fee</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Service fee</p>
               </div>  
             </th>
             <td>
@@ -128,7 +128,7 @@ const EticketPayment: FC<IProps> = ({
             <th style={{padding: '20px 0'}}>
               <div>
                 <p style={{margin: 0, fontSize: 13}}>할인내역</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Discount</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Discount</p>
               </div>
             </th>
             <td>
@@ -156,7 +156,7 @@ const EticketPayment: FC<IProps> = ({
             <th style={{padding: '20px 0'}}>
               <div style={{textAlign: 'left'}}>
                 <p style={{margin: 0, fontSize: 13}}>지불 금액/포인트</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Paid</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Paid</p>
               </div>
             </th>
             <td>
@@ -173,7 +173,7 @@ const EticketPayment: FC<IProps> = ({
             <th style={{padding: '20px 0'}}>
               <div style={{textAlign: 'left'}}>
                 <p style={{margin: 0, fontSize: 13}}>지불 수단</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Form of Payment</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Form of Payment</p>
               </div>
             </th>
             <td>
@@ -190,7 +190,7 @@ const EticketPayment: FC<IProps> = ({
             <th style={{padding: '20px 0'}}>
               <div>
                 <p style={{margin: 0, fontSize: 13}}>총 금액</p>
-                <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Total Amount</p>
+                <p className="e01" style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Total Amount</p>
               </div>
             </th>
             <td>
@@ -208,6 +208,16 @@ const EticketPayment: FC<IProps> = ({
 const S = {
   container: styled.div`
     padding-bottom: 100px;
+    @media only screen and (max-width: 767px) { 
+      padding-bottom: 40px;
+      table{
+        th{
+          .e01{
+            margin-top:5px !important;
+          }
+        }
+      }
+    } 
   `,
 };
 

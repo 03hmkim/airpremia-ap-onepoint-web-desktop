@@ -100,12 +100,19 @@ const S = {
       right: 80px;
     }
 
-    @media only screen and (max-width: 1059px) {
-      padding-top: 40px;
-
+    @media only screen and (max-width: 1440px) {
       .mainBg {
         height: 600px;
-        top: 80px;
+      }
+    }
+
+    @media only screen and (max-width: 1059px) {
+      .mainWrap {
+        padding-top: 40px !important;
+      }
+
+      .mainBg {
+        top: 40px;
       }
 
       .eventWrap {
@@ -114,7 +121,18 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) {
-      padding-top: 10px;
+      .mainBg {
+        top: 10px;
+      }
+
+      .mainWrap {
+        padding-top: 10px !important;
+      }
+    }
+    @media only screen and (max-width: 599px) {
+      .mainBg {
+        height: 470px;
+      }
     }
   `,
 };

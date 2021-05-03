@@ -71,16 +71,16 @@ const EticketJourney: FC<IProps> = ({
           <div style={{width: 43, height: 20, color: '#fff', fontSize: 11, lineHeight: '24px', textAlign: 'center', background: '#222222', borderRadius: 4}}>{tripText}</div>
         </div>
         <div style={{marginTop: 15}}>
-          <div style={{width: '35%', float: 'left'}}>
+          <div className="lt-item" style={{width: '35%', float: 'left'}}>
             <h1 style={{margin: 0, paddingBottom: 2, fontSize: 46, fontWeight: 'bold', display:'inline-block'}}>{origin}</h1>
             <p style={{margin: 0, paddingBottom: 5, fontSize: 14, fontWeight: 'bold'}}>{originText}</p>
             <p style={{margin: 0, paddingBottom: 10, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>{depStationFullName},<br />{depCountryFullName}</p>
             <p style={{margin: 0, paddingBottom: 20, fontSize: 16}} >{depTerminal && `Terminal ${depTerminal}` && ''}</p>
           </div>
-          <div style={{width: '30%', marginTop: 10, float: 'left', display: 'flex', justifyContent: 'center', alignItems: 'baseline'}}>
+          <div className="cn-item" style={{width: '30%', marginTop: 10, float: 'left', display: 'flex', justifyContent: 'center', alignItems: 'baseline'}}>
             <img src={IcoFlight} alt="비행기아이콘" style={{width: 257}} />
           </div>
-          <div style={{width: '35%', float: 'left', textAlign: 'right'}}>
+          <div className="rt-item" style={{width: '35%', float: 'left', textAlign: 'right'}}>
             <h1 style={{margin: 0, paddingBottom: 2, fontSize: 46, fontWeight: 'bold', display:'inline-block'}}>{destination}</h1>
             <p style={{margin: 0, paddingBottom: 5, fontSize: 14, fontWeight: 'bold'}}>{destinationText}</p>
             <p style={{margin: 0, paddingBottom: 10, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>{arrStationFullName},<br />{arrCountryFullName}</p>
@@ -89,29 +89,29 @@ const EticketJourney: FC<IProps> = ({
           <div style={{clear: 'both'}} />
         </div>
       </div>
-      <div style={{padding: '20px 25px', display: 'flex', borderTop: '4px dotted #e5e5e5'}}>
-        <div style={{width: '40%'}}>
+      <div className="data-wrap" style={{padding: '20px 25px', display: 'flex', borderTop: '4px dotted #e5e5e5'}}>
+        <div className="item" style={{width: '40%'}}>
           <p style={{margin: 0, paddingBottom: 5, fontSize: 16}}>날짜/시간</p>
           <p style={{margin: 0, paddingBottom: 10, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Date/Local Time</p>
         </div>
-        <div style={{width: '60%', margin: 0, textAlign: 'right'}}>
+        <div className="item" style={{width: '60%', margin: 0, textAlign: 'right'}}>
           <p style={{margin: 0, paddingBottom: 5, fontSize: 16, fontWeight: 'bold'}}>{getDateInfo()}</p>
           <p style={{margin: 0, color: '#222', fontSize: 13}}><span style={{paddingBottom: 15, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Flight Time </span>{getFlightTime()}</p>
         </div>
       </div>
-      <div style={{padding: '20px 25px', display: 'flex', borderTop: '1px solid #e5e5e5'}}>
-        <div style={{width: '20%'}}>
+      <div  className="class-wrap" style={{padding: '20px 25px', display: 'flex', borderTop: '1px solid #e5e5e5'}}>
+        <div className="item" style={{width: '20%'}}>
           <p style={{margin: 0, paddingBottom: 5, fontSize: 13}}>예약등급</p>
           <p style={{margin: 0, paddingBottom: 10, color: '#b2b2b2', fontSize: 13, fontWeight: 400}}>Class</p>
         </div>
-        <div style={{width: '30%'}}>
+        <div className="item" style={{width: '30%'}}>
           <p style={{margin: 0, paddingBottom: 5, fontSize: 13}}>{getClass()}</p>
         </div>
-        <div style={{width: '20%', textAlign: 'left'}}>
+        <div className="item" style={{width: '20%', textAlign: 'left'}}>
           <p style={{margin: 0, paddingBottom: 5, fontSize: 13, fontWeight: 'bold'}}>기종 / 편명</p>
           <p style={{margin: 0, paddingBottom: 15, color: '#b2b2b2', fontSize: 13, fontWeight: 'bold'}}>Aircraft Type/Flight</p>
         </div>
-        <div style={{width: '30%', margin: 0, textAlign: 'right'}}>
+        <div className="item" style={{width: '30%', margin: 0, textAlign: 'right'}}>
           <p style={{margin: 0, paddingBottom: 5, fontSize: 13, fontWeight: 'bold'}}>{`B787-9 / ${identifier}`}</p>
         </div>
       </div>
@@ -143,6 +143,40 @@ const S = {
     border: solid 1px #e5e5e5;
     border-radius: 12px;
     box-sizing: border-box;
+    @media only screen and (max-width: 599px) {
+      .lt-item{
+        h1{
+          font-size:30px !important;
+        }
+      }
+      .rt-item{
+        h1{
+          font-size:30px !important;
+        }
+      }
+      .cn-item{
+        overflow:hidden;
+      }
+      .data-wrap{
+        display:block !important;
+        .item{
+          width:100% !important;
+          text-align:left !important;
+        }
+      }
+      .class-wrap{
+        display:block !important;
+        .item{
+          width:100% !important;
+          text-align:left !important;
+          margin-top:10px !important;
+          &:first-child{
+            margin-top:0 !important
+          }
+        }
+      }
+    }
+    
   `,
 };
 

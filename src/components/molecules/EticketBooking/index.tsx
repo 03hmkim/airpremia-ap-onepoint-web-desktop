@@ -84,7 +84,18 @@ const EticketBooking: FC<IProps> = ({
 };
 
 const S = {
-  container: styled.div``,
+  container: styled.div`
+    @media only screen and (max-width: 767px) { 
+      table{
+        td{
+          line-height:1.5em;
+          p{
+            font-size:13px !important;
+          }
+        }
+      }
+    } 
+  `,
 };
 
 export default EticketBooking;
