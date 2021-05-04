@@ -6,7 +6,7 @@ import {
 } from '@airpremia/cdk/styles/colors';
 
 interface IProps {
-  level?: string;
+  level?: string; //fst, scd, trd, four
   body?: string | ReactElement;
   item?: number | string;
 }

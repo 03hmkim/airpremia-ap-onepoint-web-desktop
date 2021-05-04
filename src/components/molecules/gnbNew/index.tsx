@@ -35,6 +35,9 @@ import {
 } from '@airpremia/cdk/styles/colors';
 import { useState } from 'react';
 import { ERightDpType } from './types';
+import { 
+  RightMenuMobile,
+} from 'src/components';
 
 interface IProps {
   resetData: () => void;
@@ -71,7 +74,7 @@ const GnbNew = ({ resetData }: IProps) => {
               <span className="line"></span>
             </button>
             <div className="contents">
-              오른쪽메뉴
+              <RightMenuMobile />
             </div>  
           </div>
         </S.rightMenu>
@@ -553,6 +556,7 @@ const S = {
 
         .line {
           width: 32px;
+          background-color: ${WHITE1};
 
           &:nth-child(2) {
             display: none;
