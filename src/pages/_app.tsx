@@ -158,7 +158,9 @@ const AppMiddleWare = ({ Component, pageProps }: any) => {
             <Component {...pageProps} />
           </C.contWrap>
         </div>
-        <Footer />
+        <C.footer>
+          <Footer />
+        </C.footer>
       </div>
       <Modal onClearToken={onClearToken} />
       <VersionPopup />
@@ -214,6 +216,14 @@ const C = {
         margin-bottom: 50px;
       }
     }
+  `,
+  
+  footer: styled.div`
+    @media only screen and (max-width: 1059px) {
+      footer {
+        display: none;
+      }  
+    }    
   `,
 };
 

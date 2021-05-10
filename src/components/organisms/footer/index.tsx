@@ -357,6 +357,11 @@ const S = {
           }
           li {
             margin-bottom: 10px;
+
+            &:last-child {
+              margin-bottom: 0;
+            }
+
             span {
               margin-right: 15px;
             }
@@ -417,8 +422,101 @@ const S = {
         }
       }
     }
+
     @media only screen and (max-width: 1059px) {
-      display: none;
+      h3 {
+        font-size: 13px;
+      }
+
+      li {
+        margin-bottom: 15px;
+        font-size: 12px;
+        font-weight: 300;
+      }
+
+      input {
+        width: 100%;
+        height: 30px;
+        font-size: 13px;
+      }
+
+      .wrapper {
+        .top {
+          padding-bottom: 40px;
+
+          .rightSide {
+            display: block;
+          }
+
+          .list {
+            display: block;
+          }
+
+          .box {
+            margin-top: 50px;
+
+            &:not(:first-of-type) {
+              margin-left: 0;
+            }
+          }
+
+          .news {
+            span {
+              top: -5px;
+              right: 0;
+              font-size: 13px;
+            }
+          }
+
+          .support {
+            margin-top: 50px;
+
+            .number {
+              font-size: 36px;
+            }
+
+            .timeWrapper {
+              margin-bottom: 0;
+              justify-content: initial;
+              font-size: 11px;
+
+              .label {
+                font-weight: 700;
+              }
+            }
+          }
+        }
+
+        .bottom {
+          margin-top: 40px;
+          display: block;
+
+          .left-contents {
+            display: block;
+          }
+
+          .content {
+            margin: 20px 0;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 2em;
+
+            .block {
+              display: none;
+            }
+
+            li {
+              margin-bottom: 5px;
+
+              span {
+                display: block;
+                margin-right: 0;
+                margin-bottom: 5px;
+              }
+            }
+          }
+        }
+      }
     }
   `,
 };
