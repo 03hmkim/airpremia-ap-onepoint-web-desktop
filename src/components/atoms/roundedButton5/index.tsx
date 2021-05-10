@@ -55,7 +55,9 @@ const S = {
       font-weight: 700;
     }
     @media only screen and (max-width: 767px) {
-      height: 27px;
+      height: auto;
+      padding-top:5px;
+      padding-bottom:5px;
       span {
         font-size: 14px;
       }

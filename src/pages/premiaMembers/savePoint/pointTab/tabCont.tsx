@@ -46,9 +46,9 @@ function TabContent({currIdxCont}: IProps) {
                   <C.itemTitle>항공 운임</C.itemTitle>
                 </div>
                 <S.ul>
-                  <S.li>- 결제된 항공 운임 (할인된 금액 제외)</S.li>
-                  <S.li>- 공항세, 유류할증료를 포함한 세금 제외</S.li>
-                  <S.li>- 해외 출발 항공권의 경우 운임을 원화로 환산하여 계산</S.li>
+                  <S.li>결제된 항공 운임 (할인된 금액 제외)</S.li>
+                  <S.li>공항세, 유류할증료를 포함한 세금 제외</S.li>
+                  <S.li>해외 출발 항공권의 경우 운임을 원화로 환산하여 계산</S.li>
                 </S.ul>
               </C.bannerContent01>
               <C.bannerContent02>
@@ -59,9 +59,9 @@ function TabContent({currIdxCont}: IProps) {
                   <C.itemTitle>적립 비율</C.itemTitle>
                 </div>
                 <S.ul>
-                  <S.li>- 기본 1%의 적립 비율 (1,000KRW당 10포인트 비율)</S.li>
-                  <S.li>- 골드 회원은 40% 추가 적립 (1,000KRW당 14포인트 비율)</S.li>
-                  <S.li>- 다이아몬드 회원은 90% 추가 적립 (1,000KRW당 19포인트 비율)</S.li>
+                  <S.li>기본 1%의 적립 비율 (1,000KRW당 10포인트 비율)</S.li>
+                  <S.li>골드 회원은 40% 추가 적립 (1,000KRW당 14포인트 비율)</S.li>
+                  <S.li>다이아몬드 회원은 90% 추가 적립 (1,000KRW당 19포인트 비율)</S.li>
                 </S.ul>
               </C.bannerContent02>
             </C.bannerDiv>
@@ -144,11 +144,11 @@ function TabContent({currIdxCont}: IProps) {
             탑승 시점에 회원이 아니었더라도 늦지 않았어요. 항공편 도착 이전에 회원으로 가입하시면 사후 적립이 가능해요! <br />
             에어프레미아 기내 와이파이를 이용해서 비행 중에 회원 가입하시고 사후 적립의 혜택을 놓치지 마세요. </C.li>
             <C.li className='mt20'> 탑승일로부터 1년 이내에만 사후 적립이 가능합니다.<br />
-              <span style={{fontSize:'14px'}}>-예) 2020년 9월 1일 탑승 항공편 : 2021년 8월 31일 까지 사후 적립 신청한 경우에만 사후 적립 가능</span>
+              <span>- 예) 2020년 9월 1일 탑승 항공편 : 2021년 8월 31일 까지 사후 적립 신청한 경우에만 사후 적립 가능</span>
             </C.li>
             <C.li className='mt20'> 회원 정보 상 이름과 탑승자의 이름이 일치하는 경우에만 사후 적립이 가능합니다.<br />
-            <span style={{fontSize:'14px'}}> - 국내선 항공권의 경우 탑승자 한글 이름과 회원 정보상 영문 이름의 발음이 동일해야 사후 적립이 가능합니다.</span><br />
-            <span style={{fontSize:'14px'}}> - 국제선 항공권의 경우 탑승자 영문 이름(여권상 영문 이름)과 회원 정보상 영문 이름의 철자가 동일해야 사후 적립이 가능합니다.</span>
+              <span>- 국내선 항공권의 경우 탑승자 한글 이름과 회원 정보상 영문 이름의 발음이 동일해야 사후 적립이 가능합니다.</span><br />
+              <span>- 국제선 항공권의 경우 탑승자 영문 이름(여권상 영문 이름)과 회원 정보상 영문 이름의 철자가 동일해야 사후 적립이 가능합니다.</span>
             </C.li>
           </C.ul>
         </C.mt30>
@@ -206,74 +206,172 @@ const S = {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: 767px) { 
+    width:100%;
+    flex:1;
+  }
+  @media only screen and (max-width: 479px) {
+    margin-top:20px;
+  }
   `,
   li: styled.li`
-  font-size: 15px;
-  line-height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    position:relative;
+    padding-left:10px;
+    &:before{
+      content:"-";
+      position:absolute;
+      left:0;
+      top:0;
+      font-size:18px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      line-height:1.5em;
+    }
   `,
   bg02:styled.div`
-  position: absolute;
-  right: 60px;
-  bottom: 15px;
+    position: absolute;
+    right: 60px;
+    bottom: 15px;
+
+    @media only screen and (max-width: 1059px) {
+      display: none;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      position:static;
+      margin:0 auto;
+    }
   `,
 };
 
 const C = {
   wrap: styled.div`
     margin-top: 60px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 50px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
   sbody: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 60px;
+    }
   `,
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+    }
   `,
   itemTitle: styled.h5`
     font-size: 18px;
     font-weight: bold;
     line-height: 1.2em;
     margin-left: 10px;
+
+    @media only screen and (max-width: 767px) { 
+      margin-left: 0;
+      font-size: 14px;
+    }
   `,
+  
   linkTitle: styled.a`
-  font-size: 16px;
-  font-weight: bold;
-  color: ${BLUE1};
-  line-height: 36px;
-  cursor: pointer;
-  box-shadow: inset 0 -1.5px 0 ${BLUE1};
-}
-`,
+    font-size: 18px;
+    font-weight: bold;
+    color: ${BLUE1};
+    line-height: 36px;
+    cursor: pointer;
+    box-shadow: inset 0 -1.5px 0 ${BLUE1};
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      line-height:1.5em;
+    }
+  `,
+
   mt30:styled.div`
-  margin-top: 30px;
-      .flex{
-        display: flex;
-        align-items: center;
-        padding-bottom: 25px;
-        &:last-child{
-          padding: 0;
-        }
+    margin-top: 30px;
+    .flex{
+      display: flex;
+      align-items: center;
+      padding-bottom: 25px;
+      &:last-child{
+        padding: 0;
       }
+    }
+    .bg01{
+      background: url(${AirplaneBg});
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    .bg02{
+      background: url(${WolrdBg});
+      background-size: 100%;
+      background-repeat: no-repeat;
+      background-position: center bottom;
+    }
+
+    @media only screen and (max-width: 1059px) { 
       .bg01{
-        background: url(${AirplaneBg});
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: center;
+          background:none;
       }
       .bg02{
-        background: url(${WolrdBg});
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: center bottom;
+        background:none;
       }
+    }
 
-  `,
-  flex:styled.div`
-  display: flex;
-  align-items: center;
-      .pd52{
-        padding:52px 0;
+    @media only screen and (max-width: 767px) { 
+      .flex{
+        display:block;
+        position:relative;
+        padding-left:20px;
+        &:last-child{
+          padding-left:20px;
+        }
       }
+    }
+  `,
+
+  flex:styled.div`
+    display: flex;
+    align-items: center;
+
+    .pd52{
+      padding: 52px 0;
+      width: calc( 100% - 160px );
+    }
+
+    @media only screen and (max-width: 767px) { 
+      display:block;
+
+      .pd52{
+        width:calc( 100% - 40px );
+        margin-left:20px !important;
+        padding:20px 0;
+
+        li{
+          margin-top:20px !important;
+
+          &:first-child{
+            margin-top:0 !important;
+          }
+        }
+      }      
+    }
   `,
 
   p: styled.p`
@@ -289,56 +387,92 @@ const C = {
   `,
 
   itemText: styled.p`
-  font-size: 16px;
-  line-height: 1.8;
-  display: inline-block;
-  :hover{
-    color:${ORANGE2};
-  }
-`,
+    font-size: 18px;
+    line-height: 1.8;
+    display: inline-block;
+    &:hover{
+      color:${ORANGE2};
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
+  `,
+
   note: styled.p`
     padding: 0 10px 0 15px;
     position: relative;
-    font-size: 15px;
+    font-size: 18px;
     color: ${DARK_GRAY1};
-    line-height: 36px;
+    line-height: 1.5em;
 
     &.str{
-      font-size: 16px;
+      padding-right: 180px;
     }
 
     &.point{
       line-height: 22px;
     }
+    .line{
+      content: "";
+      width: 1px;
+      height: 50%;
+      top: 5px;
+      right: 0;
+      text-indent: -9999px;
+      display: flex;
+      position: absolute;
+      background-color: #dddddd;
+    }
+    .blue {
+      color: ${BLUE1};
+    }
+
+    @media only screen and (max-width: 1059px) {
+      padding: 0;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+
+      &.str{
+        padding: 0;
+        font-size: 14px;
+      }
       .line{
-        content: "";
-        width: 1px;
-        height: 50%;
-        top: 5px;
-        right: 0;
-        text-indent: -9999px;
-        display: flex;
-        position: absolute;
-        background-color: #dddddd;
+        display:none;
       }
-      .blue {
-        color: ${BLUE1};
-      }
-    
+    }
   `,
   noteSubText:styled.p`
   padding-right: 0;
   padding-left: 10px;
+  @media only screen and (max-width: 767px) { 
+    line-height:1.5em;
+    font-size:14px;
+    padding:0;
+  }
   `,
-bold: styled.span`
-  font-weight: bold;
-`,
+  bold: styled.span`
+    font-weight: bold;
+  `,
   igr: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
   emphasis:styled.p`
     font-size:20px;
     color: ${ORANGE1};
+    @media only screen and (max-width: 767px) { 
+      font-size:16px;
+      position:absolute;
+      left:0;
+      top:2px;
+    }
   `,
   ul:styled.ul`
   .mt20{
@@ -348,6 +482,7 @@ bold: styled.span`
   li: styled.li`
     padding-left: 10px;
     position: relative;
+    font-size: 18px;
     line-height: 36px;
       &::before{
         content:"";
@@ -364,36 +499,51 @@ bold: styled.span`
       &:first-child{
         margin: 0;
       }
-
+    @media only screen and (max-width: 767px) { 
+      font-size:14px;
+      line-height:1.5em;
+      &:before{
+        top:9px;
+      }
+    }
   `,
-bannerBox01:styled.div`
-  height: 182px;
-  margin-top: 30px;
-  border: 1px solid ${LIGHT_GRAY6};
-  border-radius: 12px;
-  background-image: url(${MoneyBg});
-  background-size: 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-`,
-bannerBox02:styled.div`
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  position: relative;
-  border: 1px solid ${LIGHT_GRAY6};
-  border-radius: 12px;
-`,
-bannerBox:styled.div`
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  position: relative;
-  border: 1px solid ${LIGHT_GRAY6};
-  border-radius: 12px;
-`,
-bannerDiv:styled.div`
-    width: 1050px;
+  bannerBox01:styled.div`
+    height: auto;
+    margin-top: 30px;
+    border: 1px solid ${LIGHT_GRAY6};
+    border-radius: 12px;
+    background-image: url(${MoneyBg});
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    @media only screen and (max-width: 1059px) { 
+      height: auto;
+    }
+    @media only screen and (max-width: 767px) { 
+      background-image: none;
+    }
+  `,
+  bannerBox02:styled.div`
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    border: 1px solid ${LIGHT_GRAY6};
+    border-radius: 12px;
+    @media only screen and (max-width: 767px) { 
+      display:block;
+    }
+  `,
+  bannerBox:styled.div`
+    width: 100%;
+    margin-top: 30px;
+    display: flex;
+    position: relative;
+    border: 1px solid ${LIGHT_GRAY6};
+    border-radius: 12px;
+  `,
+  bannerDiv:styled.div`
+    max-width: 1050px;
     margin: 45px 30px;
     display: flex;
 
@@ -405,29 +555,100 @@ bannerDiv:styled.div`
     .mb7{
       margin-bottom: 7px;
     }
-`,
+    @media only screen and (max-width: 1059px) { 
+      display:block;
+      margin: 30px;
 
-bannerContent01:styled.div`
+      .addIcon{
+        margin:0 auto 20px auto;
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      margin: 20px;
+
+      .addIcon svg {
+        width: 70px;
+        height: 70px;
+      }
+    }
+  `,
+
+  bannerContent01:styled.div`
     width: 45%;
     padding-right: 35px;
     display: flex;
-`,
-bannerContent02:styled.div`
+    &>div{
+        text-align:center;
+      }
+    @media only screen and (max-width: 1059px) { 
+      width: 100%;
+      padding-right:0;
+    }
+    @media only screen and (max-width: 767px) { 
+      svg {
+        width: 35px;
+        height: 35px;
+      }    
+    }
+    @media only screen and (max-width: 479px) {
+      flex-direction:column;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      &>div{
+        text-align:center;
+      }
+    }
+  `,
+  bannerContent02:styled.div`
     width: 55%;
     padding-left: 25px;
     display: flex;
     position: relative;
+
+    &::before{
+      content:"";
+      width: 1px;
+      height: 80%;
+      top: 8px;
+      left: 0;
+      text-indent: -9999px;
+      display: inline-block;
+      position: absolute;
+      background-color: ${LIGHT_GRAY6};
+    }
+
+    &>div{
+      text-align:center;
+    }
+
+    @media only screen and (max-width: 1059px) { 
+      width: 100%;
+      margin-top:40px;
+      padding-left:0;
+
       &::before{
-        content:"";
-        width: 1px;
-        height: 80%;
-        top: 8px;
-        left: 0;
-        text-indent: -9999px;
-        display: inline-block;
-        position: absolute;
-        background-color: ${LIGHT_GRAY6};
+        display:none
       }
-`,
+    }
+
+    @media only screen and (max-width: 767px) { 
+      svg {
+        width: 35px;
+        height: 35px;
+      }
+    }
+
+    @media only screen and (max-width: 479px) {
+      flex-direction:column;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+
+      &>div{
+        text-align:center;
+      }
+    }
+  `,
 }
 export default TabContent;

@@ -13,7 +13,6 @@ import {
   ORANGE2,
 } from '@airpremia/cdk/styles/colors';
 import Members from 'public/images/premiaMembers/grade/membersinfo.png';
-import Why from 'public/images/premiaMembers/grade/why.png';
 import Caution from 'public/images/support/ico_caution.svg';
 
 
@@ -106,25 +105,6 @@ function TabContentBenefit({currIdxCont}: IProps) {
             </C.content>
           </C.sb>
         </C.sbody>
-        <C.sbody>
-          <C.bannerBox03>
-            <C.bancon>
-              <C.conltxt>
-                <C.titlecon>WHY</C.titlecon>
-                <C.contitle>프레미아 멤버스가 특별한 이유</C.contitle>
-                <C.description>에어프레미아 상용 고객에게 다양한 혜택을<br></br>드리기 위해 프레미아 멤버스 프로그램을<br></br>운영합니다. 에어프레미아 회원이라면 누구나<br></br>이용할 수 있습니다. 등급에 따른 다양한<br></br>혜택과 승급 기준을 확인해보세요. </C.description>
-              </C.conltxt>
-              <C.conrtxt>
-                <C.dt><C.det>01</C.det> 직관적인 포인트 적립이 가능합니다.</C.dt>
-                <C.dd>복잡하고 어려운 항공사 마일리지 프로그램은 이제 그만.<br></br>결제한 항공 운임의 1%가 기본으로 적립됩니다. 회원 등급이 높다면 적립률도 높아집니다.</C.dd>
-                <C.dt><C.det>02</C.det> 편리한 포인트 사용이 가능합니다.</C.dt>
-                <C.dd>적립한 포인트는 언제든지 사용할 수 있습니다.<br></br>항공권뿐만 아니라 부가 서비스와 캐빈 업그레이드까지 포인트로 구매가 가능합니다.</C.dd>
-                <C.dt><C.det>03</C.det> 자주 탑승할수록 더욱 큰 혜택을 드립니다.</C.dt>
-                <C.dd>직전 24개월동안 누적 적립한 포인트를 기준으로 회원 등급을 결정합니다.<br></br>회원 등급이 높아질수록 함께 높아지는 포인트 적립률과 다양한 혜택을 누려보세요.</C.dd>
-              </C.conrtxt>
-            </C.bancon>
-          </C.bannerBox03>
-        </C.sbody>
       </C.wrap>
     )
   } else if ( currIdxCont === 1 ) {
@@ -134,7 +114,7 @@ function TabContentBenefit({currIdxCont}: IProps) {
         <C.title>프레미아포인트 적립</C.title>
         <C.tmi>
           <C.ul>
-            <C.li>모든 GOLD 회원에게 <C.blue>항공 운임 1,000KRW 당 14 포인트</C.blue> 비율로 프레미안포인트를 적립해드립니다<br></br>  프레미아포인트 적립에 대한 자세한 정보가 궁금하시면 <C.linkTitle><a href="" target="_blank">여기</a></C.linkTitle>를 클릭해주세요. </C.li>
+            <C.li>모든 GOLD 회원에게 <C.blue>항공 운임 1,000KRW 당 14 포인트</C.blue> 비율로 프레미안포인트를 적립해드립니다.<br></br>  프레미아포인트 적립에 대한 자세한 정보가 궁금하시면 <C.linkTitle><a href="" target="_blank">여기</a></C.linkTitle>를 클릭해주세요. </C.li>
             <C.li>적립한 프레미안포인트는 항공 운임, 유상 좌석, 사전 수하물, 좌석 업그레이드 구매 시 사용이 가능합니다.<br></br>프레미아포인트 사용에 대한 자세한 정보가 궁금하시면 <C.linkTitle><a href="" target="_blank">여기</a></C.linkTitle>를 클릭해주세요. </C.li>
           </C.ul>
         </C.tmi>
@@ -147,7 +127,7 @@ function TabContentBenefit({currIdxCont}: IProps) {
               <C.tbul>
                 <C.ul>
                   <C.li>기본 제공되는 위탁 수하물 허용량에 추가로 23kg 이내 수하물 1개를 무상으로 위탁하실 수 있습니다.</C.li>
-                  <C.li>본 쿠폰은 사전구매 수하물 구매 시 사용하실 수 있는 온라인 결제 전용 쿠폰으로써 공항 현장에서 발생하는<br></br>초과 수하물 요금에 대해서는 사용이 불가합니다.</C.li>
+                  <C.li>본 쿠폰은 사전구매 수하물 구매 시 사용하실 수 있는 온라인 결제 전용 쿠폰으로써 공항 현장에서 발생하는 초과 수하물 요금에 대해서는 사용이 불가합니다.</C.li>
                   <C.li>본 쿠폰은 발급일로부터 2년 동안 유효합니다. 유효 기간이 지난 쿠폰은 자동으로 소멸됩니다.</C.li>
                   <C.li>사전 구매 수하물 제도를 운영하는 국제선 항공권에만 사용이 가능합니다.</C.li>
                   <C.li>쿠폰은 한 번 탑승 시 1개만 사용 가능합니다. (한 번 탑승 시 여러 장 중복 사용 불가)</C.li>
@@ -234,25 +214,6 @@ function TabContentBenefit({currIdxCont}: IProps) {
             </C.content>
           </C.sb>
         </C.sbody>
-        <C.sbody>
-          <C.bannerBox03>
-            <C.bancon>
-              <C.conltxt>
-                <C.titlecon>WHY</C.titlecon>
-                <C.contitle>프레미아 멤버스가 특별한 이유</C.contitle>
-                <C.description>에어프레미아 상용 고객에게 다양한 혜택을<br></br>드리기 위해 프레미아 멤버스 프로그램을<br></br>운영합니다. 에어프레미아 회원이라면 누구나<br></br>이용할 수 있습니다. 등급에 따른 다양한<br></br>혜택과 승급 기준을 확인해보세요. </C.description>
-              </C.conltxt>
-              <C.conrtxt>
-                <C.dt><C.det>01</C.det> 직관적인 포인트 적립이 가능합니다.</C.dt>
-                <C.dd>복잡하고 어려운 항공사 마일리지 프로그램은 이제 그만.<br></br>결제한 항공 운임의 1%가 기본으로 적립됩니다. 회원 등급이 높다면 적립률도 높아집니다.</C.dd>
-                <C.dt><C.det>02</C.det> 편리한 포인트 사용이 가능합니다.</C.dt>
-                <C.dd>적립한 포인트는 언제든지 사용할 수 있습니다.<br></br>항공권뿐만 아니라 부가 서비스와 캐빈 업그레이드까지 포인트로 구매가 가능합니다.</C.dd>
-                <C.dt><C.det>03</C.det> 자주 탑승할수록 더욱 큰 혜택을 드립니다.</C.dt>
-                <C.dd>직전 24개월동안 누적 적립한 포인트를 기준으로 회원 등급을 결정합니다.<br></br>회원 등급이 높아질수록 함께 높아지는 포인트 적립률과 다양한 혜택을 누려보세요.</C.dd>
-              </C.conrtxt>
-            </C.bancon>
-          </C.bannerBox03>
-        </C.sbody>
       </C.wrap>
     )
   } else {
@@ -275,7 +236,7 @@ function TabContentBenefit({currIdxCont}: IProps) {
               <C.tbul>
                 <C.ul>
                   <C.li>기본 제공되는 위탁 수하물 허용량에 추가로 23kg 이내 수하물 1개를 무상으로 위탁하실 수 있습니다.</C.li>
-                  <C.li>본 쿠폰은 사전구매 수하물 구매 시 사용하실 수 있는 온라인 결제 전용 쿠폰으로써 공항 현장에서 발생하는<br></br>초과 수하물 요금에 대해서는 사용이 불가합니다.</C.li>
+                  <C.li>본 쿠폰은 사전구매 수하물 구매 시 사용하실 수 있는 온라인 결제 전용 쿠폰으로써 공항 현장에서 발생하는 초과 수하물 요금에 대해서는 사용이 불가합니다.</C.li>
                   <C.li>본 쿠폰은 발급일로부터 2년 동안 유효합니다. 유효 기간이 지난 쿠폰은 자동으로 소멸됩니다.</C.li>
                   <C.li>사전 구매 수하물 제도를 운영하는 국제선 항공권에만 사용이 가능합니다.</C.li>
                   <C.li>쿠폰은 한 번 탑승 시 1개만 사용 가능합니다. (한 번 탑승 시 여러 장 중복 사용 불가)</C.li>
@@ -293,7 +254,7 @@ function TabContentBenefit({currIdxCont}: IProps) {
               <C.title>좌석 무상 지정 쿠폰 사용 조건</C.title>
               <C.tbul>
                 <C.ul>
-                  <C.li>본 쿠폰은 유상 좌석 지정 시 사용할 수 있는 쿠폰으로써 온라인 사전 좌석 지정과 현장 좌석 지정 시 모두<br></br>사용이 가능합니다.</C.li>
+                  <C.li>본 쿠폰은 유상 좌석 지정 시 사용할 수 있는 쿠폰으로써 온라인 사전 좌석 지정과 현장 좌석 지정 시 모두 사용이 가능합니다.</C.li>
                   <C.li>본 쿠폰은 발급일로부터 2년 동안 유효합니다. 유효 기간이 지난 쿠폰은 자동으로 소멸됩니다. </C.li>
                   <C.li>본 쿠폰은 회원 본인의 좌석 지정 시에만 사용이 가능합니다.</C.li>
                   <C.li>공항 및 항공기 상황에 따라 부득이하게 사용이 불가한 경우가 발생할 수 있습니다. </C.li>
@@ -404,25 +365,6 @@ function TabContentBenefit({currIdxCont}: IProps) {
             </C.content>
           </C.sb>
         </C.sbody>
-        <C.sbody>
-          <C.bannerBox03>
-            <C.bancon>
-              <C.conltxt>
-                <C.titlecon>WHY</C.titlecon>
-                <C.contitle>프레미아 멤버스가 특별한 이유</C.contitle>
-                <C.description>에어프레미아 상용 고객에게 다양한 혜택을<br></br>드리기 위해 프레미아 멤버스 프로그램을<br></br>운영합니다. 에어프레미아 회원이라면 누구나<br></br>이용할 수 있습니다. 등급에 따른 다양한<br></br>혜택과 승급 기준을 확인해보세요. </C.description>
-              </C.conltxt>
-              <C.conrtxt>
-                <C.dt><C.det>01</C.det> 직관적인 포인트 적립이 가능합니다.</C.dt>
-                <C.dd>복잡하고 어려운 항공사 마일리지 프로그램은 이제 그만.<br></br>결제한 항공 운임의 1%가 기본으로 적립됩니다. 회원 등급이 높다면 적립률도 높아집니다.</C.dd>
-                <C.dt><C.det>02</C.det> 편리한 포인트 사용이 가능합니다.</C.dt>
-                <C.dd>적립한 포인트는 언제든지 사용할 수 있습니다.<br></br>항공권뿐만 아니라 부가 서비스와 캐빈 업그레이드까지 포인트로 구매가 가능합니다.</C.dd>
-                <C.dt><C.det>03</C.det> 자주 탑승할수록 더욱 큰 혜택을 드립니다.</C.dt>
-                <C.dd>직전 24개월동안 누적 적립한 포인트를 기준으로 회원 등급을 결정합니다.<br></br>회원 등급이 높아질수록 함께 높아지는 포인트 적립률과 다양한 혜택을 누려보세요.</C.dd>
-              </C.conrtxt>
-            </C.bancon>
-          </C.bannerBox03>
-        </C.sbody>
       </C.wrap>
     )
   }
@@ -433,9 +375,21 @@ const C = {
   ComTitles:styled.div`
   font-size:36px;
   font-weight: bold;
+  @media only screen and (max-width: 1059px) { 
+    font-size:30px;
+  }
+  @media only screen and (max-width: 767px) { 
+    font-size:26px;
+  }
   `,
   wrap: styled.div`
     margin: 30px 0px 60px 0px;
+    @media only screen and (max-width: 1059px) { 
+      margin: 20px 0px 50px 0px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin: 10px 0px 40px 0px;
+    }
   `,
   Cont:styled.p`
     margin-bottom: 60px;
@@ -450,6 +404,12 @@ const C = {
   `,
   sbody: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 60px;
+    }
   `,
   conmar: styled.p`
     margin-top: 20px;
@@ -458,25 +418,53 @@ const C = {
     font-size: 48px;
     font-family: 'premiaOTF';
     color: ${ORANGE2};
+    @media only screen and (max-width: 1059px) { 
+      font-size: 40px;
+    }
   `,
   titleMain: styled.h3`
     font-size: 30px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 26px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 22px;
+    }
   `,
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+      line-height:1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+    }
   `,
   contitle: styled.h4`
     font-size: 22px;
     font-weight: bold;
     margin-top: 15px;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+    }
   `,
   content: styled.div`
     padding-top: 12px;
   `,
   sb: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
   conltxt: styled.div`
     float: left;
@@ -485,48 +473,100 @@ const C = {
     padding-top: 60px;
     padding-right: 160px;
     float: right;
+    @media only screen and (max-width: 767px) { 
+      padding-top: 40px;
+      padding-right: 0px;
+    }
   `,
   p: styled.p`
     margin-top: 20px;
     margin-bottom: 15px;
+    font-size: 18px;
     line-height: 1.8;
-      &:first-child{
-        margin-top: 20px;
-      }
-      &:last-child{
-        margin-bottom: 0px;
-      }
+
+    &:first-child{
+      margin-top: 20px;
+    }
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
   note: styled.p`
-    font-size: 15px;
+    font-size: 18px;
     color: ${DARK_GRAY1};
     font-weight: bold;
     margin-bottom: 15px;
     display: flex;
     justify-align: center;
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
   description: styled.p`
     font-size: 14px;
     color: ${DARK_GRAY1};
     margin-top: 90px;
     line-height: 28px;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 18px;
+      margin-top: 60px;
+      line-height: 1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      margin-top: 40px;
+    }
   `,
   det: styled.span`
     color: ${ORANGE2};
     font-size: 24px;
     font-family: 'premiaOTF';
     line-height: 28px;
+    position:absolute;
+    left:0;
+    top:0px;
     margin-right: 14px;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 22px;
+      line-height: 1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 20px;
+      top:-6px;
+    }
   `,
   dt: styled.p`
     font-size: 16px;
     line-height: 28px;
     font-weight: bold;
+    position:relative;
+    padding-left:30px;
+    margin-top:20px;
+    &:first-child{
+      margin-top:0
+    }
+    @media only screen and (max-width: 1059px) { 
+      line-height: 1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
   dd: styled.p`
     font-size: 16px;
     line-height: 28px;
-    margin-left: 40px;
+    margin-left: 30px;
+    @media only screen and (max-width: 1059px) { 
+      line-height: 1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
   bold: styled.span`
     font-weight: bold;
@@ -541,7 +581,7 @@ const C = {
     text-align: center;
   `,
   ntg: styled.p`
-    font-size: 14px;
+    font-size: 18px;
     color: ${LIGHT_GRAY8};
     padding-left: 10px;
     line-height: 28px;
@@ -555,6 +595,12 @@ const C = {
     color: ${LIGHT_GRAY8};
     display: block;
     position: absolute;
+    }
+    @media only screen and (max-width: 1059px) { 
+      line-height: 1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
     }
   `,
   desc: styled.p`
@@ -570,36 +616,64 @@ const C = {
   `,
   tbul:styled.p`
     margin-top: 20px;
+    padding-right: 420px;
+
+    @media only screen and (max-width: 1059px) {
+      padding-right: 0;
+    }
+
   `,
   ul:styled.ul`
     
   `,
   li: styled.li`
     padding-left: 10px;
+    font-size: 18px;
     line-height: 36px;
     position: relative;
+
+    &::before{
+      content:"";
+      width: 4px;
+      height: 4px;
+      top: 15px;
+      left: 0px;
+      text-indent: -9999px;
+      display: block;
+      position: absolute;
+      background-color: ${DARK_GRAY1};
+      border-radius: 50%
+    }
+
+    &:first-child{
+      margin-top: 0px;
+    }
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 1059px) { 
+      line-height: 1.5em;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+
       &::before{
-        content:"";
-        width: 4px;
-        height: 4px;
-        top: 15px;
-        left: 0px;
-        text-indent: -9999px;
-        display: block;
-        position: absolute;
-        background-color: ${DARK_GRAY1};
-        border-radius: 50%
+        top: 7px;
       }
-      &:first-child{
-        margin-top: 0px;
-      }
-      &:last-child{
-        margin-bottom: 0px;
-      }
+    }  
   `,
   lp:styled.p`
     margin-left: 10px;
     line-height: 36px;
+    @media only screen and (max-width: 767px) { 
+      font-size:14px;
+      &:before{
+        font-size:14px;
+      }
+    }
   `,
   left:styled.div`
   padding-right:80px;
@@ -614,14 +688,10 @@ bannerBox02:styled.div`
   background-image: url(${Members});
   background-repeat: no-repeat;
   background-position: right 50px top 100px;
-`,
-bannerBox03:styled.div`
-  height: 382px;
-  border-radius: 12px;
-  background-color: rgba(232,221,213,0.5);
-  background-image: url(${Why});
-  background-repeat: no-repeat;
-  background-position: right 30px center;
+
+  @media only screen and (max-width: 1059px) { 
+    background-image: none;
+  }
 `,
 bannerBox04:styled.div`
   margin-top: 30px;
@@ -630,6 +700,15 @@ bannerBox04:styled.div`
   background-image: url(${Members});
   background-repeat: no-repeat;
   background-position: right 50px top 100px;
+
+  @media only screen and (max-width: 1059px) { 
+    background-image: none;
+  }
+
+  @media only screen and (max-width: 767px) { 
+    background-position: right bottom;
+    height: auto;
+  }
 `,
 bannerDiv:styled.div`
   width: 995px;
@@ -670,99 +749,122 @@ bancon:styled.div`
     display: block;
     clear: both;
   }
+  @media only screen and (max-width: 1059px) { 
+    padding: 30px;
+  }
+  @media only screen and (max-width: 767px) { 
+    padding: 20px;
+  }
 `,
 bcol:styled.p`
   background-color: ${LIGHT_GRAY1};
 `,
 linkTitle: styled.a`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: ${BLUE1};
   line-height: 36px;
   cursor: pointer;
   box-shadow: inset 0 -1.5px 0 ${BLUE1};
+  @media only screen and (max-width: 767px) { 
+    font-size: 14px;
+  }
 `,
 }
 const T = {
   table: styled.div`
     .taL,
     .taL{
-    text-align: left;
+      text-align: left;
     }
+
     .taR,
     .taR{
-    text-align: right;
+      text-align: right;
     }
+
     table {
-    width: 100%;
-    th,
-    thead td,
-    td strong {
-      color: ${DARK_GRAY1};
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 1.6;
-      letter-spacing: -0.3px;
-      text-align: center;
-    }
-    td strong {
-      margin-top: 30px;
-      display: block;
-      &:first-of-type {
-      margin-top: 0;
+      width: 100%;
+    
+      th,
+      thead td,
+      td strong {
+        color: ${DARK_GRAY1};
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 1.6;
+        letter-spacing: -0.3px;
+        text-align: center;
       }
-    }
-    td{
-      font-size: 14px;
-      font-weight: 400;
-      line-height: 1.9;
-      letter-spacing: -0.3px;
-      text-align: center;
-      vertical-align: middle;
-      position: relative;
-      &>p {
-      margin-top: 18px;
+      td strong {
+        margin-top: 30px;
+        display: block;
+        &:first-of-type {
+        margin-top: 0;
+        }
       }
-      &>p:first-of-type {
-      margin-top: 0;
-      }
-      &.bcol {
-        background-color: ${LIGHT_GRAY1};
-      }
-      .txt {
-      margin-top: 10px;
-      p {
-          position: relative;
-          color: ${LIGHT_GRAY8};
-          &.iLine{
-          padding-left: 8px;
-          }
-          &.iLine::after{
-          content: "-";
-          position: absolute;
-          left: 0;
-          top: 0;
-          display: block;
+      td{
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.9;
+        letter-spacing: -0.3px;
+        text-align: center;
+        vertical-align: middle;
+        position: relative;
+        &>p {
+        margin-top: 18px;
+        }
+        &>p:first-of-type {
+        margin-top: 0;
+        }
+        &.bcol {
+          background-color: ${LIGHT_GRAY1};
+        }
+        .txt {
+        margin-top: 10px;
+        p {
+            position: relative;
+            color: ${LIGHT_GRAY8};
+            &.iLine{
+            padding-left: 8px;
+            }
+            &.iLine::after{
+            content: "-";
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            }
           }
         }
       }
+      th:first-child,      
+      td:first-child{
+        text-align: left;
+        vertical-align: middle;
+      }
+      thead th,
+      thead td{
+        padding: 18px 0;
+        border-bottom: 1px solid ${DARK_GRAY1};
+      }
+      tbody th,
+      tbody td{
+        padding: 18px 0;
+        border-bottom: 1px solid ${LIGHT_GRAY5};
+      }
     }
-    th:first-child,      
-    td:first-child{
-      text-align: left;
-      vertical-align: middle;
+    @media only screen and (max-width: 767px) { 
+      table{
+        th,
+        thead td,
+        td strong,
+        td {
+          font-size:13px;
+          word-break:keep-all;
+        }
+      }
     }
-    thead th,
-    thead td{
-      padding: 18px 0;
-      border-bottom: 1px solid ${DARK_GRAY1};
-    }
-    tbody th,
-    tbody td{
-      padding: 18px 0;
-      border-bottom: 1px solid ${LIGHT_GRAY5};
-    }
-  }
   `,
 }
 export default TabContentBenefit;

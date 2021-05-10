@@ -49,6 +49,9 @@ const S = {
     background-color: ${prop('backgroundColor',WHITE1)};
     border: 1px solid ${BLUE1};
     border-radius: 6px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
     &:hover{
       background-color: ${PALE_BLUE7};
@@ -86,6 +89,11 @@ const S = {
         display: inline-block;
         background: url(${Linkblue}) no-repeat;
       }
+    }
+    @media only screen and (max-width: 767px) { 
+        a{
+            font-size:14px;
+        }
     }
   `,
 }

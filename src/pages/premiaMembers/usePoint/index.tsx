@@ -149,7 +149,7 @@ function UsePoint(){
           <T.wrap>
             <T.title>좌석 업그레이드를 위한 포인트 공제표</T.title>
             <T.body>
-              <table>
+              <table className="type01">
                 <colgroup>
                   <col width="20%"></col>
                   <col width="20%"></col>
@@ -199,15 +199,45 @@ function UsePoint(){
 const C = {
   wrap: styled.div`
     margin-top: 80px;
-    padding-top: 60px;
-    border-top: 2px solid ${DARK_GRAY1};
+    max-width:1280px;
+
+    h4 {      
+      padding-top: 60px;
+      border-top: 2px solid ${DARK_GRAY1};
+    }
+
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 60px;
+      padding-top: 40px;
+      margin-left:25px !important;
+      margin-right:25px !important;
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+      padding-top: 20px;
+    }
   `,
   sbody: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 60px;
+    }
   `,
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+    }
   `,
   mt30:styled.div`
     margin-top: 30px;
@@ -222,10 +252,19 @@ const C = {
   `,
   ul:styled.ul`
   `,
+
   li: styled.li`
     position: relative;
+    font-size: 18px;
     line-height: 36px;
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      font-weight: 300;
+      line-height:1.5em;
+    }
   `,
+
   btnWrap: styled.div`
     margin-top: 10px;
   `,
@@ -237,9 +276,13 @@ const T = {
   `,
   title: styled.div`
     margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 36px;
     font-weight: 600;
+    @media only screen and (max-width: 767px) { 
+      font-size: 16px;
+    }
+    
   `,
   body: styled.div`
 
@@ -279,7 +322,7 @@ const T = {
       th,
       td{
         padding: 15px 2px;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 28px;
         letter-spacing: -0.3px;
         text-align: center;
@@ -300,6 +343,42 @@ const T = {
       th:last-child,
       td:last-child{
         border-right: 1px solid ${LIGHT_GRAY6};
+      }
+    }
+    @media only screen and (max-width: 1059px) { 
+      table.type01{
+        th{
+          .text{
+            width:100% !important;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            text-align:center !important;
+            line-height:1.5em;
+            height:54px;
+          }
+          .icon_flight{
+            margin:0 !important;
+            display:block;
+            width:100% !important;
+            text-align:center !important;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      table{
+        th,
+        td{
+          font-size:12px;
+          .text{
+            font-size:12px;
+            width:calc( 50% - 14px ) !important;
+          }
+          .icon_flight{
+            margin:0 5px !important;
+          }
+        } 
       }
     }
   `,

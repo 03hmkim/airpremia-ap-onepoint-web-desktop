@@ -10,10 +10,8 @@ import {
   LIGHT_GRAY6,
   LIGHT_GRAY8,
   BLUE1,
-  ORANGE2,
 } from '@airpremia/cdk/styles/colors';
 import Members from 'public/images/premiaMembers/grade/membersinfo.png';
-import Why from 'public/images/premiaMembers/grade/why.png';
 import Caution from 'public/images/support/ico_caution.svg';
 
 
@@ -41,7 +39,7 @@ function TabContentMember({currIdxCont}: IProps) {
                   <C.conmar></C.conmar>
                   <C.ul>
                     <C.li><C.blue>직전 24개월 동안 적립한 프레미아포인트</C.blue>를 모두 합하여 계산합니다.</C.li>
-                    <C.li>승급 포인트가 20,000에 도달하는 경우 골드 등급으로 승급되고<br></br>승급 포인트가 70,000에 도달하는 경우 다이아 등급으로 승급됩니다.</C.li>
+                    <C.li>승급 포인트가 20,000에 도달하는 경우 골드 등급으로 승급되고 승급 포인트가 70,000에 도달하는 경우 다이아 등급으로 승급됩니다.</C.li>
                   </C.ul>
                 </C.tmi>
               </C.tbul>
@@ -61,16 +59,16 @@ function TabContentMember({currIdxCont}: IProps) {
           <C.tmi>
             <C.ul>
               <C.li>상위 등급의 승급 조건을 충족하는 회원은 즉시 상위 등급으로 승급</C.li>
-              <C.lp>- 승급 포인트가 20,000에 도달한 블루 회원은 즉시 골드 등급으로 승급</C.lp>
-              <C.lp>- 승급 포인트가 70,000에 도달한 블루 회원, 골드 회원의 경우 즉시 다이아 등급으로 승급</C.lp>
+              <C.lp>승급 포인트가 20,000에 도달한 블루 회원은 즉시 골드 등급으로 승급</C.lp>
+              <C.lp>승급 포인트가 70,000에 도달한 블루 회원, 골드 회원의 경우 즉시 다이아 등급으로 승급</C.lp>
             </C.ul>
           </C.tmi>
           <C.tmi>
             <C.ul>
               <C.li>등급 만료일에 보유한 승급포인트에 따라 기존의 등급이 유지되거나 하위 등급으로 강등</C.li>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 20,000미만인 경우 블루 등급으로 유지 또는 강등</C.lp>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 70,000미만인 경우 골드 등급으로 유지 또는 강등</C.lp>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 70,000이상인 경우 다이아 등급으로 유지</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 20,000미만인 경우 블루 등급으로 유지 또는 강등</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 70,000미만인 경우 골드 등급으로 유지 또는 강등</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 70,000이상인 경우 다이아 등급으로 유지</C.lp>
             </C.ul>
           </C.tmi>
         </C.sbody>
@@ -151,25 +149,6 @@ function TabContentMember({currIdxCont}: IProps) {
             </C.content>
           </C.sb>
         </C.sbody>
-        <C.sbody>
-          <C.bannerBox03>
-            <C.bancon>
-              <C.conltxt>
-                <C.titlecon>WHY</C.titlecon>
-                <C.contitle>프레미아 멤버스가 특별한 이유</C.contitle>
-                <C.description>에어프레미아 상용 고객에게 다양한 혜택을<br></br>드리기 위해 프레미아 멤버스 프로그램을<br></br>운영합니다. 에어프레미아 회원이라면 누구나<br></br>이용할 수 있습니다. 등급에 따른 다양한<br></br>혜택과 승급 기준을 확인해보세요. </C.description>
-              </C.conltxt>
-              <C.conrtxt>
-                <C.dt><C.det>01</C.det> 직관적인 포인트 적립이 가능합니다.</C.dt>
-                <C.dd>복잡하고 어려운 항공사 마일리지 프로그램은 이제 그만.<br></br>결제한 항공 운임의 1%가 기본으로 적립됩니다. 회원 등급이 높다면 적립률도 높아집니다.</C.dd>
-                <C.dt><C.det>02</C.det> 편리한 포인트 사용이 가능합니다.</C.dt>
-                <C.dd>적립한 포인트는 언제든지 사용할 수 있습니다.<br></br>항공권뿐만 아니라 부가 서비스와 캐빈 업그레이드까지 포인트로 구매가 가능합니다.</C.dd>
-                <C.dt><C.det>03</C.det> 자주 탑승할수록 더욱 큰 혜택을 드립니다.</C.dt>
-                <C.dd>직전 24개월동안 누적 적립한 포인트를 기준으로 회원 등급을 결정합니다.<br></br>회원 등급이 높아질수록 함께 높아지는 포인트 적립률과 다양한 혜택을 누려보세요.</C.dd>
-              </C.conrtxt>
-            </C.bancon>
-          </C.bannerBox03>
-        </C.sbody>
       </C.wrap>
     )
   } else if ( currIdxCont === 1 ) {
@@ -195,7 +174,7 @@ function TabContentMember({currIdxCont}: IProps) {
                   <C.conmar></C.conmar>
                   <C.ul>
                     <C.li><C.blue>직전 24개월 동안 적립한 프레미아포인트</C.blue>를 모두 합하여 계산합니다.</C.li>
-                    <C.li>승급 포인트가 20,000에 도달하는 경우 골드 등급으로 승급되고<br></br>승급 포인트가 70,000에 도달하는 경우 다이아 등급으로 즉시 승급됩니다.</C.li>
+                    <C.li>승급 포인트가 20,000에 도달하는 경우 골드 등급으로 승급되고 승급 포인트가 70,000에 도달하는 경우 다이아 등급으로 즉시 승급됩니다.</C.li>
                   </C.ul>
                 </C.tmi>
               </C.tbul>
@@ -215,16 +194,16 @@ function TabContentMember({currIdxCont}: IProps) {
           <C.tmi>
             <C.ul>
               <C.li>상위 등급의 승급 조건을 충족하는 회원은 즉시 상위 등급으로 승급</C.li>
-              <C.lp>- 승급 포인트가 20,000에 도달한 블루 회원은 즉시 골드 등급으로 승급</C.lp>
-              <C.lp>- 승급 포인트가 70,000에 도달한 블루 회원, 골드 회원의 경우 즉시 다이아 등급으로 승급</C.lp>
+              <C.lp>승급 포인트가 20,000에 도달한 블루 회원은 즉시 골드 등급으로 승급</C.lp>
+              <C.lp>승급 포인트가 70,000에 도달한 블루 회원, 골드 회원의 경우 즉시 다이아 등급으로 승급</C.lp>
             </C.ul>
           </C.tmi>
           <C.tmi>
             <C.ul>
               <C.li>등급 만료일에 보유한 승급포인트에 따라 기존의 등급이 유지되거나 하위 등급으로 강등</C.li>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 20,000미만인 경우 블루 등급으로 유지 또는 강등</C.lp>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 70,000미만인 경우 골드 등급으로 유지 또는 강등</C.lp>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 70,000이상인 경우 다이아 등급으로 유지</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 20,000미만인 경우 블루 등급으로 유지 또는 강등</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 70,000미만인 경우 골드 등급으로 유지 또는 강등</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 70,000이상인 경우 다이아 등급으로 유지</C.lp>
             </C.ul>
           </C.tmi>
         </C.sbody>
@@ -305,25 +284,6 @@ function TabContentMember({currIdxCont}: IProps) {
             </C.content>
           </C.sb>
         </C.sbody>
-        <C.sbody>
-          <C.bannerBox03>
-            <C.bancon>
-              <C.conltxt>
-                <C.titlecon>WHY</C.titlecon>
-                <C.contitle>프레미아 멤버스가 특별한 이유</C.contitle>
-                <C.description>에어프레미아 상용 고객에게 다양한 혜택을<br></br>드리기 위해 프레미아 멤버스 프로그램을<br></br>운영합니다. 에어프레미아 회원이라면 누구나<br></br>이용할 수 있습니다. 등급에 따른 다양한<br></br>혜택과 승급 기준을 확인해보세요. </C.description>
-              </C.conltxt>
-              <C.conrtxt>
-                <C.dt><C.det>01</C.det> 직관적인 포인트 적립이 가능합니다.</C.dt>
-                <C.dd>복잡하고 어려운 항공사 마일리지 프로그램은 이제 그만.<br></br>결제한 항공 운임의 1%가 기본으로 적립됩니다. 회원 등급이 높다면 적립률도 높아집니다.</C.dd>
-                <C.dt><C.det>02</C.det> 편리한 포인트 사용이 가능합니다.</C.dt>
-                <C.dd>적립한 포인트는 언제든지 사용할 수 있습니다.<br></br>항공권뿐만 아니라 부가 서비스와 캐빈 업그레이드까지 포인트로 구매가 가능합니다.</C.dd>
-                <C.dt><C.det>03</C.det> 자주 탑승할수록 더욱 큰 혜택을 드립니다.</C.dt>
-                <C.dd>직전 24개월동안 누적 적립한 포인트를 기준으로 회원 등급을 결정합니다.<br></br>회원 등급이 높아질수록 함께 높아지는 포인트 적립률과 다양한 혜택을 누려보세요.</C.dd>
-              </C.conrtxt>
-            </C.bancon>
-          </C.bannerBox03>
-        </C.sbody>
       </C.wrap>
     )
   } else {
@@ -349,7 +309,7 @@ function TabContentMember({currIdxCont}: IProps) {
                   <C.conmar></C.conmar>
                   <C.ul>
                     <C.li><C.blue>직전 24개월 동안 적립한 프레미아포인트</C.blue>를 모두 합하여 계산합니다.</C.li>
-                    <C.li>승급 포인트가 20,000에 도달하는 경우 골드 등급으로 즉시 승급되며, <br></br>승급 포인트가 70,000에 도달하는 경우 다이아 등급으로 즉시 승급됩니다.</C.li>
+                    <C.li>승급 포인트가 20,000에 도달하는 경우 골드 등급으로 즉시 승급되며, 승급 포인트가 70,000에 도달하는 경우 다이아 등급으로 즉시 승급됩니다.</C.li>
                   </C.ul>
                 </C.tmi>
               </C.tbul>
@@ -369,16 +329,16 @@ function TabContentMember({currIdxCont}: IProps) {
           <C.tmi>
             <C.ul>
               <C.li>상위 등급의 승급 조건을 충족하는 회원은 즉시 상위 등급으로 승급</C.li>
-              <C.lp>- 승급 포인트가 20,000에 도달한 블루 회원은 즉시 골드 등급으로 승급</C.lp>
-              <C.lp>- 승급 포인트가 70,000에 도달한 블루 회원, 골드 회원의 경우 즉시 다이아 등급으로 승급</C.lp>
+              <C.lp>승급 포인트가 20,000에 도달한 블루 회원은 즉시 골드 등급으로 승급</C.lp>
+              <C.lp>승급 포인트가 70,000에 도달한 블루 회원, 골드 회원의 경우 즉시 다이아 등급으로 승급</C.lp>
             </C.ul>
           </C.tmi>
           <C.tmi>
             <C.ul>
               <C.li>등급 만료일에 보유한 승급포인트에 따라 기존의 등급이 유지되거나 하위 등급으로 강등</C.li>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 20,000미만인 경우 블루 등급으로 유지 또는 강등</C.lp>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 70,000미만인 경우 골드 등급으로 유지 또는 강등</C.lp>
-              <C.lp>- 등급 만료일에 보유한 승급포인트가 70,000이상인 경우 다이아 등급으로 유지</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 20,000미만인 경우 블루 등급으로 유지 또는 강등</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 70,000미만인 경우 골드 등급으로 유지 또는 강등</C.lp>
+              <C.lp>등급 만료일에 보유한 승급포인트가 70,000이상인 경우 다이아 등급으로 유지</C.lp>
             </C.ul>
           </C.tmi>
         </C.sbody>
@@ -459,25 +419,6 @@ function TabContentMember({currIdxCont}: IProps) {
             </C.content>
           </C.sb>
         </C.sbody>
-        <C.sbody>
-          <C.bannerBox03>
-            <C.bancon>
-              <C.conltxt>
-                <C.titlecon>WHY</C.titlecon>
-                <C.contitle>프레미아 멤버스가 특별한 이유</C.contitle>
-                <C.description>에어프레미아 상용 고객에게 다양한 혜택을<br></br>드리기 위해 프레미아 멤버스 프로그램을<br></br>운영합니다. 에어프레미아 회원이라면 누구나<br></br>이용할 수 있습니다. 등급에 따른 다양한<br></br>혜택과 승급 기준을 확인해보세요. </C.description>
-              </C.conltxt>
-              <C.conrtxt>
-                <C.dt><C.det>01</C.det> 직관적인 포인트 적립이 가능합니다.</C.dt>
-                <C.dd>복잡하고 어려운 항공사 마일리지 프로그램은 이제 그만.<br></br>결제한 항공 운임의 1%가 기본으로 적립됩니다. 회원 등급이 높다면 적립률도 높아집니다.</C.dd>
-                <C.dt><C.det>02</C.det> 편리한 포인트 사용이 가능합니다.</C.dt>
-                <C.dd>적립한 포인트는 언제든지 사용할 수 있습니다.<br></br>항공권뿐만 아니라 부가 서비스와 캐빈 업그레이드까지 포인트로 구매가 가능합니다.</C.dd>
-                <C.dt><C.det>03</C.det> 자주 탑승할수록 더욱 큰 혜택을 드립니다.</C.dt>
-                <C.dd>직전 24개월동안 누적 적립한 포인트를 기준으로 회원 등급을 결정합니다.<br></br>회원 등급이 높아질수록 함께 높아지는 포인트 적립률과 다양한 혜택을 누려보세요.</C.dd>
-              </C.conrtxt>
-            </C.bancon>
-          </C.bannerBox03>
-        </C.sbody>
       </C.wrap>
     )
   }
@@ -485,12 +426,30 @@ function TabContentMember({currIdxCont}: IProps) {
 
 
 const C = {
-  ComTitles:styled.div`
-  font-size:36px;
-  font-weight: bold;
+  bancon:styled.div`
+    padding: 50px 40px;
+
+    &::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    @media only screen and (max-width: 1059px) { 
+      padding: 30px;
+    }
+    @media only screen and (max-width: 767px) { 
+      padding: 20px;
+    }
   `,
+
   wrap: styled.div`
     margin: 30px 0px 60px 0px;
+    @media only screen and (max-width: 1059px) { 
+      margin: 20px 0px 50px 0px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin: 10px 0px 40px 0px;
+    }
   `,
   Cont:styled.p`
     margin-bottom: 60px;
@@ -505,84 +464,85 @@ const C = {
   `,
   sbody: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 60px;
+    }
   `,
   conmar: styled.p`
     margin-top: 20px;
   `,
-  titlecon: styled.h2`
-    font-size: 48px;
-    font-family: 'premiaOTF';
-    color: ${ORANGE2};
-  `,
+
   titleMain: styled.h3`
     font-size: 30px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 26px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 22px;
+    }
   `,
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+      line-height:1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+    }
   `,
-  contitle: styled.h4`
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-  `,
+
   content: styled.div`
     padding-top: 12px;
   `,
   sb: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
-  conltxt: styled.div`
-    float: left;
-  `,
-  conrtxt: styled.div`
-    padding-top: 60px;
-    padding-right: 160px;
-    float: right;
-  `,
+
   p: styled.p`
     margin-top: 20px;
     margin-bottom: 15px;
+    font-size: 18px;
     line-height: 1.8;
-      &:first-child{
-        margin-top: 20px;
-      }
-      &:last-child{
-        margin-bottom: 0px;
-      }
+
+    &:first-child{
+      margin-top: 20px;
+    }
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
   note: styled.p`
-    font-size: 15px;
+    font-size: 18px;
     color: ${DARK_GRAY1};
     font-weight: bold;
     margin-bottom: 15px;
     display: flex;
     justify-align: center;
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
-  description: styled.p`
-    font-size: 14px;
-    color: ${DARK_GRAY1};
-    margin-top: 90px;
-    line-height: 28px;
-  `,
-  det: styled.span`
-    color: ${ORANGE2};
-    font-size: 24px;
-    font-family: 'premiaOTF';
-    line-height: 28px;
-    margin-right: 14px;
-  `,
-  dt: styled.p`
-    font-size: 16px;
-    line-height: 28px;
-    font-weight: bold;
-  `,
-  dd: styled.p`
-    font-size: 16px;
-    line-height: 28px;
-    margin-left: 40px;
-  `,
+
+
+
   bold: styled.span`
     font-weight: bold;
   `,
@@ -596,7 +556,7 @@ const C = {
     text-align: center;
   `,
   ntg: styled.p`
-    font-size: 14px;
+    font-size: 18px;
     color: ${LIGHT_GRAY8};
     padding-left: 10px;
     line-height: 28px;
@@ -610,6 +570,12 @@ const C = {
     color: ${LIGHT_GRAY8};
     display: block;
     position: absolute;
+    }
+    @media only screen and (max-width: 1059px) { 
+      line-height: 1.5em;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
     }
   `,
   desc: styled.p`
@@ -625,36 +591,76 @@ const C = {
   `,
   tbul:styled.p`
     margin-top: 20px;
+    padding-right: 420px;
+
+    @media only screen and (max-width: 1059px) {
+      padding-right: 0px;
+    }    
   `,
   ul:styled.ul`
     
   `,
-  li: styled.li`
+  li:styled.li`
     padding-left: 10px;
+    font-size: 18px;
     line-height: 36px;
     position: relative;
+
+    &::before{
+      content:"";
+      width: 4px;
+      height: 4px;
+      top: 15px;
+      left: 0px;
+      text-indent: -9999px;
+      display: block;
+      position: absolute;
+      background-color: ${DARK_GRAY1};
+      border-radius: 50%
+    }
+
+    &:first-child{
+      margin-top: 0px;
+    }
+
+    &:last-child{
+      margin-bottom: 0px;
+    }
+
+    @media only screen and (max-width: 1059px) { 
+      line-height: 1.5em;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+
       &::before{
-        content:"";
-        width: 4px;
-        height: 4px;
-        top: 15px;
-        left: 0px;
-        text-indent: -9999px;
-        display: block;
-        position: absolute;
-        background-color: ${DARK_GRAY1};
-        border-radius: 50%
+        top: 7px;
       }
-      &:first-child{
-        margin-top: 0px;
-      }
-      &:last-child{
-        margin-bottom: 0px;
-      }
+    }
+
   `,
   lp:styled.p`
     margin-left: 10px;
-    line-height: 36px;
+    font-size: 18px;
+    line-height: 1.5em;
+    position:relative;
+    padding-left: 10px;
+
+    &:before{
+      content:"-";
+      position:absolute;
+      left:0;
+      top:0;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size:14px;
+
+      &:before{
+        font-size:14px;
+      }
+    }
   `,
   left:styled.div`
   padding-right:80px;
@@ -669,17 +675,18 @@ bannerBox02:styled.div`
   background-image: url(${Members});
   background-repeat: no-repeat;
   background-position: right 50px top 100px;
+
+  @media only screen and (max-width: 1059px) {
+    background-image: none;
+  }
+
+  @media only screen and (max-width: 767px) {     
+    background-position: right bottom;
+  }
 `,
-bannerBox03:styled.div`
-  height: 382px;
-  border-radius: 12px;
-  background-color: rgba(232,221,213,0.5);
-  background-image: url(${Why});
-  background-repeat: no-repeat;
-  background-position: right 30px center;
-`,
+
 bannerDiv:styled.div`
-  width: 995px;
+  max-width: 995px;
   margin: 26px 30px;
   display: flex;
 `,
@@ -705,45 +712,43 @@ bannerContent02:styled.div`
       position: absolute;
       background-color: ${LIGHT_GRAY6};
     }
-`,
-blue:styled.span`
-  color: ${BLUE1};
-`,
-bancon:styled.div`
-  padding: 50px 40px;
+  `,
+  blue:styled.span`
+    color: ${BLUE1};
+  `,
 
-  &::after{
-    content: "";
-    display: block;
-    clear: both;
-  }
-`,
-bcol:styled.p`
-  background-color: ${LIGHT_GRAY1};
-`,
+  bcol:styled.p`
+    background-color: ${LIGHT_GRAY1};
+  `,
+
 }
+
 const T = {
   table: styled.div`
     .taL,
     .taL{
     text-align: left;
     }
+    
     .taR,
     .taR{
     text-align: right;
     }
+
     table {
     width: 100%;
+
     th,
     thead td,
     td strong {
       color: ${DARK_GRAY1};
-      font-size: 15px;
+      font-size: 18px;
       font-weight: bold;
       line-height: 1.6;
       letter-spacing: -0.3px;
       text-align: center;
     }
+
     td strong {
       margin-top: 30px;
       display: block;
@@ -751,25 +756,31 @@ const T = {
       margin-top: 0;
       }
     }
+
     td{
-      font-size: 14px;
+      font-size: 18px;
       font-weight: 400;
       line-height: 1.9;
       letter-spacing: -0.3px;
       text-align: center;
       vertical-align: middle;
       position: relative;
+
       &>p {
       margin-top: 18px;
       }
+
       &>p:first-of-type {
       margin-top: 0;
       }
+
       &.bcol {
         background-color: ${LIGHT_GRAY1};
       }
+
       .txt {
       margin-top: 10px;
+
       p {
           position: relative;
           color: ${LIGHT_GRAY8};
@@ -786,20 +797,35 @@ const T = {
         }
       }
     }
+
     th:first-child,      
     td:first-child{
       text-align: left;
       vertical-align: middle;
     }
+
     thead th,
     thead td{
       padding: 18px 0;
       border-bottom: 1px solid ${DARK_GRAY1};
     }
+
     tbody th,
     tbody td{
       padding: 18px 0;
       border-bottom: 1px solid ${LIGHT_GRAY5};
+    }
+  }
+
+  @media only screen and (max-width: 767px) { 
+    
+    table{
+      th,
+      thead td,
+      td strong,
+      td {
+        font-size: 13px;
+      }
     }
   }
   `,

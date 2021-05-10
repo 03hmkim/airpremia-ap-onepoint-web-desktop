@@ -302,7 +302,7 @@ function RightMenuMobile () {
               <dl className="list">
                 <dt>고객지원</dt>
                 <dd>
-                  <Link href='/customer/notice'>
+                  <Link href='/customer/notice/list'>
                     <a>
                       <p>공지사항</p>
                       <i className="arrow go"></i>

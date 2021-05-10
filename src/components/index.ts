@@ -305,5 +305,6 @@ export {default as DepArrResultTemplate} from 'src/components/templates/checkin/
 
 export {default as ByeUserTemplate} from 'src/components/templates/auth/byeUser/index';
 export {default as RightMenuMobile} from 'src/components/templates/rightMenuMobile';
+export {default as MembersWhy} from 'src/components/templates/membersWhy';
 
 //

@@ -62,9 +62,21 @@ const C = {
   ComTitles:styled.div`
   font-size:36px;
   font-weight: bold;
+  @media only screen and (max-width: 1059px) { 
+    font-size:30px;
+  }
+  @media only screen and (max-width: 767px) { 
+    font-size:26px;
+  }
   `,
   wrap: styled.div`
     margin-top: 60px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 40px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 20px;
+    }
   `,
   body: styled.div`
     margin-top: 140px;
@@ -72,39 +84,82 @@ const C = {
       &:first-of-type{
         margin-top: 30px;
       }
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 100px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 80px;
+    }
   `,
   bd: styled.div`
   margin-top: 150px;
   text-align: center;
+  @media only screen and (max-width: 1059px) { 
+    margin-top: 100px;
+  }
+  @media only screen and (max-width: 767px) { 
+    margin-top: 80px;
+  }
 `,
   sbody: styled.div`
     margin-top: 100px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 80px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 60px;
+    }
   `,
   titleMain: styled.h3`
     font-size: 30px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 26px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 22px;
+    }
   `,
   title: styled.h4`
     font-size: 22px;
     font-weight: bold;
+    @media only screen and (max-width: 1059px) { 
+      font-size: 20px;
+    }
+    @media only screen and (max-width: 767px) { 
+      font-size: 18px;
+    }
   `,
   itemTitle: styled.h5`
   font-size: 18px;
   font-weight: bold;
   margin-left: 10px;
+  @media only screen and (max-width: 1059px) { 
+    
+  }
+  @media only screen and (max-width: 767px) { 
+    font-size: 14x;
+  }
   `,
   linkTitle: styled.a`
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
   color: ${BLUE1};
   line-height: 36px;
   cursor: pointer;
+  @media only screen and (max-width: 767px) { 
+    font-size: 14x;
+    line-height:1.5em;
+  }
 `,
   content: styled.div`
     padding-top: 12px;
   `,
   sb: styled.div`
     margin-top: 60px;
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
   mt30:styled.div`
   margin-top: 30px;
@@ -133,17 +188,20 @@ const C = {
   `,
 
   itemText: styled.p`
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
   display: inline-block;
   :hover{
     color:${ORANGE2};
   }
+  @media only screen and (max-width: 767px) { 
+    font-size: 14px;
+  }
 `,
   note: styled.p`
     padding: 0 10px 0 15px;
     position: relative;
-    font-size: 15px;
+    font-size: 18px;
     color: ${DARK_GRAY1};
     font-weight: bold;
     display: flex;
@@ -158,13 +216,18 @@ const C = {
         position: absolute;
         background-color: #dddddd;
       }
-    
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
   description: styled.p`
-  font-size: 14px;
+  font-size: 18px;
   color: ${LIGHT_GRAY8};
   margin-top: 10px;
   line-height: 1.8;
+  @media only screen and (max-width: 767px) { 
+    font-size: 14px;
+  }
 `,
 bold: styled.span`
   font-weight: bold;
@@ -179,7 +242,7 @@ bold: styled.span`
     text-align: center;
   `,
   ntg: styled.p`
-    font-size: 14px;
+    font-size: 18px;
     color: ${LIGHT_GRAY8};
     margin-top: 15px;
     padding-left: 10px;
@@ -195,12 +258,21 @@ bold: styled.span`
         display: block;
         position: absolute;
       }
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+    }
   `,
   lgray: styled.p`
     color: ${LIGHT_GRAY7};
   `,
   igr: styled.div`
     margin-top: 80px;
+    @media only screen and (max-width: 1059px) { 
+      margin-top: 60px;
+    }
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
+    }
   `,
   desc: styled.p`
     margin-left: 50px;
