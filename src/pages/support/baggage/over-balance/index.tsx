@@ -1,18 +1,21 @@
 import styled from 'styled-components';
 import {
   ComTitle,
+  SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
   LIGHT_GRAY5,
   LIGHT_GRAY8,
-  LIGHT_GRAY7,
-  BLUE1,
 } from '@airpremia/cdk/styles/colors';
 import { ListGlobal } from 'src/components';
-import Linkblack from 'public/images/support/btn_txt_link_black.svg';
-import Link from 'next/link'
+import { 
+  baggageFree,
+  baggageLost,
+  baggageProhibition,
+  baggageSpecial,
+} from '../../linkset';
 
 
 function OverBalance(){
@@ -24,12 +27,10 @@ function OverBalance(){
         />
         <C.wrap>
           <C.body>
-            <C.title>초과수하물</C.title>
-            <C.sb>
-              <ListGlobal level="fst" body={
-                <p>위탁수하물이 추가로 필요한 경우 탑승수속 카운터에서 구매하실 수 있습니다.</p>
-              }/>
-            </C.sb>
+            <C.titleMain>초과수하물</C.titleMain>
+            <C.content>
+              <p>위탁수하물이 추가로 필요한 경우 탑승수속 카운터에서 구매하실 수 있습니다.</p>
+            </C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -85,8 +86,10 @@ function OverBalance(){
                 </tbody>
               </table>
             </T.table>
-            <C.sb>
-              <C.sub>요금 안내</C.sub>
+          </C.body>
+          <C.body>
+            <C.titleSub>요금 안내</C.titleSub>
+            <C.content>
               <ListGlobal level="fst" body={
                 <p>무료수하물 허용량을 초과할 경우 초과수하물 요금이 부과됩니다.</p>
               }/>
@@ -99,52 +102,28 @@ function OverBalance(){
               <ListGlobal level="fst" body={
                 <p>휴대수하물  허용량 외의 수하물은 반드시 위탁하셔야 하며, 탑승게이트에서 위탁 시 별도의 수수료가 부과됩니다.</p>
               }/>
-            </C.sb>
-            <C.sb>
-              <C.sub>도움이 되셨나요?</C.sub>
-              <C.helpl>
-                <Link href="./carry">
-                  <a>
-                    운송제한물품<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./free-baggage">
-                  <a>
-                    무료수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./prohibition">
-                  <a>
-                    초과수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl className="dpN">
-                <Link href="./special-carry">
-                  <a>
-                    특수수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./lost-carry">
-                  <a>
-                    수하물 배상<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./#">
-                  <a>
-                    1:1 문의<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-            </C.sb>
+            </C.content>
+          </C.body>
+          <C.body>
+            <C.titleMain>도움이 되셨나요?</C.titleMain>
+            <C.linkWrap>
+              <SupportLink
+                title={baggageFree.title}
+                link={baggageFree.link}
+              />
+              <SupportLink
+                title={baggageLost.title}
+                link={baggageLost.link}
+              />
+              <SupportLink
+                title={baggageProhibition.title}
+                link={baggageProhibition.link}
+              />
+              <SupportLink
+                title={baggageSpecial.title}
+                link={baggageSpecial.link}
+              />
+            </C.linkWrap>
           </C.body>
         </C.wrap>
       </S.container>
@@ -157,125 +136,68 @@ const S = {
 }
 
 const C = {
+  /* 서비스안내 공통css */
   wrap: styled.div`
-    margin-top: 70px;
     border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
   `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
+    margin-top: 100px;
+
+    &:first-of-type {
       margin-top: 30px;
     }
   `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  titleMain: styled.h3`
-    font-size: 30px;
+  titleMain: styled.h2`
+    font-size: 24px;
     font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
   `,
-  title: styled.h4`
-    font-size: 22px;
-    font-weight: bold;
-  `,
-  sub: styled.h5`
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      margin-top: 60px;
+    }
   `,
   content: styled.div`
-    margin-top: 12px;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
+      }
+    }
   `,
-  sb: styled.div`
-    margin-top: 60px;
-  `,
-  p: styled.p`
-    margin-top: 20px;
-    margin-bottom: 15px;
-    line-height: 1.8;
-    &:first-child{
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
       margin-top: 20px;
     }
-    &:last-child{
-      margin-bottom: 0px;
-    }
   `,
-  rf: styled.p`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 20px;
-    line-height: 1.8;
-  `,
-  note: styled.p`
-    font-size: 15px;
-    color: ${DARK_GRAY1};
-    font-weight: bold;
-    display: flex;
-    justify-align: center;
-  `,
-  image: styled.p`
-    margin-right: 5px;
-  `,
-  tmi: styled.p`
-    margin-top: 30px;
-  `,
-  center: styled.p`
-    text-align: center;
-  `,
-  ntg: styled.p`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-      content:"-";
-      width: 5px;
-      height: 20px;
-      top: 0px;
-      left: 0px;
-      color: ${LIGHT_GRAY8};
-      display: block;
-      position: absolute;
-    }
-  `,
-  lgray: styled.p`
-    color: ${LIGHT_GRAY7};
-  `,
-  linkTitle: styled.p`
-    color: ${BLUE1};
-    margin-left: 10px;
-    margin-top: 10px;
-  `,
-  igr: styled.div`
-    width: 50%;
-    margin-top: 80px;
-    display: inline-block;
-  `,
-  desc: styled.p`
-    margin-left: 50px;
-    line-height: 1.8;
-    display: inline-block;
-    vertical-align: middle;
-  `,
-  img: styled.p`
-    display: inline-block;
-    vertical-align: middle;
-  `,
-  linkhelp: styled.a`
-    text-decoration-line: none;
-    border: 0px;
-  `,
-  helpl: styled.p`
-    width: 100%;
-    padding: 25px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-    
-    &.dpN{
-      display: none;
-    }
-  `,
+  /* 서비스안내 공통css 끝 */
 }
     
 const T = {

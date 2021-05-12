@@ -4,22 +4,24 @@ import {
   ComTitle,
   NewModal,
   PopupTitle,
+  SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
   LIGHT_GRAY5,
   LIGHT_GRAY8,
-  WHITE1,
-  DARK_BLUE1,
   BLUE1,
-  ORANGE2,
 } from '@airpremia/cdk/styles/colors';
-import Linkblack from 'public/images/support/btn_txt_link_black.svg';
 import Linkblue from 'public/images/support/btn_txt_link_blue.svg';
-import Link from 'next/link';
 import { EScrollType } from 'src/components/templates/centerPopup';
 import { ListGlobal } from 'src/components';
+import { 
+  baggageFree,
+  baggageOver,
+  baggageProhibition,
+  baggageSpecial,
+} from '../../linkset';
 
 
 function LostCarry(){
@@ -77,10 +79,10 @@ function LostCarry(){
         <C.wrap>
           <C.body>
             <C.titleMain>수하물 배상</C.titleMain>
-            <C.sb>
-              <C.title>수하물 배상 책임 및 안내</C.title>
-            </C.sb>
-            <C.tmi>
+            <C.content className="mt60">
+              <C.titleSub>수하물 배상 책임 및 안내</C.titleSub>
+            </C.content>
+            <C.content>
               <ListGlobal level="fst" body={
                 <p>에어프레미아는 수하물을 운송, 보관 및 관리하는 과정에서 회사의 고의 또는 과실로 수하물에 손해가 발생한 경우에 한하여 배상에 대한 책임을 부담합니다.</p>
               }/>
@@ -101,11 +103,11 @@ function LostCarry(){
               <C.textM>
                 <p>SDR이란? Special Drawing Rights(특별인출권)의 약자로 국제통화기금(IMF)에서 정한 전세계 공통의 통화 단위를 나타냅니다. SDR로 표시된 금액을 각국 통화로 환산하는 경우, 소송의 경우에는 법원의 최종 판결 일에 유효한 해당 통화와의 환율을 적용하고 소송 이외의 경우에는 지불해야 할 손해배상 금액이 합의된 날에 유효한 해당 통화와의 환율을 적용합니다.</p>
               </C.textM>
-            </C.tmi>
+            </C.content>
           </C.body>
           <C.body>
-            <C.title>배상불가 사항</C.title>
-            <C.tmi>
+            <C.titleSub>배상불가 사항</C.titleSub>
+            <C.content>
               <ListGlobal level="fst" body={
                 <p>다음의 경우에는 이용 구간에 따라 배상에서 제외 되거나, 운송약관 또는 바르샤바조약/ 몬트리올협약에 의한 제한된 배상이 실시됩니다.</p>
               }/>
@@ -139,60 +141,34 @@ function LostCarry(){
               <ListGlobal level="trd" body={
                 <p>현금, 보석이나 귀금속, 유가증권, 계약서, 논문 등의 서류, 여권, 신분증, 열쇠, 견본품, 골동품 등 가치를 따지기 어려운 물건</p>
               }/>
-            </C.tmi>
+            </C.content>
           </C.body>
           <C.body>
-            <C.title>에어프레미아 수하물 문의처</C.title>
-            <C.tmi>
+            <C.titleSub>에어프레미아 수하물 문의처</C.titleSub>
+            <C.content>
               (LL전용 지점별 이메일 &카톡아이디 공지예정)
-            </C.tmi>
+            </C.content>
           </C.body>
           <C.body>
-            <C.title>도움이 되셨나요?</C.title>
-            <C.sb>
-              <C.helpl>
-                <Link href="./prohibition">
-                  <a>
-                    운송제한물품<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./free-baggage">
-                  <a>
-                    무료수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./carry">
-                  <a>
-                    초과수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./special-carry">
-                  <a>
-                    특수수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl className="dpN">
-                <Link href="./lost-carry">
-                  <a>
-                    수하물 분실 및 보상<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./#">
-                  <a>
-                    1:1 문의<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-            </C.sb>
+            <C.titleMain>도움이 되셨나요?</C.titleMain>      
+            <C.linkWrap>
+              <SupportLink
+                title={baggageFree.title}
+                link={baggageFree.link}
+              />
+              <SupportLink
+                title={baggageOver.title}
+                link={baggageOver.link}
+              />
+              <SupportLink
+                title={baggageProhibition.title}
+                link={baggageProhibition.link}
+              />
+              <SupportLink
+                title={baggageSpecial.title}
+                link={baggageSpecial.link}
+              />
+            </C.linkWrap>
           </C.body>
         </C.wrap>
       </S.container>
@@ -201,182 +177,6 @@ function LostCarry(){
 }
 
 
-const C = {
-  wrap: styled.div`
-    margin-top: 70px;
-    border-top: 2px solid ${DARK_GRAY1};
-  `,
-  body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
-    margin-top: 30px;
-    }
-  `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  titleMain: styled.h3`
-    font-size: 30px;
-    font-weight: bold;
-  `,
-  title: styled.h4`
-    font-size: 22px;
-    font-weight: bold;
-  `,
-  sub: styled.h5`
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  `,
-  content: styled.div`
-    margin-top: 12px;
-  `,
-  sb: styled.div`
-    margin-top: 60px;
-  `,
-  ul: styled.ul`
-      
-  `,
-  li: styled.li`
-    margin-bottom: 15px;
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-      content:"";
-      width: 4px;
-      height: 4px;
-      top: 11px;
-      left: 0px;
-      text-indent: -9999px;
-      display: block;
-      position: absolute;
-      background-color: ${DARK_GRAY1};
-      border-radius: 50%
-    }
-    &.ndot{
-      padding-left: 0;
-      &::before{
-        display: none;
-      }
-    }
-    &:first-child{
-      margin-top: 20px;
-    }
-  `,
-  p: styled.p`
-    margin-top: 20px;
-    margin-bottom: 15px;
-    line-height: 1.8;
-    &:first-child{
-    margin-top: 20px;
-    }
-    &:last-child{
-    margin-bottom: 0px;
-    }
-  `,
-  rf: styled.p`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 20px;
-    line-height: 1.8;
-  `,
-  tmi: styled.p`
-    margin-top: 30px;
-  `,
-  ntg: styled.p`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-    content:"-";
-    width: 5px;
-    height: 20px;
-    top: 0px;
-    left: 0px;
-    color: ${LIGHT_GRAY8};
-    display: block;
-    position: absolute;
-    }
-  `,
-  lft: styled.p`
-    font-size: 14px;
-    margin-top: 15px;
-    padding-left: 20px;
-    line-height: 1.8;
-  `,
-  span: styled.span`
-    padding: 4px 12px;
-    color:${WHITE1};
-    background-color: ${DARK_BLUE1};
-    border-radius: 60px;
-  `,
-  dgray: styled.span`
-    font-size: 15px;
-    color: ${DARK_GRAY1};
-  `,
-  linkTitle: styled.a`
-    font-size: 14px;
-    font-weight: bold;
-    color: ${BLUE1};
-    margin-right: 10px;
-  `,
-  linkhelp: styled.a`
-    text-decoration-line: none;
-    border: 0px;
-  `,
-  helpl: styled.p`
-    width: 100%;
-    padding: 25px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-    
-    &.dpN{
-      display: none;
-    }
-  `,
-  linkm: styled.p`
-    color: ${BLUE1};
-    font-weight: 600;
-    cursor: pointer;
-  `,
-  txtb: styled.span`
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.8;
-  `,
-  txt: styled.p`
-    font-size: 15px;
-    line-height: 1.8;
-    margin-top: 15px;
-  `,
-  linkpage: styled.a`
-    font-size: 15px;
-    font-weight: regular;
-    color: ${BLUE1};
-    margin-left: 20px;
-  `,
-  under: styled.u`
-    font-weight: 600;
-    color: ${BLUE1};
-  `,
-  textM: styled.div`
-    color: ${LIGHT_GRAY8};
-    padding-left: 28px;
-    position: relative;
-    font-size: 18px;
-    line-height: 2em;
-    
-      &:before {
-        position: absolute;
-        content: "*";
-        left: 14px;
-        top: 0;
-      }
-  `,
-}
     
 const S = {
   container : styled.div`
@@ -415,5 +215,92 @@ const S = {
     }
   `,
 };
+
+
+const C = {
+  /* 서비스안내 공통css */
+  wrap: styled.div`
+    border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
+  `,
+  body: styled.div`
+    margin-top: 100px;
+
+    &:first-of-type {
+      margin-top: 30px;
+    }
+  `,
+  titleMain: styled.h2`
+    font-size: 24px;
+    font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
+  `,
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      margin-top: 60px;
+    }
+  `,
+  content: styled.div`
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
+      }
+    }
+  `,
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 20px;
+    }
+  `,
+  /* 서비스안내 공통css 끝 */
+
+
+  linkm: styled.p`
+    color: ${BLUE1};
+    font-weight: 600;
+    cursor: pointer;
+  `,
+  textM: styled.div`
+    color: ${LIGHT_GRAY8};
+    padding-left: 28px;
+    position: relative;
+    font-size: 18px;
+    line-height: 2em;
+    
+      &:before {
+        position: absolute;
+        content: "*";
+        left: 14px;
+        top: 0;
+      }
+  `,
+}
 
 export default LostCarry;

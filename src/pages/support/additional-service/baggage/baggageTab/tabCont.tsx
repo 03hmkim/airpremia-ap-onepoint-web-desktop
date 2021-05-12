@@ -6,14 +6,13 @@ export interface IProps extends IStyleProps {
 import {
   DARK_GRAY1,
   LIGHT_GRAY5,
-  LIGHT_GRAY8,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
 
 function TabContent({currIdxCont}: IProps) {
   if ( currIdxCont === 0 ) {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
           <C.content>
             항공기 출발 48시간 전 위탁수하물이 추가로 필요한 경우 미리 구매하시면 할인된 요금으로 이용하실 수 있습니다.
@@ -83,7 +82,7 @@ function TabContent({currIdxCont}: IProps) {
     )
   } else {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
         <C.content>
             위탁수하물이 추가로 필요하신 경우 탑승수속 카운터에서 구매하실 수 있습니다.
@@ -158,184 +157,69 @@ function TabContent({currIdxCont}: IProps) {
 }
 
 
-// const S = {
-//   container: styled.div``,
-//   ul: styled.ul`
-//     padding-bottom: 30px;
-//   `,
-//   li: styled.li`
-//     margin-left: 10px;
-//     margin-bottom: 15px;
-//     padding-left: 10px;
-//     position: relative;
-//     font-size: 15px;
-//     &::before{
-//       content:"";
-//       width: 4px;
-//       height: 4px;
-//       top: 5px;
-//       left: 0px;
-//       text-indent: -9999px;
-//       display: block;
-//       position: absolute;
-//       background-color: ${DARK_GRAY1};
-//       border-radius: 50%
-//     }
-//     &:first-child{
-//       margin-top: 20px;
-//     }
-//     &:last-child{
-//       margin-bottom: 0px;
-//     }
-//   `,
-
-// };
-
-
 const C = {
+  /* 서비스안내 공통css */
   wrap: styled.div`
-    margin-top: 70px;
+    border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
   `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
+    margin-top: 100px;
+
+    &:first-of-type {
       margin-top: 30px;
     }
   `,
-  title: styled.h4`
-    font-size: 30px;
+  titleMain: styled.h2`
+    font-size: 24px;
     font-weight: bold;
-    padding-bottom: 30px;
-    
-  `,
-  subTitle: styled.h5`
-    font-size: 22px;
-    font-weight: bold;
-    padding-bottom: 30px;
-  `,
-  itemTitle: styled.h6`
-    padding-bottom: 30px;
-    font-size: 18px;
-    font-weight: bold;
-  `,
-  linkTitle: styled.a`
-    font-size: 16px;
-    font-weight: bold;
-    color: ${BLUE1};
-    line-height: 36px;
-    cursor: pointer;
-  `,
 
-  itemText: styled.p`
-    font-size: 15px;
-    line-height: 30px;
-    span{
-      display: block;
-      &:first-child{
-        margin-top: 35px;
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
+  `,
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      margin-top: 60px;
+    }
+  `,
+  content: styled.div`
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
       }
     }
   `,
-  description: styled.p`
-    font-size:14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-    &.mt0{
-      margin-top: 0;
-    }
-  `,
-  
-  content: styled.div`
-    margin-top: 12px;
-  `,
-  button: styled.button`
-    background: none;
-    color: #ccc;
-    font-size: 15px;
-    font-weight: bold;
-    margin:30px 40px 30px 0;
-  `,
-  div: styled.div`
-    padding-top:50px;
-  `,
-  ul: styled.ul`
-    font-size: 18px;
-    font-weight: bold;
-  `,
-  li: styled.li`
-    font-size: 15px;
-    line-height: 36px;
-    font-weight: normal;
-  `,
-  span: styled.span`
-    color:#FF5800;
-    border-bottom: 2px solid #FF5800;
-  `,
-  p: styled.p``,
-  bold: styled.span`
-    font-weight: bold;
-  `,
+  linkWrap: styled.div`
+    margin-top: 30px;
 
-  subbox:styled.h5`
-    font-size: 15px;
-    line-height: 36px;
-  `,
-  badge:styled.div`
-    width: 60px;
-    height: 100%;
-    display: flex;
-    -webkit-box-pack: center;
-    align-items: center;
-    justify-content: center;
-    border-radius: 4px;
-    background-color: #0093ff;
-    padding-top: 2px;
-    box-sizing: border-box;
-    color:#fff;
-    font-size: 18px;
-    margin-right: 9px;
-  `,
-  inline: styled.div`
-    display: flex;
-    align-items: baseline;
-    padding-bottom: 30px;
-  `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  note: styled.p`
-    font-size: 15px;
-    color: ${DARK_GRAY1};
-    font-weight: bold;
-    display: flex;
-    justify-align: center;
-  `,
-  image: styled.p`
-    margin-right: 5px;
-  `,
-  right: styled.div`
-    display: block;
-  `,
-  ml20: styled.div`
-    margin-left: 20px;
-  `,
-  mb60: styled.div`
-    margin-bottom: 60px;
-  `,
-  mt60: styled.div`
-    margin-top: 60px;
-  `,
-  mb30: styled.div`
-    margin-bottom: 30px;
-  `,
-  linkm: styled.p`
-    font-weight: 600;
-    color: ${BLUE1};
-    margin-top: 20px;
-    &.dpin{
-      display: inline-block;
+    @media only screen and (max-width: 1059px) {
+      margin-top: 20px;
     }
   `,
+  /* 서비스안내 공통css 끝 */
 };
 
 const T = {

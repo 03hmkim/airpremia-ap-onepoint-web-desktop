@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 import {
   ComTitle,
+  SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
 import PetTab from './petTab';
-import Linkblack from 'public/images/support/btn_txt_link_black.svg';
-import Link from 'next/link'
+import { 
+  needHelp,
+  needInfant,
+  needPregnant,
+  needTeenager,
+} from '../../linkset';
 
 function Pet(){
   return (
@@ -24,51 +28,23 @@ function Pet(){
             <PetTab />
           </C.body>
           <C.body>
-            <C.title>도움이 되셨나요?</C.title>
-            <C.sb>
-              <C.helpl>
-                <Link href="./infant">
-                  <a>
-                    유아 동반 손님<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./teenager">
-                  <a>
-                    혼자 여행하는 어린이,청소년<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./pregnant">
-                  <a>
-                    임산부 손님<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./help">
-                  <a>
-                    장애인 및 의료 도움이 필요한 손님<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl className="dpN">
-                <Link href="./pet">
-                  <a>
-                    반려동물을 동반하는 손님<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./#">
-                  <a>
-                    1:1 문의<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-            </C.sb>
+            <C.titleMain>도움이 되셨나요?</C.titleMain>      
+            <SupportLink
+              title={needHelp.title}
+              link={needHelp.link}
+            />
+            <SupportLink
+              title={needInfant.title}
+              link={needInfant.link}
+            />
+            <SupportLink
+              title={needPregnant.title}
+              link={needPregnant.link}
+            />
+            <SupportLink
+              title={needTeenager.title}
+              link={needTeenager.link}
+            />
           </C.body>
         </C.wrap>
       </S.container>
@@ -81,44 +57,64 @@ const S = {
 }
 
 const C = {
+  /* 서비스안내 공통css */
   wrap: styled.div`
-    margin-top: 70px;
     border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
   `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
+    margin-top: 100px;
+
+    &:first-of-type {
       margin-top: 30px;
     }
   `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  titleMain: styled.h3`
+  titleMain: styled.h2`
     font-size: 24px;
     font-weight: bold;
-  `,
-  title: styled.h4`
-    font-size: 21px;
-    font-weight: bold;
-  `,
-  sb: styled.div`
-    margin-top: 60px;
-  `,
-  helpl: styled.p`
-    width: 100%;
-    font-size: 18px;
-    letter-spacing: 0;
-    line-height: 1.8em;
-    font-family: 'NotoSans';
-    font-weight: 700;
-    padding: 25px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-    
-    &.dpN{
-      display: none;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
     }
   `,
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      margin-top: 60px;
+    }
+  `,
+  content: styled.div`
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 20px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+    }
+  `,
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 20px;
+    }
+  `,
+  /* 서비스안내 공통css 끝 */
 }
 
 

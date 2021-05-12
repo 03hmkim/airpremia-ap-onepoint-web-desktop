@@ -1,21 +1,20 @@
 import styled from 'styled-components';
 import {
   ComTitle,
+  SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
-  LIGHT_GRAY8,
-  WHITE1,
-  DARK_BLUE1,
-  BLUE1,
-  RED1,
 } from '@airpremia/cdk/styles/colors';
-import Linkblack from 'public/images/support/btn_txt_link_black.svg';
 // import Special from 'public/images/support/img_special.png';
-import Link from 'next/link'
 import SpecialTab from './special-carryTab';
+import { 
+  baggageFree,
+  baggageLost,
+  baggageOver,
+  baggageProhibition,
+} from '../../linkset';
 
 
 function SpecialCarry(){
@@ -29,54 +28,30 @@ function SpecialCarry(){
         <C.wrap>
           <C.body>
             <C.titleMain>특수수하물</C.titleMain>
-            <SpecialTab />
+            <C.content>
+              <SpecialTab />
+            </C.content>
           </C.body>
           <C.body>
-            <C.title>도움이 되셨나요?</C.title>
-            <C.sb>
-              <C.helpl>
-                <Link href="./carry">
-                  <a>
-                    운송제한물품<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./free-baggage">
-                  <a>
-                    무료수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./prohibition">
-                  <a>
-                    초과수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl className="dpN">
-                <Link href="./special-carry">
-                  <a>
-                    특수수하물<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./lost-carry">
-                  <a>
-                    수하물 배상<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./#">
-                  <a>
-                    1:1 문의<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-            </C.sb>
+            <C.titleMain>도움이 되셨나요?</C.titleMain>      
+            <C.linkWrap>
+              <SupportLink
+                title={baggageFree.title}
+                link={baggageFree.link}
+              />
+              <SupportLink
+                title={baggageLost.title}
+                link={baggageLost.link}
+              />
+              <SupportLink
+                title={baggageOver.title}
+                link={baggageOver.link}
+              />
+              <SupportLink
+                title={baggageProhibition.title}
+                link={baggageProhibition.link}
+              />
+            </C.linkWrap>
           </C.body>
         </C.wrap>
       </S.container>
@@ -89,143 +64,67 @@ const S = {
 }
 
 const C = {
+  /* 서비스안내 공통css */
   wrap: styled.div`
-    margin-top: 70px;
     border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
   `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
+    margin-top: 100px;
+
+    &:first-of-type {
       margin-top: 30px;
     }
   `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  titleMain: styled.h3`
-    font-size: 30px;
+  titleMain: styled.h2`
+    font-size: 24px;
     font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
   `,
-  title: styled.h4`
-    font-size: 22px;
-    font-weight: bold;
-  `,
-  sub: styled.h5`
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      margin-top: 60px;
+    }
   `,
   content: styled.div`
-    margin-top: 12px;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
+      }
+    }
   `,
-  sb: styled.div`
-    margin-top: 60px;
-  `,
-  p: styled.p`
-    margin-top: 20px;
-    margin-bottom: 15px;
-    line-height: 1.8;
-    &:first-child{
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
       margin-top: 20px;
     }
-    &:last-child{
-      margin-bottom: 0px;
-    }
   `,
-  note: styled.p`
-    font-size: 15px;
-    color: ${DARK_GRAY1};
-    font-weight: bold;
-    display: flex;
-    justify-align: center;
-  `,
-  image: styled.p`
-    margin-right: 5px;
-  `,
-  tmi: styled.p`
-    margin-top: 30px;
-  `,
-  center: styled.p`
-    text-align: center;
-  `,
-  ntg: styled.p`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-      content:"-";
-      width: 5px;
-      height: 20px;
-      top: 0px;
-      left: 0px;
-      color: ${LIGHT_GRAY8};
-      display: block;
-      position: absolute;
-    }
-  `,
-  span: styled.span`
-    padding: 4px 12px;
-    color:${WHITE1};
-    background-color: ${DARK_BLUE1};
-    border-radius: 60px;
-  `,
-  linkTitle: styled.a`
-    font-size: 14px;
-    font-weight: bold;
-    color: ${BLUE1};
-    margin-right: 10px;
-  `,
-  img: styled.p`
-    display: inline-block;
-    vertical-align: middle;
-  `,
-  linkhelp: styled.a`
-    text-decoration-line: none;
-    border: 0px;
-  `,
-  helpl: styled.p`
-    width: 100%;
-    padding: 25px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-
-    .dpN{
-      display: none;
-    }
-  `,
-  linkm: styled.p`
-    margin-top: 20px;
-    margin-left: 10px;
-    a,
-    span{
-      color: ${BLUE1};
-      font-weight: 600;
-      cursor: pointer;
-    }
-    &:last-child{
-      margin-left: 0px;
-    }
-  `,
-  txtb: styled.p`
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.8;
-  `,
-  red: styled.span`
-    color: ${RED1};
-  `,
-  linehgt: styled.div`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 20px;
-    line-height: 1.8;
-  `,
-  desc: styled.p`
-    font-size: 15px;
-    font-weight: regular;
-    line-height: 1.8;
-  `,
+  /* 서비스안내 공통css 끝 */
 }
 export default SpecialCarry;

@@ -14,7 +14,6 @@ import {
   LIGHT_GRAY8,
   BLUE1,
   RED1,
-  ORANGE2,
 } from '@airpremia/cdk/styles/colors';
 import { ListGlobal } from 'src/components';
 import Linkblue from 'public/images/support/btn_txt_link_blue.svg';
@@ -37,7 +36,7 @@ function TabContent({currIdxCont}: IProps) {
             return (
               <NewModal
                 className="max"
-                type={EScrollType.TYPE6}
+                type={EScrollType.TYPE1}
                 title={
                   <S.modalTitle>
                     <PopupTitle>리튬배터리 운송 규정</PopupTitle>
@@ -113,12 +112,11 @@ function TabContent({currIdxCont}: IProps) {
         };
       };
 
-    return (
-      
-      <C.wrap>
+    return (      
+      <C.wrap className="bdN">
         {onClickModal()}
         <C.body>
-          <C.tmi>
+          <C.content className="mt60">
             <ListGlobal level="fst" body={
               <p>특수수하물의 최대 무게는 32kg 이하,  최대  크기는 세 변의 합이 292cm 이하입니다.</p>
             }/>
@@ -144,11 +142,11 @@ function TabContent({currIdxCont}: IProps) {
                 </C.linkm>  
               </p>
             }/>
-          </C.tmi>
-          <C.sb>
-            <C.sub>골프장비</C.sub>
-          </C.sb>
-          <C.tmi>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>골프장비</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>
                 골프백 1개와 일반가방 1개 무게의 합은 해당 클래스 무료 위탁수하물 허용량 1pc 무게를 적용합니다.
@@ -164,11 +162,11 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="scd" body={
               <p>골프백 1개+일반가방 1개 무게의 합이 32kg 초과 45kg 이하: 2개의 위탁수하물로 간주</p>
             }/>
-          </C.tmi>
-          <C.sb>
-            <C.sub>스쿠버다이빙 장비</C.sub>
-          </C.sb>
-          <C.tmi>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>스쿠버다이빙 장비</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>“공기통 1개+스쿠버다이빙 장비 가방 1개”를 위탁수하물 1개로 간주합니다.</p>
             }/>
@@ -183,45 +181,45 @@ function TabContent({currIdxCont}: IProps) {
                 </C.linkm>
               </p>
             }/>
-          </C.tmi>
-          <C.sb>
-            <C.sub>자전거</C.sub>
-          </C.sb>
-          <C.tmi>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>자전거</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>자전거는 핸들을 고정하고 페달을 제거한 후 충격 방지용 완충제가 내장된 전용 케이스 또는 종이박스 등으로 포장하여야 합니다.</p>
             }/>
             <ListGlobal level="fst" body={
               <p>엔진이 장착된 동력 자전거나 오토바이, 제트스크 등의 경우 수하물로 운송이 불가능합니다.</p>
             }/>
-          </C.tmi>
-          <C.sb>
-            <C.sub>낚시 장비</C.sub>
-          </C.sb>
-          <C.tmi>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>낚시 장비</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>“낚시대 가방 1개+Tackle Box1개”를 위탁수하물 1개로 간주합니다.</p>
             }/>
-          </C.tmi>
-          <C.sb>
-            <C.sub>하키/라크로스 장비</C.sub>
-          </C.sb>
-          <C.tmi>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>하키/라크로스 장비</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p> “장비 가방 1개+스틱 1개”를 위탁수하물 1개로 간주합니다.</p>
             }/>
             <ListGlobal level="fst" body={
               <p>장비가방 없이 스틱만 위탁하는 경우에도 위탁수하물 1개로 간주합니다.</p>
             }/>
-          </C.tmi>
+          </C.content>
         </C.body>
       </C.wrap>
     )
   } else if ( currIdxCont === 1 ) {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
-          <C.tmi>
+          <C.content className="mt60">
             <ListGlobal level="fst" body={
               <p>첼로, 콘트라베이스 등 대형악기를 기내로 휴대하고자 하는 경우, 별도의 추가 좌석을 구매하시면 반입이 가능합니다.</p>
             }/>
@@ -234,15 +232,15 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>별도의 좌석 구매와 관련하여 에어프레미아 예약센터로 문의해주시기 바랍니다.</p>
             }/>
-          </C.tmi>
+          </C.content>
         </C.body>
       </C.wrap>
     )
   } else {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
-          <C.tmi>
+          <C.content className="mt60">
             <ListGlobal level="fst" body={
               <p>손님께서 고가의 물품을 위탁하실 경우 소정의 추가 요금을 지불하시면 손해 배상 시 신고하신 금액까지 보장받으실 수 있습니다.</p>
             }/>
@@ -255,202 +253,103 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>고가품 신고 시 부과되는 요금은 USD 100달러당 USD 0.5로 계산됩니다.</p>
             }/>
-          </C.tmi>
+          </C.content>
         </C.body>
       </C.wrap>
     )
   } 
 }
 
+
+const S = {
+  modalTitle : styled.div`
+  `,
+
+  textArea: styled.div`
+    height: 100%;
+    &.auto{
+      padding: 0 50px 50px;
+      overflow-y: auto;
+      box-sizing: border-box;
+    }
+  `,
+}
+
+
 const C = {
+  /* 서비스안내 공통css */
   wrap: styled.div`
-    margin-top: 70px;
     border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
   `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
+    margin-top: 100px;
+
+    &:first-of-type {
       margin-top: 30px;
     }
   `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  titleMain: styled.h3`
+  titleMain: styled.h2`
     font-size: 24px;
     font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
   `,
-  title: styled.h4`
+  titleSub: styled.h3`
     font-size: 21px;
-    font-weight: bold;
-  `,
-  sub: styled.h5`
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  `,
-  content: styled.div`
-    margin-top: 12px;
-  `,
-  sb: styled.div`
-    margin-top: 60px;
-  `,
-  area: styled.div`
-    width: 1200px;
-    height: auto;
-    margin-top: 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  `,
-  p: styled.p`
-    margin-top: 20px;
-    margin-bottom: 15px;
-    line-height: 1.8;
-    &:first-child{
-      margin-top: 20px;
-    }
-    &:last-child{
-      margin-bottom: 0px;
-    }
-  `,
-  rf: styled.p`
-    font-size: 18px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 20px;
-  `,
-  note: styled.p`
-    font-size: 18px;
-    color: ${DARK_GRAY1};
-    font-weight: bold;
-    display: flex;
-    justify-align: center;
-  `,
-  image: styled.p`
-    margin-right: 5px;
-  `,
-  tmi: styled.p`
-    margin-top: 30px;
-  `,
-  center: styled.p`
-    text-align: center;
-  `,
-  ntg: styled.p`
-    font-size: 18px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-    content:"-";
-    width: 5px;
-    height: 20px;
-    top: 0px;
-    left: 0px;
-    color: ${LIGHT_GRAY8};
-    display: block;
-    position: absolute;
-    }
-  `,
-  btg: styled.p`
-    font-size: 18px;
-    color: ${DARK_GRAY1};
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-    content:"-";
-    width: 5px;
-    height: 20px;
-    top: 0px;
-    left: 0px;
-    color: ${DARK_GRAY1};
-    display: block;
-    position: absolute;
-    }
-  `,
-  rgt: styled.p`
-    font-size: 18px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-  `,
-  lgcl: styled.p`
-    color: ${LIGHT_GRAY8};
-  `,
-  igr: styled.div`
-    width: 50%;
-    margin-top: 80px;
-    display: inline-block;
-    &:first-child{
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
       margin-top: 60px;
     }
-    &:last-child{
-      margin-bottom: 60px;
-      border-bottom: 1px solid ${LIGHT_GRAY5};
+  `,
+  content: styled.div`
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
+      }
     }
   `,
-  group: styled.div`
-    margin-left: 50px;
-    display: inline-block;
-    vertical-align: middle;
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 20px;
+    }
   `,
-  bdt: styled.p`
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  `,
+  /* 서비스안내 공통css 끝 */
+
+
   desc: styled.p`
     margin-top: 30px;
     font-size: 18px;
     font-weight: regular;
     line-height: 1.8;
   `,
-  img: styled.p`
-    display: inline-block;
-    vertical-align: middle;
-  `,
-  linkhelp: styled.a`
-    text-decoration-line: none;
-    border: 0px;
-  `,
-  helpl: styled.p`
-    width: 100%;
-    padding: 25px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-    
-    &.dpN{
-      display: none;
-    }
-  `,
-  linkpage: styled.span`
-    color: ${BLUE1};
-    border-bottom: 1px solid ${BLUE1};
-  `,
-  line: styled.div`
-    width: 100%;
-    margin: 60px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-  `,
-  bold: styled.span`
-    font-weight: bold;
-  `,
-  subtit: styled.p`
-    font-size: 18px;
-    font-weight: bold;
-  `,
-  blue: styled.span`
-    color: ${BLUE1};
-  `,
+  
   red: styled.span`
     color: ${RED1};
-  `,
-  orange: styled.span`
-    color: ${ORANGE2};
-  `,
-  stit: styled.p`
-    font-size: 18px;
-    margin: 20px 0px;
-    line-height: 1.8;
   `,
   linehgt: styled.div`
     font-size: 18px;
@@ -484,6 +383,7 @@ const C = {
     }
   `,
 }
+
     
 const T = {
   table: styled.div`
@@ -567,21 +467,6 @@ const T = {
     }
   }
 `,
-}
-
-const S = {
-  modalTitle : styled.div`
-  `,
-
-  textArea: styled.div`
-    height: 100%;
-    &.auto{
-      padding: 0 50px 50px;
-      overflow-y: auto;
-      box-sizing: border-box;
-    }
-  `,
-
 }
 
 export default TabContent;

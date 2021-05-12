@@ -37,6 +37,7 @@ export { default as TextTabButton } from './atoms/textTabButton';
 export { default as BtnBlue } from './atoms/btnBlue';
 export { default as BadgeArrow } from './atoms/badgeArrow';
 export { default as ListGlobal } from './atoms/listGlobal';
+export { default as SupportLink } from './atoms/supportLink';
 
 // Molecules
 export { default as Checkbox } from 'src/components/molecules/checkbox';
@@ -306,6 +307,5 @@ export {default as DepArrResultTemplate} from 'src/components/templates/checkin/
 export {default as ByeUserTemplate} from 'src/components/templates/auth/byeUser/index';
 export {default as RightMenuMobile} from 'src/components/templates/rightMenuMobile';
 export {default as MembersWhy} from 'src/components/templates/membersWhy';
-export {default as SupportLink} from 'src/components/templates/supportLink';
 
 //

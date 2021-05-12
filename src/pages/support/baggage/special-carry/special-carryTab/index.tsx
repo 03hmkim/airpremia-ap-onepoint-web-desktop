@@ -19,16 +19,28 @@ const SpecialTab: FC<IProps> = ({}) => {
         list={tabList}
         onClick={setCurrIdx}
       />
-      <TabContent
-        currIdxCont={currIdx}
-      />
+      <div className="tabCont">
+        <TabContent
+          currIdxCont={currIdx}
+        />
+      </div>
     </S.container>
   );
 };
 
 const S = {
   container: styled.div`
-  padding-top: 15px;
+    margin-top: 60px;
+
+    .tabCont {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .tabCont {
+        margin-top: 40px;
+      } 
+    }
   `,
 };
 

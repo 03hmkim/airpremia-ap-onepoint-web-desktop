@@ -1,17 +1,19 @@
 import styled from 'styled-components';
 import {
   ComTitle,
+  SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
-  LIGHT_GRAY8,
 } from '@airpremia/cdk/styles/colors';
 import { ListGlobal } from 'src/components';
-import Link from 'next/link'
-import Linkblack from 'public/images/support/btn_txt_link_black.svg';
 import BaggageTab from './baggageTab';
+import { 
+  additionalPacking,
+  additionalSeat,
+  additionalSideseat,
+} from '../../linkset';
 
 function Baggage(){
   return (
@@ -22,7 +24,7 @@ function Baggage(){
         />
         <C.wrap>
           <C.body>
-            <C.title>사전 수하물 구매</C.title>
+            <C.titleMain>사전 수하물 구매</C.titleMain>
             <BaggageTab />
             {/* <C.sub>국제선</C.sub>
             <C.content>
@@ -179,7 +181,7 @@ function Baggage(){
             </C.content>
           </C.body> */}
           <C.body>
-            <C.sub>구매 안내</C.sub>
+            <C.titleSub>구매 안내</C.titleSub>
             <C.content>
               <ListGlobal level="fst" body={
                 <p>사전 구매 전 무료수하물 허용량을 먼저 확인해주시기 바랍니다.​</p>
@@ -200,8 +202,8 @@ function Baggage(){
               */}
             </C.content>
           </C.body>
-          <C.sbody>
-            <C.sub>취소 및 환불 안내</C.sub>
+          <C.body>
+            <C.titleSub>취소 및 환불 안내</C.titleSub>
             <C.content>
               <ListGlobal level="fst" body={
                 <p>항공기 출발 48시간 전까지만 취소 및 환불이 가능하며 48시간 이내에는 취소 및 환불이 불가합니다.<br></br>단, 항공기 지연 및 결항등 항공사 사정에 항공편 취소의 경우는 환불이 가능합니다</p>
@@ -219,9 +221,9 @@ function Baggage(){
                 <p>환불 및 취소는 홈페이지, 모바일 앱 및 예약센터 각 구매처에서만 가능합니다.​</p>
               }/>
             </C.content>
-          </C.sbody>
-          <C.sbody>
-            <C.sub>유의사항</C.sub>
+          </C.body>
+          <C.body>
+            <C.titleSub>유의사항</C.titleSub>
             <C.content>
               <ListGlobal level="fst" body={
                 <p>사전수하물구매는 당사자만 적용되며 양도가 불가능합니다.​</p>
@@ -233,46 +235,23 @@ function Baggage(){
                 <p>특수수하물 및 반려동물을 동반하는 손님은 사전수하물 구매가 불가능하며 탑승수속 카운터에서만 가능합니다.​</p>
               }/>
             </C.content>
-          </C.sbody>
+          </C.body>
           <C.body>
-            <C.sub>도움이 되셨나요?</C.sub>
-            <C.sb>
-              <C.helpl className="dpN">
-                <Link href="./baggage">
-                  <a>
-                    사전 수하물 구매<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./seat">
-                  <a>
-                    사전 좌석 구매<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./side-seat">
-                  <a>
-                    공항에서의 옆좌석 구매<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./packing">
-                  <a>
-                    수하물용품 구매<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-              <C.helpl>
-                <Link href="./#">
-                  <a>
-                    1:1 문의<Linkblack />
-                  </a>
-                </Link>
-              </C.helpl>
-            </C.sb>
+            <C.titleMain>도움이 되셨나요?</C.titleMain>
+            <C.linkWrap>
+              <SupportLink
+                title={additionalPacking.title}
+                link={additionalPacking.link}
+              />
+              <SupportLink
+                title={additionalSeat.title}
+                link={additionalSeat.link}
+              />
+              <SupportLink
+                title={additionalSideseat.title}
+                link={additionalSideseat.link}
+              />
+            </C.linkWrap>
           </C.body>
         </C.wrap>
       </S.container>
@@ -285,135 +264,68 @@ const S = {
 }
 
 const C = {
-  sb: styled.div`
-    margin-top: 60px;
-  `,
+  /* 서비스안내 공통css */
   wrap: styled.div`
-    margin-top: 70px;
     border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
   `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
+    margin-top: 100px;
+
+    &:first-of-type {
       margin-top: 30px;
     }
   `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  title: styled.h4`
-    font-size: 22px;
+  titleMain: styled.h2`
+    font-size: 24px;
     font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
   `,
-  sub: styled.h5`
-    margin-top: 60px;
-    font-size: 18px;
-    font-weight: bold;
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
+      margin-top: 60px;
+    }
   `,
   content: styled.div`
-    margin-top: 12px;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
+      }
+    }
   `,
-  p: styled.p`
-    margin-bottom: 15px;
-    &:first-child{
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
       margin-top: 20px;
     }
-    &:last-child{
-      margin-bottom: 0px;
-    }
   `,
-  rf: styled.p`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 20px;
-  `,
-  note: styled.p`
-    font-size: 15px;
-    color: ${DARK_GRAY1};
-    font-weight: bold;
-    display: flex;
-    justify-align: center;
-  `,
-  image: styled.p`
-    margin-right: 5px;
-  `,
-  ntg: styled.p`
-    font-size: 14px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-  `,
-  helpl: styled.p`
-    width: 100%;
-    padding: 25px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-    
-    &.dpN{
-      display: none;
-    }
-  `,
+  /* 서비스안내 공통css 끝 */
 }
-
-// const T = {
-//   table: styled.div`
-//     .taL,
-//     .taL{
-//       text-align: left;
-//     }
-//     .taR,
-//     .taR{
-//       text-align: right;
-//     }
-//     table {
-//       width: 100%;
-//       th,
-//       thead td,
-//       td strong {
-//         color: ${DARK_GRAY1};
-//         font-size: 15px;
-//         font-weight: bold;
-//         line-height: 1.6;
-//         letter-spacing: -0.3px;
-//         text-align: center;
-//         vertical-align: middle;
-//       }
-//       td strong {
-//         margin-top: 30px;
-//         display: block;
-//         &:first-of-type {
-//           margin-top: 0;
-//         }
-//       }
-//       td{
-//         font-size: 14px;
-//         font-weight: 400;
-//         line-height: 1.9;
-//         letter-spacing: -0.3px;
-//         text-align: center;
-//         vertical-align: middle;
-//         &>p {
-//           margin-top: 18px;
-//         }
-//         &>p:first-of-type {
-//           margin-top: 0;
-//         }
-//       }
-//       th:last-child,
-//       td:last-child{
-//         text-align: center;
-//         vertical-align: middle;
-//       }
-//       thead th,
-//       thead td{
-//         padding: 18px 0;
-//         border-bottom: 1px solid ${DARK_GRAY1};
-//       }
-//       tbody th,
-//       tbody td{
-//         padding: 18px 0;
-//         border-bottom: 1px solid ${LIGHT_GRAY5};
-//       }
-//     }
-//   `,
-// }
 
 export default Baggage;

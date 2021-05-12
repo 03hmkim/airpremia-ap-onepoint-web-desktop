@@ -19,9 +19,11 @@ const FreeBaggageTab: FC<IProps> = ({}) => {
         list={tabList}
         onClick={setCurrIdx}
       />
-      <TabContent
-        currIdxCont={currIdx}
-      />
+      <div className="tabCont">
+        <TabContent
+          currIdxCont={currIdx}
+        />
+      </div>
     </S.container>
   );
 };
@@ -29,6 +31,16 @@ const FreeBaggageTab: FC<IProps> = ({}) => {
 const S = {
   container: styled.div`
     margin-top: 60px;
+
+    .tabCont {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      .tabCont {
+        margin-top: 40px;
+      } 
+    }
   `,
 };
 

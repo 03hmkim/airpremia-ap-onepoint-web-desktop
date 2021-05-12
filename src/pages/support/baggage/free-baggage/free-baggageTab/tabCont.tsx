@@ -22,20 +22,22 @@ import Linkblue from 'public/images/support/btn_txt_link_blue.svg';
 function TabContent({currIdxCont}: IProps) {
   if ( currIdxCont === 0 ) {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
-          <C.title>휴대수하물 크기</C.title>
-          <C.sb>
+          <C.titleSub>휴대수하물 크기</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>세 변의 합이 115cm 이내 이며, 각 변의 최대치는 높이(A) 55cm, 가로(B) 40cm, 세로(C) 20cm로 제한합니다.</p>
             }/>
             <ListGlobal level="fst" body={
               <p>전 노선과 클래스에서 동일 기준으로 적용됩니다.</p>
             }/>
-          </C.sb>
-          <C.sb><C.image></C.image></C.sb>
-          <C.title2>휴대수하물 무게 및 개수</C.title2>
-          <C.sb>
+          </C.content>
+          <C.content><C.image></C.image></C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>휴대수하물 무게 및 개수</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -58,9 +60,11 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-          </C.sb>
-          <C.title>유의사항</C.title>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>유의사항</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>휴대수하물은 손님의 책임과 보관 하에 기내로 가져갈 수 있는 수하물로 개폐가 가능한 머리 위 선반, 손님 좌석 하단에 안전하게 보관할 수 있어야 합니다.</p>
             }/>
@@ -95,16 +99,16 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="trd" body={
               <p>[항공보안법] 제44조에 따라 2년 이상 5년 이하의 징역 또는 2천만원 이상 5천만원 이하의 벌금에 처할 수 있으니 금지 물품을 항공기로 반입하지 않도록 유의해 주시기 바랍니다.</p>
             }/>
-          </C.sb>
+          </C.content>
         </C.body>
       </C.wrap>
     )
   } else {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
-          <C.title>위탁 수하물 크기</C.title>
-          <C.sb><C.image></C.image></C.sb>
+          <C.titleSub>위탁 수하물 크기</C.titleSub>
+          <C.content><C.image></C.image></C.content>
           <T.table>
             <table>
               <colgroup>
@@ -125,7 +129,9 @@ function TabContent({currIdxCont}: IProps) {
               </tbody>
             </table>
           </T.table>
-          <C.title>휴대수하물 무게 및 개수</C.title>
+        </C.body>
+        <C.body>
+          <C.titleSub>휴대수하물 무게 및 개수</C.titleSub>
           <T.table>
             <table>
               <colgroup>
@@ -179,7 +185,7 @@ function TabContent({currIdxCont}: IProps) {
               </tbody>
             </table>
           </T.table>
-          <C.sb>
+          <C.content>
             ※ 항공기 출발 48시간 전에 추가수하물을 미리 구매하시면 할인된 요금으로 이용하실 수 있습니다
             <C.linkm>
               <Link href="/ticket/pay/confirm">
@@ -188,8 +194,10 @@ function TabContent({currIdxCont}: IProps) {
                 </a>
               </Link>
             </C.linkm>
-          </C.sb>
-          <C.title>유아 위탁수하물 허용량</C.title>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>유아 위탁수하물 허용량</C.titleSub>
           <T.table>
             <table>
               <colgroup>
@@ -214,8 +222,10 @@ function TabContent({currIdxCont}: IProps) {
               </tbody>
             </table>
           </T.table>
-          <C.title>유의사항</C.title>
-          <C.sb>
+        </C.body>
+        <C.body>
+          <C.titleSub>유의사항</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>소아 운임을 지불한 소아 또는 좌석을 점유하는 유아의 위탁수하물 허용량은 성인 적용 운임을 지불한 여객과 동일합니다.</p>
             }/>
@@ -231,16 +241,18 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>손님의 여정이 다구간일 경우 출발 당일 공항 탑승수속 카운터에서 수하물이 최종 목적지까지 연결 수속 가능한지 확인해 주시기 바랍니다.<br></br>(수하물 연결 수속은 경우지 공항 사정 및 연결편 항공사에 따라 제한될 수 있습니다)</p>
             }/>
-          </C.sb>
-          <C.title>무료 위탁수하물의 개수 합산</C.title>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>무료 위탁수하물의 개수 합산</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>동일 손님예약번호(PNR)의 2인 이상 손님이 동일 목적지와 항공편으로 여행하며 동시에 탑승수속할 경우, 각 개인의 무료수하물 개수 허용량의 합계를 단체 여객 전원에 대한 허용량으로 취급할 수 있습니다.(무게 합산은 불가)</p>
             }/>
             <ListGlobal level="fst" body={
               <p>단, 상기 합산된 무료 수하물 허용량을 초과하는 수하물에 대해서는 정해진 기준에 따라 초과수하물 요금에 따라 부과합니다.</p>
             }/>
-          </C.sb>
+          </C.content>
         </C.body>
       </C.wrap>
     )
@@ -248,41 +260,72 @@ function TabContent({currIdxCont}: IProps) {
 }
 
 
-// const S = {
-//   container: styled.div``,
-//   ul: styled.ul`
-//     padding-bottom: 30px;
-//   `,
-//   li: styled.li`
-//     margin-left: 10px;
-//     margin-bottom: 15px;
-//     padding-left: 10px;
-//     position: relative;
-//     font-size: 15px;
-//     &::before{
-//       content:"";
-//       width: 4px;
-//       height: 4px;
-//       top: 5px;
-//       left: 0px;
-//       text-indent: -9999px;
-//       display: block;
-//       position: absolute;
-//       background-color: ${DARK_GRAY1};
-//       border-radius: 50%
-//     }
-//     &:first-child{
-//       margin-top: 20px;
-//     }
-//     &:last-child{
-//       margin-bottom: 0px;
-//     }
-//   `,
-
-// };
-
 
 const C = {
+  /* 서비스안내 공통css */
+  wrap: styled.div`
+    border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
+  `,
+  body: styled.div`
+    margin-top: 100px;
+
+    &:first-of-type {
+      margin-top: 30px;
+    }
+  `,
+  titleMain: styled.h2`
+    font-size: 24px;
+    font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
+  `,
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
+    }
+  `,
+  content: styled.div`
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
+      }
+    }
+  `,
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 20px;
+    }
+  `,
+  /* 서비스안내 공통css 끝 */
+
+
+
   oneBaggage: styled.div`
     margin: 0 auto;
     width: 58px;
@@ -352,27 +395,6 @@ const C = {
       left: 14px;
       color: ${DARK_GRAY1};
     }
-  `,
-  wrap: styled.div`
-    margin-top: 60px;
-  `,
-  body: styled.div`
-  `,
-  title: styled.h4`
-    font-size: 21px;
-    font-weight: bold;
-    margin-top: 100px;
-    &:first-child{
-      margin: 0;
-    }
-  `,
-  title2: styled.h4`
-    font-size: 21px;
-    font-weight: bold;
-    margin-top: 30px;
-  `,
-  sb: styled.div`
-    margin-top: 30px;
   `,
   image: styled.div`
     background-image: url(${Redcarry});

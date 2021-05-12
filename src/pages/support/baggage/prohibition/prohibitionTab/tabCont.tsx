@@ -33,12 +33,10 @@ import { ListGlobal } from 'src/components';
 function TabContent({currIdxCont}: IProps) {
   if ( currIdxCont === 0 ) {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
-          <C.sb>
-            <C.sub>폭발성, 인화성, 유독성 물질</C.sub>
-          </C.sb>
-          <C.sb>
+          <C.titleSub>폭발성, 인화성, 유독성 물질</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -87,11 +85,11 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-          </C.sb>
-          <C.sb>
-            <C.sub>무기로 사용될 수 있는 물품</C.sub>
-          </C.sb>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>무기로 사용될 수 있는 물품</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -163,11 +161,11 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-          </C.sb>
-          <C.sb>
-            <C.sub>일반생활용품 및 의료용품</C.sub>
-          </C.sb>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>일반생활용품 및 의료용품</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -227,11 +225,11 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-          </C.sb>
-          <C.sb>
-            <C.sub>국제선 객실 내 액체류 반입 기준</C.sub>
-          </C.sb>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>국제선 객실 내 액체류 반입 기준</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -267,11 +265,11 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-          </C.sb>
-          <C.sb>
-            <C.sub>전자담배</C.sub>
-          </C.sb>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>     
+          <C.titleSub>전자담배</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -293,24 +291,22 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-            <C.tmi>
-              <ListGlobal level="scd" body={
-                <p>일부국가에서는 휴대수하물로 반입을 금지하고 있습니다.</p>
-              }/>
-              <C.ex>싱가포르, 대만은 휴대 및 위탁수하물 모두 반입 불가</C.ex>
-            </C.tmi>
-          </C.sb>
+          </C.content>
+          <C.content>
+            <ListGlobal level="scd" body={
+              <p>일부국가에서는 휴대수하물로 반입을 금지하고 있습니다.</p>
+            }/>
+            <C.ex>싱가포르, 대만은 휴대 및 위탁수하물 모두 반입 불가</C.ex>
+          </C.content>
         </C.body>
       </C.wrap>
     )
   } else {
     return (
-      <C.wrap>
+      <C.wrap className="bdN">
         <C.body>
-          <C.sb>
-            <C.sub>리튬배터리 운송 규정</C.sub>
-          </C.sb>
-          <C.sb>
+          <C.titleSub>리튬배터리 운송 규정</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -353,16 +349,16 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-            <C.tmi>
+          </C.content>
+          <C.content>
               <ListGlobal level="fst" body={
                 <p>A = 총 15개(휴대수하물+위탁수하물), B = 총 10개(휴대수하물+위탁수하물)</p>
               }/>
               <ListGlobal level="fst" body={
                 <p>리튬이온배터리의 용량 단위 : Wh, 리튬메탈배터리의 용량 단위 : g</p>
               }/>
-            </C.tmi>
-          </C.sb>
-          <C.sb>
+          </C.content>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>배터리 용량 구하는 법 : 용량(Wh) = 전압(V) X 전류(Ah), 1Ah=1,000mAh</p>
             }/>
@@ -372,11 +368,11 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>리튬배터리로 구동되는 일체의 탈 것류(에어휠, 호버보드, 전기 자전거, 전동 스쿠터, 전동 킥보드, 전동 스케이트 보드 등)는 배터리 용량에 관계없이&nbsp;<C.orange>휴대/위탁수하물 모두 불가</C.orange>합니다.</p>
             }/>
-          </C.sb>
-          <C.sb>
-            <C.sub>전동휠체어</C.sub>
-          </C.sb>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>전동휠체어</C.titleSub>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -441,19 +437,21 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-            <C.tmi>
+          </C.content>
+          <C.content>
               <ListGlobal level="fst" body={
                 <p>반드시 항공사 사전 승인이 필요하오니 에어프레미아 예약센터(XXXX-XXXX)로 문의 주시기 바랍니다.</p>
               }/>
-            </C.tmi>
-          </C.sb>
-          <C.sb>
-            <C.sub>스마트 가방(Smart Luggage)</C.sub>
-          </C.sb>
-          <C.sb>
+          </C.content>
+        </C.body>
+        <C.body>
+          <C.titleSub>스마트 가방(Smart Luggage)</C.titleSub>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>배터리 용량이 2.7wh(리튬이온) 또는 0.3g(리튬메탈) 이하</p>
             }/>
+          </C.content>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -480,9 +478,13 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
+          </C.content>
+          <C.content>
             <ListGlobal level="fst" body={
               <p>배터리 용량이 2.7wh(리튬이온) 또는 0.3g(리튬메탈) 초과</p>
             }/>
+          </C.content>
+          <C.content>
             <T.table>
               <table>
                 <colgroup>
@@ -508,12 +510,12 @@ function TabContent({currIdxCont}: IProps) {
                 </tbody>
               </table>
             </T.table>
-            <C.tmi>
-              <ListGlobal level="fst" body={
-                <p>리튬배터리 운송기준에 따름</p>
-              }/>
-            </C.tmi>
-          </C.sb>
+          </C.content>
+          <C.content>
+            <ListGlobal level="fst" body={
+              <p>리튬배터리 운송기준에 따름</p>
+            }/>
+          </C.content>
         </C.body>
       </C.wrap>
     )
@@ -521,199 +523,75 @@ function TabContent({currIdxCont}: IProps) {
 }
 
 const C = {
+  /* 서비스안내 공통css */
   wrap: styled.div`
-    margin-top: 70px;
     border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
   `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
+    margin-top: 100px;
+
+    &:first-of-type {
       margin-top: 30px;
     }
   `,
-  sbody: styled.div`
-    margin-top: 100px;
-  `,
-  titleMain: styled.h3`
+  titleMain: styled.h2`
     font-size: 24px;
     font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
   `,
-  title: styled.h4`
+  titleSub: styled.h3`
     font-size: 21px;
-    font-weight: bold;
-  `,
-  sub: styled.h5`
-    margin-top: 20px;
-    font-size: 18px;
-    font-weight: bold;
-  `,
-  content: styled.div`
-    margin-top: 12px;
-  `,
-  sb: styled.div`
-    margin-top: 60px;
-  `,
-  area: styled.div`
-    width: 1200px;
-    height: auto;
-    margin-top: 30px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-  `,
-  p: styled.p`
-    margin-top: 20px;
-    margin-bottom: 15px;
-    line-height: 1.8;
-    &:first-child{
-      margin-top: 20px;
-    }
-    &:last-child{
-      margin-bottom: 0px;
-    }
-  `,
-  rf: styled.p`
-    font-size: 18px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 20px;
-  `,
-  note: styled.p`
-    font-size: 18px;
-    color: ${DARK_GRAY1};
-    font-weight: bold;
-    display: flex;
-    justify-align: center;
-  `,
-  image: styled.p`
-    margin-right: 5px;
-  `,
-  tmi: styled.p`
-    margin-top: 30px;
-  `,
-  center: styled.p`
-    text-align: center;
-  `,
-  ntg: styled.p`
-    font-size: 18px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-    content:"-";
-    width: 5px;
-    height: 20px;
-    top: 0px;
-    left: 0px;
-    color: ${LIGHT_GRAY8};
-    display: block;
-    position: absolute;
-    }
-  `,
-  btg: styled.p`
-    font-size: 18px;
-    color: ${DARK_GRAY1};
-    padding-left: 10px;
-    line-height: 1.8;
-    position: relative;
-    &::before{
-    content:"-";
-    width: 5px;
-    height: 20px;
-    top: 0px;
-    left: 0px;
-    color: ${DARK_GRAY1};
-    display: block;
-    position: absolute;
-    }
-  `,
-  rgt: styled.p`
-    font-size: 18px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 15px;
-  `,
-  lgcl: styled.p`
-    color: ${LIGHT_GRAY8};
-  `,
-  igr: styled.div`
-    width: 50%;
-    margin-top: 80px;
-    display: inline-block;
-    &:first-child{
+    font-weight: 700;
+
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
       margin-top: 60px;
     }
-    &:last-child{
-      margin-bottom: 60px;
-      border-bottom: 1px solid ${LIGHT_GRAY5};
+  `,
+  content: styled.div`
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+
+      &.mt60 {
+        margin-top: 40px;
+      }
     }
   `,
-  group: styled.div`
-    margin-left: 50px;
-    display: inline-block;
-    vertical-align: middle;
-  `,
-  bdt: styled.p`
-    font-size: 16px;
-    font-weight: bold;
-    margin-bottom: 15px;
-  `,
-  desc: styled.p`
-    font-size: 18px;
-    font-weight: regular;
-    line-height: 1.8;
-  `,
-  img: styled.p`
-    display: inline-block;
-    vertical-align: middle;
-  `,
-  linkhelp: styled.a`
-    text-decoration-line: none;
-    border: 0px;
-  `,
-  helpl: styled.p`
-    width: 100%;
-    padding: 25px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-    
-    &.dpN{
-      display: none;
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
+      margin-top: 20px;
     }
   `,
-  linkpage: styled.span`
-    color: ${BLUE1};
-    border-bottom: 1px solid ${BLUE1};
-  `,
-  line: styled.div`
-    width: 100%;
-    margin: 60px 0px;
-    border-bottom: 1px solid ${LIGHT_GRAY5};
-  `,
-  bold: styled.span`
-    font-weight: bold;
-  `,
-  subtit: styled.p`
-    font-size: 18px;
-    font-weight: bold;
-  `,
-  blue: styled.span`
-    color: ${BLUE1};
-  `,
+  /* 서비스안내 공통css 끝 */
+
+
   red: styled.span`
     color: ${RED1};
   `,
   orange: styled.span`
     color: ${ORANGE2};
-  `,
-  stit: styled.p`
-    font-size: 18px;
-    margin: 20px 0px;
-    line-height: 1.8;
-  `,
-  linehgt: styled.div`
-    font-size: 18px;
-    color: ${LIGHT_GRAY8};
-    margin-top: 20px;
-    line-height: 1.8;
   `,
   ex: styled.div`
     position: relative;
