@@ -7,9 +7,9 @@ import TabContent from './tabCont';
 
 interface IProps {}
 
-const PetTab: FC<IProps> = ({}) => {
+const FreeBaggageTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['반려동물', '시각장애인 안내견'];
+  const tabList = ['휴대수하물', '위탁수하물'];
   
 
   return (
@@ -28,8 +28,8 @@ const PetTab: FC<IProps> = ({}) => {
 
 const S = {
   container: styled.div`
-  padding-top: 15px;
+    margin-top: 60px;
   `,
 };
 
-export default PetTab;
+export default FreeBaggageTab;

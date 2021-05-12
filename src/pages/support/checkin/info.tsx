@@ -1,20 +1,15 @@
 import styled from 'styled-components';
 import {
   ComTitle,
-  SpeechBubble,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
   LIGHT_GRAY8,
-  BLUE1,
 } from '@airpremia/cdk/styles/colors';
-import EnterTab from './enterTab'
-import BoardingTab from './boardingTab'
+import CheckinTab from './checkinTab';
 
-
-function additionalServiceCheckin(){
+function Checkin(){
     return (
       <Container>
         <ComTitle
@@ -22,14 +17,15 @@ function additionalServiceCheckin(){
         />
         <C.wrap>
           <C.body>
-            <C.title>탑승수속 안내</C.title>
-            <C.sb>
+            <C.titleMain>탑승수속 안내</C.titleMain>
+            <CheckinTab />
+            {/* <C.sb>
                 <SpeechBubble backgroundColor={BLUE1}>
                 STEP1
                 </SpeechBubble>
             </C.sb>
             <C.sub>공항 도착</C.sub>
-            <C.p>탑승수속 카운터 및 출국장이 혼잡할 수 있으니 탑승수속 카운터 오픈 시간 및 마감 시간을 확인하시어 도착하여 주시기 바랍니다.​</C.p>
+            <C.p>탑승수속 카운터 오픈 시간 및 마감 시간을 확인하시어 도착하여 주시기 바랍니다.​</C.p>
             <C.area>
               <T.table>
                 <table>
@@ -134,7 +130,7 @@ function additionalServiceCheckin(){
               <C.cover>
                 <BoardingTab /> 
               </C.cover>
-            </C.area>
+            </C.area> */}
           </C.body>
         </C.wrap>
       </Container>
@@ -151,9 +147,6 @@ function additionalServiceCheckin(){
       &:first-of-type{
         margin-top: 30px;
       }
-    `,
-    sbody: styled.div`
-      margin-top: 100px;
     `,
     titleMain: styled.h3`
       font-size: 30px;
@@ -228,88 +221,4 @@ function additionalServiceCheckin(){
       padding: 30px;
     `,
   }
-  
-  const T = {
-    table: styled.div`
-      padding: 30px;
-      .taL,
-      .taL{
-        text-align: left;
-      }
-      .taR,
-      .taR{
-        text-align: right;
-      }
-      table {
-        width: 100%;
-        th,
-        thead td,
-        td strong {
-          color: ${DARK_GRAY1};
-          font-size: 15px;
-          font-weight: bold;
-          line-height: 1.6;
-          letter-spacing: -0.3px;
-          text-align: left;
-        }
-        td strong {
-          margin-top: 30px;
-          display: block;
-          &:first-of-type {
-            margin-top: 0;
-          }
-        }
-        td{
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 1.9;
-          letter-spacing: -0.3px;
-          text-align: left;
-          vertical-align: middle;
-          position: relative;
-          &>p {
-            margin-top: 18px;
-          }
-          &>p:first-of-type {
-            margin-top: 0;
-          }
-          .txt {
-            margin-top: 10px;
-            p {
-              position: relative;
-              color: ${LIGHT_GRAY8};
-              &.iLine{
-                padding-left: 8px;
-              }
-              &.iLine::after{
-                content: "-";
-                position: absolute;
-                left: 0;
-                top: 0;
-                display: block;
-              }
-            }
-          }
-        }
-        th:first-child,      
-        td:first-child{
-          text-align: left;
-        }
-        th:last-child,
-        td:last-child{
-          text-align: left;
-        }
-        thead th,
-        thead td{
-          padding: 18px 0;
-          border-bottom: 1px solid ${DARK_GRAY1};
-        }
-        tbody th,
-        tbody td{
-          padding: 18px 0;
-          border-bottom: 1px solid ${LIGHT_GRAY5};
-        }
-      }
-    `,
-  }
-  export default additionalServiceCheckin;
+  export default Checkin;

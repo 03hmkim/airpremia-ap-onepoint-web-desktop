@@ -7,9 +7,9 @@ import TabContent from './tabCont';
 
 interface IProps {}
 
-const PetTab: FC<IProps> = ({}) => {
+const SpecialTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['반려동물', '시각장애인 안내견'];
+  const tabList = ['스포츠장비', '대형악기운송','고가품 신고 제도'];
   
 
   return (
@@ -32,4 +32,4 @@ const S = {
   `,
 };
 
-export default PetTab;
+export default SpecialTab;

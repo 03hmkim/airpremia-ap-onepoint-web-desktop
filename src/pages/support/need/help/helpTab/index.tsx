@@ -7,9 +7,9 @@ import TabContent from './tabCont';
 
 interface IProps {}
 
-const PetTab: FC<IProps> = ({}) => {
+const HelpTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['반려동물', '시각장애인 안내견'];
+  const tabList = ['시각 장애인 손님', '휠체어가 필요한 손님', '보조흡입장치(POC) 이용 손님'];
   
 
   return (
@@ -28,8 +28,8 @@ const PetTab: FC<IProps> = ({}) => {
 
 const S = {
   container: styled.div`
-  padding-top: 15px;
+  margin-top: 60px;
   `,
 };
 
-export default PetTab;
+export default HelpTab;

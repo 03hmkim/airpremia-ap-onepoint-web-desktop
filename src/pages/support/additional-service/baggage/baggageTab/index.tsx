@@ -7,9 +7,9 @@ import TabContent from './tabCont';
 
 interface IProps {}
 
-const PetTab: FC<IProps> = ({}) => {
+const BaggageTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['반려동물', '시각장애인 안내견'];
+  const tabList = ['사전수하물 구매 가격', '현장수하물 구매 가격'];
   
 
   return (
@@ -32,4 +32,4 @@ const S = {
   `,
 };
 
-export default PetTab;
+export default BaggageTab;
