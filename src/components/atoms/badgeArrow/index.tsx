@@ -73,9 +73,9 @@ const S = {
     p {
       color: ${WHITE1};
       font-family: 'Premia';
-      font-size: 18px;
+      font-size: 16px;
       font-weight: 700;
-      line-height: 22px;
+      line-height: 20px;
       letter-spacing: -0.32px;
     }
   `,

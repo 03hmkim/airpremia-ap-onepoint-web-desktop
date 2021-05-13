@@ -62,13 +62,12 @@ const S = {
   container: styled.div<IStyleProps>`
     .innerWrapper {
       box-sizing: border-box;
-      max-width: 1920px;
       margin: 0 auto;
-      padding: 0 80px;
+      padding: 0 120px;
     }
     .heroWrapper {
       width: 100%;
-      height: 800px;
+      height: 600px;
       // background-image: url();
       // background-size: cover;
       // background-repeat: no-repeat;
@@ -86,11 +85,11 @@ const S = {
       }
     }
     .quickWrapper{
-      margin: 80px 0;
+      margin: 55px 0 120px;
     }
     .sectionWrapper{
-      padding: 0 25px;
-      margin-bottom: 130px;
+      padding: 0 120px;
+      margin-bottom: 140px;
       box-sizing: border-box;
 
       &:last-child{
@@ -107,14 +106,23 @@ const S = {
     }
 
     .max{
-      max-width: 1300px;
+      max-width: 1710px;
       margin-left: auto;
       margin-right: auto;
     }
+    
+    @media only screen and (max-width: 1430px) {
+      .innerWrapper {
+        padding: 0 60px;
+      }
 
-    @media only screen and (max-width: 1440px) {
-      .heroWrapper {
-        height: 600px;
+      .sectionWrapper {
+        max-width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        box-sizing: content-box;
       }
     }
 

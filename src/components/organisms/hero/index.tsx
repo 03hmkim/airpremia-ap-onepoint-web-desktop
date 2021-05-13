@@ -6,8 +6,8 @@ import {
   // PromotionalCardPalmTree,
   TicketSearchVertical,
 } from 'src/components';
-import ImgAngle from 'public/images/angle.svg';
-import ImgVtcBg from 'public/images/home/main_vtc_bg_people.svg';
+import ImgAngle from 'public/images/angle_a.svg';
+import ImgVtcBg from 'public/images/home/main_vtc_bg_people_s.svg';
 import {
   WHITE1,
   DARK_GRAY1,
@@ -98,8 +98,8 @@ const S = {
   `,
 
   homeTicketSearchWrapper: styled.div`
-    width: 586px;
-    height: 800px;
+    width: 496px;
+    height: 600px;
     position: relative;
     box-sizing: border-box;
 
@@ -116,10 +116,10 @@ const S = {
         }
       }
       .left {
-        left: -16px;
+        left: -30px;
       }
       .right {
-        right: -16px;
+        right: -30px;
       }
       .bottom {
         bottom: 0;
@@ -136,13 +136,13 @@ const S = {
     }
     .verticalWrapper {
       height: 100%;
-      padding: 0 40px;
+      padding: 0 59px;
       background-color: ${WHITE1};
 
       .imgVtcBg{
         position: absolute;
         top: 106px;
-        right: 44px;
+        right: 50px;
       }
     }
     .destinationWrapper {

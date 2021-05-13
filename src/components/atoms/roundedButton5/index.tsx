@@ -40,7 +40,7 @@ const S = {
     display: inline-block;
     width: auto;
     height: 30px;
-    padding: 0 15px;
+    padding: 0 17px;
     border-radius: 60px;
     background-color: ${ifProp(
       'isActive',

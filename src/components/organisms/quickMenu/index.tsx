@@ -3,9 +3,9 @@ import Link from 'next/link';
 import {
   LIGHT_GRAY6,
 } from '@airpremia/cdk/styles/colors';
-import IcoNav2b1 from 'public/images/nav/ico_nav_2-1.svg';
-import IcoNav2b2 from 'public/images/nav/ico_nav_2-2.svg';
-import IcoNav2b3 from 'public/images/nav/ico_nav_2-3.svg';
+import IcoNav2b1 from 'public/images/nav/ico_nav_2-1_s.svg';
+import IcoNav2b2 from 'public/images/nav/ico_nav_2-2_s.svg';
+import IcoNav2b3 from 'public/images/nav/ico_nav_2-3_s.svg';
 
 function QuickMenu () {
   return (
@@ -47,12 +47,12 @@ const S = {
       justify-content: center;
 
       li {
-        padding: 0 70px;
+        padding: 0 55px;
         position: relative;
 
         &::after {
           content: "";
-          dispaly: block;
+          display: block;
           width: 1px;
           height: 50px;
           position: absolute;
@@ -70,9 +70,9 @@ const S = {
           align-items: center;
 
           span {
-            margin-left: 10px;
-            font-size: 24px;
-            font-weight: 700;
+            margin-left: 20px;
+            font-size: 21px;
+            font-weight: 400;
           }
         }
       }
@@ -111,11 +111,6 @@ const S = {
 
           .label {
             display: block;
-
-            svg {
-              width: 80px;
-              height: 80px;
-            }
 
             span {
               margin-top: 10px;

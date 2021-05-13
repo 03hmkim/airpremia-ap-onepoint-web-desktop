@@ -88,7 +88,7 @@ const S = {
 
     .img {
       width: 100%;
-      height: 210px;
+      height: 244px;
       display: block;
       overflow: hidden;
       background: ${LIGHT_GRAY2};
@@ -111,7 +111,7 @@ const S = {
     }
 
     .badgeWrap{
-      margin-top: 10px;
+      margin-top: 30px;
 
       .badge {
         padding: 0 15px;
@@ -132,8 +132,8 @@ const S = {
     }
 
     h4 {
-      margin-top: 27px;
-      font-size: 21px;
+      margin-top: 24px;
+      font-size: 18px;
       font-weight: 700;
       line-height: 1.3em;
     }
@@ -141,13 +141,17 @@ const S = {
     .date {
       margin-top: 20px;
       color: ${LIGHT_GRAY8};
-      font-size: 18px;
+      font-size: 16px;
       line-height: 1.3em;
     }
 
     @media only screen and (max-width: 1059px) {
       .list {
         width: calc(25% - 15px);
+      }
+
+      .img {
+        height: 180px;
       }
     }
 

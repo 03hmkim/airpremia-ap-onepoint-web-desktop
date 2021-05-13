@@ -34,7 +34,17 @@ const ItineraryTypeButtons: FC<IProps> = ({
 ItineraryTypeButtons.defaultProps = {};
 
 const S = {
-  container: styled.div<IStyleProps>``,
+  container: styled.div<IStyleProps>`
+    button span {
+      font-size: 17px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      button span {
+        font-size: 14px;
+      }
+    }
+  `,
 };
 
 export default ItineraryTypeButtons;

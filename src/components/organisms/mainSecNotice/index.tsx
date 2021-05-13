@@ -72,7 +72,7 @@ const S = {
     border-bottom: 1px solid ${DARK_GRAY1};
 
     > ul > li {
-      padding: 30px 0;
+      padding: 35px 0;
       border-bottom: 1px solid ${LIGHT_GRAY5};
 
       &:last-child {
@@ -96,15 +96,15 @@ const S = {
       float: left;
 
       h4{
-        font-size: 21px;
+        font-size: 18px;
         font-weight: bold;
         line-height: 1.3em;
       }
 
       .desc {
-        margin-top: 10px;
+        margin-top: 15px;
         color: ${LIGHT_GRAY8};
-        font-size: 18px;
+        font-size: 16px;
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -117,7 +117,7 @@ const S = {
       margin-top: 20px;
       float: right;
       color: ${LIGHT_GRAY8};
-      font-size: 18px;
+      font-size: 16px;
     }
 
     @media only screen and (max-width: 767px) {

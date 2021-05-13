@@ -321,12 +321,12 @@ const S = {
     box-sizing: border-box;
 
     h3 {
-      padding-top: 10px;
-      margin-bottom: 175px;
+      padding-top: 22px;
+      margin-bottom: 110px;
       color: ${DARK_GRAY2};
-      font-size: 40px;
+      font-size: 30px;
       font-weight: 700;
-      line-height: 48px;
+      line-height: 36px;
     }
     .top {
       display: flex;
@@ -338,14 +338,14 @@ const S = {
       font-size: 15px;
     }
     .middle {
-      padding-top: 25px;
+      padding-top: 20px;
     }
     .bottom {
       font-size: 18px;
       font-weight: 700;
 
       button {
-        height: 60px;
+        height: 50px;
         border-radius: 70px;
 
         p {
@@ -362,25 +362,30 @@ const S = {
       }
     }
     .selectWrapper {
-      padding: 22px 0;
+      padding: 15px 0;
       border-bottom: 1px solid ${LIGHT_GRAY5};
+
+      & > div > div > div:first-of-type {
+        font-size: 17px;
+        font-weight: 400;
+      }
     }
     .menuWrapper {
       &.station {
-        top: -40px;
-        left: 546px;
-        width: 300px;
+        width: 400px;
         padding: 15px 26px;
+        top: -40px;
+        left: 400px;
         box-sizing: border-box;
       }
       &.date {
         top: -397px;
-        left: 546px;
+        left: 400px;
       }
       &.passenger {
         width: 440px;
-        top: -500px;
-        left: 546px;
+        top: -450px;
+        left: 400px;
       }
     }
 
@@ -388,25 +393,34 @@ const S = {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      height: 47px;
-      margin: 10px 0 40px;
+      margin: 12px 0 25px;
+
       h5 {
         margin-right: 11px;
-        font-size: 18px;
-        line-height: 28px;
+        font-size: 17px;
+        line-height: 20px;
         letter-spacing: -0.26px;
         font-weight: 700;
       }
+
       .select {
         padding-left: 10px;
         font-size: 14px;
-        line-height: 28px;
+        line-height: 20px;
         letter-spacing: -0.28px;
         box-sizing: border-box;
 
-        & > div > div:last-of-type {
-          top: -85px;
-          right: -77px;
+        & > div > div {
+          height: auto;
+
+          > div:first-of-type {
+            margin-right: 25px;
+            position: relative;
+            top: 1px;
+            font-family: 'Heebo';
+            font-size: 17px;
+            font-weight: 400;
+          }
         }
       }
     }
@@ -417,21 +431,16 @@ const S = {
         font-size: 30px;
         line-height: 36px;
       }
-      .selectWrapper {
-        padding: 15px 0;
-      }
+      
       .menuWrapper {
         &.station {
-          top: -38px;
-          left: 411px;
+          top: -50px;
         }
         &.date {
-          top: -350px;
-          left: 411px;
+          top: -360px;
         }
         &.passenger {
-          top: -404px;
-          left: 411px;
+          top: -410px;
         }
       }
     }
@@ -501,8 +510,7 @@ const S = {
       .menuWrapper {
         &.passenger {
           width: 300px;
-          top: -370px;
-          left: 411px;
+          top: -377px;
         }
       }
     }
@@ -513,6 +521,10 @@ const S = {
         h5 {
           font-size: 14px;
           font-weight: 400;
+        }
+        .select > div > div > div:first-of-type {
+          font-size: 14px;
+          font-weight: 300;
         }
       }
 
@@ -554,6 +566,13 @@ const S = {
               padding: 15px 15px;
             }
           }
+        }
+      }
+
+      .selectWrapper {  
+        & > div > div > div:first-of-type {
+          font-size: 14px;
+          font-weight: 300;
         }
       }
     }

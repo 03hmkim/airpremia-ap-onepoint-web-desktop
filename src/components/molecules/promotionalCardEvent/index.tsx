@@ -153,38 +153,51 @@ PromotionalCardEvent.defaultProps = {};
 
 const S = {
   container: styled.div`
-    width: 375px;
-    height: 595px;
-    padding: 30px 40px 40px;
+    width: 300px;
+    height: 460px;
+    padding: 20px 40px;
     border-radius: 20px;
-    box-shadow: 20px -20px 20px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 20px -8px 20px 0 rgba(0, 0, 0, 0.07);
     background-color: ${WHITE1};
     box-sizing: border-box;
   `,
   badge: styled.div`
-    margin-bottom: 20px;
+    margin-bottom: 18px;
   `,
   bottomWrapper: styled.div`
     .subTitle {
-      margin-bottom: 17px;
-      font-size: 21px;
+      margin-bottom: 18px;
+      font-size: 20px;
       font-weight: 700;
-      line-height: 36px;
+      line-height: 28px;
+      letter-spacing: -0.3px;
       color: ${DARK_GRAY1};
+      white-space: normal !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      word-wrap: break-word !important;
+      overflow: hidden;
     }
     .description {
-      font-size: 18px;
-      line-height: 30px;
+      font-size: 17px;
+      line-height: 22px;
       color: ${LIGHT_GRAY8};
+      white-space: normal !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      word-wrap: break-word !important;
+      overflow: hidden;
 
       strong{
         color: ${ORANGE1};
-        font-weight: 700;
+        font-weight: 400;
       }
     }
 
     .click {
-      margin-top: 35px;
+      margin-top: 25px;
 
       &::after{
         content: "";
@@ -194,7 +207,7 @@ const S = {
 
       button {
         float: right;
-        font-size: 21px;
+        font-size: 16px;
         font-family: 'Premia';
         font-weight: 700;
       }
@@ -205,8 +218,8 @@ const S = {
     margin-top: 5px;
 
     .img {
-      width: 290px;
-      height: 252px;
+      width: 220px;
+      height: 200px;
       display: block;
       overflow: hidden;
       background: ${LIGHT_GRAY2};

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 // import { XButtonRound } from 'src/components';
-import { DARK_GRAY1 } from '@airpremia/cdk/styles/colors';
+import { DARK_GRAY1, LIGHT_GRAY8 } from '@airpremia/cdk/styles/colors';
 import SvgBtnLinkCircle from 'public/images/btn_link_circle.svg';
 import Link from 'next/link';
 
@@ -61,9 +61,10 @@ const S = {
     .goCovid {
       display: flex;
       font-size: 16px;
+      font-weight: 300;
       letter-spacing: -0.24px;
       text-align: left;
-      color: ${DARK_GRAY1};
+      color: ${LIGHT_GRAY8};
 
       .moDp{
         margin-left: 5px;

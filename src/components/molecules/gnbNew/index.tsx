@@ -473,7 +473,7 @@ GnbNew.defaultProps = {
 
 const S = {
   container: styled.div`
-    padding: 0 55px;
+    padding: 0 95px;
     position: relative;
     background-color: ${WHITE1};
     
@@ -486,7 +486,7 @@ const S = {
       border-bottom: solid 1px transparent;
     }
     
-    @media only screen and (max-width: 1480px) {
+    @media only screen and (max-width: 1530px) {
       > .innerWrapper {
         justify-content: space-between;
       }
@@ -500,13 +500,17 @@ const S = {
     }
   `,
   logo: styled.div`
-    margin-right: 260px;
+    margin-right: 210px;
     cursor: pointer;
     a {
       display: block;
       position: relative;
+
+      svg {
+        width: 180px;
+      }
     }
-    @media only screen and (max-width: 1480px) {
+    @media only screen and (max-width: 1530px) {
       margin-right: 0;
     }
     @media only screen and (max-width: 1059px) {
@@ -656,10 +660,10 @@ const S = {
       cursor: pointer;
 
       > .label {
-        padding-right: 70px;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 80px;
+        padding: 25px 110px 25px 0;
+        font-size: 21px;
+        font-weight: 700;
+        line-height: 30px;
         letter-spacing: -0.3px;
 
         &:hover {

@@ -46,9 +46,9 @@ const S = {
       h3 {
         color: ${ORANGE2};
         font-family: 'Premia';
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 700;
-        line-height: 60px;
+        line-height: 48px;
       }
     }
 

@@ -199,7 +199,7 @@ const C = {
   contWrap: styled.div`
     &>div>div{
       max-width: 1280px;
-      margin: 60px auto 160px;
+      margin: 60px auto 200px;
       padding-left: 25px;
       padding-right: 25px;
 

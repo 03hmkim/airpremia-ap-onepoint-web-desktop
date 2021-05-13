@@ -103,7 +103,7 @@ Header.defaultProps = {};
 
 const S = {
   container: styled.div`
-    padding: 0 55px;
+    padding: 0 95px;
     background-color: ${WHITE1};
     .innerWrapper {
       margin: 0 auto;
@@ -125,7 +125,7 @@ const S = {
     }
   `,
   leftWrapper: styled.div`
-    padding: 15px 0;
+    padding: 25px 0 45px;
     display: flex;
     align-items: center;
   `,

@@ -76,16 +76,16 @@ const S = {
 
     .mainWrap {
       max-width: 100% !important;
-      padding: 80px 0 0 !important;
+      padding: 45px 0 0 !important;
       margin-top: 0 !important;
       position: relative;
     }
 
     .mainBg {
       width: 100%;
-      height: 800px;
+      height: 600px;
       position: absolute;
-      top: 80px;
+      top: 45px;
       left: 0;
       background-image: url(${randomBG});
       background-size: cover;
@@ -96,13 +96,13 @@ const S = {
 
     .eventWrap {
       position: absolute;
-      top: 60px;
-      right: 80px;
+      top: 20px;
+      right: 120px;
     }
 
-    @media only screen and (max-width: 1440px) {
-      .mainBg {
-        height: 600px;
+    @media only screen and (max-width: 1430px) {
+      .eventWrap {
+        right: 60px;
       }
     }
 

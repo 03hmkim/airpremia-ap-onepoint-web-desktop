@@ -4,7 +4,7 @@ import ImgLogo from 'public/images/airpremia_brand_logo_transparent.png';
 import { SnsButton } from 'src/components';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY1,
+  LIGHT_GRAY2,
   LIGHT_GRAY6,
   LIGHT_GRAY8,
   LIGHT_GRAY5,
@@ -216,9 +216,10 @@ const S = {
   container: styled.footer`
     width: 100%;
     margin: 0 auto;
-    background-color: ${LIGHT_GRAY1};
+    background-color: ${LIGHT_GRAY2};
     h3 {
-      font-size: 18px;
+      font-size: 16px;
+      font-weight: 400;
     }
     a {
       color: ${LIGHT_GRAY8};
@@ -226,7 +227,8 @@ const S = {
     li {
       margin-bottom: 15px;
       color: ${LIGHT_GRAY8};
-      font-size: 16px;
+      font-size: 15px;
+      font-weight: 300;
       letter-spacing: -0.5px;
     }
     input {
@@ -249,15 +251,18 @@ const S = {
 
     .wrapper {
       margin: 0 auto;
-      padding: 50px 80px 60px;
+      padding: 40px 120px 90px;
       z-index: -1;
 
       .top {
-        padding-bottom: 94px;
+        padding-bottom: 180px;
         position: relative;
         display: flex;
         border-bottom: solid 1px ${LIGHT_GRAY5};
+
+
         .list {
+          width: 760px;
           display: flex;
           justify-content: space-between;
         }
@@ -275,8 +280,12 @@ const S = {
             display: none;
           }
         }
+
+        .rightSide {
+          margin-left: 80px;
+        }
+
         .news {
-          margin-left: 40px;
           div {
             position: relative;
           }
@@ -288,7 +297,8 @@ const S = {
           }
           span {
             position: absolute;
-            font-size: 16px;
+            font-size: 15px;
+            font-weight: 300;
             text-decoration: underline;
             top: 5px;
             right: 8px;
@@ -321,7 +331,7 @@ const S = {
             margin: 10px 0;
             display: flex;
             justify-content: space-between;
-            font-size: 16px;
+            font-size: 15px;
             font-weight: 300;
             line-height: 2.73;
             letter-spacing: -0.3px;
@@ -337,7 +347,8 @@ const S = {
       .bottom {
         display: flex;
         justify-content: space-between;
-        margin-top: 30px;
+        margin-top: 45px;
+
         .left-contents {
           display: flex;
         }
@@ -380,12 +391,25 @@ const S = {
       }
     }
 
+    @media only screen and (max-width: 1600px) {
+      .wrapper .top {      
+        .list {
+          width: 630px;
+        }
+
+        .rightSide {
+          margin-left: 40px;
+        }
+      }
+    }
+
     @media only screen and (max-width: 1430px) {
-    .wrapper {
-      max-width: 1280px;
-      margin: 0 auto;
-      padding-left: 25px;
-      padding-right: 25px;
+      .wrapper {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding-left: 25px;
+        padding-right: 25px;
+      }
     }
     
     @media only screen and (max-width: 1380px) {
@@ -393,13 +417,15 @@ const S = {
         .top {
           display: block;
 
+          .list {
+            width: 100%;
+          }
+
           .rightSide{
             margin-top: 50px;
+            margin-left: 0;
             display: flex;
             justify-content: space-between;
-          }
-          .news {
-            margin-left: 0;
           }
           .support {
             position: static;
