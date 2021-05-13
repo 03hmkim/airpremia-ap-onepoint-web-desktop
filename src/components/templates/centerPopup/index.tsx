@@ -4,6 +4,7 @@ import {
   LIGHT_GRAY8, 
   LIGHT_GRAY5,
   DARK_GRAY1,
+  WHITE1,
  } from '@airpremia/cdk/styles/colors';
 
 export enum EScrollType {
@@ -132,6 +133,7 @@ const S = {
     right: 0;
     bottom: 0;
     text-align : center;
+    background: ${WHITE1};
     border-top: 1px solid ${LIGHT_GRAY5};
     box-sizing: border-box;
 
@@ -142,12 +144,25 @@ const S = {
     .twin{
       display: flex;
       justify-content: space-between;
+      background: ${WHITE1};
+
+      &.padbtn {
+        
+      }
 
       button{
         margin-right: 10px;
       }
       button:last-child{
         margin-right: 0;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .twin {
+        &.padbtn {
+          padding: 25px;
+        }
       }
     }
   `,

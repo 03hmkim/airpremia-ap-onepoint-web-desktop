@@ -7,8 +7,6 @@ import {
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
-  LIGHT_GRAY8,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
 import Linkblue from 'public/images/support/btn_txt_link_blue.svg';
@@ -29,88 +27,74 @@ function Teenager(){
             <C.titleMain>혼자 여행하는 어린이/청소년</C.titleMain>
             <C.content className="mt60">
               <C.titleSub>이용 대상</C.titleSub>
-              <C.right>
-                <T.table>
+            </C.content>
+            <C.content>
+              <T.table>
+                <div className="tbWrap">
                   <table>
                     <colgroup>
-                      <col width="20%"></col>
-                      <col width="20%"></col>
-                      <col width="20%"></col>
-                      <col width="20%"></col>
-                      <col width="20%"></col>
+                      <col width="33.3%"></col>
+                      <col width="33.3%"></col>
+                      <col width="33.3%"></col>
                     </colgroup>
                     <thead>
                       <tr>
-                        <th></th>
-                        <td></td>
+                        <th>구분</th>
                         <td>국내선</td>
-                        <td></td>
                         <td>국제선</td>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                         <th>혼자 여행하는 어린이(UM)</th>
-                        <td></td>
                         <td>만 5세 이상 ~ 만 13세 미만</td>
-                        <td></td>
                         <td>만 5세 이상 ~ 만 12세 미만</td>
                       </tr>
-                    </tbody>
-                    <tbody>
                       <tr>
                         <th>혼자 여행하는 청소년(YPTA)</th>
-                        <td></td>
                         <td>미제공</td>
-                        <td></td>
                         <td>만 12세 이상 ~ 만 17세 미만</td>
                       </tr>
                     </tbody>
                   </table>
-                </T.table>
-              </C.right>
+                </div>
+              </T.table>
             </C.content>
           </C.body>
           <C.body>
             <C.titleSub>운임 안내</C.titleSub>
             <C.content>
               <T.table>
-                <table>
-                  <colgroup>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th></th>
-                      <td></td>
-                      <td>국내선</td>
-                      <td></td>
-                      <td>국제선</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>혼자 여행하는 어린이(UM)</th>
-                      <td></td>
-                      <td>에어프레미아에서 별도로 정한 성인운임</td>
-                      <td></td>
-                      <td>에어프레미아에서 별도로 정한 성인운임<br />+서비스 구간당(인당/편도) 100,000</td>
-                    </tr>
-                  </tbody>
-                  <tbody>
-                    <tr>
-                      <th>혼자 여행하는 청소년(YPTA)</th>
-                      <td></td>
-                      <td>미제공</td>
-                      <td></td>
-                      <td>에어프레미아에서 별도로 정한 성인운임<br />+서비스 구간당(인당/편도) 100,000</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="tbWrap">
+                  <table>
+                    <colgroup>
+                      <col width="33.3%"></col>
+                      <col width="33.3%"></col>
+                      <col width="33.3%"></col>
+                      <col width="33.3%"></col>
+                      <col width="33.3%"></col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>구분</th>
+                        <td>국내선</td>
+                        <td>국제선</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>혼자 여행하는 어린이(UM)</th>
+                        <td>에어프레미아에서 별도로 정한 성인운임</td>
+                        <td>에어프레미아에서 별도로 정한 성인운임<br />+서비스 구간당(인당/편도) 100,000</td>
+                      </tr>
+                      <tr>
+                        <th>혼자 여행하는 청소년(YPTA)</th>
+                        <td>미제공</td>
+                        <td>에어프레미아에서 별도로 정한 성인운임<br />+서비스 구간당(인당/편도) 100,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </T.table>
             </C.content>
           </C.body>
@@ -163,17 +147,17 @@ function Teenager(){
             <C.titleSub>유의사항</C.titleSub>
             <C.content>
               <ListGlobal level="fst" body={
-                        <p>출발할 때와 도착할 때는 반드시 보호자(만 18세 이상)의 인수인계가 필요합니다.​</p>
-                      } />
+                <p>출발할 때와 도착할 때는 반드시 보호자(만 18세 이상)의 인수인계가 필요합니다.​</p>
+              } />
               <ListGlobal level="fst" body={
-                        <p>회사가 직접 운항하는 구간만 이용 가능하며, 타사로 연결되는 항​공편의 경우 접수 불가합니다.</p>
-                      } />
+                <p>회사가 직접 운항하는 구간만 이용 가능하며, 타사로 연결되는 항​공편의 경우 접수 불가합니다.</p>
+              } />
               <ListGlobal level="fst" body={
-                        <p>항공기 출발 48시간 전 예약없이 출발 당일 신청 시에는 여행이 불가할 수도 있습니다.</p>
-                      } />
+                <p>항공기 출발 48시간 전 예약없이 출발 당일 신청 시에는 여행이 불가할 수도 있습니다.</p>
+              } />
               <ListGlobal level="fst" body={
-                        <p>필요한 비동반 소아 서류(비동반 소아 서비스 신청서, 보호자 서약서)는 사전에 작성하시어 출발 당일 공항 카운터에 제출​하셔야 하며, 구비 여부에 따라 서비스가 제공되지 않을수도 있습니다.</p>
-                      } />
+                <p>필요한 비동반 소아 서류(비동반 소아 서비스 신청서, 보호자 서약서)는 사전에 작성하시어 출발 당일 공항 카운터에 제출​하셔야 하며, 구비 여부에 따라 서비스가 제공되지 않을수도 있습니다.</p>
+              } />
             </C.content>
           </C.body>
           <C.body>
@@ -276,9 +260,6 @@ const C = {
       font-size: 16px;
     }
   `,
-  right: styled.div`
-    display: block;
-  `,
   linkm: styled.p`
     margin-left: 10px;
     a{
@@ -298,109 +279,6 @@ const C = {
 
 const T = {
   table: styled.div`
-    .taL,
-    .taL{
-      text-align: left;
-    }
-    .taR,
-    .taR{
-      text-align: right;
-    }
-    table {
-      width: 100%;
-      th,
-      thead td,
-      td strong {
-        color: ${DARK_GRAY1};
-        font-size: 15px;
-        font-weight: bold;
-        line-height: 1.6;
-        letter-spacing: -0.3px;
-        text-align: center;
-      }
-      td strong {
-        margin-top: 30px;
-        display: block;
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-      td{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.9;
-        letter-spacing: -0.3px;
-        text-align: center;
-        &>p {
-          margin-top: 18px;
-        }
-        &>p:first-of-type {
-          margin-top: 0;
-        }
-        .txt {
-          margin-top: 10px;
-          p {
-            position: relative;
-            color: ${LIGHT_GRAY8};
-            &.iLine{
-              padding-left: 8px;
-            }
-            &.iLine::after{
-              content: "-";
-              position: absolute;
-              left: 0;
-              top: 0;
-              display: block;
-            }
-          }
-        }
-      }
-      th:first-child,      
-      td:first-child{
-        text-align: left;
-      }
-      th:last-child,
-      td:last-child{
-        text-align: center;
-      }
-      thead th,
-      thead td{
-        padding: 18px 0;
-        border-bottom: 1px solid ${DARK_GRAY1};
-      }
-      tbody th,
-      tbody td{
-        padding: 18px 0;
-        border-bottom: 1px solid ${LIGHT_GRAY5};
-      }
-      th{
-        
-      }
-    }
-    @media only screen and (max-width: 767px) { 
-       table {
-          col:nth-child(1){
-            width:30%;
-          }
-          col:nth-child(2){
-            width:5%;
-          }
-          col:nth-child(3){
-            width:30%;
-          }
-          col:nth-child(4){
-            width:5%;
-          }
-          col:nth-child(5){
-            width:30%;
-          }
-          tbody th,
-          tbody td{
-            font-size:14px;
-          }
-        
-       }
-    }
   `,
 }
 

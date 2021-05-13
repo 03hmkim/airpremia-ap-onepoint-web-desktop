@@ -6,8 +6,6 @@ import {
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
-  LIGHT_GRAY8,
 } from '@airpremia/cdk/styles/colors';
 import { ListGlobal } from 'src/components';
 import { 
@@ -31,63 +29,65 @@ function OverBalance(){
             <C.content>
               <p>위탁수하물이 추가로 필요한 경우 탑승수속 카운터에서 구매하실 수 있습니다.</p>
             </C.content>
-            <T.table>
-              <div className="tbl-scrolls">
-                <table>
-                  <colgroup>
-                    <col width="10%"></col>
-                    <col width="10%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <td rowSpan={2} colSpan={2}>구분</td>
-                      <td rowSpan={2}>국내선</td>
-                      <td colSpan={3}>국제선</td>
-                    </tr>
-                    <tr>
-                      <td>동북아</td>
-                      <td>동남아</td>
-                      <td>미주</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td colSpan={2}>개수 초과 (최대 23kg)</td>
-                      <td>-</td>
-                      <td>70,000</td>
-                      <td>100,000</td>
-                      <td>200,000</td>
-                    </tr>
-                    <tr>
-                      <td colSpan={2}>무게 초과 (23kg 초과/1kg)</td>
-                      <td>2,000/kg</td>
-                      <td>10,000/kg</td>
-                      <td>15,000/kg</td>
-                      <td>20,000/kg</td>
-                    </tr>
-                    <tr>
-                      <td rowSpan={2}>크기 초과</td>
-                      <td>159~203cm</td>
-                      <td>-</td>
-                      <td>80,000</td>
-                      <td>120,000</td>
-                      <td>160,000</td>
-                    </tr>
-                    <tr>
-                      <td>204~292cm</td>
-                      <td>10,000</td>
-                      <td>160,000</td>
-                      <td>240,000</td>
-                      <td>320,000</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </T.table>
+            <C.content>
+              <T.table>
+                <div className="tbWrap">
+                  <table>
+                    <colgroup>
+                      <col width="16%"></col>
+                      <col width="16%"></col>
+                      <col width="17%"></col>
+                      <col width="17%"></col>
+                      <col width="17%"></col>
+                      <col width="17%"></col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th rowSpan={2} colSpan={2}>구분</th>
+                        <td className="bdBN" rowSpan={2}>국내선</td>
+                        <td colSpan={3}>국제선</td>
+                      </tr>
+                      <tr>
+                        <td>동북아</td>
+                        <td>동남아</td>
+                        <td>미주</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th colSpan={2}>개수 초과 (최대 23kg)</th>
+                        <td>-</td>
+                        <td>70,000</td>
+                        <td>100,000</td>
+                        <td>200,000</td>
+                      </tr>
+                      <tr>
+                        <th colSpan={2}>무게 초과 (23kg 초과/1kg)</th>
+                        <td>2,000/kg</td>
+                        <td>10,000/kg</td>
+                        <td>15,000/kg</td>
+                        <td>20,000/kg</td>
+                      </tr>
+                      <tr>
+                        <th className="sb" rowSpan={2}>크기 초과</th>
+                        <th>159~203cm</th>
+                        <td>-</td>
+                        <td>80,000</td>
+                        <td>120,000</td>
+                        <td>160,000</td>
+                      </tr>
+                      <tr>
+                        <th>204~292cm</th>
+                        <td>10,000</td>
+                        <td>160,000</td>
+                        <td>240,000</td>
+                        <td>320,000</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </T.table>
+            </C.content>
           </C.body>
           <C.body>
             <C.titleSub>요금 안내</C.titleSub>
@@ -203,134 +203,11 @@ const C = {
 }
     
 const T = {
-table: styled.div`
-  padding: 30px 0;
-  .taL,
-  .taL{
-    text-align: left;
-  }
-  .taR,
-  .taR{
-    text-align: right;
-  }
-  table {
-    width: 100%;
-    th,
-    thead td,
-    td strong {
-      color: ${DARK_GRAY1};
-      font-size: 15px;
-      font-weight: bold;
-      line-height: 1.6;
-      letter-spacing: -0.3px;
-      text-align: center;
-    }
-    thead td{
-      color:#fff;
-      background:#1b2b45;
-      border:1px solid #324158;
-      text-align:center !important;
-    }
-    td strong {
-      margin-top: 30px;
-      display: block;
-      &:first-of-type {
-        margin-top: 0;
-      }
-    }
-    td{
-      font-size: 14px;
-      font-weight: 400;
-      word-break:keep-all;
-      line-height: 1.9;
-      letter-spacing: -0.3px;
-      text-align: center;
-      vertical-align: middle;
-      position: relative;
-      border:1px solid #ddd;
-      &>p {
-        margin-top: 18px;
-      }
-      &>p:first-of-type {
-        margin-top: 0;
-      }
-      .txt {
-        margin-top: 10px;
-      p {
-          position: relative;
-          color: ${LIGHT_GRAY8};
-          &.iLine{
-          padding-left: 8px;
-          }
-          &.iLine::after{
-          content: "-";
-          position: absolute;
-          left: 0;
-          top: 0;
-          display: block;
-          }
-        }
-      }
-    }
-    th:first-child,      
-    td:first-child{
-      text-align: left;
-      vertical-align: middle;
-      border-left:0;
-    }
-    th:last-child,
-    td:last-child{
-      text-align: right;
-      border-right:0;
-    }
-    thead th,
-    thead td{
-      padding: 18px 0;
-    }
-    tbody th,
-    tbody td{
-      padding: 18px 0;
-      border-bottom: 1px solid ${LIGHT_GRAY5};
-    }
-  }
-  @media only screen and (max-width: 767px) { 
-    padding:20px 0;
-    .tbl-scrolls{
-      width:100%;
-      height:auto;
-      overflow:hidden;
-      overflow-x:auto;
-      table{
-        min-width:800px;
-        thead{
-          td{
-            padding:10px;
-            font-size:14px;
-            height:30px;
-            vertical-align:middle;
-            text-align:center;
-          }
-        }
-        td{
-          padding:10px;
-          font-size:14px;
-          text-align:left;
-        }
-        .img-type{
-          td{
-            text-align:center;
-          }
-        }
-        
-      }
-    }
-    table{
-      td{
-        font-size:14px;
-        padding:10px !important;
-      }
-    }
-  }
-`,
+  table: styled.div`
+
+
+
+
+  `,
 }
 export default OverBalance;

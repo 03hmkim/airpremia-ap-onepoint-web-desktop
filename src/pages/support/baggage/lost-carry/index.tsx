@@ -5,6 +5,7 @@ import {
   NewModal,
   PopupTitle,
   SupportLink,
+  TaskButton,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
@@ -30,6 +31,8 @@ function LostCarry(){
     UIStore: { newModal },
   } = useModal();
 
+  const { onHideNewModal } = useModal();
+
   const report = () =>
   onShowNewModal('report');
 
@@ -41,27 +44,26 @@ function LostCarry(){
             className="min hAuto"
             type={EScrollType.TYPE1}
             title={
-              <S.modalTitle>
-                <PopupTitle>고가품 신고 제도</PopupTitle>
-              </S.modalTitle>
+              <PopupTitle>고가품 신고 제도</PopupTitle>
             }
             body={
               <>
-                <S.textArea className="auto">
-                  <ListGlobal level="fst" body={
-                    <p>손님께서 고가의 물품을 위탁하실 경우 소정의 추가 요금을 지불하시면 손해 배상 시 신고하신 금액까지 보장받으실 수 있습니다.</p>
-                  }/>
-                  <ListGlobal level="fst" body={
-                    <p>위탁수하물로 부치신 물품이 분실, 파손된 경우 운송약관이 정하는 범위 외의 일체의 책임을 부담하지 않습니다.</p>
-                  }/>
-                  <ListGlobal level="fst" body={
-                    <p>최대 신고액은 USD 2,500으로 한정되며, 물품 가액을 증명할 수 있는 서류를 제시해야 합니다.</p>
-                  }/>
-                  <ListGlobal level="fst" body={
-                    <p>고가품 신고 시 부과되는 요금은 USD 100달러당 USD 0.5로 계산됩니다.</p>
-                  }/>
-                </S.textArea>
+                <ListGlobal level="fst" body={
+                  <p>손님께서 고가의 물품을 위탁하실 경우 소정의 추가 요금을 지불하시면 손해 배상 시 신고하신 금액까지 보장받으실 수 있습니다.</p>
+                }/>
+                <ListGlobal level="fst" body={
+                  <p>위탁수하물로 부치신 물품이 분실, 파손된 경우 운송약관이 정하는 범위 외의 일체의 책임을 부담하지 않습니다.</p>
+                }/>
+                <ListGlobal level="fst" body={
+                  <p>최대 신고액은 USD 2,500으로 한정되며, 물품 가액을 증명할 수 있는 서류를 제시해야 합니다.</p>
+                }/>
+                <ListGlobal level="fst" body={
+                  <p>고가품 신고 시 부과되는 요금은 USD 100달러당 USD 0.5로 계산됩니다.</p>
+                }/>
               </>
+            }
+            button={
+              <TaskButton onClick={onHideNewModal}>확인</TaskButton>
             }
           />
         );

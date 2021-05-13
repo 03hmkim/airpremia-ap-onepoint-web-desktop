@@ -82,6 +82,10 @@ const S = {
       }
     }
 
+    &.hAutoDf {      
+      height: auto;
+    }
+
     &.max {
       max-width: 800px;
     }
@@ -95,6 +99,12 @@ const S = {
         .popup-title {
           min-height: 60px;
         }
+      }
+    }
+
+    @media only screen and (max-height: 800px) {
+      &.hCalc800 {
+        height: calc(100vh - 85px);
       }
     }
   `,

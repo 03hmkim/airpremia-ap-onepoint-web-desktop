@@ -6,9 +6,6 @@ import {
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  DARK_BLUE1,
-  LIGHT_GRAY6,
-  WHITE1,
   ORANGE2,
   RED2,
 } from '@airpremia/cdk/styles/colors';
@@ -43,33 +40,35 @@ function SideSeat(){
               <C.content>
                 <C.sb>
                   <T.table>
-                    <table>
-                      <colgroup>
-                        <col width="20%"></col>
-                        <col width="20%"></col>
-                        <col width="20%"></col>
-                        <col width="20%"></col>
-                        <col width="20%"></col>
-                      </colgroup>
-                      <thead>
-                        <tr>
-                          <th>구분</th>
-                          <td>국내선</td>
-                          <td>동북아</td>
-                          <td>동남아</td>
-                          <td>미주</td>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th>요금</th>
-                          <td><C.red>구매 불가</C.red></td>
-                          <td>20,000</td>
-                          <td>40,000</td>
-                          <td>100,000</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                    <div className="tbWrap">
+                      <table>
+                        <colgroup>
+                          <col width="20%"></col>
+                          <col width="20%"></col>
+                          <col width="20%"></col>
+                          <col width="20%"></col>
+                          <col width="20%"></col>
+                        </colgroup>
+                        <thead>
+                          <tr>
+                            <th>구분</th>
+                            <td>국내선</td>
+                            <td>동북아</td>
+                            <td>동남아</td>
+                            <td>미주</td>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th>요금</th>
+                            <td><C.red>구매 불가</C.red></td>
+                            <td>20,000</td>
+                            <td>40,000</td>
+                            <td>100,000</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </T.table>
                 </C.sb>
               </C.content>
@@ -220,44 +219,6 @@ const C = {
 
 const T = {
   table: styled.div`
-    border-top: 0.75px solid ${DARK_BLUE1};
-    border-bottom: 0.75px solid ${DARK_BLUE1};
-    table {
-      width: 100%;
-      th, td{
-        font-size: 20px;
-        line-height: 1.36em;
-        text-align: center;
-        vertical-align: middle;
-        padding: 15px;
-      }
-      thead th, thead td {
-        color: ${WHITE1};
-        font-weight: 700;
-        background: ${DARK_BLUE1};
-      }
-      tbody th, tbody td{
-        border-bottom: 0.75px solid ${LIGHT_GRAY6};
-        border-right: 0.75px solid ${LIGHT_GRAY6};
-      }
-      tbody th{
-        font-weight: 700;
-      }
-      tbody td{
-        font-weight: 400;
-        &:last-child {
-          border-right: none;
-        }
-      }
-    }
-    @media only screen and (max-width: 767px) {
-      table {
-        th, td{
-          font-size: 14px;
-          letter-spacing: -0.28px;
-        }
-      }
-    }
   `,
 }
 

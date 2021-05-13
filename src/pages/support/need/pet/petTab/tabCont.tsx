@@ -5,7 +5,6 @@ export interface IProps extends IStyleProps {
 }
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
   LIGHT_GRAY8,
   BLUE1,
   ORANGE2,
@@ -50,7 +49,7 @@ function TabContent({currIdxCont}: IProps) {
                   }/>
                   <ListGlobal level="scd" body={
                     <p>서류 준비 시 총 3부(원본 1부/사본 2부) 준비해 주시기 바랍니다.<br />원본- 손님 소지/사본 2부- 농림축산검역본부 제출용, 항공사 제출용<br />국가/지역별 규정 및 자세한 사항은&nbsp;
-                      <C.linkm2><a href="http://www.qia.go.kr/livestock/qua/livestock_outforeign_hygiene_inf.jsp">농림축산검역본부</a></C.linkm2>
+                      <C.linkm2><a href="http://www.qia.go.kr/livestock/qua/livestock_outforeign_hygiene_inf.jsp" target="_blank">농림축산검역본부</a></C.linkm2>
                     를 확인바랍니다​</p>
                   }/>
                   <ListGlobal level="fst" body={
@@ -71,29 +70,27 @@ function TabContent({currIdxCont}: IProps) {
               <C.right>
                 <C.itemText><C.bold>반려동물 운반용기 준비</C.bold></C.itemText>
                 <C.itemText>반려동물 운반용기를 조건에 맞게 준비해 주시기 바랍니다.</C.itemText>
-                <AnimalCage />
+                <AnimalCage />                
+                <ListGlobal level="fst" body={
+                  <p>세변(가로, 세로, 높이)의 합이 총 115CM 이하이며, 높이가 최대 20CM 이하인 용기​</p>
+                }/>
+                <ListGlobal level="fst" body={
+                  <p>반려동물이 움직이는데 불편함이 없는 충분한 공간이 있는 용기​</p>
+                }/>
+                <ListGlobal level="fst" body={
+                  <p>환기, 방수, 잠금장치가 있으며, 비상시 외부에서 열 수 있는 용기​</p>
+                }/>
+                <ListGlobal level="fst" body={
+                  <p>조류의 운송용기는 철재용기로 된 케이지를 준비하셔야 하며, 용기외부는 불투명한 천으로 가려야 함​</p>
+                }/>
+                <ListGlobal level="fst" body={
+                  <p><C.linkm2><a href="https://www.iata.org/en/programs/cargo/live-animals/pets/#tab-1">IATA</a></C.linkm2>에서 용기에 관하여 정의한 지침입니다.​</p>
+                }/>
+                {/* <C.ml20>
+                  <C.description>운반용기에 대한 자세한 내용은 <C.linkm className="dpin"><a href="https://www.iata.org/en/programs/cargo/live-animals/pets/#tab-1" target="_blank">IATA Traveler’s Pet Corner</a></C.linkm>를 참고해주시기 바랍니다.</C.description>
+                </C.ml20>                     */}
               </C.right>
             </C.inline>
-          </C.content>
-          <C.content>
-            <ListGlobal level="fst" body={
-              <p>세변(가로, 세로, 높이)의 합이 총 115CM 이하이며, 높이가 최대 20CM 이하인 용기​</p>
-            }/>
-            <ListGlobal level="fst" body={
-              <p>반려동물이 움직이는데 불편함이 없는 충분한 공간이 있는 용기​</p>
-            }/>
-            <ListGlobal level="fst" body={
-              <p>환기, 방수, 잠금장치가 있으며, 비상시 외부에서 열 수 있는 용기​</p>
-            }/>
-            <ListGlobal level="fst" body={
-              <p>조류의 운송용기는 철재용기로 된 케이지를 준비하셔야 하며, 용기외부는 불투명한 천으로 가려야 함​</p>
-            }/>
-            <ListGlobal level="fst" body={
-              <p><C.linkm2><a href="https://www.iata.org/en/programs/cargo/live-animals/pets/#tab-1">IATA</a></C.linkm2>에서 용기에 관하여 정의한 지침입니다.​</p>
-            }/>
-              {/* <C.ml20>
-                <C.description>운반용기에 대한 자세한 내용은 <C.linkm className="dpin"><a href="https://www.iata.org/en/programs/cargo/live-animals/pets/#tab-1" target="_blank">IATA Traveler’s Pet Corner</a></C.linkm>를 참고해주시기 바랍니다.</C.description>
-              </C.ml20>                     */}
           </C.content>
           <C.content>
             <C.itemTitle>[공항 도착]</C.itemTitle>
@@ -121,34 +118,38 @@ function TabContent({currIdxCont}: IProps) {
           <C.titleSub>요금안내</C.titleSub>
           <C.content>
             <C.itemText2>※ 반려동물 요금은 무료 위탁수하물 허용량과 별도로 부과됩니다.</C.itemText2>
+          </C.content>
+          <C.content>
             <T.table>
-              <table>
-                <colgroup>
-                  <col width="20%"></col>
-                  <col width="20%"></col>
-                  <col width="20%"></col>
-                  <col width="20%"></col>
-                  <col width="20%"></col>
-                </colgroup>
-                <thead>
-                  <tr>
-                    <th>구분</th>
-                    <td>국내선</td>
-                    <td>동북아</td>
-                    <td>동남아</td>
-                    <td>미주</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>요금</th>
-                    <td>20,000</td>
-                    <td>70,000</td>
-                    <td>100,000</td>
-                    <td>200,000</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="tbWrap">
+                <table>
+                  <colgroup>
+                    <col width="20%"></col>
+                    <col width="20%"></col>
+                    <col width="20%"></col>
+                    <col width="20%"></col>
+                    <col width="20%"></col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <td>국내선</td>
+                      <td>동북아</td>
+                      <td>동남아</td>
+                      <td>미주</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th>요금</th>
+                      <td>20,000</td>
+                      <td>70,000</td>
+                      <td>100,000</td>
+                      <td>200,000</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </T.table>
           </C.content>
         </C.body>
@@ -290,35 +291,57 @@ const C = {
   itemText: styled.p`
     font-size: 18px;
     line-height: 30px;
+    word-break:keep-all;
+
     span{
       display: block;
-      &:first-child{
-        margin-top: 35px;
-      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      width: 100%;
+      flex: 1;
+      line-height: 1.5em;
+      margin-top: 10px;
     }
   `,
   itemText2: styled.p`
     font-size: 18px;
     line-height: 30px;
     color: ${ORANGE2};
-    span{
+    word-break: keep-all;
+
+    span {
       display: block;
-      &:first-child{
-        margin-top: 35px;
-      }
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      margin-top: 10px;
+      line-height: 1.5em;
     }
   `,
   description: styled.p`
     font-size: 18px;
     color: ${LIGHT_GRAY8};
     margin-top: 15px;
+
     &.mt0{
       margin-top: 0;
+    }
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 14px;
+      margin-left: -70px;
     }
   `,
   p: styled.p``,
   bold: styled.span`
     font-weight: bold;
+
+    @media only screen and (max-width: 767px) { 
+      font-size: 16px;
+    }
   `,
   badge:styled.div`
     width: 60px;
@@ -339,9 +362,16 @@ const C = {
     display: flex;
     align-items: baseline;
     padding-bottom: 30px;
+
+    @media only screen and (max-width: 479px) {
+      display: block;
+    }
   `,
   right: styled.div`
     display: block;
+    width: 100%;
+    height: auto;
+    flex: 1;
   `,
   ml20: styled.div`
     margin-left: 20px;
@@ -366,82 +396,6 @@ const C = {
 
 const T = {
   table: styled.div`
-    .taL,
-    .taL{
-      text-align: left;
-    }
-    .taR,
-    .taR{
-      text-align: right;
-    }
-    table {
-      width: 100%;
-      th,
-      thead td,
-      td strong {
-        color: ${DARK_GRAY1};
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 1.6;
-        letter-spacing: -0.3px;
-        text-align: center;
-      }
-      td strong {
-        margin-top: 30px;
-        display: block;
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-      td{
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.9;
-        letter-spacing: -0.3px;
-        text-align: center;
-        &>p {
-          margin-top: 18px;
-        }
-        &>p:first-of-type {
-          margin-top: 0;
-        }
-        .txt {
-          margin-top: 10px;
-          p {
-            position: relative;
-            color: ${LIGHT_GRAY8};
-            &.iLine{
-              padding-left: 8px;
-            }
-            &.iLine::after{
-              content: "-";
-              position: absolute;
-              left: 0;
-              top: 0;
-              display: block;
-            }
-          }
-        }
-      }
-      th:first-child,      
-      td:first-child{
-        text-align: left;
-      }
-      th:last-child,
-      td:last-child{
-        text-align: center;
-      }
-      thead th,
-      thead td{
-        padding: 18px 0;
-        border-bottom: 1px solid ${DARK_GRAY1};
-      }
-      tbody th,
-      tbody td{
-        padding: 18px 0;
-        border-bottom: 1px solid ${LIGHT_GRAY5};
-      }
-    }
   `,
 };
 

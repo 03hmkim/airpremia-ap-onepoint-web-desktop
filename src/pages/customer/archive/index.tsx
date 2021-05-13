@@ -39,7 +39,7 @@ function archivelist(){
         case 'popHealth':
           return (
             <NewModal
-              className="max hAuto"
+              className="max hAutoDf hCalc800"
               type={EScrollType.TYPE1}
               title={
                 <S.modalTitle>
@@ -54,7 +54,7 @@ function archivelist(){
                       <li>당뇨 증상 및 특정 알레르기 반응의 처치 목적으로 주사기를 휴대한 승객</li>
                       <li>체내 의료용 장비(인공 심장박동기,인슐린 펌프, 척추자극기 등)가 삽입되어 있는 승객</li>
                       <li>급성 감염병 질환  및 전염성 질환을 보유한 승객</li>
-                      <li>심근 경색, 협심증, 심부전 등의 심혈관계 질환이 있는 환자 및 심장 수술을<br />받은 경우</li>
+                      <li>심근 경색, 협심증, 심부전 등의 심혈관계 질환이 있는 환자 및 심장 수술을 받은 경우</li>
                       <li>만성 폐쇄성 폐질환, 천식, 폐렴, 폐수종, 기흉 등의 호흡기계 질환이 있는 경우</li>
                       <li>뇌졸중, 뇌종양 등의 신경계 질환이 있는 환자 및 뇌수술을 받은 경우</li>
                       <li><C.orange>최근 한 달 이내</C.orange> 수술을 받은 경우</li>
@@ -62,10 +62,12 @@ function archivelist(){
                       <li>조절되지 않는 정신과적 질환이 있는 경우</li>
                     </ul>
                   </S.textArea>
-                  <S.btnArea className="auto">
-                    <TaskButton onClick={onHideNewModal}>확인</TaskButton>
-                  </S.btnArea>
                 </>
+              }
+              button={
+                <S.btnArea>
+                  <TaskButton onClick={onHideNewModal}>확인</TaskButton>
+                </S.btnArea>
               }
             />
           );       
@@ -107,7 +109,7 @@ function archivelist(){
                     <th>
                       <C.ptit>특수 수하물 운송 서약서</C.ptit>
                       <C.pscr>
-                        스포츠 장비(골프, 스키, 스쿠버다이빙, 자전거 등), 대형악기 또는 고가의 물품을 위탁하시는 고객은<br />특수수하물 운송서약서를 작성 후  출발 당일 탑승수속 카운터에서 직원에게 제출해 주시기 바랍니다. 
+                        스포츠 장비(골프, 스키, 스쿠버다이빙, 자전거 등), 대형악기 또는 고가의 물품을 위탁하시는 고객은 특수 수하물 운송서약서를 작성 후 출발 당일 탑승수속 카운터에서 직원에게 제출해 주시기 바랍니다. 
                         </C.pscr>
                     </th>
                     <td>
@@ -118,7 +120,7 @@ function archivelist(){
                     <th>
                       <C.ptit>비동반 소아 서비스 신청서 (UM/YPTA 신청서)</C.ptit>
                       <C.pscr>
-                        보호자 없이 혼자 여행하는 어린이/청소년은 예약센터를 통해 신청하신 후 UM/YPTA 신청서를 작성하여<br />출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
+                        보호자 없이 혼자 여행하는 어린이/청소년은 예약센터를 통해 신청하신 후 UM/YPTA 신청서를 작성하여 출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
                       </C.pscr>
                     </th>
                     <td>
@@ -129,7 +131,7 @@ function archivelist(){
                     <th>
                       <C.ptit>비동반 소아 보호자 서약서</C.ptit>
                       <C.pscr>
-                        보호자 없이 혼자 여행하는 어린이/청소년은 예약센터를 통해 신청하신 후 보호자 서약서를 작성하여<br />출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
+                        보호자 없이 혼자 여행하는 어린이/청소년은 예약센터를 통해 신청하신 후 보호자 서약서를 작성하여 출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
                       </C.pscr>
                     </th>
                     <td>
@@ -140,7 +142,7 @@ function archivelist(){
                     <th>
                       <C.ptit>반려동물 운송 서약서</C.ptit>
                       <C.pscr>
-                        반려동물을 동반한 고객은 예약센터를 통해 운송 승인을 받은신 후 반려동물 운송 서약서를 작성하여<br />출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
+                        반려동물을 동반한 고객은 예약센터를 통해 운송 승인을 받은신 후 반려동물 운송 서약서를 작성하여 출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
                       </C.pscr>
                     </th>
                     <td>
@@ -161,7 +163,7 @@ function archivelist(){
                     <th>
                       <C.ptit>의사소견서(POC)</C.ptit>
                       <C.pscr>
-                        보조흡입장치 기내사용이 필요한 손님께서는 예약센터를 통해 운송 확인을 먼저 받으신 후<br />작성된 의사소견서(POC)를 출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
+                        보조흡입장치 기내사용이 필요한 손님께서는 예약센터를 통해 운송 확인을 먼저 받으신 후 작성된 의사소견서(POC)를 출발 당일 탑승수속 카운터 직원에게 제출해 주시기 바랍니다.
                       </C.pscr>
                     </th>
                     <td>
@@ -172,7 +174,7 @@ function archivelist(){
                     <th>
                       <C.ptit>항공교통이용자 피해구제 신청서</C.ptit>
                       <C.pscr>
-                        항공사업법 제61조 및 동법 시행규칙 제64조에 의거 피해구제신청을 위한 양식입니다.<br />피해구제 접수처에 제출해 주시기 바랍니다.
+                        항공사업법 제61조 및 동법 시행규칙 제64조에 의거 피해구제신청을 위한 양식입니다. 피해구제 접수처에 제출해 주시기 바랍니다.
                       </C.pscr>
                     </th>
                     <td>
@@ -194,7 +196,8 @@ const C = {
     margin-top: 70px;
 
     .mr10{
-      margin-right: 10px;
+      margin-bottom: 10px;
+      display: inline-flex;
     }
 
     .btnDown{
@@ -223,6 +226,22 @@ const C = {
 
       &:hover{        
         text-decoration: underline !important;;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .mr10 {
+        margin-right: 10px;
+        margin-bottom: 0px;
+        display: inline-block;
+      }
+    }
+
+    @media only screen and (max-width: 369px) {
+      .mr10 {
+        margin-right: 0px;
+        margin-bottom: 10px;
+        margin-left: 10px;
       }
     }
   `,
@@ -330,6 +349,15 @@ const T = {
       tbody td{
         padding: 30px 0;
         border-bottom: 1px solid ${LIGHT_GRAY5};
+
+        @media only screen and (max-width: 767px) {
+          display: block;
+          tbody td {
+            &:last-child {
+              border-bottom: 0px;
+            }
+          }
+        }
       }
     }
   `,
@@ -370,13 +398,12 @@ const S = {
     height: 100%;
     
     &.auto{
-      padding: 0 50px 50px;
       overflow-y: auto;
       box-sizing: border-box;
     }
 
     ul {
-      padding-left: 22px;
+      padding-left: 30px;
 
       > li{
         margin-top: 10px;
@@ -385,18 +412,15 @@ const S = {
         word-break: keep-all;
       }
     }
+
+    @media only screen and (max-width: 767px) {
+      ul {
+        padding-left: 20px;
+      }
+    }
   `,
 
   btnArea: styled.div`
-    padding: 25px 50px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid ${LIGHT_GRAY5};
-    &.auto{
-      position: static;
-    }
   `,
 }
 export default archivelist;

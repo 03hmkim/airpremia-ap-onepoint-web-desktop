@@ -7,7 +7,6 @@ import {
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
 import Stroller from 'public/images/support/stroller.png';
 import BaggageStroller from 'public/images/support/baggageStroller.png';
@@ -32,18 +31,18 @@ function Infant(){
           <C.body>
               <C.titleSub><span>이용 대상 및 운임</span></C.titleSub>
               <C.content>
-                <T.table>
+                <T.dl>
                   <dl>
                       <dt>유아의 기준</dt>
                       <dd>
                           <ul>
                               <li>
-                                  <ListGlobal level="scd" body={
+                                  <ListGlobal level="fst" body={
                                       <p>탑승일 기준 생후 7일 이상~24개월 미만</p>
                                   } />
                               </li>
                               <li>
-                                  <ListGlobal level="scd" body={
+                                  <ListGlobal level="fst" body={
                                       <p>성인 1명이 유아 2명을 동반한 경우 유아 1명의 항공권은 소아운임이 적용되며 좌석이 제공됩니다.</p>
                                   } />
                               </li>
@@ -53,12 +52,12 @@ function Infant(){
                       <dd>
                           <ul>
                               <li>
-                                  <ListGlobal level="scd" body={
+                                  <ListGlobal level="fst" body={
                                       <p>국내선:무료</p>
                                   } />
                               </li>
                               <li>
-                                  <ListGlobal level="scd" body={
+                                  <ListGlobal level="fst" body={
                                       <p>국제선:성인 구매운임의 10%</p>
                                   } />
                               </li>
@@ -95,35 +94,37 @@ function Infant(){
                     </tbody>
                   </table>
                   */}
-                </T.table>
+                </T.dl>
               </C.content>
           </C.body>
           <C.body>
             <C.titleSub>유아 수하물 허용량</C.titleSub>
             <C.content>
               <T.table>
-                <table>
-                  <colgroup>
-                    <col width="50%"></col>
-                    <col width="50%"></col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <td className="cell">국내선</td>
-                      <td className="cell">국제선</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><C.stroller></C.stroller></td>
-                      <td><C.baggageStroller><C.bSText>1pc<br></br>X<br></br>10kg</C.bSText></C.baggageStroller></td>
-                    </tr>
-                    <tr>
-                      <td>유모차/유아용 안전의자/요람 중 1개</td>
-                      <td>1pc X 10kg + 유모차/유아용 안전의자/요람 중 1개</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="tbWrap">
+                  <table>
+                    <colgroup>
+                      <col width="50%"></col>
+                      <col width="50%"></col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <td>국내선</td>
+                        <td>국제선</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><C.stroller></C.stroller></td>
+                        <td><C.baggageStroller><C.bSText>1pc<br></br>X<br></br>10kg</C.bSText></C.baggageStroller></td>
+                      </tr>
+                      <tr>
+                        <td>유모차/유아용 안전의자/요람 중 1개</td>
+                        <td>1pc X 10kg + 유모차/유아용 안전의자/요람 중 1개</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </T.table>
             </C.content>
           </C.body>
@@ -332,114 +333,86 @@ const C = {
     justify-content: center;
     align-items: center;
     background-image: url(${Stroller});
+
+    @media only screen and (max-width: 767px) {
+      width: 60px;
+      height: 60px;
+      background-size: 60px;
+    }
   `,
   baggageStroller: styled.div`
     margin: 0 auto;
     width: 125px;
     height: 130px;
+    font-size: 14px;
+    line-height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(${BaggageStroller});
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width: 767px) {
+      width: 80px;
+      height: 80px;
+      background-size: 75px;
+    }
   `,
   bSText:styled.span`
     margin-top: 5px;
     margin-left: -52px;
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
   `,
 }
 
 
 const T = {
-  table: styled.div`
-    dl{
-        dt{ 
-            margin-top:60px;
-            font-size:21px;
-            color:#222;
-            font-weight:bold;
-            line-height:1.71em;
-        }
-        dd{
-            margin-top:30px;
-            p{
-                font-size:18px;
-                color:#222;
-                font-weight:500;
-                line-height:2em;
-            }
-        }
-    }
-    .taL,
-    .taL{
-      text-align: left;
-    }
-    .taR,
-    .taR{
-      text-align: right;
-    }
-    table {
-        th{
-            background:#1b2b45;
-            color:#fff;
-        }
-      width: 100%;
-      thead td{
-        color: ${DARK_GRAY1};
-        font-size: 15px;
-        font-weight: bold;
-        line-height: 1.6;
-        letter-spacing: -0.3px;
-        text-align: center;
+
+  dl: styled.div`
+    dl {
+      dt { 
+          margin-top:60px;
+          font-size:21px;
+          color:#222;
+          font-weight:bold;
+          line-height:1.71em;
       }
-      td{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.9;
-        letter-spacing: -0.3px;
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
+      dd {
+          margin-top:30px;
+          p{
+              font-size:18px;
+              color:#222;
+              font-weight:500;
+              line-height:2em;
+          }
       }
-      td.cell{
-        background:#1b2b45;
-        color:#fff;
-      }
-      thead td{
-        padding: 18px 0;
-        border-bottom: 1px solid ${DARK_GRAY1};
-      }
-      tbody td{
-        padding: 18px 0;
-        border-bottom: 1px solid ${LIGHT_GRAY5};
-      }
-    }
+    } 
+    
     @media only screen and (max-width: 767px) { 
-        dl{
-            dt{ 
-                margin-top:30px;
-                font-size:18px;
-            }
-            dd{
-                margin-top:10px;
-                p{
-                    font-size:14px;
-                }
-            }
+      dl {
+        dt { 
+          margin-top:30px;
+          font-size:18px;
         }
-        table{
-            td{
-                padding:18px;
-                word-break:keep-all;
-            }
-            td.cell{
-                padding:10px 0;
-            }
-            thead td{
-                font-size:14px;
-            }
+
+        dd {
+          margin-top: 10px;
+
+          p {
+            font-size: 14px;
+          }
         }
+      }
     }
   `,
+
+  table: styled.div`
+  
+  `,
+  
 }
 
 export default Infant;

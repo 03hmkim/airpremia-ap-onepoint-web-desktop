@@ -6,8 +6,6 @@ import {
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
-  LIGHT_GRAY8
 } from '@airpremia/cdk/styles/colors';
 import HelpTab from './helpTab';
 import {

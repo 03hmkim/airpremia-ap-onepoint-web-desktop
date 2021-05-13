@@ -6,9 +6,6 @@ import {
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  DARK_BLUE1,
-  LIGHT_GRAY6,
-  WHITE1,
 } from '@airpremia/cdk/styles/colors';
 import { ListGlobal } from 'src/components';
 import { 
@@ -35,28 +32,30 @@ function Packing(){
             <C.titleSub>가격 및 규격</C.titleSub>
             <C.content>
               <T.table>
-                <table>
-                  <colgroup>
-                    <col width="50%"></col>
-                    <col width="50%"></col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th>구분</th>
-                      <td>포장용 비닐</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>가격</th>
-                      <td>3,000</td>
-                    </tr>
-                    <tr>
-                      <th>규격</th>
-                      <td>1,000 X 1,510mm</td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="tbWrap">
+                  <table>
+                    <colgroup>
+                      <col width="50%"></col>
+                      <col width="50%"></col>
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>구분</th>
+                        <td>포장용 비닐</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>가격</th>
+                        <td>3,000</td>
+                      </tr>
+                      <tr>
+                        <th>규격</th>
+                        <td>1,000 X 1,510mm</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </T.table>
             </C.content>
           </C.body>
@@ -162,44 +161,6 @@ const C = {
 
 const T = {
   table: styled.div`
-    border-top: 0.75px solid ${DARK_BLUE1};
-    border-bottom: 0.75px solid ${DARK_BLUE1};
-    table {
-      width: 100%;
-      th, td{
-        font-size: 20px;
-        line-height: 1.36em;
-        text-align: center;
-        vertical-align: middle;
-        padding: 15px;
-      }
-      thead th, thead td {
-        color: ${WHITE1};
-        font-weight: 700;
-        background: ${DARK_BLUE1};
-      }
-      tbody th, tbody td{
-        border-bottom: 0.75px solid ${LIGHT_GRAY6};
-        border-right: 0.75px solid ${LIGHT_GRAY6};
-      }
-      tbody th{
-        font-weight: 700;
-      }
-      tbody td{
-        font-weight: 400;
-        &:last-child {
-          border-right: none;
-        }
-      }
-    }
-    @media only screen and (max-width: 767px) {
-      table {
-        th, td{
-          font-size: 14px;
-          letter-spacing: -0.28px;
-        }
-      }
-    }
   `,
 }
 export default Packing;

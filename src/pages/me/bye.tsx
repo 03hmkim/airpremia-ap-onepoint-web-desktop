@@ -1,7 +1,7 @@
 import React, { FC, Fragment, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Container } from 'src/styles/layout';
-import { TaskButton, ByeUserTemplate, Title } from 'src/components';
+import { TaskButton, ByeUserTemplate, Title, ListGlobal } from 'src/components';
 import {
   DARK_BLUE1,
   LIGHT_GRAY6,
@@ -12,6 +12,7 @@ import { useMe, useAuth } from '@airpremia/core/hooks';
 import { get } from 'lodash/fp';
 import { Checkbox } from '@airpremia/cdk/components';
 import { useModal } from 'src/hooks';
+import styled from 'styled-components';
 
 interface IProps {
 }
@@ -77,26 +78,31 @@ const Bye: FC<IProps> = ({
 
   return (
     <Container>
-        <ByeUserTemplate
+      <ByeUserTemplate
         title={'회원탈퇴'}
         description={
           '회원탈퇴 전, 아래 유의사항을 확인해주세요.'
         }
-        subtitle={<Title>에어프레미아 회원탈퇴 유의사항</Title>}
+        subtitle={<C.titleMain>에어프레미아 회원탈퇴 유의사항</C.titleMain>}
         content={
           <div>
             <div className="content">
-            회원 탈퇴 완료 시, 고객님의 개인정보는 에어프레미아 <a href="/footer/term/personal-info">개인정보처리방침</a>에 따라 관리 됩니다.
-            <br></br>
-            회원 탈퇴가 완료되면, 보유하신 포인트 및 쿠폰은 모두 소멸되며, 재가입시에도 복원 불가합니다.
-            <br></br>
-            회원 탈퇴 후 재가입을 하셔도 이전의 예매내역을 조회하실 수 없습니다
-            <br></br>
-            탈퇴 일로부터 14일동안은 재가입이 불가하며, 동일 ID 사용이 제한됩니다
-            <br></br>
-            회원 탈퇴는 인터넷 회원 정보를 포함한 에어프레미아 기록 전체에 대한 탈퇴이므로 신중히 고려해 주시기 바랍니다.
+              <ListGlobal level="fst" body={
+                <p>회원 탈퇴 완료 시, 고객님의 개인정보는 에어프레미아 <a href="/footer/term/personal-info" target="_blank">개인정보처리방침</a>에 따라 관리 됩니다.</p>
+              }/>              
+              <ListGlobal level="fst" body={
+                <p>회원 탈퇴가 완료되면, 보유하신 포인트 및 쿠폰은 모두 소멸되며, 재가입시에도 복원 불가합니다.</p>
+              }/>              
+              <ListGlobal level="fst" body={
+                <p>회원 탈퇴 후 재가입을 하셔도 이전의 예매내역을 조회하실 수 없습니다.</p>
+              }/>              
+              <ListGlobal level="fst" body={
+                <p>탈퇴 일로부터 14일 동안은 재가입이 불가하며, 동일 ID 사용이 제한됩니다.</p>
+              }/>              
+              <ListGlobal level="fst" body={
+                <p>회원 탈퇴는 인터넷 회원 정보를 포함한 에어프레미아 기록 전체에 대한 탈퇴이므로 신중히 고려해 주시기 바랍니다.</p>
+              }/>            
             </div>
-            <hr></hr>
             <ul>
               <li>{userInfo?.name.first}  {userInfo?.name.last}</li>
               <li>{userInfo?.email}</li>
@@ -107,7 +113,7 @@ const Bye: FC<IProps> = ({
         }
 
         checkpoint={  <Checkbox {...checkboxProps}>
-                        위의 유의사항을 확인하고 회원탈퇴에 동의합니다</Checkbox>}
+                        위의 유의사항을 확인하고 회원탈퇴에 동의합니다.</Checkbox>}
         button={
             <Fragment>
             <TaskButton
@@ -132,6 +138,21 @@ const Bye: FC<IProps> = ({
     </Container>
   );
 };
+
+const C = {
+  titleMain: styled.h2`
+  font-size:24px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+      @media only screen and (max-width: 767px) {
+          font-size: 22px;
+          line-height: 28px;
+      }
+  `,
+
+}
+
+Title.defaultProps = {};
 
 export default Bye;
 

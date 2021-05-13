@@ -5,12 +5,9 @@ import {
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
-  WHITE1,
   DARK_GRAY1,
   LIGHT_GRAY8,
-  LIGHT_GRAY5,
   ORANGE2,
-  DARK_BLUE1,
 } from '@airpremia/cdk/styles/colors';
 // import Psghelp from 'public/images/support/img_psghelp_menu2.svg'
 import { ListGlobal } from 'src/components';
@@ -38,32 +35,34 @@ function Pregnant(){
             <C.titleSub>임신 기간별 항공여행 안내</C.titleSub>
             <C.content>
               <T.table>
-                <table>
-                  <colgroup>
-                    <col width="30%"></col>
-                    <col width="70%"></col>
-                  </colgroup>
-                  <tbody>
-                    <tr>
-                      <th>임신 32주 미만</th>
-                      <td>
-                        의사로부터 항공여행 금지 권고를 받지 않는 일반인과 동일한 항공 여행이 가능합니다.<br />(별도의 구비 서류 필요 없음)
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>임신 32주 이상 ~ 37주 미만</th>
-                      <td>
-                        전문의가 작성한 의사소견서 총 2부(원본 1부/사본 1부)를 제출하셔야 합니다.<br />→탑승기분일(복편탑승일도 동일하게 적용) 7일 이내여야 하며, 의사소견서 내에는 항공 여행의 적합 여부/임신일 수(작성일 기준)/분만 예정일/임신관련 합병증 유무가 명기되어야 합니다.
-                      </td>
-                    </tr>
-                    <tr>
-                      <th>임신 37주 이상 (다태 33주 이상)</th>
-                      <td>
-                        임산부와 태아의 건강을 위해 의사소견서 소지 여부와 관계 없이 항공기 탑승이 불가합니다.
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+                <div className="tbWrap vtc">
+                  <table className="vtc">
+                    <colgroup>
+                      <col width="30%"></col>
+                      <col width="70%"></col>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <th>임신 32주 미만</th>
+                        <td>
+                          의사로부터 항공여행 금지 권고를 받지 않는 일반인과 동일한 항공 여행이 가능합니다.<br />(별도의 구비 서류 필요 없음)
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>임신 32주 이상 ~ 37주 미만</th>
+                        <td>
+                          전문의가 작성한 의사소견서 총 2부(원본 1부/사본 1부)를 제출하셔야 합니다.<br />→ 탑승기준일(복편탑승일도 동일하게 적용) 7일 이내여야 하며, 의사소견서 내에는 항공 여행의 적합 여부/임신일 수(작성일 기준)/분만 예정일/임신관련 합병증 유무가 명기되어야 합니다.
+                        </td>
+                      </tr>
+                      <tr>
+                        <th>임신 37주 이상 (다태 33주 이상)</th>
+                        <td>
+                          임산부와 태아의 건강을 위해 의사소견서 소지 여부와 관계 없이 항공기 탑승이 불가합니다.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
               </T.table>
             </C.content>
           </C.body>
@@ -204,7 +203,9 @@ const C = {
       top: 0;
       left: 0;
     }
+
     @media only screen and (max-width: 767px) {
+      padding-left: 34px;
       font-size: 14px;
       line-height: 1.8em;
       letter-spacing: -0.028em;
@@ -214,97 +215,6 @@ const C = {
 
 const T = {
   table: styled.div`
-    .taL,
-    .taL{
-      text-align: left;
-    }
-    .taR,
-    .taR{
-      text-align: right;
-    }
-    table {
-      width: 100%;
-      border-top: 0.75px solid ${DARK_BLUE1};
-      border-bottom: 0.75px solid ${DARK_BLUE1};
-      th,
-      thead td,
-      td strong {
-        color: ${WHITE1};
-        font-size: 20px;
-        font-weight: bold;
-        line-height: 1.6;
-        letter-spacing: -0.3px;
-        text-align: center;
-      }
-      td strong {
-        margin-top: 30px;
-        display: block;
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-      td{
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 1.9;
-        letter-spacing: -0.3px;
-        text-align: center;
-        position: relative;
-        &>p {
-          margin-top: 18px;
-        }
-        &>p:first-of-type {
-          margin-top: 0;
-        }
-        .txt {
-          margin-top: 10px;
-          p {
-            position: relative;
-            color: ${LIGHT_GRAY8};
-            &.iLine{
-              padding-left: 8px;
-            }
-            &.iLine::after{
-              content: "-";
-              position: absolute;
-              left: 0;
-              top: 0;
-              display: block;
-            }
-          }
-        }
-      }
-      th:last-child,
-      td:last-child{
-        text-align: center;
-      }
-      thead th,
-      thead td{
-        padding: 18px 0;
-        border-bottom: 0.75px solid ${DARK_GRAY1};
-      }
-      tbody th,
-      tbody td{
-        padding: 15px;
-        border-bottom: 0.75px solid ${LIGHT_GRAY5};
-        vertical-align: middle;
-        .tableExBox{
-          width: 80%;
-          margin: 0 auto;
-        }
-        @media only screen and (max-width: 767px) {
-          font-size:14px;
-        }
-      }
-      tbody th{
-        background: ${DARK_BLUE1};
-      }
-      tbody tr:last-child{
-        th,td{
-          border-bottom: none;
-        }
-      }
-    }
   `,
 }
 

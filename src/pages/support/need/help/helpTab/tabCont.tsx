@@ -7,7 +7,6 @@ import { useModal } from 'src/hooks';
 import {
   BLUE1,
   DARK_GRAY1,
-  LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
 import { 
   ListGlobal,
@@ -24,6 +23,8 @@ function TabContent({currIdxCont}: IProps) {
     UIStore: { newModal },
   } = useModal();
 
+  const { onHideNewModal } = useModal();
+  
   const helpModal = () =>
   onShowNewModal('helpModal');
 
@@ -109,8 +110,8 @@ function TabContent({currIdxCont}: IProps) {
               </>
             }
             button={
-              <S.btnArea className="twin">
-                <TaskButton>확인</TaskButton>
+              <S.btnArea>
+                <TaskButton onClick={onHideNewModal}>확인</TaskButton>
               </S.btnArea>
             }
           />
@@ -313,7 +314,8 @@ const C = {
   linkm: styled.p`
     font-weight: 600;
     color: ${BLUE1};
-    pointer
+    cursor: pointer;
+    
     &.dpin{
       display: inline-block;
     }
@@ -334,24 +336,9 @@ const S = {
   modalTitle : styled.div``,
 
   textArea: styled.div`
-    height: 100%;
-    &.auto{
-      padding: 0 50px 50px;
-      overflow-y: auto;
-      box-sizing: border-box;
-    }
   `,
 
   btnArea: styled.div`
-    padding: 25px 50px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-top: 1px solid ${LIGHT_GRAY5};
-    &.auto{
-      position: static;
-    }
   `,
 };
 export default TabContent;

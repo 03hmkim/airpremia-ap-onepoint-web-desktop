@@ -29,7 +29,7 @@ const PrivacyCheck: FC<IProps> = ({
       </S.left>
       <S.right className="right">
         <Arrow
-          position={EPosition.RIGHT}
+          position={EPosition.RIGHT} 
           onClick={onClickDescription}
         />
       </S.right>
@@ -41,13 +41,20 @@ const S = {
   container: styled.div`
     display: flex;
     align-items: center;
-
+    justify-content: space-between;
+    margin-bottom: 10px;
     @media only screen and (max-width: 767px) {
       justify-content: space-between;
+      margin-bottom: 5px;
     }
-
     &.arrowN .right {
       display: none;
+    }
+    &.arrowN {
+      margin-bottom: 15px;
+      @media only screen and (max-width: 767px) {
+        margin-bottom: 10px;
+      }
     }
   `,
 

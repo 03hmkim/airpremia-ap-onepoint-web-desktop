@@ -7,10 +7,10 @@ import { useModal } from 'src/hooks';
 import {
   NewModal,
   PopupTitle,
+  TaskButton,
 } from 'src/components';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
   LIGHT_GRAY8,
   BLUE1,
   RED1,
@@ -26,6 +26,8 @@ function TabContent({currIdxCont}: IProps) {
       onShowNewModal,
       UIStore: { newModal },
     } = useModal();
+
+    const { onHideNewModal } = useModal();
     
     const li_ion = () =>
       onShowNewModal('li_ion');
@@ -38,14 +40,12 @@ function TabContent({currIdxCont}: IProps) {
                 className="max"
                 type={EScrollType.TYPE1}
                 title={
-                  <S.modalTitle>
-                    <PopupTitle>리튬배터리 운송 규정</PopupTitle>
-                  </S.modalTitle>
+                  <PopupTitle>리튬배터리 운송 규정</PopupTitle>
                 }
                 body={
                   <>
-                    <S.textArea className="auto">
-                      <T.table>
+                    <T.table>
+                      <div className="tbWrap">
                         <table>
                           <colgroup>
                             <col width="32%"></col>
@@ -56,7 +56,7 @@ function TabContent({currIdxCont}: IProps) {
                           </colgroup>
                           <thead>
                             <tr>
-                              <td rowSpan={2}>기준</td>
+                              <th rowSpan={2}>기준</th>
                               <td colSpan={2}>휴대수하물</td>
                               <td colSpan={2}>위탁 수하물</td>
                             </tr>
@@ -69,14 +69,14 @@ function TabContent({currIdxCont}: IProps) {
                           </thead>
                           <tbody>
                             <tr>
-                              <td>100Wh 이하, 2g 이하</td>
+                              <th>100Wh 이하, 2g 이하</th>
                               <td>A</td>
                               <td>5개</td>
                               <td>A</td>
                               <td><C.red>불가</C.red></td>
                             </tr>
                             <tr>
-                              <td>100Wh 초과 160Wh 이하, 2g 초과 8g 이하 (항공사 사전 승인 필요)</td>
+                              <th>100Wh 초과 160Wh 이하, 2g 초과 8g 이하 (항공사 사전 승인 필요)</th>
                               <td>B</td>
                               <td>2개</td>
                               <td>B</td>
@@ -88,22 +88,28 @@ function TabContent({currIdxCont}: IProps) {
                             </tr>
                           </tbody>
                         </table>
-                      </T.table>
-                      <C.linehgt>
-                        <p>* A=총 15개(휴대수하물+위탁수하물), B=총 10개(휴대수하물+위탁수하물)</p>
-                        <p>** 리튬이온배터리의 용량 단위:Wh, 리튬메탈배터리의 용량 단위:g​</p>
-                      </C.linehgt>
-                      <C.desc>
-                        <ListGlobal level="fst" body={
-                          <p>배터리 용량 구하는 법 : 용량(Wh) = 전압(V) X 전류(Ah), 1Ah=1,000mAh
-                          </p>
-                        }/>
-                        <ListGlobal level="fst" body={
-                          <p>여분의 리튬배터리 및 보조배터리는 위탁수하물로 운송이 불가합니다.</p>
-                        }/>
-                      ​</C.desc>
-                    </S.textArea>
+                      </div>
+                    </T.table>
+                    <C.m20>
+                      <ListGlobal level="star gray" body={
+                        <p>A=총 15개(휴대수하물+위탁수하물), B=총 10개(휴대수하물+위탁수하물)</p>
+                      }/>
+                      <ListGlobal level="star gray" body={
+                        <p>리튬이온배터리의 용량 단위:Wh, 리튬메탈배터리의 용량 단위:g​</p>
+                      }/>
+                    </C.m20>
+                    <C.m30>
+                      <ListGlobal level="fst" body={
+                        <p>배터리 용량 구하는 법 : 용량(Wh) = 전압(V) X 전류(Ah), 1Ah=1,000mAh</p>
+                      }/>
+                      <ListGlobal level="fst" body={
+                        <p>여분의 리튬배터리 및 보조배터리는 위탁수하물로 운송이 불가합니다.</p>
+                      }/>
+                    ​</C.m30>
                   </>
+                }
+                button={
+                  <TaskButton onClick={onHideNewModal}>확인</TaskButton>
                 }
               />
             );         
@@ -261,21 +267,6 @@ function TabContent({currIdxCont}: IProps) {
 }
 
 
-const S = {
-  modalTitle : styled.div`
-  `,
-
-  textArea: styled.div`
-    height: 100%;
-    &.auto{
-      padding: 0 50px 50px;
-      overflow-y: auto;
-      box-sizing: border-box;
-    }
-  `,
-}
-
-
 const C = {
   /* 서비스안내 공통css */
   wrap: styled.div`
@@ -341,6 +332,23 @@ const C = {
   /* 서비스안내 공통css 끝 */
 
 
+  m30: styled.div`
+    margin-top: 30px;
+    @media only screen and (max-width: 767px){
+      margin-top: 20px;
+    }
+  `,
+  m20: styled.div`
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 2em;
+    color: ${LIGHT_GRAY8};
+    @media only screen and (max-width: 767px){
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 28px;
+    }
+  `,
   desc: styled.p`
     margin-top: 30px;
     font-size: 18px;
@@ -387,86 +395,8 @@ const C = {
     
 const T = {
   table: styled.div`
-    .taL,
-    .taL{
-    text-align: center;
-    }
-    .taR,
-    .taR{
-    text-align: center;
-    }
-    table {
-    width: 100%;
-    th,
-    thead td,
-    td strong {
-      color: ${DARK_GRAY1};
-      font-size: 18px;
-      font-weight: bold;
-      line-height: 1.6;
-      letter-spacing: -0.3px;
-      text-align: center;
-    }
-    td strong {
-      margin-top: 30px;
-      display: block;
-      &:first-of-type {
-      margin-top: 0;
-      }
-    }
-    td{
-      font-size: 18px;
-      font-weight: 400;
-      line-height: 1.9;
-      letter-spacing: -0.3px;
-      text-align: center;
-      vertical-align: middle;
-      position: relative;
-      &>p {
-      margin-top: 18px;
-      }
-      &>p:first-of-type {
-      margin-top: 0;
-      }
-      .txt {
-      margin-top: 10px;
-      p {
-          position: relative;
-          color: ${LIGHT_GRAY8};
-          &.iLine{
-          padding-left: 8px;
-          }
-          &.iLine::after{
-          content: "-";
-          position: absolute;
-          left: 0;
-          top: 0;
-          display: block;
-          }
-        }
-      }
-    }
-    th:first-child,      
-    td:first-child{
-      text-align: center;
-      vertical-align: middle;
-    }
-    th:last-child,
-    td:last-child{
-      text-align: center;
-    }
-    thead th,
-    thead td{
-      padding: 18px 0;
-      border-bottom: 1px solid ${DARK_GRAY1};
-    }
-    tbody th,
-    tbody td{
-      padding: 18px 0;
-      border-bottom: 1px solid ${LIGHT_GRAY5};
-    }
-  }
-`,
+  
+  `,
 }
 
 export default TabContent;

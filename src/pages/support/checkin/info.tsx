@@ -5,16 +5,16 @@ import {
 import { Container } from 'src/styles/layout';
 import {
   DARK_GRAY1,
-  LIGHT_GRAY8,
 } from '@airpremia/cdk/styles/colors';
 import CheckinTab from './checkinTab';
 
 function Checkin(){
-    return (
-      <Container>
-        <ComTitle
-          title="탑승 수속"
-        />
+  return (
+    <Container>
+      <ComTitle
+        title="탑승 수속"
+      />
+      <S.container>
         <C.wrap>
           <C.body>
             <C.titleMain>탑승수속 안내</C.titleMain>
@@ -133,104 +133,73 @@ function Checkin(){
             </C.area> */}
           </C.body>
         </C.wrap>
-      </Container>
-    );
-  }
-  
-  const C = {
-    wrap: styled.div`
-      margin-top: 70px;
-      border-top: 2px solid ${DARK_GRAY1};
-    `,
-    body: styled.div`
-      margin-top: 140px;
-      &:first-of-type{
-        margin-top: 30px;
-      }
-    `,
-    titleMain: styled.h3`
-      font-size: 30px;
-      font-weight: bold;
+      </S.container>
+    </Container>
+  );
+}
 
-      @media only screen and (max-width: 767px) { 
-        font-size: 22px;
-      }
-    `,
-    title: styled.h4`
+const S = {
+  container: styled.div``,
+}
+
+const C = {
+  /* 서비스안내 공통css */
+  wrap: styled.div`
+    border-top: 2px solid ${DARK_GRAY1};
+
+    &.bdN {
+      border-top: 0;
+    }
+  `,
+  body: styled.div`
+    margin-top: 100px;
+
+    &:first-of-type {
+      margin-top: 30px;
+    }
+  `,
+  titleMain: styled.h2`
+    font-size: 24px;
+    font-weight: bold;
+
+    @media only screen and (max-width: 767px) {
       font-size: 22px;
-      font-weight: bold;
+      line-height: 28px;
+      letter-spacing: -0.04em;
+    }
+  `,
+  titleSub: styled.h3`
+    font-size: 21px;
+    font-weight: 700;
 
-      @media only screen and (max-width: 767px) { 
-        font-size: 18px;
-      }
-    `,
-    sub: styled.h5`
-      margin-top: 20px;
-      font-size: 18px;
-      font-weight: bold;
-      
-      @media only screen and (max-width: 767px) { 
-        font-size: 14px;
-      }
-    `,
-    content: styled.div`
-      margin-top: 12px;
-    `,
-    sb: styled.div`
+    @media only screen and (max-width: 767px){
+      font-size: 16px;
+      letter-spacing: -0.32px;
       margin-top: 60px;
-    `,
-    area: styled.div`
-      max-width: 1200px;
-      height: auto;
-      margin-top: 30px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-    `,
-    ul: styled.ul`
-      
-    `,
-    li: styled.li`
-      margin-bottom: 15px;
-      padding-left: 10px;
-      line-height: 1.8;
-      position: relative;
-      &::before{
-        content:"";
-        width: 4px;
-        height: 4px;
-        top: 11px;
-        left: 0px;
-        text-indent: -9999px;
-        display: block;
-        position: absolute;
-        background-color: ${DARK_GRAY1};
-        border-radius: 50%
-      }
-      &:first-child{
-        margin-top: 20px;
-      }
-    `,
-    p: styled.p`
+    }
+  `,
+  content: styled.div`
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+
+    &.mt60 {
+      margin-top: 60px;
+    }
+
+    @media only screen and (max-width: 767px){
       margin-top: 20px;
-      margin-bottom: 15px;
-      line-height: 1.8;
-      &:first-child{
-        margin-top: 20px;
-      }
-      &:last-child{
-        margin-bottom: 0px;
-      }
-    `,
-    rf: styled.p`
       font-size: 14px;
-      color: ${LIGHT_GRAY8};
+      letter-spacing: -0.28px;
+    }
+  `,
+  linkWrap: styled.div`
+    margin-top: 30px;
+
+    @media only screen and (max-width: 1059px) {
       margin-top: 20px;
-    `,
-    tmi: styled.p`
-      margin-top: 30px;
-    `,
-    cover: styled.div`
-      padding: 30px;
-    `,
-  }
-  export default Checkin;
+    }
+  `,
+  /* 서비스안내 공통css 끝 */
+}
+export default Checkin;

@@ -7,9 +7,9 @@ import TabContent from './tabCont';
 
 interface IProps {}
 
-const CheckinTab: FC<IProps> = ({}) => {
+const ProhibitionTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['국내선', '국제선'];
+  const tabList = ['주요제한물품', '리튬배터리'];
   
 
   return (
@@ -19,7 +19,6 @@ const CheckinTab: FC<IProps> = ({}) => {
         list={tabList}
         onClick={setCurrIdx}
       />
-
       <div className="tabCont">
         <TabContent
           currIdxCont={currIdx}
@@ -45,4 +44,4 @@ const S = {
   `,
 };
 
-export default CheckinTab;
+export default ProhibitionTab;

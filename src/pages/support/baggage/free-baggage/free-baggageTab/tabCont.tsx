@@ -5,8 +5,6 @@ export interface IProps extends IStyleProps {
 }
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
-  LIGHT_GRAY8,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
 import Redcarry from 'public/images/support/img_redcarry.png';
@@ -39,26 +37,33 @@ function TabContent({currIdxCont}: IProps) {
           <C.titleSub>휴대수하물 무게 및 개수</C.titleSub>
           <C.content>
             <T.table>
-              <table>
-                <colgroup>
-                  <col width="50%"></col>
-                  <col width="50%"></col>
-                </colgroup>
-                <tbody>
-                  <tr>
-                    <td>Premia 42</td>
-                    <td>Economy 35</td>
-                  </tr>
-                  <tr>
-                    <td><C.oneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.oneBaggage></td>
-                    <td><C.twoBaggage><C.twoBText>10kg<br></br>(22lbs)</C.twoBText></C.twoBaggage></td>
-                  </tr>
-                  <tr>
-                    <td>무게: 10kg(22lbs) 이내, 개수: 2개</td>
-                    <td>무게: 10kg(22lbs) 이내, 개수: 1개</td>
-                  </tr>
-                </tbody>
-              </table>
+              <div className="tbWrap">
+                <table>
+                  <colgroup>
+                    <col width="50%"></col>
+                    <col width="50%"></col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <td>Premia 42</td>
+                      <td>Economy 35</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <C.oneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.oneBaggage>
+                        <C.oneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.oneBaggage>
+                      </td>
+                      <td><C.oneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.oneBaggage></td>
+                    </tr>
+                    <tr>
+                      <td>무게: 10kg(22lbs) 이내, 개수: 2개</td>
+                      <td>무게: 10kg(22lbs) 이내, 개수: 1개</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </T.table>
           </C.content>
         </C.body>
@@ -108,122 +113,147 @@ function TabContent({currIdxCont}: IProps) {
       <C.wrap className="bdN">
         <C.body>
           <C.titleSub>위탁 수하물 크기</C.titleSub>
-          <C.content><C.image></C.image></C.content>
-          <T.table>
-            <table>
-              <colgroup>
-                <col width="50%"></col>
-                <col width="50%"></col>
-              </colgroup>
-              <thead>
-                <tr>
-                  <td className="cell">국내선</td>
-                  <td className="cell">국제선</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>세 변의 합이 203cm 이내</td>
-                  <td>세 변의 합이 158cm 이내</td>
-                </tr>
-              </tbody>
-            </table>
-          </T.table>
+          <C.content>
+            <C.image></C.image>
+            <T.table>
+              <div className="tbWrap">
+                <table>
+                  <colgroup>
+                    <col width="50%"></col>
+                    <col width="50%"></col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <td>국내선</td>
+                      <td>국제선</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>세 변의 합이 203cm 이내</td>
+                      <td>세 변의 합이 158cm 이내</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </T.table>
+          </C.content>
         </C.body>
         <C.body>
           <C.titleSub>휴대수하물 무게 및 개수</C.titleSub>
-          <T.table>
-            <div className="tbl-scrolls">
-              <table>
-                <colgroup>
-                  <col width="10%"></col>
-                  <col width="30%"></col>
-                  <col width="30%"></col>
-                  <col width="30%"></col>
-                </colgroup>
-                <thead>
-                  <tr>
-                    <td>구분</td>
-                    <td>Premia 42</td>
-                    <td>Economy 35<br></br>(Flex/Standard)</td>
-                    <td>Economy 35<br></br>(Lite)</td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td rowSpan={2}>국내선</td>
-                    <td><C.oneBaggage><C.oneBText>30kg<br></br>(66lbs)</C.oneBText></C.oneBaggage></td>
-                    <td><C.oneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.oneBaggage></td>
-                    <td><C.oneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.oneBaggage></td>
-                  </tr>
-                  <tr>
-                    <td>무게: 30kg(66lbs) 이내, 개수: 1개</td>
-                    <td>무게: 20kg(44lbs) 이내, 개수: 1개</td>
-                    <td>무게: 20kg(44lbs) 이내, 개수: 1개</td>
-                  </tr>
-                  <tr>
-                    <td rowSpan={2}>동북아/<br></br>동남아</td>
-                    <td><C.twoBaggage><C.twoBText>23kg<br></br>(51lbs)</C.twoBText></C.twoBaggage></td>
-                    <td><C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage></td>
-                    <td><C.noBaggage></C.noBaggage></td>
-                  </tr>
-                  <tr>
-                    <td>무게: 23kg(51lbs) 이내, 개수: 2개</td>
-                    <td>무게: 23kg(51lbs) 이내, 개수: 1개</td>
-                    <td>수하물 없음</td>
-                  </tr>
-                  <tr>
-                    <td rowSpan={2}>미주</td>
-                    <td><C.twoBaggage><C.twoBText>32kg<br></br>(71lbs)</C.twoBText></C.twoBaggage></td>
-                    <td><C.twoBaggage><C.twoBText>23kg<br></br>(51lbs)</C.twoBText></C.twoBaggage></td>
-                    <td><C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage></td>
-                  </tr>
-                  <tr>
-                    <td>무게: 32kg(71lbs) 이내, 개수: 2개</td>
-                    <td>무게: 23kg(51lbs) 이내, 개수: 2개</td>
-                    <td>무게: 23kg(51lbs) 이내, 개수: 1개</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </T.table>
           <C.content>
-            ※ 항공기 출발 48시간 전에 추가수하물을 미리 구매하시면 할인된 요금으로 이용하실 수 있습니다
-            <C.linkm>
-              <Link href="/ticket/pay/confirm">
-                <a>
-                  사전 수하물 구매 <Linkblue />
-                </a>
-              </Link>
-            </C.linkm>
+            <T.table>
+              <div className="tbWrap">
+                <table className="resize">
+                  <colgroup>
+                    <col width="10%"></col>
+                    <col width="30%"></col>
+                    <col width="30%"></col>
+                    <col width="30%"></col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <th>구분</th>
+                      <td>Premia 42</td>
+                      <td>Economy 35<br></br>(Flex/Standard)</td>
+                      <td>Economy 35<br></br>(Lite)</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th rowSpan={2}>국내선</th>
+                      <td className="mobN"><C.oneBaggage><C.oneBText>30kg<br></br>(66lbs)</C.oneBText></C.oneBaggage></td>
+                      <td className="mobN"><C.oneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.oneBaggage></td>
+                      <td className="mobN"><C.oneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.oneBaggage></td>
+                    </tr>
+                    <tr>
+                      <td>무게: 30kg(66lbs) 이내, 개수: 1개</td>
+                      <td>무게: 20kg(44lbs) 이내, 개수: 1개</td>
+                      <td>무게: 20kg(44lbs) 이내, 개수: 1개</td>
+                    </tr>
+                    <tr>
+                      <th rowSpan={2}>동북아/<br></br>동남아</th>
+                      <td className="mobN">
+                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
+                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
+                      </td>
+                      <td className="mobN"><C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage></td>
+                      <td className="mobN"><C.noBaggage></C.noBaggage></td>
+                    </tr>
+                    <tr>
+                      <td>무게: 23kg(51lbs) 이내, 개수: 2개</td>
+                      <td>무게: 23kg(51lbs) 이내, 개수: 1개</td>
+                      <td>수하물 없음</td>
+                    </tr>
+                    <tr>
+                      <th rowSpan={2}>미주</th>
+                      <td className="mobN">
+                        <C.oneBaggage><C.oneBText>32kg<br></br>(71lbs)</C.oneBText></C.oneBaggage>
+                        <C.oneBaggage><C.oneBText>32kg<br></br>(71lbs)</C.oneBText></C.oneBaggage>  
+                      </td>
+                      <td className="mobN">
+                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
+                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
+                      </td>
+                      <td className="mobN"><C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage></td>
+                    </tr>
+                    <tr>
+                      <td>무게: 32kg(71lbs) 이내, 개수: 2개</td>
+                      <td>무게: 23kg(51lbs) 이내, 개수: 2개</td>
+                      <td>무게: 23kg(51lbs) 이내, 개수: 1개</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </T.table>
+          </C.content>
+          <C.content>
+            <ListGlobal level="ball" body={
+              <div>
+                <p>항공기 출발 48시간 전에 추가수하물을 미리 구매하시면 할인된 요금으로 이용하실 수 있습니다</p>
+                <p>
+                  <C.linkm>
+                    <Link href="/ticket/pay/confirm">
+                      <a>
+                        사전 수하물 구매 <Linkblue />
+                      </a>
+                    </Link>
+                  </C.linkm>
+                </p>
+              </div>
+            }/>
           </C.content>
         </C.body>
         <C.body>
           <C.titleSub>유아 위탁수하물 허용량</C.titleSub>
-          <T.table>
-            <table>
-              <colgroup>
-                <col width="50%"></col>
-                <col width="50%"></col>
-              </colgroup>
-              <thead>
-                <tr>
-                  <td>국내선</td>
-                  <td>국제선</td>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><C.stroller></C.stroller></td>
-                  <td><C.baggageStroller><C.bSText>1pc<br></br>X<br></br>10kg</C.bSText></C.baggageStroller></td>
-                </tr>
-                <tr>
-                  <td>유모차/유아용 안전의자/요람 중 1개</td>
-                  <td>1pc X 10kg + 유모차/유아용 안전의자/요람 중 1개</td>
-                </tr>
-              </tbody>
-            </table>
-          </T.table>
+          <C.content>
+            <T.table>
+              <div className="tbWrap">
+                <table>
+                  <colgroup>
+                    <col width="50%"></col>
+                    <col width="50%"></col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                      <td>국내선</td>
+                      <td>국제선</td>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><C.stroller></C.stroller></td>
+                      <td><C.baggageStroller><C.bSText>1pc<br></br>X<br></br>10kg</C.bSText></C.baggageStroller></td>
+                    </tr>
+                    <tr>
+                      <td>유모차/유아용 안전의자/요람 중 1개</td>
+                      <td>1pc X 10kg + 유모차/유아용 안전의자/요람 중 1개</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </T.table>
+          </C.content>
         </C.body>
         <C.body>
           <C.titleSub>유의사항</C.titleSub>
@@ -292,11 +322,11 @@ const C = {
   titleSub: styled.h3`
     font-size: 21px;
     font-weight: 700;
-    padding-bottom:20px;
+
     @media only screen and (max-width: 767px){
       font-size: 16px;
-      padding-bottom:10px;
       letter-spacing: -0.32px;
+      margin-top: 60px;
     }
   `,
   content: styled.div`
@@ -316,6 +346,9 @@ const C = {
       &.mt60 {
         margin-top: 40px;
       }
+      .ex{
+        font-size:14px;
+      }
     }
   `,
   linkWrap: styled.div`
@@ -333,13 +366,32 @@ const C = {
     margin: 0 auto;
     width: 58px;
     height: 112px;
-    display: flex;
+    margin-right: 10px;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    font-size: 14px;
+    line-height: 24px;
     background-image: url(${OneBaggage});
+    background-repeat: no-repeat;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @media only screen and (max-width: 767px) {
+      width: 30px;
+      height: 60px;
+      background-size: 30px;
+      background-repeat: no-repeat;
+    }
   `,
   oneBText:styled.span`
     margin-top: 15px;
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
   `,
   twoBaggage: styled.div`
     margin: 0 auto;
@@ -362,6 +414,13 @@ const C = {
     justify-content: center;
     align-items: center;
     background-image: url(${NoBaggage});
+
+    @media only screen and (max-width: 767px) {
+      width: 40px;
+      height: 60px;
+      background-size: 40px;
+      background-repeat: no-repeat;
+    }
   `,
   stroller: styled.div`
     margin: 0 auto;
@@ -371,19 +430,40 @@ const C = {
     justify-content: center;
     align-items: center;
     background-image: url(${Stroller});
+
+    @media only screen and (max-width: 767px) {
+      width: 60px;
+      height: 60px;
+      background-size: 60px;
+      background-repeat: no-repeat;
+    }
   `,
   baggageStroller: styled.div`
     margin: 0 auto;
     width: 125px;
     height: 130px;
+    font-size: 14px;
+    line-height: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-image: url(${BaggageStroller});
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width: 767px) {
+      width: 80px;
+      height: 80px;
+      background-size: 75px;
+      background-repeat: no-repeat;
+    }
   `,
   bSText:styled.span`
     margin-top: 5px;
     margin-left: -52px;
+
+    @media only screen and (max-width: 767px) {
+      display: none;
+    }
   `,
   ex: styled.div`
     position: relative;
@@ -398,6 +478,7 @@ const C = {
       left: 14px;
       color: ${DARK_GRAY1};
     }
+
     @media only screen and (max-width: 767px) { 
       font-size: 14px;
       &:before {
@@ -406,15 +487,20 @@ const C = {
     }
   `,
   image: styled.div`
-    background-image: url(${Redcarry});
     width: 400px;
     height: 280px;
     margin: 30px auto;
+    background-image: url(${Redcarry});
+    background-repeat: no-repeat;
+
+    @media only screen and (max-width: 767px) {
+      width: 240px;
+      height: 168px;
+      background-size: 240px;
+    }
   `,
   linkm: styled.p`
-    margin-top: 20px;
-    margin-left: 10px;
-    a{
+    a {
       color: ${BLUE1};
       font-weight: 600;
       cursor: pointer;
@@ -424,84 +510,22 @@ const C = {
 
 const T = {
   table: styled.div`
-    .taL,
-    .taL{
-      text-align: left;
-    }
-    .taR,
-    .taR{
-      text-align: right;
-    }
-    table {
-      width: 100%;
-      thead td{
-        color: ${DARK_GRAY1};
-        font-size: 15px;
-        font-weight: bold;
-        line-height: 1.6;
-        letter-spacing: -0.3px;
-        text-align: center;
-      }
-      td{
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.9;
-        letter-spacing: -0.3px;
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
-      }
-      thead td{
-        padding: 18px 0;
-        word-break:keep-all;
-        color:#fff;
-        background:#1b2b45;
-        border:1px solid #324158;
-        border-bottom: 1px solid ${DARK_GRAY1};
-      }
-      tbody td{
-        padding: 18px 0;
-        word-break:keep-all;
-        border-bottom: 1px solid ${LIGHT_GRAY5};
-      }
-    }
-    @media only screen and (max-width: 767px) { 
-    .tbl-scrolls{
-      width:100%;
-      height:auto;
-      overflow:hidden;
-      overflow-x:auto;
-      table{
-        min-width:800px;
-        thead{
-          td{
-            padding:10px;
-            font-size:14px;
-            height:30px;
-            vertical-align:middle;
-            text-align:center;
-          }
+
+    @media only screen and (max-width: 767px) {
+      table.resize {
+        col:nth-child(1),
+        col:nth-child(2),
+        col:nth-child(3),
+        col:nth-child(4) {
+          width: 25%;
         }
-        td{
-          padding:10px;
-          font-size:14px;
-          text-align:left;
-        }
-        .img-type{
-          td{
-            text-align:center;
-          }
-        }
-        
+      }
+
+      .mobN {
+        display: none !important;
       }
     }
-    table{
-      td{
-        font-size:14px;
-        padding:10px !important;
-      }
-    }
-  }
+  
   `,
   }
 

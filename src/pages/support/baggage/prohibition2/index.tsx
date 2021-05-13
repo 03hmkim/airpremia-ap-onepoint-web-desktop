@@ -28,10 +28,10 @@ function Prohibition(){
           <C.body>
             <C.titleMain>운송제한물품</C.titleMain>
             <C.content>
-              <ListGlobal level="ball gray" body={
+              <ListGlobal level="fst" body={
                 <p>하기 기준은 대한민국 공항 적용 기준이며, 목적지가 외국 공항일 경우 추가 금지 물품을 항공사 또는 여행사를 통하여 사전에 반드시 확인 바랍니다.</p>
               }/>
-              <ListGlobal level="ball gray" body={
+              <ListGlobal level="fst" body={
                 <p>
                   하기 외 제한 물품은&nbsp;
                   <C.linkpage>

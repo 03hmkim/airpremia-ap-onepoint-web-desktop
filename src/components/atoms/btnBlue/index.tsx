@@ -59,6 +59,7 @@ const S = {
 
     &.down{
       padding-left: 32px;
+      display: inline-flex;
 
       &:hover{
         text-decoration: underline;
@@ -75,6 +76,12 @@ const S = {
         display: block;
         background: url(${BtnDownBlue}) no-repeat;
       }
+
+      @media only screen and (max-width: 767px) {
+        &.down {
+          display: inline-block;
+        }
+      }
     }
 
     &.arrow{
@@ -90,10 +97,13 @@ const S = {
         background: url(${Linkblue}) no-repeat;
       }
     }
+
+
     @media only screen and (max-width: 767px) { 
-        a{
-            font-size:14px;
-        }
+      font-size: ${prop('fontSize','14px')};
+      a{
+        font-size:14px;
+      }
     }
   `,
 }
