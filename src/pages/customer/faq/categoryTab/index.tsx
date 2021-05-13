@@ -33,6 +33,9 @@ const S = {
     > div > div > button > span{
       font-size: 15px;
     }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 0px;
+    }
   `,
 };
 

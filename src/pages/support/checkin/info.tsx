@@ -151,15 +151,27 @@ function Checkin(){
     titleMain: styled.h3`
       font-size: 30px;
       font-weight: bold;
+
+      @media only screen and (max-width: 767px) { 
+        font-size: 22px;
+      }
     `,
     title: styled.h4`
       font-size: 22px;
       font-weight: bold;
+
+      @media only screen and (max-width: 767px) { 
+        font-size: 18px;
+      }
     `,
     sub: styled.h5`
       margin-top: 20px;
       font-size: 18px;
       font-weight: bold;
+      
+      @media only screen and (max-width: 767px) { 
+        font-size: 14px;
+      }
     `,
     content: styled.div`
       margin-top: 12px;
@@ -168,7 +180,7 @@ function Checkin(){
       margin-top: 60px;
     `,
     area: styled.div`
-      width: 1200px;
+      max-width: 1200px;
       height: auto;
       margin-top: 30px;
       border: 1px solid #ddd;

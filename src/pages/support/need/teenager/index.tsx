@@ -238,7 +238,7 @@ const C = {
     font-weight: 700;
 
     @media only screen and (max-width: 767px){
-      font-size: 16px;
+      font-size: 19px;
       letter-spacing: -0.32px;
       margin-top: 60px;
     }
@@ -272,6 +272,9 @@ const C = {
     font-size: 18px;
     font-weight:700;
     padding-bottom: 20px;
+    @media only screen and (max-width: 767px) { 
+      font-size: 16px;
+    }
   `,
   right: styled.div`
     display: block;
@@ -370,6 +373,33 @@ const T = {
         padding: 18px 0;
         border-bottom: 1px solid ${LIGHT_GRAY5};
       }
+      th{
+        
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+       table {
+          col:nth-child(1){
+            width:30%;
+          }
+          col:nth-child(2){
+            width:5%;
+          }
+          col:nth-child(3){
+            width:30%;
+          }
+          col:nth-child(4){
+            width:5%;
+          }
+          col:nth-child(5){
+            width:30%;
+          }
+          tbody th,
+          tbody td{
+            font-size:14px;
+          }
+        
+       }
     }
   `,
 }

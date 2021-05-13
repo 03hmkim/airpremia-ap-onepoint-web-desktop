@@ -419,7 +419,7 @@ const GnbNew = ({ resetData }: IProps) => {
             <div className="subMenusWrapper">
               <div className="subMenus">                  
                 <div className="subMenu">
-                  <Link href='/customer/notice'>
+                  <Link href='/customer/notice/list'>
                     <a className="label" onClick={linkOnClick}>
                       <IcoNav5b1 />
                       <span>공지사항</span>

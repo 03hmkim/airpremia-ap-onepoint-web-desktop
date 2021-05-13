@@ -328,7 +328,29 @@ const T = {
         content: "A";
         color: ${ORANGE2};
       }
-    }  
+    } 
+    @media only screen and (max-width: 1059px) { 
+    
+    }
+    @media only screen and (max-width: 767px) { 
+      .accWrap {
+        .accSummary{
+          padding: 0;
+          padding-right: 0px;
+  
+        }
+      }
+      .qst,
+      .asr {
+        padding: 20px 0 20px 40px;
+        &::before {
+          left:0px;
+        }
+      }
+      .qst {
+        padding-right: 10px;
+      }
+    } 
   `,
 };
 

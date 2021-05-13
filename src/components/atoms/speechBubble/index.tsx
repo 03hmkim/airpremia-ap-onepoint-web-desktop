@@ -77,6 +77,9 @@ const S = {
         `;
       }
     }}
+    @media only screen and (max-width: 767px) { 
+      font-size: 13px;
+    }
   `,
 };
 

@@ -42,65 +42,80 @@ function TabContent({currIdxCont}: IProps) {
             <table>
               <colgroup>
                 <col width="5%"></col>
-                <col width="8%"></col>
-                <col width="3%"></col>
-                <col width="15%"></col>
-                <col width="23%"></col>
-                <col width="23%"></col>
-                <col width="23%"></col>
+                <col width="30%"></col>
+                <col width=""></col>
               </colgroup>
               <tbody>
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 01
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 01
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.airport></C.airport></div>
+                              <div className="txt">공항도착</div>
+                          </div>
+                      </div>
+
                   </th>
-                  <td><C.airport></C.airport></td>
-                  <td>공항도착</td>
-                  <td colSpan={3}>
-                    <ListGlobal level="fst" body={
-                      <p>탑승수속 카운터 오픈 시간 및 마감 시간을 확인하시어 도착하여 주시기 바랍니다.</p>
-                    }/>
-                    <ListGlobal level="scd" body={
-                      <p>오픈시간 : 항공기 출발 2시간 전</p>
-                    }/>
-                    <ListGlobal level="scd" body={
-                      <p>마감시간 : 항공기 출발 30분 전</p>
-                    }/>
-                  </td>
-                </tr>
-                <tr>
-                  <th></th>
-                  <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 02
-                    </SpeechBubble>
-                  </th>
-                  <td><C.ticket>&nbsp;</C.ticket></td>
-                  <td>탑승권발급</td>
                   <td>
-                    1)
-                    <C.linkm>
-                      <Link href="#">
-                        <a>온라인 체크인</a>
-                      </Link>
-                    </C.linkm>
+                      <ListGlobal level="fst" body={
+                          <p>탑승수속 카운터 오픈 시간 및 마감 시간을 확인하시어 도착하여 주시기 바랍니다.</p>
+                      }/>
+                      <ListGlobal level="scd" body={
+                          <p>오픈시간 : 항공기 출발 2시간 전</p>
+                      }/>
+                      <ListGlobal level="scd" body={
+                          <p>마감시간 : 항공기 출발 30분 전</p>
+                      }/>
                   </td>
-                  <td>2)KIOSK</td>
-                  <td>3)탑승수속 카운터</td>
                 </tr>
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 03
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 02
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.ticket>&nbsp;</C.ticket></div>
+                              <div className="txt">탑승권발급</div>
+                          </div>
+                      </div>
+
                   </th>
-                  <td><C.bag></C.bag></td>
-                  <td>수하물 위탁</td>
-                  <td colSpan={3}>
+                  <td>
+                    <ul>
+                        <li>
+                            1)
+                            <C.linkm>
+                                <Link href="#">
+                                    <a>온라인 체크인</a>
+                                </Link>
+                            </C.linkm>
+                        </li>
+                        <li>2)KIOSK</li>
+                        <li>3)탑승수속 카운터</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 03
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.bag></C.bag></div>
+                              <div className="txt">수하물 위탁</div>
+                          </div>
+                      </div>
+
+                  </th>
+                  <td>
                     <ListGlobal level="fst" body={
                       <p>에어프레미아 카운터에서 신분증과 탑승권을 제시하신 후 수하물을 위탁하여 주시기 바랍니다.</p>
                     }/>
@@ -109,13 +124,18 @@ function TabContent({currIdxCont}: IProps) {
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 04
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 04
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.security></C.security></div>
+                              <div className="txt">보안검색</div>
+                          </div>
+                      </div>
+
                   </th>
-                  <td><C.security></C.security></td>
-                  <td>보안검색</td>
-                  <td colSpan={3}>
+                  <td>
                     <ListGlobal level="fst" body={
                       <p>출발장 입구에서 신분증과 탑승권을 제시하신 후 보안 검색대를 통과하여 탑승구로 이동해 주시기 바랍니다.</p>
                     }/>
@@ -124,13 +144,17 @@ function TabContent({currIdxCont}: IProps) {
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 05
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 05
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.seat></C.seat></div>
+                              <div className="txt">항공기 탑승</div>
+                          </div>
+                      </div>
                   </th>
-                  <td><C.seat></C.seat></td>
-                  <td>항공기 탑승</td>
-                  <td colSpan={3}>
+                  <td>
                     <ListGlobal level="fst" body={
                       <p>원활한 탑승을 위하여, 신분증 및 탑승권은 개인별로 소지하여 주시기 바랍니다.</p>
                     }/>
@@ -162,7 +186,7 @@ function TabContent({currIdxCont}: IProps) {
               return (
                 <NewModal
                   className="max"
-                  type={EScrollType.TYPE6}
+                  type={EScrollType.TYPE1}
                   title={
                     <S.modalTitle>
                       <PopupTitle>자동출입국심사 이용가능대상</PopupTitle>
@@ -231,7 +255,7 @@ function TabContent({currIdxCont}: IProps) {
               return (
                 <NewModal
                   className="max"
-                  type={EScrollType.TYPE6}
+                  type={EScrollType.TYPE1}
                   title={
                     <S.modalTitle>
                       <PopupTitle>세관/병무/검역신고 안내</PopupTitle>
@@ -259,24 +283,24 @@ function TabContent({currIdxCont}: IProps) {
             <table>
               <colgroup>
                 <col width="5%"></col>
-                <col width="8%"></col>
-                <col width="3%"></col>
-                <col width="15%"></col>
-                <col width="23%"></col>
-                <col width="23%"></col>
-                <col width="23%"></col>
+                <col width="30%"></col>
+                <col width=""></col>
               </colgroup>
               <tbody>
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 01
-                    </SpeechBubble>
+                    <div className="step-wrap">
+                        <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                            STEP 01
+                        </SpeechBubble>
+                        <div className="step-value">
+                          <div className="ico"><C.airport></C.airport></div>
+                          <div className="txt">공항도착</div>
+                        </div>
+                    </div>
                   </th>
-                  <td><C.airport></C.airport></td>
-                  <td>공항도착</td>
-                  <td colSpan={3}>
+                  <td>
                     <ListGlobal level="fst" body={
                       <p>탑승수속 카운터 오픈 시간 및 마감 시간을 확인하시어 도착하여 주시기 바랍니다.</p>
                     }/>
@@ -291,33 +315,48 @@ function TabContent({currIdxCont}: IProps) {
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 02
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 02
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.ticket>&nbsp;</C.ticket></div>
+                              <div className="txt">탑승권발급</div>
+                          </div>
+                      </div>
+
                   </th>
-                  <td><C.ticket>&nbsp;</C.ticket></td>
-                  <td>탑승권발급</td>
                   <td>
-                    1)
-                    <C.linkm>
-                      <Link href="#">
-                        <a>온라인 체크인</a>
-                      </Link>
-                    </C.linkm>
+                      <ul>
+                          <li>
+                              1)
+                              <C.linkm>
+                                  <Link href="#">
+                                      <a>온라인 체크인</a>
+                                  </Link>
+                              </C.linkm>
+                          </li>
+                          <li>2)KIOSK</li>
+                          <li>3)탑승수속 카운터</li>
+                      </ul>
+
                   </td>
-                  <td>2)KIOSK</td>
-                  <td>3)탑승수속 카운터</td>
                 </tr>
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 03
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 03
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.bag></C.bag></div>
+                              <div className="txt">수하물 위탁</div>
+                          </div>
+                      </div>
+
                   </th>
-                  <td><C.bag></C.bag></td>
-                  <td>수하물 위탁</td>
-                  <td colSpan={3}>
+                  <td>
                     <ListGlobal level="fst" body={
                       <p>에어프레미아 카운터에서 신분증과 탑승권을 제시하신 후 수하물을 위탁하여 주시기 바랍니다.</p>
                     }/>
@@ -326,13 +365,18 @@ function TabContent({currIdxCont}: IProps) {
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 04
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 04
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.check></C.check></div>
+                              <div className="txt">출발장 입장</div>
+                          </div>
+                      </div>
+
                   </th>
-                  <td><C.check></C.check></td>
-                  <td>출발장 입장</td>
-                  <td colSpan={3}>
+                  <td>
                     <ListGlobal level="fst" body={
                       <p>보안검색: 여행객 및 소지품을 대상으로 보안 검색을 실시합니다.</p>
                     }/>
@@ -351,13 +395,18 @@ function TabContent({currIdxCont}: IProps) {
                 <tr>
                   <th></th>
                   <th>
-                    <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
-                      STEP 05
-                    </SpeechBubble>
+                      <div className="step-wrap">
+                          <SpeechBubble backgroundColor={BLUE1} arrowPosition="right">
+                              STEP 05
+                          </SpeechBubble>
+                          <div className="step-value">
+                              <div className="ico"><C.seat></C.seat></div>
+                              <div className="txt">항공기 탑승</div>
+                          </div>
+                      </div>
+
                   </th>
-                  <td><C.seat></C.seat></td>
-                  <td>항공기 탑승</td>
-                  <td colSpan={3}>
+                  <td>
                     <ListGlobal level="fst" body={
                       <p>원활한 탑승을 위하여, 신분증 및 탑승권은 개인별로 소지하여 주시기 바랍니다.</p>
                     }/>
@@ -527,6 +576,9 @@ const C = {
   `,
   wrap: styled.div`
     margin-top: 70px;
+    @media only screen and (max-width: 767px) { 
+        margin-top: 30px;
+    }
   `,
   body: styled.div`
     margin-top: 140px;
@@ -650,6 +702,16 @@ const T = {
         font-weight: 400;
         text-align: left;
         position: relative;
+        ul{
+          width:100%;
+          height:auto;
+          overflow:Hidden;
+          display:flex;
+          justify-content:space-between;
+          align-items:center;
+          li{
+          }
+        }
       }
       thead td, thead th{
         padding: 18px 0;
@@ -659,6 +721,80 @@ const T = {
         padding: 18px 0;
         border-bottom: 1px solid ${LIGHT_GRAY5};
       }
+    }
+    .step-wrap{
+        width:100%;
+        height:auto;
+        overflow:hidden;
+        display:flex;
+        justify-content:flex-start;
+        align-items:center;
+        .step-value{
+            margin-left:10px;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            .ico{
+                
+            }
+            .txt{
+                margin-left:5px;
+            }
+        }
+    }
+    @media only screen and (max-width: 767px) { 
+      table{
+        col:nth-child(1){
+          display:none;
+        }
+        col:nth-child(2){
+          width:110px;
+        }
+        tr{
+          th{
+            font-size:14px;
+            &:nth-child(1){
+              display:none;
+            }
+          }
+          td{
+            font-size:14px;
+            padding:10px 5px;
+            ul{
+              display:block;
+              li{
+                line-height: 28px;
+                font-size:14px;
+                a{
+                    font-size:14px;
+                }
+                &:first-child{
+                  margin-top:0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .step-wrap{
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        .step-value{
+            margin-left:0px;
+            margin-top:20px;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            .ico{
+                
+            }
+            .txt{
+                margin-left:5px;
+            }
+        }
+      }
+      
     }
   `,
   }

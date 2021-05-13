@@ -14,7 +14,8 @@ export const LIGHT_GRAY10 = '#ededed';
 export const LIGHT_GRAY11 = '#a8a8a8';
 export const LIGHT_GRAY12 = '#828282';
 export const LIGHT_GRAY13 = '#707070';
-export const LIGHT_GRAY14 = "#F7F7F7"
+export const LIGHT_GRAY14 = "#F7F7F7";
+export const LIGHT_GRAY15 = "#324158";
 
 export const DARK_GRAY1 = '#222222';
 export const DARK_GRAY2 = '#111111';
@@ -34,6 +35,8 @@ export const LIGHT_BLUE4 = '#8ecfff';
 export const BLUE1 = '#0093ff';
 export const BLUE2 = '#7FD3F8';
 export const DARK_BLUE1 = '#1b2b45';
+export const DARK_BLUE2 = "#6b7586";
+
 
 export const PALE_ORANGE1 = '#ffceb4';
 export const ORANGE1 = '#ff4d00';

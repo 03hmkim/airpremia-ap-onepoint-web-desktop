@@ -33,7 +33,40 @@ function Infant(){
               <C.titleSub><span>이용 대상 및 운임</span></C.titleSub>
               <C.content>
                 <T.table>
-                  <table>
+                  <dl>
+                      <dt>유아의 기준</dt>
+                      <dd>
+                          <ul>
+                              <li>
+                                  <ListGlobal level="scd" body={
+                                      <p>탑승일 기준 생후 7일 이상~24개월 미만</p>
+                                  } />
+                              </li>
+                              <li>
+                                  <ListGlobal level="scd" body={
+                                      <p>성인 1명이 유아 2명을 동반한 경우 유아 1명의 항공권은 소아운임이 적용되며 좌석이 제공됩니다.</p>
+                                  } />
+                              </li>
+                          </ul>
+                      </dd>
+                      <dt>운임</dt>
+                      <dd>
+                          <ul>
+                              <li>
+                                  <ListGlobal level="scd" body={
+                                      <p>국내선:무료</p>
+                                  } />
+                              </li>
+                              <li>
+                                  <ListGlobal level="scd" body={
+                                      <p>국제선:성인 구매운임의 10%</p>
+                                  } />
+                              </li>
+                          </ul>
+                      </dd>
+                  </dl>
+                    {/*
+                    <table className="tbl-target">
                     <colgroup>
                       <col width=""></col>
                       <col width="500px"></col>
@@ -41,20 +74,16 @@ function Infant(){
                     <tbody>
                       <tr>
                         <th>유아의 기준</th>
-                        <td>
-                          <ListGlobal level="scd" body={
-                                <p>탑승일 기준 생후 7일 이상~24개월 미만</p>
-                              } />
-                          <ListGlobal level="scd" body={
-                              <p>성인 1명이 유아 2명을 동반한 경우 유아 1명의 항공권은 소아운임이 적용되며 좌석이 제공됩니다.</p>
-                            } />
+                        <td className="al">
+
+
                         </td>
                       </tr>
                     </tbody>
                     <tbody>
                       <tr>
                         <th>운임</th>
-                        <td>
+                        <td className="al">
                           <ListGlobal level="scd" body={
                               <p>국내선:무료</p>
                             } />
@@ -65,6 +94,7 @@ function Infant(){
                       </tr>
                     </tbody>
                   </table>
+                  */}
                 </T.table>
               </C.content>
           </C.body>
@@ -79,8 +109,8 @@ function Infant(){
                   </colgroup>
                   <thead>
                     <tr>
-                      <td>국내선</td>
-                      <td>국제선</td>
+                      <td className="cell">국내선</td>
+                      <td className="cell">국제선</td>
                     </tr>
                   </thead>
                   <tbody>
@@ -227,6 +257,18 @@ const C = {
     &:first-of-type {
       margin-top: 30px;
     }
+    @media only screen and (max-width: 1059px) { 
+        margin-top: 80px;
+        &:first-of-type {
+          margin-top: 20px;
+        }
+    }
+    @media only screen and (max-width: 767px) { 
+        margin-top: 60px;
+        &:first-of-type {
+          margin-top: 10px;
+        }
+    }
   `,
   titleMain: styled.h2`
     font-size: 24px;
@@ -243,9 +285,10 @@ const C = {
     font-weight: 700;
 
     @media only screen and (max-width: 767px){
-      font-size: 16px;
+      font-size: 21px;
       letter-spacing: -0.32px;
-      margin-top: 60px;
+      line-height:1.5em;
+      margin-top: 30px;
     }
   `,
   content: styled.div`
@@ -308,6 +351,24 @@ const C = {
 
 const T = {
   table: styled.div`
+    dl{
+        dt{ 
+            margin-top:60px;
+            font-size:21px;
+            color:#222;
+            font-weight:bold;
+            line-height:1.71em;
+        }
+        dd{
+            margin-top:30px;
+            p{
+                font-size:18px;
+                color:#222;
+                font-weight:500;
+                line-height:2em;
+            }
+        }
+    }
     .taL,
     .taL{
       text-align: left;
@@ -317,6 +378,10 @@ const T = {
       text-align: right;
     }
     table {
+        th{
+            background:#1b2b45;
+            color:#fff;
+        }
       width: 100%;
       thead td{
         color: ${DARK_GRAY1};
@@ -335,6 +400,10 @@ const T = {
         vertical-align: middle;
         position: relative;
       }
+      td.cell{
+        background:#1b2b45;
+        color:#fff;
+      }
       thead td{
         padding: 18px 0;
         border-bottom: 1px solid ${DARK_GRAY1};
@@ -343,6 +412,32 @@ const T = {
         padding: 18px 0;
         border-bottom: 1px solid ${LIGHT_GRAY5};
       }
+    }
+    @media only screen and (max-width: 767px) { 
+        dl{
+            dt{ 
+                margin-top:30px;
+                font-size:18px;
+            }
+            dd{
+                margin-top:10px;
+                p{
+                    font-size:14px;
+                }
+            }
+        }
+        table{
+            td{
+                padding:18px;
+                word-break:keep-all;
+            }
+            td.cell{
+                padding:10px 0;
+            }
+            thead td{
+                font-size:14px;
+            }
+        }
     }
   `,
 }
