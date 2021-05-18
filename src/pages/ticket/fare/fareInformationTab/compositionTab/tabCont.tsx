@@ -1,295 +1,408 @@
-import styled from 'styled-components';
-export interface IStyleProps {}
-export interface IProps extends IStyleProps {
-  currIdxCont: number;
-}
+import { useState } from 'react';
+import styled, { css } from 'styled-components';
+import { map } from 'lodash';
+import { ECabinClassType } from '@airpremia/core/stores/models/bookingSession';
 import {
-  DARK_GRAY1,
-  LIGHT_GRAY5,
-  LIGHT_GRAY8,
   ORANGE2,
+  DARK_GRAY1,
+  LIGHT_GRAY6,
+  DARK_BLUE1,
+  WHITE1,
 } from '@airpremia/cdk/styles/colors';
-import FareConfig from 'public/images/ticket/fareConfig.png';
+import EconomyImage from 'public/images/ticket/illust_economy.png';
+import PremiumEconomyImage from 'public/images/ticket/illust_premium_economy.png';
 
-function TabContentComposition({currIdxCont}: IProps) {
-  if ( currIdxCont === 0 ) {
-    return (
-      <C.wrap>
-        <C.fareBox>
-          <C.boxCon>
-            <C.title>ECONOMY CLASS</C.title>
-            <C.tmi>
-              <C.oneLine>이코노미 클래스의 새로운 기준을 제안합니다.</C.oneLine>
-              <C.oneLine>충분한 간격의 좌석으로 이코노미의 새로운 좌석 기준을 경험해보세요.</C.oneLine>
-            </C.tmi>
-          </C.boxCon>
-        </C.fareBox>
-        <C.tmi>
-          <T.table>
-            <table>
-              <colgroup>
-                <col width="30%"></col>
-                <col width="70%"></col>
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>좌석정보</th>
-                  <td>
-                    <T.noBorder>
-                      <table>
-                        <colgroup>
-                          <col width="50%"></col>
-                          <col width="50%"></col>
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>항공사</th>
-                            <th>좌석 길이</th>
-                          </tr>
-                        </tbody>
-                        <tbody>
-                          <tr>
-                            <td><C.yell>에어프레미아 이코노미</C.yell></td>
-                            <td><C.yell>35 inch (약 89cm)</C.yell></td>
-                          </tr>
-                          <tr>
-                            <td>대형 항공사(FSC)</td>
-                            <td>31-32 inch (약 78-91cm)</td>
-                          </tr>
-                          <tr>
-                            <td>저가 항공사(LCC)</td>
-                            <td>29-31 inch (약 73-78cm)</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </T.noBorder>
-                  </td>
-                </tr>
-                <tr>
-                  <th>기내 와이파이 정보</th>
-                  <td>
-                    <C.oneLine>
-                      기내 와이파이 
-                      <C.yell>5MB</C.yell>
-                      를 무료로 제공해 드립니다. 기내에서도 편리하게 인터넷을 사용해보세요.
-                    </C.oneLine>
-                    <C.oneLine>
-                      <C.yell>*</C.yell>
-                      <C.lg>국제선 노선에 적용</C.lg>
-                    </C.oneLine>
-                  </td>
-                </tr>
-                <tr>
-                  <th>서비스 용품</th>
-                  <td>안대, 귀마개, 필기도구, 간단한 의약품이 상시 준비되어 있습니다.</td>
-                </tr>
-              </tbody>
-            </table>
-          </T.table>
-        </C.tmi>
-      </C.wrap>
-    )
-  } else {
-    return (
-      <C.wrap>
-        <C.fareBox>
-          <C.boxCon>
-            <C.title>PREMIUM ECONOMY CLASS</C.title>
-            <C.tmi>
-              합리적인 가격으로 편안함을 누릴 수 있는 프리미엄 이코노미 클래스를 소개합니다.
-            </C.tmi>
-          </C.boxCon>
-        </C.fareBox>
-        <C.tmi>
-          <T.table>
-            <table>
-              <colgroup>
-                <col width="30%"></col>
-                <col width="70%"></col>
-              </colgroup>
-              <tbody>
-                <tr>
-                  <th>좌석정보</th>
-                  <td>
-                    <T.noBorder>
-                      <table>
-                        <colgroup>
-                          <col width="50%"></col>                            <col width="50%"></col>
-                        </colgroup>
-                        <tbody>
-                          <tr>
-                            <th>항공사</th>
-                            <th>좌석 길이</th>
-                          </tr>
-                        </tbody>
-                        <tbody>
-                          <tr>
-                            <td><C.yell>에어프레미아 프리미엄 이코노미</C.yell></td>
-                            <td><C.yell>42 inch (약 105cm)</C.yell></td>
-                          </tr>
-                          <tr>
-                            <td>대형 항공사(FSC)</td>
-                            <td>31-32 inch (약 78-91cm)</td>
-                          </tr>
-                          <tr>
-                            <td>저가 항공사(LCC)</td>
-                            <td>29-31 inch (약 73-78cm)</td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </T.noBorder>
-                  </td>
-                </tr>
-                <tr>
-                <th>기내 와이파이 정보</th>
-                  <td>
-                    <C.oneLine>
-                      기내 와이파이 
-                      <C.yell>5MB</C.yell>
-                      를 무료로 제공해 드립니다. 기내에서도 편리하게 인터넷을 사용해보세요.
-                    </C.oneLine>
-                    <C.oneLine>
-                      <C.yell>*</C.yell>
-                      <C.lg>국제선 노선에 적용</C.lg>
-                    </C.oneLine>
-                  </td>
-                </tr>
-                <tr>
-                  <th>서비스 용품</th>
-                  <td>안대, 귀마개, 필기도구, 간단한 의약품이 상시 준비되어 있습니다.</td>
-                </tr>
-              </tbody>
-            </table>
-          </T.table>
-        </C.tmi>
-      </C.wrap>
-    )
-  }
+export interface IProps {}
+
+const data = {
+  [ECabinClassType.EY]: {
+    title: 'ECONOMY CLASS',
+    description:
+      '이코노미 클래스의 새로운 기준을 제안합니다.\n충분한 간격의 좌석으로 이코노미의 새로운 좌석 기준을 경험해보세요.',
+    image: EconomyImage,
+    seatInfo: {
+      airline: '에어프레미아 이코노미',
+      seatWidth: '35 inch (약 89cm)',
+    },
+    luggage: '23KG 1개',
+    wifi: '10MB',
+  },
+
+  [ECabinClassType.PE]: {
+    title: 'PREMIUM ECONOMY CLASS',
+    description:
+      '합리적인 가격으로 편안함을 누릴 수 있는 프리미엄 이코노미 클래스를 소개합니다.',
+    image: PremiumEconomyImage,
+    seatInfo: {
+      airline: '에어프레미아 프리미엄 이코노미',
+      seatWidth: '42 inch (약 106m)',
+    },
+    luggage: '23KG 2개',
+    wifi: '500MB',
+  },
+};
+
+function TabContentComposition() {
+  const { EY, PE } = ECabinClassType;
+  const [cabinClass, setCabinClass] = useState(EY);
+
+  return (
+    <S.container>
+      <S.wrapper>
+        <S.classNavigatorWrapper
+          className="font-bold"
+          cabinClass={cabinClass}
+        >
+          <button onClick={() => setCabinClass(EY)}>
+            이코노미 35"
+          </button>
+          <button onClick={() => setCabinClass(PE)}>
+            프레미아 42"
+          </button>
+        </S.classNavigatorWrapper>
+
+        <S.body>
+          <div className="main-info">
+            <div className="info-cont">
+              <h3>
+                {data[cabinClass].title}
+              </h3>
+              {map(
+                data[cabinClass].description.split('\n'),
+                (item, i) => (
+                  <p key={`cabinClassDesc${i.toString()}`}>
+                    {item}
+                  </p>
+                ),
+              )}
+            </div>
+            <div className="info-pic">
+              <img src={data[cabinClass].image} alt="" />
+            </div>
+          </div>
+          <div className="sub-info">
+            <div className="seat">
+              <div className="left">
+                <h4>좌석 정보</h4>
+              </div>
+              <div className="table">
+                <div className="title-row">
+                  <p className="font-bold column1">항공사</p>
+                  <p className="font-bold column2">
+                    좌석 길이
+                  </p>
+                </div>
+                <div className="body-row">
+                  <p className="column1">
+                    <em>
+                      {data[cabinClass].seatInfo.airline}
+                    </em>
+                  </p>
+                  <p className="column2">
+                    <em>
+                      {data[cabinClass].seatInfo.seatWidth}
+                    </em>
+                  </p>
+                </div>
+                <div className="body-row">
+                  <p className="column1">대형 항공사(FSC)</p>
+                  <p className="column2">
+                    31-32 inch (약 78-91cm)
+                  </p>
+                </div>
+                <div className="body-row">
+                  <p className="column1">저가 항공사(LCC)</p>
+                  <p className="column2">
+                    29-31 inch (약 73-78cm)
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* <div className="luggage">
+              <div className="left">
+                <h4>위탁 수하물 정보</h4>
+              </div>
+              <div className="right">
+                <p>
+                  위탁 수하물은{' '}
+                  <em>{data[cabinClass].luggage}</em>까지
+                  무료로 제공합니다. 단, 각 수하물은 최대
+                  158cm (가로, 세로, 높이의 합) 로 제한됩니다.
+                </p>
+              </div>
+            </div> */}
+            <div className="wifi">
+              <div className="left">
+                <h4>기내 와이파이 정보</h4>
+              </div>
+              <div className="right">
+                <p>
+                  기내 와이파이 
+                  <em>{data[cabinClass].wifi}</em>를 무료로
+                  제공해 드립니다. 기내에서도 편리하게
+                  인터넷을 사용해보세요.
+                </p>
+                <p>
+                  <em>*</em> 국제선 노선에 적용
+                </p>
+              </div>
+            </div>
+            <div className="service">
+              <div className="left">
+                <h4>서비스 용품</h4>
+              </div>
+              <div className="right">
+                <p>
+                  안대, 귀마개, 필기도구, 간단한 의약품이 상시
+                  준비되어 있습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </S.body>
+      </S.wrapper>
+    </S.container>
+  );
 }
 
-const C = {
-  fareBox: styled.div`
-    height: 275px;
-    background-image: url(${FareConfig});
-    background-repeat: no-repeat;
-    background-position: right 50px top 0;
-    @media only screen and (max-width: 1059px) {
-      height: auto;
-      background: none;
+TabContentComposition.defaultProps = {};
+
+const S = {
+  container: styled.div``,
+
+  wrapper: styled.div`
+  `,
+
+  title: styled.div`
+    margin-bottom: 100px;
+
+    @media only screen and (max-width: 1059px) { 
+      margin-bottom: 80px;
+    }
+
+    @media only screen and (max-width: 767px) { 
       margin-bottom: 60px;
     }
   `,
-  boxCon: styled.div`
-    &::after{
-      content: "";
-      display: block;
-      clear: both;
+
+  classNavigatorWrapper: styled.div<{
+    cabinClass: ECabinClassType;
+  }>`
+    display: flex;
+    align-items: center;
+
+    button {
+      padding: 0 17px;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 30px;
+      letter-spacing: -0.26px;
     }
-  `,
-  oneLine: styled.p`
-  `,
-  lg: styled.span`
-    color: ${LIGHT_GRAY8};
-  `,
-  yell: styled.span`
-    color: ${ORANGE2};
-  `,
-  wrap: styled.div`
-    margin: 0;
-  `,
-  title: styled.h4`
-    font-family: 'premiaOTF';
-    font-size: 40px;
-    font-weight: bold;
-    padding-top: 100px;
-    line-height: 1.8em;
-    letter-spacing: -0.30px;
+
     @media only screen and (max-width: 767px) { 
-      font-size: 26px;
-      letter-spacing: -0.52px;
-      padding-top: 60px;
+      button {
+        font-size: 14px;
+        line-height: 18px;
+        padding: 4px 17px;
+      }
     }
+
+    ${({ cabinClass }) => {
+      if (cabinClass === ECabinClassType.EY) {
+        return css`
+          & > button:nth-child(1) {
+            position: relative;
+            background-color: ${DARK_BLUE1};
+            border-radius: 60px;
+            color: ${WHITE1};
+          }
+        `;
+      }
+      return css`
+        & > button:nth-child(2) {
+          position: relative;
+          background-color: ${DARK_BLUE1};
+          border-radius: 60px;
+          color: ${WHITE1};
+        }
+      `;
+    }}
   `,
-  tmi: styled.p`
-    margin-top: 40px;
-    font-size: 18px;
-    line-height: 1.8em;
-    @media only screen and (max-width: 767px) { 
-      margin-top: 30px;
-      font-size: 14px;
-      letter-spacing: -0.32px;
+
+  body: styled.div`
+    .main-info {
+      display: flex;
+      justify-content: space-between;
+      
+      & > div:first-of-type {
+        margin-top: 43px;
+      }
+
+      h3 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-family: 'premia';
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 1.8em;
+        letter-spacing: -0.6px;
+      }
+
+      p {
+        margin-bottom: 10px;
+        font-size: 18px;
+        line-height: 1.8em;
+        letter-spacing: -0.28px;
+      }
+
+      img {
+        width: 360px;
+        height: 232px;
+        object-fit: contain;
+      }
     }
-  `,
-}
-const T = {
-  table: styled.div`
-    border-top: 2px solid ${DARK_GRAY1};
-    border-bottom: 2px solid ${DARK_GRAY1};
-    table {
-      width: 100%;
-      th{
-        color: ${DARK_GRAY1};
-        font-size: 21px;
-        font-weight: bold;
-        line-height: 1.36em;
-        letter-spacing: -0.3px;
-        text-align: left;
-        @media only screen and (max-width: 767px){
-          font-size: 16px;
+
+    .sub-info {
+      border-top: solid 2px ${DARK_GRAY1};
+      border-bottom: solid 2px ${DARK_GRAY1};
+      margin-top: 53px;
+
+      & > div {
+        padding: 60px 0;
+        display: flex;
+        
+        &:not(:last-of-type) {
+          border-bottom: solid 1px ${LIGHT_GRAY6};
         }
       }
-      td{
+
+      em {
+        color: ${ORANGE2};
+      }
+
+      .left {
+        width: 25%;
+        font-weight: 600;
+
+        h4 {
+          font-size: 22px;
+          line-height: 1.8em;
+          letter-spacing: -0.44px;
+        }
+      }
+
+      .right {
+        width: 75%;
+        margin-top: 4px;
         font-size: 18px;
-        font-weight: 400;
-        line-height: 1.36em;
-        letter-spacing: -0.3px;
-        text-align: left;
-        vertical-align: middle;
-        position: relative;
-        @media only screen and (max-width: 767px){
+        line-height: 1.8em;
+      }
+
+      .table {
+        width: 75%;
+
+        & > div {
+          display: flex;
+        }
+
+        .column1 {
+          width: calc(50% - 10px);
+          margin-right: 20px;
+        }
+        .column2 {
+          width: calc(50% - 10px);
+        }
+      }
+
+      .title-row {
+        font-size: 18px;
+        line-height: 1.8em;
+        letter-spacing: -0.28px;
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+        border-bottom: solid 1px ${LIGHT_GRAY6};
+      }
+
+      .body-row {
+        margin-bottom: 30px;
+        font-size: 18px;
+        font-weight: 600;
+      }
+    }
+
+
+    @media only screen and (max-width: 767px) { 
+      .main-info{
+        display:block;
+
+        h3 {
+          font-size: 26px;
+        }
+
+        p {
+          margin-bottom: 0;
           font-size: 14px;
         }
-      }
-      tbody th,
-      tbody td{
-        padding: 60px 5px;
-        border-bottom: 1px solid ${LIGHT_GRAY5};
-        @media only screen and (max-width: 767px){
-          padding: 20px 5px;
+
+        .info-pic{
+          width: 100%;
+          text-align: center;
+          margin-top: 10px;
+
+          img{
+            max-width: 100%;
+          }
         }
       }
-      tbody th{
-        padding-left: 0;
-      }
-      tbody td{
-        padding-right: 0;
+      .sub-info {
+        margin-top: 0px;
+
+        & > div {
+          padding: 25px 0;
+          display: block;
+        } 
+
+        .table {
+          width: 100%;
+
+          & > div {
+            padding-top: 25px;
+            margin-bottom: 0;
+            display: flex;
+          }
+        }
+
+        .title-row {
+          padding: 25px 0;
+          font-size: 14px;
+        }
+        
+        .body-row {
+          font-size: 14px;
+        }
+
+        .left {
+          width:100%;
+          h4 {
+            font-size: 18px;
+          }
+        }
+
+        .right {
+          width: 100%;
+          font-size: 14px;
+        }
+
+        .service{
+          display:block;
+        }
+
+        .seat{
+          display:block;  
+        } 
       }
     }
-  }
   `,
-  noBorder: styled.div`
-    border-top: none;
-    border-bottom: none;
-    table tbody th{
-      font-size: 18px;
-      padding-bottom: 13px;
-      padding-top: 0;
-      padding-left: 5px;
-      padding-right: 5px;
-      @media only screen and (max-width: 767px){
-        font-size: 14px;
-      }
-    }
-    table tbody td{
-      border-bottom: none;
-      padding: 10px 5px;
-    };
-    table tbody tr:first-child td{
-      padding-top: 30px;
-      @media only screen and (max-width: 767px){
-        padding-top: 10px;
-      }
-    };
-  `,
-}
+};
+
 export default TabContentComposition;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {
   TextNavigationTab,
 } from 'src/components';
-import TabContent from './tabCont';
 
 interface IProps {}
 
@@ -18,9 +17,6 @@ const fareInformationTab: FC<IProps> = ({}) => {
         currIdx={currIdx}
         list={tabList}
         onClick={setCurrIdx}
-      />
-      <TabContent
-        currIdxCont={currIdx}
       />
     </S.container>
   );

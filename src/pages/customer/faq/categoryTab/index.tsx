@@ -28,14 +28,6 @@ const CategoryTab: FC<IProps> = ({}) => {
 
 const S = {
   container: styled.div`
-    margin-top: 100px;
-    
-    > div > div > button > span{
-      font-size: 15px;
-    }
-    @media only screen and (max-width: 767px) { 
-        margin-top: 0px;
-    }
   `,
 };
 

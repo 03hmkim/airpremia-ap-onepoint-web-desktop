@@ -60,17 +60,31 @@ const S = {
             }
         }
     `,
-    left: styled.div``,
-    right: styled.div``,
+    left: styled.div`
+        width: 85%;
+    `,
+    right: styled.div`
+        width: 15%;
+        text-align: right;
+    `,
     itemTitle: styled.h5`
-        font-size: 18px;
-        font-weight: bold;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.8em;
+        @media only screen and (max-width: 767px){
+            font-size: 22px;
+            letter-spacing: -0.4px;
+        }
     `,
     description: styled.p`
         margin-top: 10px;
-        font-size: 14px;
+        font-size: 18px;
         color: ${LIGHT_GRAY8};
-        line-height: 1.8;
+        line-height: 1.8em;
+        @media only screen and (max-width: 767px){
+            font-size: 14px;
+            letter-spacing: -0.28px;
+        }
 
         &.date{
         margin-top: 0;

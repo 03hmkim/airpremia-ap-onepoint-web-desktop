@@ -257,27 +257,42 @@ const C = {
   sb: styled.div`
   `,
   ptit: styled.div`
-    font-size: 20px;
-  `,
+    font-size: 24px;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+    }  `,
   pscr: styled.p`
     margin-top: 15px;
     color: ${LIGHT_GRAY13};
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
     line-height: 1.8;
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }
   `,
   pth: styled.p`
     margin-top: 10px;
-  `,
+    font-size: 18px;
+    line-height: 1.8;
+
+    @media only screen and (max-width: 767px) {
+      font-size: 14px;
+    }  `,
   tmi: styled.p`
     margin-top: 30px;
+    @media only screen and (max-width: 767px) { 
+      margin-top: 20px;
+    }
   `,
   blue: styled.span`
     color: ${BLUE1};
   `,
   orange: styled.span`
     color: ${ORANGE2};
-    font-weight: bold;
+    font-weight: 700;
   `,
 }
     
@@ -289,11 +304,14 @@ const T = {
       thead td,
       td strong {
         color: ${DARK_GRAY1};
-        font-size: 15px;
-        font-weight: bold;
-        line-height: 1.6;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 1.8;
         letter-spacing: -0.3px;
         text-align: center;
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+        }
       }
 
       th{
@@ -301,9 +319,9 @@ const T = {
       }
 
       td{
-        font-size: 14px;
+        font-size: 18px;
         font-weight: 400;
-        line-height: 1.9;
+        line-height: 1.8;
         letter-spacing: -0.3px;
         text-align: right;
         vertical-align: middle;
@@ -336,6 +354,10 @@ const T = {
               display: block;
             }
           }
+        }
+        @media only screen and (max-width: 767px) {
+          font-size: 14px;
+          text-align: left;
         }
       }
 
@@ -372,6 +394,12 @@ const S = {
     > span,
     > span > strong {
       color: ${DARK_GRAY1};
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      > span,
+    > span > strong {
       font-size: 14px;
     }
   `,

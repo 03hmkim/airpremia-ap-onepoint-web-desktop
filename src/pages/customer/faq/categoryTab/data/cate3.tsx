@@ -144,17 +144,19 @@ const T = {
 
     .qst {
       padding-right: 60px;
+      font-family: 'NotoSans', sans-serif;
 
       > strong {
         display: block;
-        font-size: 15px;
+        font-size: 24px;
+        line-height: 1.8em;
       }
 
       .loc {
         margin-top: 10px;
         display: block;
         color: ${LIGHT_GRAY7};
-        font-size: 13px;
+        font-size: 18px;
       }
 
       &::before {
@@ -164,7 +166,8 @@ const T = {
     }
 
     .asr {
-      font-size: 14px;
+      font-family: 'NotoSans', sans-serif;
+      font-size: 18px;
       line-height: 1.8em;
       border-top: 1px solid ${LIGHT_GRAY6};
 
@@ -172,9 +175,6 @@ const T = {
         content: "A";
         color: ${ORANGE2};
       }
-    }  
-    @media only screen and (max-width: 1059px) { 
-    
     }
     @media only screen and (max-width: 767px) { 
       .accWrap {
@@ -193,8 +193,23 @@ const T = {
       }
       .qst {
         padding-right: 10px;
+  
+        > strong {
+          font-size: 22px;
+          letter-spacing: -0.4px;
+        }
+  
+        .loc {
+          font-size: 14px;
+          letter-spacing: -0.28px;
+        }
       }
-    }
+  
+      .asr {
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
+    } 
   `,
 };
 

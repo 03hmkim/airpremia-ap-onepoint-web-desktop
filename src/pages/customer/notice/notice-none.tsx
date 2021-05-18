@@ -1,15 +1,20 @@
 import styled from 'styled-components';
 import { Container } from 'src/styles/layout';
 import {
-  LIGHT_GRAY8
+  DARK_GRAY1
 } from '@airpremia/cdk/styles/colors';
+import {
+  ComTitle,
+} from 'src/components';
 
 function noticeNone(){
     return (
     <Container>
-      <C.ComTitles>공지사항</C.ComTitles>
+      <ComTitle
+        title= "공지사항"
+      />
       <C.body>
-          <C.description>공지사항이 없습니다.</C.description>
+        <C.description>공지사항이 없습니다.</C.description>
       </C.body>
       <C.body></C.body>
     </Container>
@@ -17,22 +22,23 @@ function noticeNone(){
 }
 
 const C = {
-  ComTitles:styled.div`
-  font-size:36px;
-  font-weight: bold;
-  `,
   body: styled.div`
-    margin-top: 140px;
-    &:first-of-type{
-      margin-top: 30px;
+    border-top: 2px solid ${DARK_GRAY1};
+    padding-top: 30px;
+    @media only screen and (max-width: 767px){
+      padding-top: 20px;
     }
   `,
   description: styled.p`
-  margin-top: 20px;
-  color: ${LIGHT_GRAY8};
-  font-size: 14px;
-  line-height: 1.8;
-  text-align: center;
+    margin-top: 30px;
+    font-size: 18px;
+    line-height: 1.8em;
+    color: ${DARK_GRAY1};
+    @media only screen and (max-width: 767px){
+      margin-top: 20px;
+      font-size: 14px;
+      letter-spacing: -0.28px;
+    }
 `,
 }
 

@@ -58,10 +58,9 @@ function TabContent({currIdxCont}: IProps) {
 
 const S = {
   container: styled.div`
-
   `,
   total: styled.div`
-    margin-top: 30px;
+    margin-top: 60px;
     padding: 20px 0;
     border-top: 1px solid ${DARK_GRAY1};
     border-bottom: 1px solid ${LIGHT_GRAY6};
@@ -69,7 +68,18 @@ const S = {
     > span,
     > span > strong {
       color: ${DARK_GRAY1};
-      font-size: 14px;
+      font-size: 18px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-top: 40px;
+
+      > span,
+      > span > strong {
+        color: ${DARK_GRAY1};
+        font-size: 14px;
+        letter-spacing: -0.28px;
+      }
     }
   `,
 

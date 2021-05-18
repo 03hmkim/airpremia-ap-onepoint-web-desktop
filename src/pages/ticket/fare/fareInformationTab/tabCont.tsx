@@ -14,20 +14,13 @@ import TabContentSale from './saleTab/tabCont';
 
 function TabContent({currIdxCont}: IProps) {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['이코노미 35"', '프레미아 42"'];
   const tabList2 = ['이코노미 35"', '프레미아 42"'];
   const tabList3 = ['이코노미 35"', '프레미아 42"'];
 
   if ( currIdxCont === 0 ) {
     return (
       <C.wrap>
-        <RoundedNavigationTab
-          currIdx={currIdx}
-          list={tabList}
-          onClick={setCurrIdx}
-        />
         <TabContentComposition
-          currIdxCont={currIdx}
         />
       </C.wrap>
     )
