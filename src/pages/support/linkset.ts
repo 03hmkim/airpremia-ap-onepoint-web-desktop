@@ -1,6 +1,6 @@
 export const additionalBaggage = {
   title: '사전 수하물 구매',
-  link: './help',
+  link: './baggage',
 };
 
 export const additionalPacking = {

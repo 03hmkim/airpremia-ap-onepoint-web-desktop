@@ -431,41 +431,6 @@ function TabContent({currIdxCont}: IProps) {
   } 
 }
 
-
-// const S = {
-//   container: styled.div``,
-//   ul: styled.ul`
-//     padding-bottom: 30px;
-//   `,
-//   li: styled.li`
-//     margin-left: 10px;
-//     margin-bottom: 15px;
-//     padding-left: 10px;
-//     position: relative;
-//     font-size: 15px;
-//     &::before{
-//       content:"";
-//       width: 4px;
-//       height: 4px;
-//       top: 5px;
-//       left: 0px;
-//       text-indent: -9999px;
-//       display: block;
-//       position: absolute;
-//       background-color: ${DARK_GRAY1};
-//       border-radius: 50%
-//     }
-//     &:first-child{
-//       margin-top: 20px;
-//     }
-//     &:last-child{
-//       margin-bottom: 0px;
-//     }
-//   `,
-
-// };
-
-
 const C = {
   /* 서비스안내 공통css */
   wrap: styled.div`
@@ -551,7 +516,7 @@ const C = {
   `,
   linkm: styled.span`
     margin-left: 4px;
-    border-bottom: 2px solid ${BLUE1};
+    border-bottom: 1px solid ${BLUE1};
 
     a {
       color: ${BLUE1};
@@ -723,7 +688,6 @@ const T = {
     .step-wrap {
       height: auto;
       margin-left: 30px;
-      overflow: hidden;
       display: flex;
       justify-content: flex-start;
       align-items: center;

@@ -103,12 +103,34 @@ const Bye: FC<IProps> = ({
                 <p>회원 탈퇴는 인터넷 회원 정보를 포함한 에어프레미아 기록 전체에 대한 탈퇴이므로 신중히 고려해 주시기 바랍니다.</p>
               }/>            
             </div>
-            <ul>
+            <C.memInfoCon>
+              <C.flex>
+                <p>회원 이름</p>
+                <p>{userInfo?.name.first}  {userInfo?.name.last}</p>
+              </C.flex>
+              <C.flex>
+                <p>아이디</p>
+                <p>{userInfo?.email}</p>
+              </C.flex>
+              <C.flex>
+                <p>회원번호</p>
+                <p>{userInfo?.customerNumber}</p>
+              </C.flex>
+              <C.flex>
+                <p>보유 포인트</p>
+                <p>{userInfo?.points}</p>
+              </C.flex>
+            </C.memInfoCon>
+            <C.m100>
+              <C.titleMain>마일리지 포기동의</C.titleMain>
+              <C.agree>상기 본인은 회원 탈퇴 하오니, 본인이 회원가입을 위하여 귀사에 제공한 정보를 삭제하여 주시기 바랍니다. 아울러 본인이 회원가입 시점부터 탈퇴 요청일까지 적립된 모든 포인트를 포기함에 동의합니다.</C.agree>
+            </C.m100>
+            {/* <ul>
               <li>{userInfo?.name.first}  {userInfo?.name.last}</li>
               <li>{userInfo?.email}</li>
               <li>{userInfo?.customerNumber}</li> 
               <li>{userInfo?.points}</li>
-            </ul>
+            </ul> */}
           </div>
         }
 
@@ -141,15 +163,39 @@ const Bye: FC<IProps> = ({
 
 const C = {
   titleMain: styled.h2`
-  font-size:24px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-      @media only screen and (max-width: 767px) {
-          font-size: 22px;
-          line-height: 28px;
-      }
+    font-size:24px;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    @media only screen and (max-width: 767px) {
+      font-size: 22px;
+      line-height: 28px;
+    }
   `,
-
+  memInfoCon:styled.div`
+    width: 700px;
+    margin-top: 30px;
+    @media only screen and (max-width: 767px){
+      width: 90%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+  `,
+  flex:styled.div`
+    display: flex;
+    justify-content: space-between;
+  `,
+  m100:styled.div`
+    margin-top: 100px;
+    @media only screen and (max-width: 767px){
+      margin-top: 60px;
+    }
+  `,
+  agree:styled.div`
+    margin-top: 30px;
+    @media only screen and (max-width: 767px){
+      margin-top: 20px;
+    }
+  `,
 }
 
 Title.defaultProps = {};

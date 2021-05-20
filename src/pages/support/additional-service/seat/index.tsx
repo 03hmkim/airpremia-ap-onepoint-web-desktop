@@ -1,10 +1,12 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import { useState } from 'react';
 import {
   ComTitle,
   SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
 import {
+  WHITE1,
   DARK_GRAY1,
   LIGHT_GRAY8,
   ORANGE2,
@@ -12,16 +14,23 @@ import {
   LIGHT_BLUE2,
   DARK_BLUE1,
 } from '@airpremia/cdk/styles/colors';
-import Img_advanceseat from 'public/images/support/img_advanceseat.svg';
-import Img_advanceseat_vertical_sm from 'public/images/support/img_advanceseat_vertical_sm.svg';
+import Advanceseat from 'public/images/support/img_advanceseat.svg';
+import Advanceseat_vtcHalf from 'public/images/support/img_advanceseat_vertical_half.svg';
+import Advanceseat_vtcFull from 'public/images/support/img_advanceseat_vertical_full.svg';
 import { ListGlobal } from 'src/components';
 import { 
   additionalBaggage,
   additionalPacking,
-  additionalSeat,
+  additionalSideseat,
 } from '../../linkset';
+import { ESeatImgType } from './types';
 
 function Seat(){
+
+  const { FULL, HALF } = ESeatImgType;
+  const [seatImg, setSeatImg] = useState(FULL);
+  
+
   return (
     <Container>
       <S.container>
@@ -32,19 +41,30 @@ function Seat(){
           <C.body>
             <C.titleMain>사전 좌석 구매</C.titleMain>
             <C.content className="mt60">
-              <C.flex>
-                <C.titleSub>구매대상 좌석</C.titleSub>
-                <C.badge onClick={() => {}}>
-                  좌석 전체 보기
-                </C.badge>
-              </C.flex>
-              <C.image2><Img_advanceseat_vertical_sm /></C.image2>
-              <C.image><Img_advanceseat /></C.image>
-              <C.imageTxt>
-                <C.imgSub><C.dark></C.dark>맨 앞 좌석 & 비상구 좌석</C.imgSub>
-                <C.imgSub><C.sky></C.sky>복도 & 창가 좌석</C.imgSub>
-                <C.imgSub><C.sky2></C.sky2>가운데 좌석</C.imgSub>
-              </C.imageTxt>
+              <C.seatWrap seatImg={seatImg}>
+                <C.flex>
+                  <C.titleSub>구매대상 좌석</C.titleSub>
+                  <C.badge className="btnHalf" onClick={() => setSeatImg(HALF)}>
+                    좌석 전체 보기
+                  </C.badge>
+                  <C.badge className="btnFull" onClick={() => setSeatImg(FULL)}>
+                    좌석 전체 닫기
+                  </C.badge>
+                </C.flex>
+                <C.seatImg className="seatPC"><Advanceseat /></C.seatImg>
+                <C.imageTxt>
+                  <p><C.icon className="dark" /><span>맨 앞 좌석 & 비상구 좌석</span></p>
+                  <p><C.icon className="sky" /><span>복도 & 창가 좌석</span></p>
+                  <p><C.icon className="sky2" /><span>가운데 좌석</span></p>
+                </C.imageTxt>
+                <C.seatImg className="seatHalf"><Advanceseat_vtcHalf /></C.seatImg>
+                <C.seatImg className="seatFull"><Advanceseat_vtcFull /></C.seatImg>
+                <C.seatbottom>
+                  <C.badge className="btnFull" onClick={() => setSeatImg(FULL)}>
+                    좌석 전체 닫기
+                  </C.badge>
+                </C.seatbottom>
+              </C.seatWrap>
             </C.content>
           </C.body>
           <C.body>
@@ -72,7 +92,7 @@ function Seat(){
                     <tbody>
                       <tr>
                         <th>
-                          <span className="icon"><C.dark /></span>
+                          <span className="icon"><C.icon className="dark" /></span>
                           맨 앞 좌석 & 비상구 좌석
                         </th>
                         <td>10,000</td>
@@ -82,7 +102,7 @@ function Seat(){
                       </tr>
                       <tr>
                         <th>
-                          <span className="icon"><C.sky /></span>
+                          <span className="icon"><C.icon className="sky" /></span>
                           복도 & 창가 좌석
                         </th>
                         <td>-</td>
@@ -92,7 +112,7 @@ function Seat(){
                       </tr>
                       <tr>
                         <th>
-                          <span className="icon"><C.sky2 /></span>
+                          <span className="icon"><C.icon className="sky2" /></span>
                           가운데 좌석
                         </th>
                         <td>-</td>
@@ -163,7 +183,7 @@ function Seat(){
                 <p><C.orange>비상구 좌석 지정 불가 손님</C.orange>: 만 15세 미만 손님, 임산부, 시각/청각 장애인, 거동이 불편한 손님, 노약자, 반려동물을 동반한 손님, 한국어나 영어로 의사소통이 불가한 손님, 음주상태의 손님 등 비상시 승무원의 지시에 따르기 어려움이 있는 손님​</p>
               }/>
               <ListGlobal level="scd" body={
-                <p>탑승 당일 출발지 공항 탑승수속 카운터/기내에서 비상구 착석 불가 손님으로 판단될 경우 현장에서 임의로 좌석배정을 취소 후 재배정되며 구매하신 좌석은 환불이 불가합니다​</p>
+                <p>탑승 당일 출발지 공항 탑승수속 카운터/기내에서 비상구 착석 불가 손님으로 판단될 경우 현장에서 임의로 좌석배정을 취소 후 재배정되며 구매하신 좌석은 환불이 불가합니다​.</p>
               }/>
             </C.content>
           </C.body>
@@ -179,8 +199,8 @@ function Seat(){
                 link={additionalPacking.link}
               />
               <SupportLink
-                title={additionalSeat.title}
-                link={additionalSeat.link}
+                title={additionalSideseat.title}
+                link={additionalSideseat.link}
               />
             </C.linkWrap>
           </C.body>
@@ -227,7 +247,6 @@ const C = {
     @media only screen and (max-width: 767px){
       font-size: 16px;
       letter-spacing: -0.32px;
-      margin-top: 60px;
     }
   `,
   content: styled.div`
@@ -259,119 +278,168 @@ const C = {
   /* 서비스안내 공통css 끝 */
 
 
+  seatWrap: styled.div<{
+    seatImg: ESeatImgType;
+  }>`
+
+    .seatHalf,
+    .seatFull {
+      display: none;
+    }
+
+    @media only screen and (min-width: 1059px) {
+      .btnHalf,
+      .btnFull,
+      .seatHalf,
+      .seatFull {
+        display: none;
+      }
+    } 
+
+    @media only screen and (max-width: 1059px) {
+      .btnHalf,
+      .seatHalf {
+        display: inline-block;
+      }
+
+      ${({ seatImg }) => {
+        if (seatImg === ESeatImgType.FULL) {
+          return css`
+            .btnHalf,
+            .seatHalf {
+              display: inline-block;
+            }
+            .btnFull,
+            .seatFull {
+              display: none;
+            }
+          `;
+        }
+        return css`
+          .btnHalf,
+          .seatHalf {
+            display: none;
+          }
+          .btnFull,
+          .seatFull {
+            display: inline-block;
+          }
+        `;
+      }}
+    }  
+  `,
   flex:styled.div`
     display: flex;
     justify-content: space-between;
+    align-items: center;
   `,
-  badge:styled.div`
-    height: 100%;
-    border-radius: 30px;
-    background-color: #0093ff;
-    padding: 5px 12px;
-    box-sizing: border-box;
-    color:#fff;
+  seatbottom: styled.div`
+    margin-top: 30px;
+    text-align: center;
+  `,
+  badge:styled.button`
+    height: 36px;
+    padding: 0 12px;
+    color: ${WHITE1};
     font-size: 18px;
+    border-radius: 30px;
+    background-color: ${BLUE1};
+    box-sizing: border-box;
     cursor: pointer;
-    display: none;
-    margin-top: 100px;
 
-    @media only screen and (max-width: 1440px) { 
-      display: block;
+    &.btnFull {
+      color: ${BLUE1};
+      background-color: ${WHITE1};
+      border: 1px solid ${BLUE1};
     }
 
     @media only screen and (max-width: 767px){
-      margin-top: 60px;
-      font-size: 14px;
+      height: 28px;
+      font-size: 13px;
       letter-spacing: -0.28px;
     }
   `,
-  imgSub: styled.span`
-    margin-left: 90px;
-    font-size: 18px;
-    
-    &:first-child {
-      margin-left: 0;
-    }
-  `,
-  image: styled.div`
+  seatImg: styled.div`
     max-width: 1200px;
     width: 100%;
     margin: 30px auto 0;
 
-    svg {
-      width: 100%;
+    &.seatPC {
+      svg {
+        width: 100%;
+      }
     }
 
     @media only screen and (max-width: 1059px) { 
-      display: none;
-    }
-  `,
-  image2: styled.div`
-    width: 171px;
-    height: 274px;
-    margin: 30px auto 0;
-    display: none;
+      margin-top: 0;
+      text-align: center;
 
-    @media only screen and (max-width: 1059px) { 
-      display: block;
+      &.seatPC {
+        display: none;
+      }
     }
   `,
   imageTxt: styled.div`
-    text-align: center;
-    font-size: 16px;
     margin-top: 14px;
+    text-align: center;
+
+    p {
+      margin-left: 90px;
+      display: inline-flex;
+      align-items: center;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    span {
+      margin-left: 10px;
+      font-size: 18px;
+    }
+    
     @media only screen and (max-width: 1059px) { 
-      display: none;
+      text-align: left;
+
+      p {
+        margin-left: 0px;
+        display: flex;
+      }
+
+      span {          
+        margin-left: 10px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      span {
+        font-size: 14px;
+        font-weight: 300;
+      }
     }
   `,  
   orange: styled.span`
     color: ${ORANGE2};
   `,
-  dark: styled.span`
+  icon: styled.div`
     width: 25px;
     height: 15px;
-    margin-right: 10px;
     display: inline-block;
+    vertical-align: middle;
     background-color: ${DARK_BLUE1};
     border-radius: 8px 4px 4px 8px;
-    vertical-align: middle;
 
-    @media only screen and (max-width: 767px){
-      width: 20px;
-      height: 12px;
-      margin-right: 0;
-      border-radius: 6px 3px 3px 6px;
+    &.sky {
+      background-color: ${LIGHT_BLUE2};
     }
-  `,
-  sky: styled.span`
-    width: 25px;
-    height: 15px;
-    margin-right: 10px;
-    display: inline-block;
-    background-color: ${LIGHT_BLUE2};
-    border-radius: 8px 4px 4px 8px;
-    vertical-align: middle;
 
-    @media only screen and (max-width: 767px){
-      width: 20px;
-      height: 12px;
-      margin-right: 0;
-      border-radius: 6px 3px 3px 6px;
+    &.sk2 {
+      background-color: ${BLUE1};
     }
-  `,
-  sky2: styled.span`
-    width: 25px;
-    height: 15px;
-    margin-right: 10px;
-    display: inline-block;
-    background-color: ${BLUE1};
-    border-radius: 8px 4px 4px 8px;
-    vertical-align: middle;
 
     @media only screen and (max-width: 767px){
       width: 20px;
       height: 12px;
-      margin-right: 0;
       border-radius: 6px 3px 3px 6px;
     }
   `,

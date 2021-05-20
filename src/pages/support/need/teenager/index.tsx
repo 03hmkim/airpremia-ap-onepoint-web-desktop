@@ -101,14 +101,16 @@ function Teenager(){
           <C.body>
             <C.titleSub>이용 안내</C.titleSub>
             <C.content>
-              <C.itemText>혼자 여행하는 어린이/청소년의 안전하고 편안한 여행을 위하여 제공하는 서비스입니다.</C.itemText>
               <ListGlobal level="fst" body={
+                <p>혼자 여행하는 어린이/청소년의 안전하고 편안한 여행을 위하여 제공하는 서비스입니다.​</p>
+              } />
+              <ListGlobal level="scd" body={
                 <p>출발지: 담당직원이 출국수속 및 탑승을 도와드리며 해당 항공편 객실 승무원에게 인계합니다.​</p>
               } />
-              <ListGlobal level="fst" body={
+              <ListGlobal level="scd" body={
                 <p>기내: 객실승무원들이 비행 중 어린이를 보살펴 드립니다.​</p>
               } />
-              <ListGlobal level="fst" body={
+              <ListGlobal level="scd" body={
                 <p>도착지: 담당직원이 객실승무원으로부터 인계를 받고 수하물 수취와 입국 수속을 도와드립니다. 그 후, 도착지 보호자에게 인계합니다.​</p>
               } />
             </C.content>
@@ -125,7 +127,7 @@ function Teenager(){
                   <p>
                     <C.linkm>
                       <a href="/document/support_need-teenager_01.pdf" download className="flex">
-                        비동반 소아 서비스 신청서<Linkblue />
+                        비동반 소아 서비스 신청서 다운<Linkblue />
                       </a>
                     </C.linkm>
                   </p>

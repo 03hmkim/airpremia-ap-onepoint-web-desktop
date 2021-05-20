@@ -28,8 +28,7 @@ function Infant(){
           <C.body>
             <C.titleMain>유아동반 손님</C.titleMain>
           </C.body>
-          <C.body>
-              <C.titleSub><span>이용 대상 및 운임</span></C.titleSub>
+              {/* <C.titleSub><span>이용 대상 및 운임</span></C.titleSub> */}
               <C.content>
                 <T.dl>
                   <dl>
@@ -42,7 +41,7 @@ function Infant(){
                                   } />
                               </li>
                               <li>
-                                  <ListGlobal level="fst" body={
+                                  <ListGlobal level="scd" body={
                                       <p>성인 1명이 유아 2명을 동반한 경우 유아 1명의 항공권은 소아운임이 적용되며 좌석이 제공됩니다.</p>
                                   } />
                               </li>
@@ -53,50 +52,19 @@ function Infant(){
                           <ul>
                               <li>
                                   <ListGlobal level="fst" body={
-                                      <p>국내선:무료</p>
+                                      <p>국내선: 무료</p>
                                   } />
                               </li>
                               <li>
                                   <ListGlobal level="fst" body={
-                                      <p>국제선:성인 구매운임의 10%</p>
+                                      <p>국제선: 성인 구매운임의 10%</p>
                                   } />
                               </li>
                           </ul>
                       </dd>
                   </dl>
-                    {/*
-                    <table className="tbl-target">
-                    <colgroup>
-                      <col width=""></col>
-                      <col width="500px"></col>
-                    </colgroup>
-                    <tbody>
-                      <tr>
-                        <th>유아의 기준</th>
-                        <td className="al">
-
-
-                        </td>
-                      </tr>
-                    </tbody>
-                    <tbody>
-                      <tr>
-                        <th>운임</th>
-                        <td className="al">
-                          <ListGlobal level="scd" body={
-                              <p>국내선:무료</p>
-                            } />
-                          <ListGlobal level="scd" body={
-                              <p>국제선:성인 구매운임의 10%</p>
-                            } />
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  */}
                 </T.dl>
               </C.content>
-          </C.body>
           <C.body>
             <C.titleSub>유아 수하물 허용량</C.titleSub>
             <C.content>
@@ -133,7 +101,7 @@ function Infant(){
             <C.content>
               <C.itemTitle>유모차</C.itemTitle>
               <ListGlobal level="fst" body={
-                          <p>기내 반입 유모차: 바구니와 덮개가 없는 규격(세 변의 합이 115cm 이하) 내 접이식 유모차​ (단, 기내에 보관이 불가하거나 공간이 부족한 경우 탑승구에서 위탁수하물로 처리될 수 있습니다)</p>
+                          <p>기내 반입 유모차: 바구니와 덮개가 없는 규격(세 변의 합이 115cm 이하) 내 접이식 유모차<br />(단, 기내에 보관이 불가하거나 공간이 부족한 경우 탑승구에서 위탁수하물로 처리될 수 있습니다)</p>
                         } />
               <ListGlobal level="fst" body={
                           <p>위탁수하물 유모차</p>
@@ -142,7 +110,7 @@ function Infant(){
                           <p>위탁수하물 부치시는 위치: 탑승수속 카운터 또는 탑승구</p>
                         } />
               <ListGlobal level="scd" body={
-                          <p>위탁수하물 찾으시는 위치: 도착지의 탑승구 앞 또는 도착지 수하물 수취구역​ (단, 해외 공항 사정에 따라 탑승구 앞에서 유모차 수취가 불가능할 수 있습니다)</p>
+                          <p>위탁수하물 찾으시는 위치: 도착지의 탑승구 앞 또는 도착지 수하물 수취구역<br />(단, 해외 공항 사정에 따라 탑승구 앞에서 유모차 수취가 불가능할 수 있습니다)</p>
                         } />
             </C.content>
             <C.content className="mt60">
@@ -154,8 +122,7 @@ function Infant(){
                           <p>이용기준: 항공기내 사용 가능 승인을 받은 가로 43cm (17inch) 이하인 안전의자에 한하여 이용가능​</p>
                         } />
               <ListGlobal level="fst" body={
-                          <p>사전에 예약센터로 문의해 주시기 바랍니다.​<br />
-                          (단, 항공기 출발 48시간 전 예약없이 현장에 나오실 경우나 항공기 좌석상황에 따라 사용이 제한될 수 있습니다)</p>
+                          <p>사전에 예약센터로 문의해 주시기 바랍니다.<br />(단, 항공기 출발 48시간 전 예약없이 현장에 나오실 경우나 항공기 좌석상황에 따라 사용이 제한될 수 있습니다)</p>
                         } />
             </C.content>
             <C.content className="mt60">
@@ -164,16 +131,19 @@ function Infant(){
                           <p>이용 기준: 신장 75cm (2.46 ft) 이하, 체중 11kg (24.25 lbs) 이하​</p>
                         } />
               <ListGlobal level="fst" body={
-                          <p>이용 안내: 아기요람은 기내에 최대 6개(PREMIA 42- 2개/ECONOMY 35- 4개) 설치가능합니다.​</p>
+                          <p>이용 안내:</p>
                         } />
-              <ListGlobal level="fst" body={
+              <ListGlobal level="scd" body={
+                          <p>아기요람은 기내에 최대 6개(PREMIA 42- 2개/ECONOMY 35- 4개) 설치가능합니다.​</p>
+                        } />
+              <ListGlobal level="scd" body={
                           <p>ECONOMY 35는 설치가능한 좌석(맨 앞 좌석)을 구매하시고 서비스 예약은 항공기 출발 48시간 전까지 예약센터로 신청해주시기 바랍니다.​</p>
                         } />
               <ListGlobal level="fst" body={
                           <p>유의사항</p>
                         } />
               <ListGlobal level="scd" body={
-                          <p>구매한 좌석은 항공기 출발 48시간 전까지만 취소 및 환불이 가능하며 48시간 이내 변경 및 환불이 불가합니다<br />(단, 항공기 지연 및 결항 등 항공사 사정에 항공편 취소의 경우는 환불이 가능합니다)</p>
+                          <p>구매한 좌석은 항공기 출발 48시간 전까지만 취소 및 환불이 가능하며 48시간 이내 변경 및 환불이 불가합니다.<br />(단, 항공기 지연 및 결항 등 항공사 사정에 항공편 취소의 경우는 환불이 가능합니다)</p>
                         } />
               <ListGlobal level="scd" body={
                           <p>여정 변경/취소 시의 경우,</p>

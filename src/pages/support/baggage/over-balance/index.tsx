@@ -62,7 +62,7 @@ function OverBalance(){
                         <td>200,000</td>
                       </tr>
                       <tr>
-                        <th colSpan={2}>무게 초과 (23kg 초과/1kg)</th>
+                        <th colSpan={2}>무게 초과 (23kg 초과/1kg 당)</th>
                         <td>2,000/kg</td>
                         <td>10,000/kg</td>
                         <td>15,000/kg</td>
@@ -204,10 +204,11 @@ const C = {
     
 const T = {
   table: styled.div`
-
-
-
-
+    th{
+      &.sb{
+        border-bottom: none;
+      }
+    }
   `,
 }
 export default OverBalance;

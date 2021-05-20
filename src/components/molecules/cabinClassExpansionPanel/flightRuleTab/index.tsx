@@ -7,9 +7,10 @@ import TabContent from './tabCont';
 
 interface IProps {}
 
-const eventTab: FC<IProps> = ({}) => {
+const FlightRuleTab: FC<IProps> = ({}) => {
   const [currIdx, setCurrIdx] = useState(0);
-  const tabList = ['김포', '인천', '제주도','취항 예정 노선'];  
+  const tabList = ['이코노미35"', '프레미아42"'];
+  
 
   return (
     <S.container>      
@@ -27,7 +28,8 @@ const eventTab: FC<IProps> = ({}) => {
 
 const S = {
   container: styled.div`
+  padding-top: 0;
   `,
 };
 
-export default eventTab;
+export default FlightRuleTab;

@@ -118,11 +118,11 @@ function TabContent({currIdxCont}: IProps) {
               <C.ul style={{marginLeft:'30px'}} className='pd52'>
                 <C.li>
                   항공권 예약 시 에어프레미아 회원이지만 탑승자의 회원 번호를 입력하지 못하셨나요? <br />
-                  <C.linkTitle><a href="" target="_blank">다가오는 여정</a></C.linkTitle> 페이지에서 예약을 조회하여 손쉽게 회원 번호를 추가할 수 있어요. 
+                  <C.linkTitle><a href="../checkin/find-trip" target="_blank">다가오는 여정</a></C.linkTitle> 페이지에서 예약을 조회하여 손쉽게 회원 번호를 추가할 수 있어요. 
                 </C.li>
                 <C.li style={{marginTop:'60px'}}>
                   항공권 예약 시 에어프레미아 회원이 아니었더라도 괜찮아요.<br />
-                  탑승 이전에 회원가입을 완료하시면 <C.linkTitle><a href="" target="_blank">다가오는 여정</a></C.linkTitle> 페이지에서 예약을 조회하여 손쉽게 회원 번호를 추가할 수 있어요. <br />
+                  탑승 이전에 회원가입을 완료하시면 <C.linkTitle><a href="../checkin/find-trip" target="_blank">다가오는 여정</a></C.linkTitle> 페이지에서 예약을 조회하여 손쉽게 회원 번호를 추가할 수 있어요. <br />
                   지금 바로 간편하게 회원가입하시고 풍성한 포인트 적립의 혜택을 누려보세요. 
                 </C.li>
               </C.ul>

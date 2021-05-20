@@ -224,7 +224,7 @@ function TabContent({currIdxCont}: IProps) {
             }/>
           </C.content>
         </C.body>
-        <C.body>
+        {/* <C.body>
           <C.titleSub>유아 위탁수하물 허용량</C.titleSub>
           <C.content>
             <T.table>
@@ -254,7 +254,7 @@ function TabContent({currIdxCont}: IProps) {
               </div>
             </T.table>
           </C.content>
-        </C.body>
+        </C.body> */}
         <C.body>
           <C.titleSub>유의사항</C.titleSub>
           <C.content>

@@ -22,10 +22,10 @@ function Hero({}: IProps) {
     <S.container>
       <S.homeTicketSearchWrapper>
         <div className="angleWrapper">
-          <span className="left">
+          <span className="top left">
             <ImgAngle />
           </span>
-          <span className="right x-rotate">
+          <span className="top right x-rotate">
             <ImgAngle />
           </span>
           <span className="bottom left y-rotate">
@@ -122,7 +122,7 @@ const S = {
         right: -30px;
       }
       .bottom {
-        bottom: 0;
+        bottom: -1px;
       }
       .x-rotate {
         transform: scaleX(-1);
@@ -217,13 +217,12 @@ const S = {
 
     @media only screen and (max-width: 1440px) {
       width: 440px;
-      height: 600px;
 
       .verticalWrapper{
         padding: 0 30px;
 
         .imgVtcBg{
-          top: 60px;
+          top: 100px;
           right: 30px;
 
           svg {
@@ -236,10 +235,27 @@ const S = {
 
     @media only screen and (max-width: 767px) {
       width: 100%;
+      height: 602px;
+      top: -1px;
+
+      .angleWrapper {
+        .left {
+          left: -29px;
+        }
+        .right {
+          right: -29px;
+        }        
+        .top {
+          top: -1px;
+        }
+        .bottom {
+          bottom: -1px;
+        }
+      }
     }
 
     @media only screen and (max-width: 599px) {
-      height: 470px;
+      height: 472px;
 
       .verticalWrapper{
         .imgVtcBg{

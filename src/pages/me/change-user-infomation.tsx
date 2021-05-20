@@ -273,10 +273,14 @@ const ChangeUserInfomationPage: FC<IProps> = ({}) => {
             </TaskButton>
           </Fragment>
         }
+        button2={
+          <Fragment>
+            <BtnType11 onClick={onClickBye1}>
+              회원 탈퇴
+            </BtnType11>
+          </Fragment>
+        }
       />
-        <BtnType11 onClick={onClickBye1}>
-          회원 탈퇴
-        </BtnType11>
     </Container>
   );
 };

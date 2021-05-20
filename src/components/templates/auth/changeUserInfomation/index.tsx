@@ -11,6 +11,7 @@ interface IProps {
   description: string;
   content: ReactElement;
   button: ReactElement;
+  button2: ReactElement;
 }
 
 const ChangeUserInfomationTemplate: FC<IProps> = ({
@@ -18,6 +19,7 @@ const ChangeUserInfomationTemplate: FC<IProps> = ({
   description,
   content,
   button,
+  button2
 }) => {
   return (
     <S.container>
@@ -28,6 +30,7 @@ const ChangeUserInfomationTemplate: FC<IProps> = ({
         <S.description>{description}</S.description>
         <S.content>{content}</S.content>
         <S.button>{button}</S.button>
+        <S.button2>{button2}</S.button2>
       </S.titleWrapper>
     </S.container>
   );
@@ -80,6 +83,14 @@ const S = {
       &:first-of-type {
         margin-right: 10px;
       }
+    }
+  `,
+  button2: styled.div`
+    width: fit-content;  
+    margin: 0 auto;
+    margin-top: 80px;
+    @media only screen and (max-width:767px){
+      margin-top: 40px;
     }
   `,
 };

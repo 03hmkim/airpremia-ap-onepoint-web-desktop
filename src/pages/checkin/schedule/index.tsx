@@ -21,11 +21,6 @@ function flightSchedule(){
 
 const C = {
   igr: styled.div`
-    margin-top: 80px;
-
-    @media only screen and (max-width: 767px) { 
-      margin-top: 40px;
-    }
   `,
 }
 

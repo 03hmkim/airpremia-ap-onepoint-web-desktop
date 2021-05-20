@@ -34,7 +34,7 @@ const S = {
     }
   `,
   span: styled.span<IStyleProps>`
-    font-size: 13px;
+    font-size: 18px;
     letter-spacing: -0.26px;
     font-family: ${ifProp(
       { fontWeight: 'bold' },
@@ -42,6 +42,10 @@ const S = {
       'NotoSans',
     )};
     color: ${LIGHT_GRAY8};
+    @media only screen and (max-width:767px){
+      font-size: 14px;
+      letter-spacing: -0.28px;
+    }
   `,
 };
 

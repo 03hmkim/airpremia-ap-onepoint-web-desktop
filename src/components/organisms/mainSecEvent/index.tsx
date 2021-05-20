@@ -133,9 +133,15 @@ const S = {
 
     h4 {
       margin-top: 24px;
+      overflow: hidden;
       font-size: 18px;
       font-weight: 700;
       line-height: 1.3em;
+      white-space: normal !important;
+      display: -webkit-box !important;
+      -webkit-line-clamp: 2 !important;
+      -webkit-box-orient: vertical !important;
+      word-wrap: break-word !important;
     }
 
     .date {
@@ -176,13 +182,6 @@ const S = {
         display: block;
         overflow: hidden;
         text-overflow: ellipsis;
-        white-space: nowrap;
-        line-height: inherit;
-        white-space: normal !important;
-        display: -webkit-box !important;
-        -webkit-line-clamp: 2 !important;
-        -webkit-box-orient: vertical !important;
-        word-wrap: break-word !important;
       }
 
       .date {

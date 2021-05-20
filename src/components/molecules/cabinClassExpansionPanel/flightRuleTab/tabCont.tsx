@@ -3,18 +3,12 @@ export interface IStyleProps {}
 export interface IProps extends IStyleProps {
   currIdxCont: number;
 }
-import {
-  LIGHT_GRAY8,
-  ORANGE2,
-} from '@airpremia/cdk/styles/colors';
 
-function TabContentPenalty({currIdxCont}: IProps) {
+function TabContent({currIdxCont}: IProps) {
   if ( currIdxCont === 0 ) {
     return (
       <C.wrap>
-        <C.sbody>
-          <C.tmi>
-            <T.table>
+        <T.table>
               <div className="tbWrap">
                 <table>
                   <colgroup>
@@ -48,28 +42,12 @@ function TabContentPenalty({currIdxCont}: IProps) {
                 </table>
               </div>
             </T.table>
-          </C.tmi>
-          <C.sb>
-            <C.content>
-              <C.oneLine>
-                <C.yell>*</C.yell> 
-                <C.lg>No-Show 시 항공권 취소 수수료와 위약금 모두 부과되며, 미탑승 항공편에 관한 유류할증료 및 공항세는 환불 요청 가능합니다.</C.lg>
-              </C.oneLine>
-              <C.oneLine>
-                <C.yell>*</C.yell> 
-                <C.lg>상기 규정은 국내선 항공편에서 제공됩니다.</C.lg>
-              </C.oneLine>
-            </C.content>
-          </C.sb>
-        </C.sbody>
       </C.wrap>
     )
   } else {
     return (
       <C.wrap>
-        <C.sbody>
-          <C.tmi>
-            <T.table>
+        <T.table>
               <div className="tbWrap">
                 <table>
                   <colgroup>
@@ -99,62 +77,23 @@ function TabContentPenalty({currIdxCont}: IProps) {
                 </table>
               </div>
             </T.table>
-          </C.tmi>
-          <C.sb>
-            <C.content>
-              <C.oneLine>
-                <C.yell>*</C.yell> 
-                <C.lg>No-Show 시 항공권 취소 수수료와 위약금 모두 부과되며, 미탑승 항공편에 관한 유류할증료 및 공항세는 환불 요청 가능합니다.</C.lg>
-              </C.oneLine>
-              <C.oneLine>
-                <C.yell>*</C.yell> 
-                <C.lg>상기 규정은 국내선 항공편에서 제공됩니다.</C.lg>
-              </C.oneLine>
-            </C.content>
-          </C.sb>
-        </C.sbody>
       </C.wrap>
     )
   }
 }
 
 const C = {
-  oneLine: styled.p`
-  `,
-  lg: styled.span`
-    color: ${LIGHT_GRAY8};
-  `,
-  yell: styled.span`
-    color: ${ORANGE2};
-  `,
   wrap: styled.div`
-    margin: 0;
-  `,
-  sbody: styled.div`
     margin-top: 60px;
-  `,
-  content: styled.div`
-    font-size: 18px;
-    line-height: 1.8em;
-    @media only screen and (max-width: 767px) {
-      font-size: 14px;
+    @media only screen and (max-width: 767px) { 
+      margin-top: 40px;
     }
-  `,
-  sb: styled.div`
-    margin-top: 30px;
-    @media only screen and (max-width: 767px) {
-      margin-top: 20px;
-    }
-  `,
-  tmi: styled.p`
-    margin-top: 60px;
-  `,
-  center: styled.p`
-    text-align: center;
   `,
 }
+
 const T = {
   table: styled.div`
   `,
 }
-export default TabContentPenalty;
+
+export default TabContent;

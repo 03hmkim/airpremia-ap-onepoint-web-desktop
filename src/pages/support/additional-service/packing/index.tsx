@@ -10,7 +10,7 @@ import {
 import { ListGlobal } from 'src/components';
 import { 
   additionalBaggage,
-  additionalPacking,
+  additionalSideseat,
   additionalSeat,
 } from '../../linkset';
 
@@ -75,12 +75,12 @@ function Packing(){
                 link={additionalBaggage.link}
               />
               <SupportLink
-                title={additionalPacking.title}
-                link={additionalPacking.link}
-              />
-              <SupportLink
                 title={additionalSeat.title}
                 link={additionalSeat.link}
+              />
+              <SupportLink
+                title={additionalSideseat.title}
+                link={additionalSideseat.link}
               />
             </C.linkWrap>
           </C.body>

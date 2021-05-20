@@ -7,6 +7,7 @@ import {
   DARK_GRAY1,
   RED1,
   ORANGE2,
+  BLUE1,
 } from '@airpremia/cdk/styles/colors';
 import Liquid1 from 'public/images/support/liquid1.png';
 import Liquid2 from 'public/images/support/liquid2.png';
@@ -32,7 +33,10 @@ function TabContent({currIdxCont}: IProps) {
     return (
       <C.wrap className="bdN">
         <C.body>
-          <C.titleSub>폭발성, 인화성, 유독성 물질</C.titleSub>
+          <C.flex>
+            <C.titleSub>폭발성, 인화성, 유독성 물질</C.titleSub>
+            <C.remark>기내반입 <C.red>X</C.red> / 위탁수하물 <C.red>X</C.red></C.remark>
+          </C.flex>
           <C.content>
             <T.table>
               <div className="tbl-scrolls tbWrap">
@@ -87,7 +91,10 @@ function TabContent({currIdxCont}: IProps) {
           </C.content>
         </C.body>
         <C.body>
-          <C.titleSub>무기로 사용될 수 있는 물품</C.titleSub>
+          <C.flex>
+            <C.titleSub>무기로 사용될 수 있는 물품</C.titleSub>
+            <C.remark>기내반입 <C.red>X</C.red> / 위탁수하물 <C.blue>O</C.blue></C.remark>
+          </C.flex>
           <C.content>
             <T.table>
                 <div className="tbl-scrolls tbWrap">
@@ -165,7 +172,10 @@ function TabContent({currIdxCont}: IProps) {
           </C.content>
         </C.body>
         <C.body>
-          <C.titleSub>일반생활용품 및 의료용품</C.titleSub>
+          <C.flex>
+            <C.titleSub>일반생활용품 및 의료용품</C.titleSub>
+            <C.remark>기내반입 <C.blue>O</C.blue> / 위탁수하물 <C.blue>O</C.blue></C.remark>
+          </C.flex>
           <C.content>
             <T.table>
               <div className="tbl-scrolls tbWrap">
@@ -293,8 +303,8 @@ function TabContent({currIdxCont}: IProps) {
                   <tbody>
                     <tr>
                       <th>전자담배</th>
-                      <td>가능</td>
-                      <td>불가능</td>
+                      <td><C.blue>가능</C.blue></td>
+                      <td><C.red>불가능</C.red></td>
                     </tr>
                   </tbody>
                 </table>
@@ -347,18 +357,18 @@ function TabContent({currIdxCont}: IProps) {
                       <td>A</td>
                       <td>5개</td>
                       <td>A</td>
-                      <td><C.red>불가</C.red></td>
+                      <td><C.red>불가능</C.red></td>
                     </tr>
                     <tr>
                       <th>100wh 초과 160wh 이하, 2g 초과 8g 이하 (항공사 사전 승인 필요)</th>
                       <td>B</td>
                       <td>2개</td>
                       <td>B</td>
-                      <td><C.red>불가</C.red></td>
+                      <td><C.red>불가능</C.red></td>
                     </tr>
                     <tr>
                       <th>160wh 초과, 8g 초과</th>
-                      <td colSpan={4}><C.red>운송 불가</C.red></td>
+                      <td colSpan={4}><C.red>불가능</C.red></td>
                     </tr>
                   </tbody>
                 </table>
@@ -438,7 +448,10 @@ function TabContent({currIdxCont}: IProps) {
                           <p>1개 구동 시 300wh 이하</p>
                         }/>
                         <ListGlobal level="scd td" body={
-                          <p>2개 구동 시 개당 160wh 이하<br></br>(분리불가 일체형 제한 없음)</p>
+                          <p>
+                            2개 구동 시 개당 160wh 이하<br></br>
+                            <C.orange>(분리불가 일체형 제한 없음)</C.orange>
+                          </p>
                         }/>
                         <ListGlobal level="fst td" body={
                           <p>여분 배터리 허용량:</p>
@@ -452,7 +465,10 @@ function TabContent({currIdxCont}: IProps) {
                       </td>
                       <td>
                         <ListGlobal level="fst td" body={
-                          <p>용량 및 분리 가능 여부 확인 및 배터리 용량 필요<br></br>(분리된 리튬 배터리는 기내로만 반입 가능)</p>
+                          <p>
+                            용량 및 분리 가능 여부 확인 및 배터리 용량 필요<br></br>
+                            <C.orange>(분리된 리튬 배터리는 기내로만 반입 가능)</C.orange>
+                          </p>
                         }/>
                       </td>
                     </tr>
@@ -462,9 +478,9 @@ function TabContent({currIdxCont}: IProps) {
             </T.table>
           </C.content>
           <C.content>
-              <ListGlobal level="fst" body={
-                <p>반드시 항공사 사전 승인이 필요하오니 에어프레미아 예약센터(XXXX-XXXX)로 문의 주시기 바랍니다.</p>
-              }/>
+            <ListGlobal level="ball gray" body={
+              <p>반드시 항공사 사전 승인이 필요하오니 에어프레미아 예약센터(XXXX-XXXX)로 문의 주시기 바랍니다.</p>
+            }/>
           </C.content>
         </C.body>
         <C.body>
@@ -491,8 +507,8 @@ function TabContent({currIdxCont}: IProps) {
                   <tbody>
                     <tr>
                       <th>배터리 분리 불가형</th>
-                      <td>가능<br></br>(단, 전원 반드시 끄고, 객실 상단 선반에 보관)</td>
-                      <td>가능</td>
+                      <td><C.blue>가능</C.blue><br></br>(단, 전원 반드시 끄고, 객실 상단 선반에 보관)</td>
+                      <td><C.blue>가능</C.blue></td>
                     </tr>
                     <tr>
                       <th>배터리 분리 가능형</th>
@@ -526,7 +542,7 @@ function TabContent({currIdxCont}: IProps) {
                   <tbody>
                     <tr>
                       <th>배터리 분리 불가형</th>
-                      <td colSpan={2}>불가능</td>
+                      <td colSpan={2}><C.red>불가능</C.red></td>
                     </tr>
                     <tr>
                       <th>배터리 분리 가능형</th>
@@ -616,7 +632,9 @@ const C = {
   `,
   /* 서비스안내 공통css 끝 */
 
-
+  blue: styled.span`
+    color: ${BLUE1};
+  `,
   red: styled.span`
     color: ${RED1};
   `,
@@ -640,11 +658,25 @@ const C = {
     }
     @media only screen and (max-width: 767px) { 
       font-size: 14px;
+      letter-spacing: -0.28px;
 
       &:before {
         font-size: 14px;
+        letter-spacing: -0.28px;
       }
     }
+  `,
+  remark: styled.div`
+    font-size: 20px;
+    font-weight: 300;
+    @media only screen and (max-width: 767px){
+      font-size: 14px;
+      letter-spacing: -0.28px;
+    }
+  `,
+  flex: styled.div`
+    display: flex;
+    justify-content: space-between;
   `,
 }
     

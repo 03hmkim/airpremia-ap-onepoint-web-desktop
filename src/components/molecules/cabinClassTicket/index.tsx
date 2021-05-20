@@ -109,7 +109,7 @@ function CabinClassTicket({
                   productClassList={productClasses}
                   selectedProduct={selectedProduct}
                   onChangeProductType={onChangeProductType}
-                  onClickFlightRule={() => {}}
+                  // onClickFlightRule={() => {}}
                 />
               </S.cabinClassExpansionPanel>
               // )

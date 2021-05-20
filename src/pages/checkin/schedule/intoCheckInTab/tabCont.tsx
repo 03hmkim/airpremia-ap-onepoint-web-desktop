@@ -5,7 +5,6 @@ export interface IProps extends IStyleProps {
 }
 import {
   DARK_GRAY1,
-  LIGHT_GRAY5,
   LIGHT_GRAY6,
   LIGHT_GRAY8,
   LIGHT_GRAY9,
@@ -31,125 +30,10 @@ function TabContent({currIdxCont}: IProps) {
     <C.sb>
       <C.flex>
         <C.title>서울/김포(GMP) - 제주(CJU)</C.title>
-        
         <C.titleMain><C.blueEmp>D-30</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
-        <table>
-          <colgroup>
-            <col width="15%"></col>
-            <col width="25%"></col>
-            <col width="8%"></col>
-            <col width="8%"></col>
-            <col width="8%"></col>
-            <col width="8%"></col>
-            <col width="8%"></col>
-            <col width="8%"></col>
-            <col width="8%"></col>
-          </colgroup>
-          <thead>
-            <tr>
-              <th>항공편</th>
-              <td>시간</td>
-              <td>월</td>
-              <td>화</td>
-              <td>수</td>
-              <td>목</td>
-              <td>금</td>
-              <td>토</td>
-              <td>일</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th>
-                <p>YP3200<br />(2시간 10분)</p>
-              </th> 
-              <td>
-                <div>
-                  <C.textBox>
-                    <C.description>출발시간</C.description>
-                    <C.itemTitle>15:30</C.itemTitle>
-                  </C.textBox>
-                  <C.textBoxCenter>
-                    <C.line></C.line>
-                  </C.textBoxCenter>
-                  <C.textBox>
-                    <C.description>도착시간</C.description>
-                    <C.itemTitle>17:40</C.itemTitle>
-                  </C.textBox>
-                </div>
-              </td>
-              <td><SelectDateOn /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOn /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOn /></td>
-            </tr>
-            <tr>
-              <th>
-                <p>YP3500<br />(2시간 10분)</p>
-              </th>
-              <td>
-                <div>
-                  <C.textBox>
-                    <C.description>출발시간</C.description>
-                    <C.itemTitle>17:30</C.itemTitle>
-                  </C.textBox>
-                  <C.textBoxCenter>
-                    <C.line></C.line>
-                  </C.textBoxCenter>
-                  <C.textBox>
-                    <C.description>도착시간</C.description>
-                    <C.itemTitle>19:50</C.itemTitle>
-                  </C.textBox>
-                </div>
-              </td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOn /></td>
-              <td><SelectDateOn /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOn /></td>
-              <td><SelectDateOff /></td>
-            </tr>
-            <tr>
-              <th>
-                <p>YP3800<br />(2시간 10분)</p>
-              </th>
-              <td>
-                <div>
-                  <C.textBox>
-                    <C.description>출발시간</C.description>
-                    <C.itemTitle>20:30</C.itemTitle>
-                  </C.textBox>
-                  <C.textBoxCenter>
-                    <C.line></C.line>
-                  </C.textBoxCenter>
-                  <C.textBox>
-                    <C.description>도착시간</C.description>
-                    <C.itemTitle>22:40</C.itemTitle>
-                  </C.textBox>
-                </div>
-              </td>
-              <td><SelectDateOn /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOff /></td>
-              <td><SelectDateOn /></td>
-            </tr>
-          </tbody>
-        </table>
-      </T.table>
-      <C.wrap>
-        <C.flex>
-          <C.title>제주(CJU) - 서울/김포(GMP)</C.title>
-        </C.flex>
-        <T.table>
+        <div className="tbWrap">
           <table>
             <colgroup>
               <col width="15%"></col>
@@ -195,16 +79,18 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td><SelectDateOff /></td>
+                <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
+                <td><SelectDateOn /></td>
               </tr>
               <tr>
-                <th><p>YP3500<br />(2시간 10분)</p></th>
+                <th>
+                  <p>YP3500<br />(2시간 10분)</p>
+                </th>
                 <td>
                   <div>
                     <C.textBox>
@@ -220,16 +106,18 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
                 <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOn /></td>
+                <td><SelectDateOff /></td>
+                <td><SelectDateOff /></td>
+                <td><SelectDateOn /></td>
+                <td><SelectDateOff /></td>
               </tr>
               <tr>
-                <th><p>YP3800<br />(2시간 10분)</p></th>
+                <th>
+                  <p>YP3800<br />(2시간 10분)</p>
+                </th>
                 <td>
                   <div>
                     <C.textBox>
@@ -245,16 +133,130 @@ function TabContent({currIdxCont}: IProps) {
                     </C.textBox>
                   </div>
                 </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
                 <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
+                <td><SelectDateOff /></td>
+                <td><SelectDateOff /></td>
+                <td><SelectDateOff /></td>
+                <td><SelectDateOff /></td>
                 <td><SelectDateOn /></td>
               </tr>
             </tbody>
           </table>
+        </div>
+      </T.table>
+      <C.wrap>
+        <C.flex>
+          <C.title>제주(CJU) - 서울/김포(GMP)</C.title>
+        </C.flex>
+        <T.table>
+          <div className="tbWrap">
+            <table>
+              <colgroup>
+                <col width="15%"></col>
+                <col width="25%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>항공편</th>
+                  <td>시간</td>
+                  <td>월</td>
+                  <td>화</td>
+                  <td>수</td>
+                  <td>목</td>
+                  <td>금</td>
+                  <td>토</td>
+                  <td>일</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>YP3200<br />(2시간 10분)</p>
+                  </th> 
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>15:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>17:40</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                </tr>
+                <tr>
+                  <th><p>YP3500<br />(2시간 10분)</p></th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>17:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>19:50</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+                <tr>
+                  <th><p>YP3800<br />(2시간 10분)</p></th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>20:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>22:40</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </T.table>
         <C.mt50>
           <WarningList
@@ -279,6 +281,7 @@ function TabContent({currIdxCont}: IProps) {
         <C.titleMain><C.blueEmp>D-10</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
+        <div className="tbWrap">
           <table>
             <colgroup>
               <col width="15%"></col>
@@ -384,121 +387,124 @@ function TabContent({currIdxCont}: IProps) {
               </tr>
             </tbody>
           </table>
-        </T.table>
+        </div>
+      </T.table>
       <C.wrap>
         <C.flex>
           <C.title>제주(CJU) - 서울/인천(ICN)</C.title>
         </C.flex>
         <T.table>
-          <table>
-            <colgroup>
-              <col width="15%"></col>
-              <col width="25%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th>항공편</th>
-                <td>시간</td>
-                <td>월</td>
-                <td>화</td>
-                <td>수</td>
-                <td>목</td>
-                <td>금</td>
-                <td>토</td>
-                <td>일</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  <p>YP3200<br />(2시간 10분)</p>
-                </th> 
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>15:30</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>17:40</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-              </tr>
-              <tr>
-                <th>
-                  <p>YP3500<br />(2시간 10분)</p>
-                </th>
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>17:30</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>19:50</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOn /></td>
-              </tr>
-              <tr>
-                <th>
-                  <p>YP3800<br />(2시간 10분)</p>
-                </th>
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>20:30</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>22:40</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOn /></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="tbWrap">
+            <table>
+              <colgroup>
+                <col width="15%"></col>
+                <col width="25%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>항공편</th>
+                  <td>시간</td>
+                  <td>월</td>
+                  <td>화</td>
+                  <td>수</td>
+                  <td>목</td>
+                  <td>금</td>
+                  <td>토</td>
+                  <td>일</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>YP3200<br />(2시간 10분)</p>
+                  </th> 
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>15:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>17:40</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                </tr>
+                <tr>
+                  <th>
+                    <p>YP3500<br />(2시간 10분)</p>
+                  </th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>17:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>19:50</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+                <tr>
+                  <th>
+                    <p>YP3800<br />(2시간 10분)</p>
+                  </th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>20:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>22:40</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </T.table>
         <C.mt50>
           <WarningList
@@ -522,6 +528,7 @@ function TabContent({currIdxCont}: IProps) {
         <C.titleMain><C.blueEmp>D-2</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
+        <div className="tbWrap">
           <table>
             <colgroup>
               <col width="15%"></col>
@@ -631,121 +638,124 @@ function TabContent({currIdxCont}: IProps) {
               </tr>
             </tbody>
           </table>
-        </T.table>
+        </div>
+      </T.table>
       <C.wrap>
         <C.flex>
           <C.title>제주(CJU) - 서울/김포(GMP)</C.title>
         </C.flex>
         <T.table>
-          <table>
-            <colgroup>
-              <col width="15%"></col>
-              <col width="25%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th>항공편</th>
-                <td>시간</td>
-                <td>월</td>
-                <td>화</td>
-                <td>수</td>
-                <td>목</td>
-                <td>금</td>
-                <td>토</td>
-                <td>일</td>                
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  <p>YP3200<br />(2시간 10분)</p>
-                </th> 
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>15:30</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>17:40</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-              </tr>
-              <tr>
-                <th>
-                  <p>YP3500<br />(2시간 10분)</p>
-                </th>
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>17:30</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>19:50</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOn /></td>
-              </tr>
-              <tr>
-                <th>
-                  <p>YP3800<br />(2시간 10분)</p>
-                </th>
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>20:30</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>22:40</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOn /></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="tbWrap">
+            <table>
+              <colgroup>
+                <col width="15%"></col>
+                <col width="25%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>항공편</th>
+                  <td>시간</td>
+                  <td>월</td>
+                  <td>화</td>
+                  <td>수</td>
+                  <td>목</td>
+                  <td>금</td>
+                  <td>토</td>
+                  <td>일</td>                
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>YP3200<br />(2시간 10분)</p>
+                  </th> 
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>15:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>17:40</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                </tr>
+                <tr>
+                  <th>
+                    <p>YP3500<br />(2시간 10분)</p>
+                  </th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>17:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>19:50</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+                <tr>
+                  <th>
+                    <p>YP3800<br />(2시간 10분)</p>
+                  </th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>20:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>22:40</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </T.table>
         <C.mt50>
           <WarningList
@@ -769,6 +779,7 @@ function TabContent({currIdxCont}: IProps) {
         <C.titleMain><C.blueEmp>D-30</C.blueEmp></C.titleMain>
       </C.flex>
       <T.table>
+        <div className="tbWrap">
           <table>
             <colgroup>
               <col width="15%"></col>
@@ -851,95 +862,98 @@ function TabContent({currIdxCont}: IProps) {
               </tr>
             </tbody>
           </table>
-        </T.table>
+        </div>
+      </T.table>
       <C.mt50>
         <C.flex>
           <C.title>뮌헨(MUC) - 서울/인천(ICN)</C.title>          
           <C.titleMain><C.blueEmp>D-30</C.blueEmp></C.titleMain>
         </C.flex>
         <T.table>
-          <table>
-            <colgroup>
-              <col width="15%"></col>
-              <col width="25%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th>항공편</th>
-                <td>시간</td>
-                <td>월</td>
-                <td>화</td>
-                <td>수</td>
-                <td>목</td>
-                <td>금</td>
-                <td>토</td>
-                <td>일</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  <p>YP3200<br />(11시간 10분)</p>
-                </th> 
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>15:30</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>17:40</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-              </tr>
-              <tr>
-                <th>
-                  <p>YP3500<br />(11시간 10분)</p>
-                </th>
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>18:00</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>20:10</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="tbWrap">
+            <table>
+              <colgroup>
+                <col width="15%"></col>
+                <col width="25%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>항공편</th>
+                  <td>시간</td>
+                  <td>월</td>
+                  <td>화</td>
+                  <td>수</td>
+                  <td>목</td>
+                  <td>금</td>
+                  <td>토</td>
+                  <td>일</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>YP3200<br />(11시간 10분)</p>
+                  </th> 
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>15:30</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>17:40</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+                <tr>
+                  <th>
+                    <p>YP3500<br />(11시간 10분)</p>
+                  </th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>18:00</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>20:10</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </T.table>
       </C.mt50>
       <C.mt50>
@@ -948,88 +962,90 @@ function TabContent({currIdxCont}: IProps) {
           <C.titleMain><C.blueEmp>Comming Soon!</C.blueEmp></C.titleMain>
         </C.flex>
         <T.table>
-          <table>
-            <colgroup>
-              <col width="15%"></col>
-              <col width="25%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-            </colgroup>
-            <thead>
-              <tr>
-              <th>항공편</th>
-                <td>시간</td>
-                <td>월</td>
-                <td>화</td>
-                <td>수</td>
-                <td>목</td>
-                <td>금</td>
-                <td>토</td>
-                <td>일</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  <p>YP6030<br />(9시간 40분)</p>
-                </th> 
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>17:55</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>11:35</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-              </tr>
-              <tr>
-                <th>
-                  <p>YP6040<br />(9시간 40분)</p>
-                </th>
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>18:40</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>12:20</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="tbWrap">
+            <table>
+              <colgroup>
+                <col width="15%"></col>
+                <col width="25%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                <th>항공편</th>
+                  <td>시간</td>
+                  <td>월</td>
+                  <td>화</td>
+                  <td>수</td>
+                  <td>목</td>
+                  <td>금</td>
+                  <td>토</td>
+                  <td>일</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>YP6030<br />(9시간 40분)</p>
+                  </th> 
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>17:55</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>11:35</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                </tr>
+                <tr>
+                  <th>
+                    <p>YP6040<br />(9시간 40분)</p>
+                  </th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>18:40</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>12:20</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </T.table>
       </C.mt50>
       <C.mt50>
@@ -1038,88 +1054,90 @@ function TabContent({currIdxCont}: IProps) {
           <C.titleMain><C.blueEmp>Comming Soon!</C.blueEmp></C.titleMain>
         </C.flex>
         <T.table>
-          <table>
-            <colgroup>
-              <col width="15%"></col>
-              <col width="25%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-              <col width="8%"></col>
-            </colgroup>
-            <thead>
-              <tr>
-                <th>항공편</th>
-                <td>시간</td>
-                <td>월</td>
-                <td>화</td>
-                <td>수</td>
-                <td>목</td>
-                <td>금</td>
-                <td>토</td>
-                <td>일</td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th>
-                  <p>YP6030<br />(9시간 40분)</p>
-                </th> 
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>17:55</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>11:35</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-              </tr>
-              <tr>
-                <th>
-                  <p>YP6040<br />(9시간 40분)</p>
-                </th>
-                <td>
-                  <div>
-                    <C.textBox>
-                      <C.description>출발시간</C.description>
-                      <C.itemTitle>18:40</C.itemTitle>
-                    </C.textBox>
-                    <C.textBoxCenter>
-                      <C.line></C.line>
-                    </C.textBoxCenter>
-                    <C.textBox>
-                      <C.description>도착시간</C.description>
-                      <C.itemTitle>12:20</C.itemTitle>
-                    </C.textBox>
-                  </div>
-                </td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOff /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOn /></td>
-                <td><SelectDateOff /></td>
-              </tr>
-            </tbody>
-          </table>
+          <div className="tbWrap">
+            <table>
+              <colgroup>
+                <col width="15%"></col>
+                <col width="25%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+                <col width="8%"></col>
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>항공편</th>
+                  <td>시간</td>
+                  <td>월</td>
+                  <td>화</td>
+                  <td>수</td>
+                  <td>목</td>
+                  <td>금</td>
+                  <td>토</td>
+                  <td>일</td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>
+                    <p>YP6030<br />(9시간 40분)</p>
+                  </th> 
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>17:55</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>11:35</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                </tr>
+                <tr>
+                  <th>
+                    <p>YP6040<br />(9시간 40분)</p>
+                  </th>
+                  <td>
+                    <div>
+                      <C.textBox>
+                        <C.description>출발시간</C.description>
+                        <C.itemTitle>18:40</C.itemTitle>
+                      </C.textBox>
+                      <C.textBoxCenter>
+                        <C.line></C.line>
+                      </C.textBoxCenter>
+                      <C.textBox>
+                        <C.description>도착시간</C.description>
+                        <C.itemTitle>12:20</C.itemTitle>
+                      </C.textBox>
+                    </div>
+                  </td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOff /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOn /></td>
+                  <td><SelectDateOff /></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </T.table>
       </C.mt50>
       <C.mt50>
@@ -1136,121 +1154,9 @@ function TabContent({currIdxCont}: IProps) {
 
 const T = {
   table: styled.div`
-    padding: 40px 0 30px;
-    .taL,
-    .taL{
-      text-align: left;
-    }
-
-    table {
-      width: 100%;
-      thead th,
-      thead td,
-      td strong {
-        color: ${DARK_GRAY1};
-        font-size: 18px;
-        font-weight: bold;
-        line-height: 1.6;
-        letter-spacing: -0.3px;
-        text-align: center;
-      }
-      td strong {
-        margin-top: 30px;
-        display: block;
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-      th,td{
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 1.9;
-        letter-spacing: -0.3px;
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
-        &>p {
-          margin-top: 18px;
-        }
-        &>p:first-of-type {
-          margin-top: 0;
-        }
-        .txt {
-          margin-top: 10px;
-        p {
-            position: relative;
-            color: ${LIGHT_GRAY8};
-            &.iLine{
-            padding-left: 8px;
-            }
-            &.iLine::after{
-            content: "-";
-            position: absolute;
-            left: 0;
-            top: 0;
-            display: block;
-            }
-          }
-        }
-      }
-      th:first-child,      
-      td:first-child{
-        text-align: left;
-        vertical-align: middle;
-      }
-      td:nth-child(2){
-        text-align: left;
-        vertical-align: middle;
-      }
-      thead th,
-      thead td{
-        padding: 18px 0;
-        border-bottom: 1px solid ${DARK_GRAY1};
-      }
-      tbody th,
-      tbody td{
-        padding: 25px 0;
-        border-bottom: 1px solid ${LIGHT_GRAY5};
-      }
-    }
-
-    @media only screen and (max-width: 1059px) { 
-      table {
-        td:nth-child(2) {
-          text-align: center;
-        }
-      }
-    }
-
-    @media only screen and (max-width: 767px) {
-      padding: 10px 0 5px;
-
-      table {
-        td strong {
-          font-size: 14px;
-        }
-
-        td strong {
-          margin-top: 10px;
-        }
-        th,
-        td {
-          font-size: 14px;
-
-          & > p {
-            margin-top: 10px;
-            font-size: 14px;
-          } 
-        }
-
-        thead th,
-        thead td,
-        tbody th,
-        tbody td {
-          padding: 10px 0;
-          font-size: 14px;
-        }
-      }
+    margin-top: 30px;
+    @media only screen and (max-width: 767px){
+      margin-top: 20px;
     }
   `,
 };
@@ -1258,7 +1164,10 @@ const T = {
 
 const C = {
   wrap: styled.div`
-    margin-top: 70px;
+    margin-top: 100px;
+    @media only screen and (max-width: 767px){
+      margin-top: 60px;
+    }
   `,
   flex:styled.div`
     display: flex;
@@ -1270,7 +1179,7 @@ const C = {
       clear: both;
     }
 
-    @media only screen and (max-width: 767px) {
+    @media only screen and (max-width: 479px) {
       display: block;
     }
   `,
@@ -1278,8 +1187,8 @@ const C = {
     margin-left: 10px;
     padding-left: 11px;
     position: relative;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
 
     &:before {
       content: "";
@@ -1304,13 +1213,13 @@ const C = {
     }
   `,
   title: styled.h4`
-    font-size: 22px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 700;
     line-height: 1.8em;
 
     @media only screen and (max-width: 767px) { 
       display: inline-block;
-      font-size: 18px;
+      font-size: 22px;
     }
   `,
   itemTitle: styled.h5`
@@ -1380,7 +1289,7 @@ const C = {
       font-weight: 700;
   `,
   line:styled.div`
-    width: 83px;
+    width: 70px;
     height: 1px;
     margin: 10px 20px 14px;
     background: ${LIGHT_GRAY9};

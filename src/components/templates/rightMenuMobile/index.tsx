@@ -255,7 +255,7 @@ function RightMenuMobile () {
                 <dd>
                   <Link href='/support/additional-service/packing'>
                     <a>
-                      <p>수하물 포장비닐 구매</p>
+                      <p>수하물용품 구매</p>
                       <i className="arrow go"></i>
                     </a>
                   </Link>

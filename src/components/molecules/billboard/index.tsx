@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // import { XButtonRound } from 'src/components';
 import { DARK_GRAY1, LIGHT_GRAY8 } from '@airpremia/cdk/styles/colors';
-import SvgBtnLinkCircle from 'public/images/btn_link_circle.svg';
+import SvgBtnLinkCircle from 'public/images/btn_link_circle_lg.svg';
 import Link from 'next/link';
 
 export enum RenderType {

@@ -48,9 +48,9 @@ function TabContent({currIdxCont}: IProps) {
                     <p>해당 국가 또는 지역의 반려동물의 반입 가능 여부와 검역 시 준비 사항을 확인해 주시기 바랍니다.​</p>
                   }/>
                   <ListGlobal level="scd" body={
-                    <p>서류 준비 시 총 3부(원본 1부/사본 2부) 준비해 주시기 바랍니다.<br />원본- 손님 소지/사본 2부- 농림축산검역본부 제출용, 항공사 제출용<br />국가/지역별 규정 및 자세한 사항은&nbsp;
+                    <p>서류 준비 시 총 3부(원본 1부/사본 2부) 준비해 주시기 바랍니다.<br />원본- 손님 소지/사본 2부- 농림축산검역본부 제출용, 항공사 제출용<br />(국가/지역별 규정 및 자세한 사항은&nbsp;
                       <C.linkm2><a href="http://www.qia.go.kr/livestock/qua/livestock_outforeign_hygiene_inf.jsp" target="_blank">농림축산검역본부</a></C.linkm2>
-                    를 확인바랍니다​</p>
+                    를 확인바랍니다)​</p>
                   }/>
                   <ListGlobal level="fst" body={
                     <p>애완동물운송서약서를 다운받아 탑승수속 카운터에서 직원에게 전달하여 주시기 바랍니다.​<br />
@@ -84,7 +84,7 @@ function TabContent({currIdxCont}: IProps) {
                   <p>조류의 운송용기는 철재용기로 된 케이지를 준비하셔야 하며, 용기외부는 불투명한 천으로 가려야 함​</p>
                 }/>
                 <ListGlobal level="fst" body={
-                  <p><C.linkm2><a href="https://www.iata.org/en/programs/cargo/live-animals/pets/#tab-1">IATA</a></C.linkm2>에서 용기에 관하여 정의한 지침입니다.​</p>
+                  <p>운반용기에 대한 자세한 내용은&nbsp;<C.linkm2><a href="https://www.iata.org/en/programs/cargo/live-animals/pets/#tab-1">IATA Traveler’s Pet Corner</a></C.linkm2>를 참고해주시기 바랍니다.​</p>
                 }/>
                 {/* <C.ml20>
                   <C.description>운반용기에 대한 자세한 내용은 <C.linkm className="dpin"><a href="https://www.iata.org/en/programs/cargo/live-animals/pets/#tab-1" target="_blank">IATA Traveler’s Pet Corner</a></C.linkm>를 참고해주시기 바랍니다.</C.description>
@@ -386,7 +386,7 @@ const C = {
   linkm2: styled.span`
     font-weight: 600;
     color: ${BLUE1};
-    border-bottom: 2px solid ${BLUE1};
+    border-bottom: 1px solid ${BLUE1};
     &.dpin{
       display: inline-block;
     }

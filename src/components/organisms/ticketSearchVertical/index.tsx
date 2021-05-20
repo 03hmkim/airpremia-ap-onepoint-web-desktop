@@ -427,7 +427,7 @@ const S = {
 
     @media only screen and (max-width: 1440px) {
       h3{        
-        margin-bottom: 70px;
+        margin-bottom: 100px;
         font-size: 30px;
         line-height: 36px;
       }
@@ -579,13 +579,13 @@ const S = {
 
     @media only screen and (max-width: 599px) {
       h3 {
-        padding-top: 0;
+        padding-top: 10px;
         margin-bottom: 20px;
         font-size: 24px;
         line-height: 32px;
       }
       .currency {
-        margin: 5px 0 10px;
+        margin: 5px 0 20px;
       }
     }
   `,

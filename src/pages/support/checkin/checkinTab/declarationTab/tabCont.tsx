@@ -21,7 +21,7 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>
                 해외여행자는 미화(US$) 1만달러를 초과하는 해외여행경비를 휴대반출 시 관할 세관의 장에게 신고해야 합니다.<br></br>
-                [「외국환거래규정」(기획재정부고시 제2020-21호, 2020. 8. 4.발령·시행) 제6-2조(신고 등)].
+                [「외국환거래규정」(기획재정부고시 제2020-21호, 2020. 8. 4.발령·시행) 제6-2조(신고 등) ].
               </p>
             }/>
           </C.content>
@@ -32,13 +32,13 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>
                 출국 시 휴대하여 반출하였다가 입국 시 재반입할 귀중품 및 고가의 물품을 소지하고 출국하는 해외여행자는 세관에 휴대물품의 반출신고를 해야 합니다.<br></br>
-                [「여행자 및 승무원 휴대품 통관에 관한 고시」(관세청고시 제2019-20호, 2019. 5. 22. 발령·시행) 제53조 제1호].
+                [「여행자 및 승무원 휴대품 통관에 관한 고시」(관세청고시 제2019-20호, 2019. 5. 22. 발령·시행) 제53조 제1호 ].
               </p>
             }/>
             <ListGlobal level="fst" body={
               <p>
                 위에 따른 휴대물품을 반출하는 해외여행자는 관세청 홈페이지를 통해 사전 신고하거나 출국시 신고하여 휴대물품반출신고(확인)서를 발급받아야 입국 시에 해당 물품에 대한 관세를 면제받을 수 있습니다.<br></br>
-                [「여행자 및 승무원 휴대품 통관에 관한 고시」제54조 제1항 및 별지 제8호서식].
+                [「여행자 및 승무원 휴대품 통관에 관한 고시」제54조 제1항 및 별지 제8호서식 ].
               </p>
             }/>
             <C.marginleft2>
@@ -64,7 +64,7 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>
                 다음의 병역의무자가 해외여행을 하려는 경우 지방병무청장의 해외여행 허가를 받고 출국 당일 법무부 출입국에서 출국 심사 시 국외여행 허가서 (전자문서로 된 신청서 포함)를 제출해야 합니다.<br></br>
-                [「병역법」제70조제1항, 「출입국관리법 시행령」제1조 제6항 본문,「병역법 시행규칙」제108조제3항, 별지 제134호서식 및 「병역의무자 국외여행 업무처리 규정」(병무청훈령 제1598호, 2019. 12. 11. 발령·시행) 제4조].
+                [「병역법」제70조제1항, 「출입국관리법 시행령」제1조 제6항 본문,「병역법 시행규칙」제108조제3항, 별지 제134호서식 및 「병역의무자 국외여행 업무처리 규정」(병무청훈령 제1598호, 2019. 12. 11. 발령·시행) 제4조 ].
               </p>
             }/>
             <ListGlobal level="scd" body={
@@ -103,7 +103,7 @@ function TabContent({currIdxCont}: IProps) {
             <ListGlobal level="fst" body={
               <p>
                 해외여행자는 검역소에서 황열 및 콜레라 등 검역대상 감염병의 예방접종과 그에 따른 국제공인 예방접종증명서를 발급받을 수 있습니다.<br></br>
-                [「「검역법」제28조제3항,「검역법 시행규칙」제23조제2항 본문 및 별지 제31호서식].
+                [「「검역법」제28조제3항,「검역법 시행규칙」제23조제2항 본문 및 별지 제31호서식 ].
               </p>
             }/>
             <C.marginleft2>
@@ -129,41 +129,6 @@ function TabContent({currIdxCont}: IProps) {
     )
   }
 }
-
-
-// const S = {
-//   container: styled.div``,
-//   ul: styled.ul`
-//     padding-bottom: 30px;
-//   `,
-//   li: styled.li`
-//     margin-left: 10px;
-//     margin-bottom: 15px;
-//     padding-left: 10px;
-//     position: relative;
-//     font-size: 15px;
-//     &::before{
-//       content:"";
-//       width: 4px;
-//       height: 4px;
-//       top: 5px;
-//       left: 0px;
-//       text-indent: -9999px;
-//       display: block;
-//       position: absolute;
-//       background-color: ${DARK_GRAY1};
-//       border-radius: 50%
-//     }
-//     &:first-child{
-//       margin-top: 20px;
-//     }
-//     &:last-child{
-//       margin-bottom: 0px;
-//     }
-//   `,
-
-// };
-
 
 const C = {
   /* 서비스안내 공통css */
@@ -227,11 +192,16 @@ const C = {
 
   linkm: styled.span`
     margin-left: 2px;
-    border-bottom: 2px solid ${BLUE1};
+    border-bottom: 1px solid ${BLUE1};
     a{
       color: ${BLUE1};
       font-weight: 600;
       cursor: pointer;
+    }
+
+    @media only screen and (max-width: 767px){
+      font-size: 14px;
+      letter-spacing: -0.28px;
     }
   `,
   orange: styled.span`
@@ -241,11 +211,23 @@ const C = {
     margin-left: 28px;
     font-size: 18px;
     line-height: 2em;
+    @media only screen and (max-width: 767px){
+      font-size: 14px;
+      letter-spacing: -0.28px;
+      margin-left: 20px;
+      font-weight: 300;
+    }
   `,
   marginleft2: styled.p`
     margin-left: 14px;
     font-size: 18px;
     line-height: 2em;
+    @media only screen and (max-width: 767px){
+      font-size: 14px;
+      letter-spacing: -0.28px;
+      margin-left: 10px;
+      font-weight: 300;
+    }
   `,
 };
 

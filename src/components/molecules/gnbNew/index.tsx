@@ -330,7 +330,7 @@ const GnbNew = ({ resetData }: IProps) => {
                     <li>
                       <Link href='/support/additional-service/packing'>
                         <a className="label" onClick={linkOnClick}>
-                          수하물 포장비닐 구매
+                          수하물용품 구매
                         </a>
                       </Link>
                     </li>

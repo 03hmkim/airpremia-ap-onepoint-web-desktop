@@ -167,7 +167,7 @@ const C = {
 
   linkpage: styled.span`
     color: ${BLUE1};
-    border-bottom: 2px solid ${BLUE1};
+    border-bottom: 1px solid ${BLUE1};
   `,
 }
 export default Prohibition;
