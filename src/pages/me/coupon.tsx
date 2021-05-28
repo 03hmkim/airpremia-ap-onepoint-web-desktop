@@ -42,6 +42,7 @@ const Coupon: FC<IProps> = ({}) => {
       case 'couponDetail':
         return (
           <NewModal
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -55,6 +56,7 @@ const Coupon: FC<IProps> = ({}) => {
       case 'couponRegistration':
         return (
           <NewModal
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>

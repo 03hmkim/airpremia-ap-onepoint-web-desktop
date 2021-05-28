@@ -166,7 +166,7 @@ const FloatingFoldableItinerary: FC<IProps> = ({
       case 'promotion_login':
         return (
           <NewModal
-            className="btnN hAuto"
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -186,7 +186,7 @@ const FloatingFoldableItinerary: FC<IProps> = ({
       case 'promotion_code':
         return (
           <NewModal
-            className="btnN hAuto"
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
@@ -360,6 +360,8 @@ const S = {
   left: styled.div`
     display: flex;
     align-items: center;
+    cursor: pointer;
+
     p {
       font-size: 18px;
       letter-spacing: -0.26px;

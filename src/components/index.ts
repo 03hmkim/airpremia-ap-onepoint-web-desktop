@@ -48,6 +48,7 @@ export { default as AppDownloadButton2 } from 'src/components/molecules/appDownl
 export { default as BannerDarksite } from 'src/components/molecules/banner/darksite';
 export { default as Billboard } from 'src/components/molecules/billboard';
 export { default as ButtonGroupHeader } from 'src/components/molecules/buttonGroup/header';
+export { default as ButtonGroup2Header } from 'src/components/molecules/buttonGroup2/header';
 export { default as Contact } from 'src/components/molecules/contact';
 export { default as DropdownLanguage } from 'src/components/molecules/dropdown/language';
 export { default as DropdownLogin } from 'src/components/molecules/dropdown/login';
@@ -245,14 +246,15 @@ export { default as SeatMapEconomy } from 'src/components/organisms/seatMapEcono
 export { default as PointsPayMethod } from 'src/components/organisms/pointsPayMethod';
 export { default as SavePointsAfterBoarding } from 'src/components/organisms/savePointsAfterBoarding';
 export { default as SuccessSavePoints } from 'src/components/organisms/successSavePoints';
-export { default as TabDataRule} from 'src/components/organisms/tabDataRule';
+export { default as TabDataRule } from 'src/components/organisms/tabDataRule';
 export { default as EventContent } from 'src/components/organisms/eventContent';
 export { default as PromotionContent } from 'src/components/organisms/promotionContent';
-// export { default as testModalDetail } from 'src/components/organisms/pubDesign';
+//export { default as testModalDetail } from 'src/components/organisms/pubDesign';
 //export { default as RulePopDetail } from 'src/components/organisms/rulePopDetail';
-export { default as DepArrListTable} from 'src/components/organisms/depArrListTable'
+export { default as DepArrListTable } from 'src/components/organisms/depArrListTable'
 export { default as TicketArrDepSearch } from 'src/components/organisms/ticketArrDepSearch';
-export { default as TicketArrivalInquiryl } from 'src/components/organisms/ticketArrivalInquiry';
+export { default as MainNoticeTemplate } from 'src/components/organisms/mainSecNotice/mainNoticeTemplate';
+export { default as TicketArrivalInquiry } from 'src/components/organisms/ticketArrivalInquiry';
 export { default as TicketNameCheck } from 'src/components/organisms/ticketNameCheck';
 export { default as TicketRealTime } from 'src/components/organisms/ticketRealTime';
 export { default as MainSecEvent } from 'src/components/organisms/mainSecEvent';
@@ -301,11 +303,10 @@ export { default as ComTitle } from 'src/components/templates/comTitle';
 export { default as TicketPayPopDetailedCost } from 'src/components/templates/ticketPayPopDetailedCost';
 export { default as EticketTemplate } from 'src/components/templates/eticket'; //smartport.mhh eticket
 export { default as NoticeListTemplate } from 'src/components/templates/notice';
-export {default as DepArrListTemplate} from 'src/components/templates/checkin/depArrList';
-export {default as DepArrResultTemplate} from 'src/components/templates/checkin/depArrResult';
-
-export {default as ByeUserTemplate} from 'src/components/templates/auth/byeUser/index';
-export {default as RightMenuMobile} from 'src/components/templates/rightMenuMobile';
-export {default as MembersWhy} from 'src/components/templates/membersWhy';
-
+export { default as DepArrListTemplate } from 'src/components/templates/checkin/depArrList';
+export { default as DepArrResultTemplate } from 'src/components/templates/checkin/depArrResult';
+export { default as ByeUserTemplate } from 'src/components/templates/auth/byeUser/index';
+export { default as RightMenuMobile } from 'src/components/templates/rightMenuMobile';
+export { default as MembersWhy } from 'src/components/templates/membersWhy';
+export { default as MainNotice } from 'src/components/templates/mainNotice';
 //

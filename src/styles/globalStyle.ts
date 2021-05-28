@@ -50,7 +50,7 @@ export default createGlobalStyle`
     }
   }
   &.scrollHidden {
-    overflow: hidden;
+    // overflow: hidden;
   }
   
   button {

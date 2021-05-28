@@ -4,7 +4,6 @@ export interface IProps extends IStyleProps {
   currIdxCont: number;
 }
 import {
-  DARK_GRAY1,
   LIGHT_GRAY8,
   BLUE1,
   ORANGE2,
@@ -12,6 +11,7 @@ import {
 import Linkblue from 'public/images/support/btn_txt_link_blue.svg';
 import AnimalCage from 'public/images/support/img_animal_menu1_01.svg';
 import { ListGlobal } from 'src/components';
+import { SupportStyle } from 'src/styles/common';
 
 function TabContent({currIdxCont}: IProps) {
   if ( currIdxCont === 0 ) {
@@ -223,65 +223,7 @@ function TabContent({currIdxCont}: IProps) {
 }
 
 const C = {
-  /* 서비스안내 공통css */
-  wrap: styled.div`
-    border-top: 2px solid ${DARK_GRAY1};
-
-    &.bdN {
-      border-top: 0;
-    }
-  `,
-  body: styled.div`
-    margin-top: 100px;
-
-    &:first-of-type {
-      margin-top: 30px;
-    }
-  `,
-  titleMain: styled.h2`
-    font-size: 24px;
-    font-weight: bold;
-
-    @media only screen and (max-width: 767px) {
-      font-size: 22px;
-      line-height: 28px;
-      letter-spacing: -0.04em;
-    }
-  `,
-  titleSub: styled.h3`
-    font-size: 21px;
-    font-weight: 700;
-
-    @media only screen and (max-width: 767px){
-      font-size: 16px;
-      letter-spacing: -0.32px;
-      margin-top: 60px;
-    }
-  `,
-  content: styled.div`
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 1.8em;
-
-    &.mt60 {
-      margin-top: 60px;
-    }
-
-    @media only screen and (max-width: 767px){
-      margin-top: 20px;
-      font-size: 14px;
-      letter-spacing: -0.28px;
-    }
-  `,
-  linkWrap: styled.div`
-    margin-top: 30px;
-
-    @media only screen and (max-width: 1059px) {
-      margin-top: 20px;
-    }
-  `,
-  /* 서비스안내 공통css 끝 */
-
+  ...SupportStyle.C1,
 
   itemTitle: styled.h6`
     padding-bottom: 30px;

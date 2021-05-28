@@ -1,4 +1,4 @@
-import { Fragment, useState, useEffect } from 'react';
+import { Fragment, useState, useEffect, useRef } from 'react';
 import moment from 'moment';
 import styled from 'styled-components';
 import { flow, get, reduce, map } from 'lodash/fp';
@@ -25,6 +25,9 @@ import {
 } from '@airpremia/core/api/ticket/types';
 import { useModal } from 'src/hooks';
 import { useBooking } from '@airpremia/core/hooks';
+import {
+  WHITE1,
+} from '@airpremia/cdk/styles/colors';
 
 interface IParams {
   pivotDate: moment.Moment;
@@ -38,6 +41,7 @@ interface IProps {
   journeys: IFlightTicketSearchJourney[];
   onLoadLowFare: (parmas: IParams) => void;
   isRebook?: boolean;
+  boxRef?: any;
 }
 
 function CabinClassOneWay({
@@ -47,6 +51,7 @@ function CabinClassOneWay({
   journeys,
   onLoadLowFare,
   isRebook,
+  boxRef,
 }: IProps) {
   const {
     bookingSessionStore,
@@ -167,14 +172,55 @@ function CabinClassOneWay({
     }
   }, [keys]);
 
+
+  /* 20210527 fix 추가 - 주석삭제해주세요 */
+  boxRef = useRef(null);  
+  const boxTopMinus = 122;
+  const boxHMinus = 60;
+
+  const boxTop = boxRef.current?.offsetTop - boxTopMinus;
+  const boxH = boxTop + boxRef.current?.clientHeight - boxHMinus;
+  const [ScrollActive, setScrollActive] = useState(false);
+
+  function wayTop() {
+    if ( window.pageYOffset > boxTop && boxH > window.pageYOffset ) {
+      setScrollActive(true);
+    } else {
+      setScrollActive(false);
+    }
+  }
+
+  useEffect(() => {
+    function wayScroll() {
+      window.addEventListener("scroll", wayTop);
+    }
+    wayScroll();
+    return () => {
+      window.removeEventListener("scroll", wayTop);
+    };
+  })
+/* 20210527 fix 추가 - 주석삭제해주세요 */
+
   return (
-    <S.container>
+    <S.container ref={boxRef} className={"way" + idx.toString()}>
       <S.Title>
         <Title>
           <Fragment>
             {getStationLabel(origin)}({origin}) →{' '}
             {getStationLabel(destination)}({destination})
             <br />
+            일정을 선택해주세요
+          </Fragment>
+        </Title>
+      </S.Title>
+
+      <S.Title // 20210527 fix 추가 - 주석삭제해주세요
+        className={ScrollActive ? "wayTitle fix" : "wayTitle"}
+      >
+        <Title>
+          <Fragment>
+            {getStationLabel(origin)}({origin}) →{' '}
+            {getStationLabel(destination)}({destination})
             일정을 선택해주세요
           </Fragment>
         </Title>
@@ -269,28 +315,82 @@ function CabinClassOneWay({
 const S = {
   container: styled.div`
     margin: 0 auto 60px;
+    padding-top: 60px;
     box-sizing: border-box;
 
     & > div {
       width: 100%;
     }
+
+    @media only screen and (max-width: 1059px) {
+      padding-top: 0;
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
   `,
 
   Title: styled.div`
-    padding: 60px 0 100px;
-
-    @media only screen and (max-width: 1059px) {
-      font-size: 26px;
-      padding: 6vw 0 12vw;
+    &.wayTitle {
+      display: none;
     }
 
-    @media only screen and (max-width: 767px) { 
-      font-size: 20px;
-      padding: 3vw 0 6vw;
+    &.fix {
+      width: 100%;
+      position: fixed;
+      left: 0;
+      top: 172px;
+      display: block;
+      z-index: 10;
+      background-color: ${WHITE1};
+      box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+
+      > div {
+        max-width: 1280px;
+        margin: 25px auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 24px;
+        line-height: 1;
+      }
+    }
+
+    @media only screen and (max-width: 1059px) {
+      &.fix {
+        top: 82px;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {       
+      > div {      
+        font-size: 21px;
+        line-height: 28px;
+      }
+
+      &.fix {
+        top: 62px;
+
+        > div {
+          margin: 16px auto;
+          font-size: 15px;
+          line-height: 20px;
+        }
+      }
     }
   `,
 
-  RowTablePriceByDate: styled.div``,
+  RowTablePriceByDate: styled.div`
+    padding-top: 100px;
+
+    @media only screen and (max-width: 1059px) {
+      padding-top: 20px;
+    }
+
+    @media only screen and (max-width: 767px) {
+      padding-top: 0;
+    }
+  `,
 
   Tickets: styled.div``,
 

@@ -171,7 +171,7 @@ function PassengersDropdown({
       case 'ageCalculator':
         return (
           <NewModal
-            className="hAuto btnN"
+            className="hAuto min"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>

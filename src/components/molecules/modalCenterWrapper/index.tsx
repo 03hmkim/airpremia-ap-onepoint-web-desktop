@@ -75,6 +75,9 @@ const S = {
     
     &.hAuto {      
       height: auto;
+      max-height: calc(100vh - 85px);
+      overflow-y: auto;
+      padding-bottom: 0;
 
       .popup-title {
         height: auto;
@@ -86,12 +89,12 @@ const S = {
       height: auto;
     }
 
-    &.max {
-      max-width: 800px;
+    &.min {
+      max-width: 500px;
     }
 
-    &.btnN{
-      padding-bottom: 0;
+    &.max {
+      max-width: 800px;
     }
 
     @media only screen and (max-width: 767px) { 
@@ -103,7 +106,13 @@ const S = {
     }
 
     @media only screen and (max-height: 800px) {
-      &.hCalc800 {
+      &.h800 {
+        height: calc(100vh - 85px);
+      }
+    }
+
+    @media only screen and (min-width: 768px) and (max-height: 800px) {
+      &.h800m {
         height: calc(100vh - 85px);
       }
     }

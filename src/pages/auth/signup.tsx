@@ -28,7 +28,6 @@ import {
   ORANGE1,
   DARK_GRAY1,
   LIGHT_GRAY7,
-  LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
 import { EDefaultModalTable } from '@airpremia/core/stores/models/ui';
 import {
@@ -799,8 +798,8 @@ const Signup: FC<IProps> = ({}: IProps) => {
                   <h5>인증 번호를 받지 못하셨나요?</h5>
                   <p>
                     인증 번호를 받지 못하셨다면, 휴대 전화
-                    번호를 한번 더 확인하거나 고객센터로
-                    연락주세요. 고객 센터 전화 번호 02-6953-6115
+                    번호를 한번 더 확인하거나 예약센터로
+                    연락주세요. 예약센터 전화 번호 1800-2626
                   </p>
                 </Fragment>
               ) : null

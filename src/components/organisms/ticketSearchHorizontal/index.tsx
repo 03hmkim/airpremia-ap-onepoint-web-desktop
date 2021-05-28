@@ -124,14 +124,13 @@ const TicketSearchHorizontal: FC<IProps> = ({
           return(
             <S.container>
               <NewModal
-                className="hAuto"
+                className="hAutoDf hCalc800 min"
                 type={EScrollType.TYPE1}
                 title={
                   <S.modalTitle>
                     <PopupTitle>
                       <>
-                        국내선을 이용하시는 고객님께<span className="textEnter" />
-                        안내 드립니다.
+                        국내선을 이용하시는 고객님께 안내 드립니다.
                       </>
                     </PopupTitle>
                   </S.modalTitle>

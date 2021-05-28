@@ -1,5 +1,6 @@
 export const WHITE1 = '#ffffff';
 export const WHITE2 = '#7FD3F8';
+export const WHITE3 = '#ffac88';
 
 export const LIGHT_GRAY1 = '#fafafa';
 export const LIGHT_GRAY2 = '#f2f2f2';

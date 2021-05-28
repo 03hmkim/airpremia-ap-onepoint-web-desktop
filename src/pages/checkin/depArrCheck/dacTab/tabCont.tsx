@@ -15,7 +15,7 @@ import {
   RED2
 } from '@airpremia/cdk/styles/colors';
 import {
-  TicketArrivalInquiryl,
+  TicketArrivalInquiry,
   TicketNameCheck,
   TicketRealTime,
   SpeechBubble
@@ -26,7 +26,7 @@ function TabContent({currIdxCont}: IProps) {
   if ( currIdxCont === 0 ) {
     return (
       <C.wrap>
-        <TicketArrivalInquiryl />
+        <TicketArrivalInquiry />
         <C.sbody>
           <S.stBox>
             <C.btn>

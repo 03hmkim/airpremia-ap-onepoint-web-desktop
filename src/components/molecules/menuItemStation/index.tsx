@@ -59,7 +59,12 @@ const S = {
     }
 
     @media only screen and (max-width: 767px) {
+      margin-bottom: 10px;
       font-size: 14px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
 
     @media only screen and (max-width: 599px) {

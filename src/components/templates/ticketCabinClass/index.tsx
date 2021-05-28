@@ -41,9 +41,7 @@ const S = {
   `,
 
   floatingFoldableItinerary: styled.div`
-    margin-bottom: 60px;
-    border-top: solid 1px transparent;
-    margin-top: -1px;
+  
   `,
 
   cabinClassOneway: styled.div``,

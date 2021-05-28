@@ -55,7 +55,7 @@ const EticketTemplate: FC<IProps> = ({
             </p>
             <div className="line-item" style={{height: 1, margin: '50px 0 30px', backgroundColor: '#e5e5e5'}} />
             <p style={{margin: 0, color: '#b2b2b2', fontSize: 13, fontWeight: 400, lineHeight: 2}}>
-              에어프레미아(주) Air Premia Inc. &nbsp; 대표 : 김세영, 심주엽 <br />
+              에어프레미아(주) Air Premia Inc. &nbsp; 대표 : 심주엽 <br />
               서울특별시 강서구 공항대로 248, 대방건설빌딩 4층
             </p>
             <br/>

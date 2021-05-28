@@ -404,7 +404,7 @@ function TabContent({currIdxCont}: IProps) {
   } else {
     return (
       <S.container>
-        국제 운송 약관
+        국내 운송 약관
       </S.container>
     )
   }

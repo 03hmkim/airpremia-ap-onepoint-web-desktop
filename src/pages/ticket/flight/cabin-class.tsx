@@ -139,6 +139,10 @@ function CabinClass({}: IProps) {
                   market={item.market}
                   journeys={item.journeys}
                   onLoadLowFare={onLoadLowFaresArrow}
+                  // way0 = {way0}
+                  // way1 = {way1}
+                  // way2 = {way2}
+                  // way3 = {way3}
                 />
               );
             })}

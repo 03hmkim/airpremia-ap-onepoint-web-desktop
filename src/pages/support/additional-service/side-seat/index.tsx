@@ -4,8 +4,8 @@ import {
   SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
+import { SupportStyle } from 'src/styles/common';
 import {
-  DARK_GRAY1,
   ORANGE2,
   RED2,
 } from '@airpremia/cdk/styles/colors';
@@ -15,7 +15,7 @@ import {
   additionalBaggage,
   additionalPacking,
   additionalSeat,
-} from '../../linkset';
+} from 'src/components/molecules/gnbNew/linkset';
 
 function SideSeat(){
   return (
@@ -120,69 +120,7 @@ const S = {
 }
 
 const C = {
-  /* 서비스안내 공통css */
-  wrap: styled.div`
-    border-top: 2px solid ${DARK_GRAY1};
-
-    &.bdN {
-      border-top: 0;
-    }
-  `,
-  body: styled.div`
-    margin-top: 100px;
-
-    &:first-of-type {
-      margin-top: 30px;
-    }
-  `,
-  titleMain: styled.h2`
-    font-size: 24px;
-    font-weight: bold;
-
-    @media only screen and (max-width: 767px) {
-      font-size: 22px;
-      line-height: 28px;
-      letter-spacing: -0.04em;
-    }
-  `,
-  titleSub: styled.h3`
-    font-size: 21px;
-    font-weight: 700;
-
-    @media only screen and (max-width: 767px){
-      font-size: 16px;
-      letter-spacing: -0.32px;
-      margin-top: 60px;
-    }
-  `,
-  content: styled.div`
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 1.8em;
-
-    &.mt60 {
-      margin-top: 60px;
-    }
-
-    @media only screen and (max-width: 767px){
-      margin-top: 40px;
-      font-size: 14px;
-      letter-spacing: -0.28px;
-
-      &.mt60 {
-        margin-top: 40px;
-      }
-    }
-  `,
-  linkWrap: styled.div`
-    margin-top: 30px;
-
-    @media only screen and (max-width: 1059px) {
-      margin-top: 20px;
-    }
-  `,
-  /* 서비스안내 공통css 끝 */
-
+  ...SupportStyle.C1,
 
   orange: styled.span`
     color: ${ORANGE2};

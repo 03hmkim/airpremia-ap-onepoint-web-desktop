@@ -45,7 +45,7 @@ function CabinClassTime({
       case journeyKey:
         return (
           <NewModal
-            className="hAuto btnN"
+            className="hAuto min"
             type={EScrollType.TYPE1}            
             title={
               <S.header>
@@ -235,15 +235,8 @@ const S = {
       }
     }
   `,
-
+  
   header: styled.div``,
-
-  description: styled.div`
-    font-size: 14px;
-    line-height: 26px;
-    letter-spacing: -0.28px;
-    color: ${LIGHT_GRAY8};
-  `,
 };
 
 export default CabinClassTime;

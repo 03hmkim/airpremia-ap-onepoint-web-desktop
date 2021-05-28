@@ -51,7 +51,7 @@ const ProfileGroup: FC<IProps> = ({ linkButtonList }) => {
       case 'changeMyInfomation':
         return (
           <NewModal
-            className="hAuto btnN"
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>

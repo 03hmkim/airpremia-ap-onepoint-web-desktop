@@ -118,14 +118,13 @@ function TicketSearchVertical({}: IProps) {
       case 'rulePop1':
         return(
           <NewModal
-            className="hAuto"
+            className="hAutoDf h800m min"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>
                 <PopupTitle>
                   <>
-                    국내선을 이용하시는 고객님께<span className="textEnter" />
-                    안내 드립니다.
+                    국내선을 이용하시는 고객님께 안내 드립니다.
                   </>
                 </PopupTitle>
               </S.modalTitle>
@@ -350,14 +349,21 @@ const S = {
 
         p {
           display: flex;
-          align-item: center;
+          align-items: center;
           justify-content: center;
         }
         .text{
           line-height: 34px;
         }
         .ico{
-          margin-left: 15px;
+          width: 21px;
+          height: 21px;
+          margin-left: 8px;
+
+          svg {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
     }
@@ -507,7 +513,11 @@ const S = {
     }
 
     @media only screen and (max-width: 1059px) {
-      .menuWrapper {
+      .menuWrapper {        
+        &.station{
+          width: 300px;
+        }
+
         &.passenger {
           width: 300px;
           top: -377px;

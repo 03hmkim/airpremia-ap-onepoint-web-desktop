@@ -232,12 +232,15 @@ const ChangePassword2: FC<IProps> = ({}) => {
 
 const S = {
   container: styled.div`
-    padding: 40px 50px 0 50px;
   `,
 
   textInputWrapper: styled.div`
-    & > div:first-of-type {
-      margin-bottom: 68px;
+    & > div {
+      margin-bottom: 20px;
+
+      &:nth-child(2) {
+        margin-bottom: 50px;
+      }
     }
   `,
 

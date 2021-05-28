@@ -195,8 +195,6 @@ const ChangeEmail2: FC<IProps> = ({ onChangeNewValue }) => {
 
 const S = {
   container: styled.div`
-    padding: 40px 50px 0;
-
     input {
       font-weight: 600;
       &::placeholder {

@@ -138,7 +138,7 @@ const BookingPersonInfo: FC<IProps> = () => {
       case 'changeEmail':
         return (
           <NewModal
-            className="btnN hAuto"
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={<MakeTitleDom text="이메일 주소 변경" />}
             body={
@@ -150,7 +150,7 @@ const BookingPersonInfo: FC<IProps> = () => {
       case 'changePhoneNumber':
         return (
           <NewModal
-            className="btnN hAuto"
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={<MakeTitleDom text="휴대폰 번호 변경" />}
             body={

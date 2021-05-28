@@ -108,7 +108,6 @@ const ChangePhoneNumber2: FC<IProps> = ({
 
 const S = {
   container: styled.div`
-    padding: 40px 50px 0;
   `,
 
   button: styled.div`

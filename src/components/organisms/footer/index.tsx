@@ -163,7 +163,7 @@ function Footer({}: IProps) {
             </div>
             <div className="support">
               <h3 className="title">예약센터</h3>
-              <h1 className="number">02-6953-6115</h1>
+              <h1 className="number">1800-2626</h1>
               <div className="timeWrapper">
                 <p className="label">운영시간</p>
                 <p className="time">AM 08:00 - PM 10:00</p>
@@ -187,13 +187,13 @@ function Footer({}: IProps) {
                   <span>대표이사: 심주엽</span>
                   <span className="block"></span>
                   <span>사업자등록번호: 864-81-00738</span>
-                  <span>통신판매업신고: 업데이트 필요</span>
+                  <span>통신판매업신고: 강서 제 20-2591</span>
                 </li>
                 <li>
                   <span>
                     서울특별시 강서구 공항대로 248, 4층
                   </span>
-                  <span>대표번호 +82 2-6953-6115</span>
+                  {/* <span>대표번호 +82 2-6953-6115</span> */}
                   <span>개인정보보호책임자: 심주엽</span>
                 </li>
               </ul>

@@ -5,17 +5,15 @@ import {
   SupportLink,
 } from 'src/components';
 import { Container } from 'src/styles/layout';
-import {
-  DARK_GRAY1,
-} from '@airpremia/cdk/styles/colors';
 import Stroller from 'public/images/support/stroller.png';
 import BaggageStroller from 'public/images/support/baggageStroller.png';
+import { SupportStyle } from 'src/styles/common';
 import { 
   needHelp,
   needPet,
   needPregnant,
   needTeenager,
-} from '../../linkset';
+} from 'src/components/molecules/gnbNew/linkset';
 
 
 
@@ -214,77 +212,7 @@ const S = {
 }
 
 const C = {
-  /* 서비스안내 공통css */
-  wrap: styled.div`
-    border-top: 2px solid ${DARK_GRAY1};
-
-    &.bdN {
-      border-top: 0;
-    }
-  `,
-  body: styled.div`
-    margin-top: 100px;
-
-    &:first-of-type {
-      margin-top: 30px;
-    }
-    @media only screen and (max-width: 1059px) { 
-        margin-top: 80px;
-        &:first-of-type {
-          margin-top: 20px;
-        }
-    }
-    @media only screen and (max-width: 767px) { 
-        margin-top: 60px;
-        &:first-of-type {
-          margin-top: 10px;
-        }
-    }
-  `,
-  titleMain: styled.h2`
-    font-size: 24px;
-    font-weight: bold;
-
-    @media only screen and (max-width: 767px) {
-      font-size: 22px;
-      line-height: 28px;
-      letter-spacing: -0.04em;
-    }
-  `,
-  titleSub: styled.h3`
-    font-size: 21px;
-    font-weight: 700;
-
-    @media only screen and (max-width: 767px){
-      font-size: 21px;
-      letter-spacing: -0.32px;
-      line-height:1.5em;
-      margin-top: 30px;
-    }
-  `,
-  content: styled.div`
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 1.8em;
-
-    &.mt60 {
-      margin-top: 60px;
-    }
-
-    @media only screen and (max-width: 767px){
-      margin-top: 20px;
-      font-size: 14px;
-      letter-spacing: -0.28px;
-    }
-  `,
-  linkWrap: styled.div`
-    margin-top: 30px;
-
-    @media only screen and (max-width: 1059px) {
-      margin-top: 20px;
-    }
-  `,
-  /* 서비스안내 공통css 끝 */
+  ...SupportStyle.C1,
 
   itemTitle: styled.h6`
     padding-bottom: 20px;

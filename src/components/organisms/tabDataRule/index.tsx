@@ -16,7 +16,7 @@ const TabDataRule: FC<IProps> = ({
   Idx,
   // onClick,
 }) => {
-  const tabList = ['항공권 규정', '수하물 규정', '항공 위험물품 안내', '국제 운송 약관'];
+  const tabList = ['항공권 규정', '수하물 규정', '항공 위험물품 안내', '국내 운송 약관'];
   const [currIdx, setCurrIdx] = useState(Idx);
   
 

@@ -38,7 +38,6 @@ import {
 import {
   LIGHT_GRAY7,
   WHITE1,
-  LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
 import { IAvailableSsr } from '@airpremia/core/stores/models/ssr';
 import {
@@ -132,7 +131,6 @@ const ApplyCheckin: FC<IProps> = ({}) => {
   function getCheckTime() {
     setInterval(getTime(), 1000);
   }
-
   const {
     onShowNewModal,
     UIStore: { newModal },
@@ -517,7 +515,7 @@ const ApplyCheckin: FC<IProps> = ({}) => {
           isNextStep && checkCompleteStatus() ? null 
           : (
             <Checkbox {...checkboxProps}>
-              입력한 여권 정보와 실제 여권 정보가 일치합니다.
+              입력한 정보와 실제 정보가 일치합니다.
             </Checkbox>
           )
         }
@@ -549,27 +547,7 @@ const S = {
 
   modalTitle : styled.div``,
 
-  modalBody: styled.div`
-    padding: 40px 50px 0;
-    .select {
-      margin-top: 40px;
-      font-size: 15px;
-      line-height: 30px;
-      letter-spacing: -0.23px;
-      box-sizing: border-box;
-      &>div{
-        height: 40px;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid ${LIGHT_GRAY5};
-      }
-      .newPosition{
-        >div{
-          max-height: 120px;
-        }
-      }
-    }
-  `,
+  modalBody: styled.div``,
 };
 
 export default ApplyCheckin;

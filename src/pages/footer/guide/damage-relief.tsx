@@ -65,7 +65,7 @@ function DamageRelief(){
                   <p>이메일 접수 및 문의 : contact@airpremia.com</p>
                 }/></C.special>
                 <C.special><ListGlobal level="fst" body={
-                  <p>전화 문의 : 02-6953-6115</p>
+                  <p>전화 문의 : 1800-2626</p>
                 }/></C.special>
                 <C.special><ListGlobal level="fst" body={
                   <p>우편 접수 : 서울특별시 강서구 공항대로 248, 4층, 에어프레미아</p>

@@ -39,7 +39,7 @@ function archivelist(){
         case 'popHealth':
           return (
             <NewModal
-              className="max hAutoDf hCalc800"
+              className="max hAutoDf h800"
               type={EScrollType.TYPE1}
               title={
                 <S.modalTitle>

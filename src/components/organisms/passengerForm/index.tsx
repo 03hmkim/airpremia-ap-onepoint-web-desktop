@@ -307,7 +307,7 @@ function PassengerForm({ isBooker, type, count }: IProps) {
     value: data && data.birthDate ? data.birthDate.value : '',
     target: 'birthDate',
     type: EInputType.TEXT,
-    placeholder: '생년월일 8자리 입력     예): 20170810',
+    placeholder: '예): 20180823',
     onChange: onChangeData,
     onBlur: onBlurData,
   };
@@ -317,7 +317,7 @@ function PassengerForm({ isBooker, type, count }: IProps) {
     value: data && data.phoneNumber ? data.phoneNumber.value : '',
     target: 'phoneNumber',
     type: EInputType.NUMBER,
-    placeholder: '(성인필수) 전화번호 입력    예): 01010002000',
+    placeholder: '예): 01020210616',
     onChange: onChangeData,
     onBlur: onBlurData,
   };
@@ -326,7 +326,7 @@ function PassengerForm({ isBooker, type, count }: IProps) {
     value: data && data.customerNumber ? data.customerNumber.value : '',
     target: 'customerNumber',
     type: EInputType.NUMBER,
-    placeholder: '회원번호 10자리 입력    예): 10000000000',
+    placeholder: '회원번호 10자리 혹은 휴대폰 번호 입력    예): 10000000000',
     onChange: onChangeData,
     onBlur: onBlurData,
   };
@@ -428,7 +428,7 @@ function PassengerForm({ isBooker, type, count }: IProps) {
             }
           >
             <S.question className="question">
-              전화번호
+              휴대폰 번호
             </S.question>
             <S.answer>
               <TextInput
@@ -557,7 +557,7 @@ function PassengerForm({ isBooker, type, count }: IProps) {
             >
               <S.question className="question">
                 생년월일
-                </S.question>
+              </S.question>
               <S.answer>
                 <TextInput
                   inputProps={birthData}
@@ -577,7 +577,7 @@ function PassengerForm({ isBooker, type, count }: IProps) {
             >
               <S.question className="question">
                 국적
-                </S.question>
+              </S.question>
               <S.answer isSelected={data?.nationality}>
                 <S.autoComplete>
                   <Select  {...nationalitySelectProps}>
@@ -599,8 +599,8 @@ function PassengerForm({ isBooker, type, count }: IProps) {
               }
             >
               <S.question className="question">
-                전화번호
-                </S.question>
+                휴대폰 번호
+              </S.question>
               <S.answer>
                 <TextInput
                   inputProps={phoneNumberData}

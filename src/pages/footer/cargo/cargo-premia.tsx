@@ -32,7 +32,7 @@ function CargoPremia(){
       case 'onPrev':
         return (
           <NewModal
-            className="hAuto"
+            className="hAuto min"
             type={EScrollType.TYPE1}
             title={
               <S.modalTitle>

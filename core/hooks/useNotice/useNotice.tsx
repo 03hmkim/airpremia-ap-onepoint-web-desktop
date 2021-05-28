@@ -28,7 +28,6 @@ export default () => {
             noticeId: noticeId
         }
 
-        console.log("payload : ", payload);
         dispatch(handleNoticeContentLoad.request(payload));
     }
 

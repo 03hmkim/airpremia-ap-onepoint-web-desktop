@@ -41,7 +41,7 @@ const MembershipDashboard: FC<IProps> = ({
       case 'userGradeGuideInfomation':
         return (
           <NewModal
-            className="hAuto btnN"
+            className="hAuto"
             type={EScrollType.TYPE1}
             title={<PopupTitle>승급 안내</PopupTitle>}
             body={

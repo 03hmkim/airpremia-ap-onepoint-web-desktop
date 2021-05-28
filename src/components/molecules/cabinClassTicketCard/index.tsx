@@ -5,12 +5,13 @@ import {
   BLUE1,
   ORANGE1,
   WHITE1,
-  LIGHT_GRAY6,
+  WHITE2,
+  WHITE3,
   PALE_BLUE1,
   PALE_RED1,
 } from '@airpremia/cdk/styles/colors';
 import { ifProp } from 'styled-tools';
-import { addComma } from '@airpremia/core/lib/service';
+// import { addComma } from '@airpremia/core/lib/service';
 import { IFlightTicketSearchProductClass } from '@airpremia/core/api/ticket/types';
 
 enum ECabinClassTypeWithPSS {
@@ -72,7 +73,7 @@ function CabinClassTicketCard({
     text,
     available,
     fareAvailabilityKey,
-    price,
+    // price,
   } = productClass;
   // @TODO: 수수료 환불 형태가 금액 -> 형태로 변경 되어 이부분 수정되면 반영할 예정
   const changeText = convertChangeType(EChangeType.FEE);
@@ -107,10 +108,16 @@ function CabinClassTicketCard({
             <p>{mileage}pp 적립</p>
           </div>
         </S.wrapper>
-        <S.priceButton {...props} isSoldOut={!available}>
+        {/* <S.priceButton {...props} isSoldOut={!available}>
           {available
             ? `${addComma(price || 0)} 원`
             : '매진'}
+        </S.priceButton> */}
+        <S.priceButton {...props}>
+          <S.beforeSale {...props}>19,900원</S.beforeSale> 
+          <S.enter />
+          <S.sale>&nbsp;→ 10,000원</S.sale>
+          {/* 할인 전 가격, 할인 후 가격 표출 */}
         </S.priceButton>
       </S.bottom>
     </S.container>
@@ -123,6 +130,40 @@ const flex = `
 `;
 
 const S = {
+  enter: styled.span`
+    @media only screen and (max-width: 1440px){
+      display: block;
+    }
+
+    @media only screen and (max-width: 479px){
+      display: inline;
+    }
+  `,
+
+  beforeSale: styled.span`
+    text-decoration: line-through;
+
+    color: ${ifProp(
+      { classType: ECabinClassTypeWithPSS.EY },
+      ifProp('isSelected', WHITE2, LIGHT_GRAY8),
+      ifProp('isSelected', WHITE3, LIGHT_GRAY8),
+    )};
+  `,
+
+  sale:styled.span`
+    @media only screen and (max-width: 1440px){
+      margin-left: -30px;
+    }
+
+    @media only screen and (max-width: 767px){
+      margin-left: -24px;
+    }
+    
+    @media only screen and (max-width: 479px){
+      margin-left: 0;
+    }
+  `,
+
   container: styled.div<
     IStyle & {
       isSoldOut: boolean;
@@ -228,14 +269,16 @@ const S = {
     }
   `,
 
-  priceButton: styled.button<
-    IStyle & {
-      isSoldOut: boolean;
-    }
-  >`
-    height: 50px;
+  // priceButton: styled.button<
+  //   IStyle & {
+  //     isSoldOut: boolean;
+  //   }
+  // >`
+
+  priceButton: styled.button`
+    padding: 15px 0;
     font-size: 21px;
-    line-height: 24px;
+    line-height: 1.36em;
     letter-spacing: -0.32px;
     border-radius: 8px;
     width: 100%;
@@ -261,19 +304,16 @@ const S = {
       ifProp('isSelected', ORANGE1, WHITE1),
     )};
 
-    ${({ isSoldOut }) => {
-      if (isSoldOut) {
-        return css`
-          background-color: ${LIGHT_GRAY6};
-          color: ${WHITE1};
-          border: 0;
-        `;
-      }
-    }}
+    // isSoldOut 삭제 (주석처리가 안 돼서 삭제했습니다.)
+
+    @media only screen and (max-width: 1440px) {
+      padding: 10px 0;
+    }
 
     @media only screen and (max-width: 767px) {
       font-size: 16px;
     }
+
     @media only screen and (max-width: 479px) {
       margin-top: 10px;
     }

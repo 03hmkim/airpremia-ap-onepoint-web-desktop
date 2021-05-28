@@ -4,10 +4,12 @@ export interface IProps extends IStyleProps {
   currIdxCont: number;
 }
 import {
-  DARK_GRAY1,
   RED1,
   ORANGE2,
   BLUE1,
+  LIGHT_GRAY6,
+  DARK_BLUE1,
+  DARK_BLUE2,
 } from '@airpremia/cdk/styles/colors';
 import Liquid1 from 'public/images/support/liquid1.png';
 import Liquid2 from 'public/images/support/liquid2.png';
@@ -27,6 +29,7 @@ import Portable from 'public/images/support/img_portable.png';
 import Device from 'public/images/support/img_device.png';
 import Air from 'public/images/support/img_air.png';
 import { ListGlobal } from 'src/components';
+import { SupportStyle } from 'src/styles/common';
 
 function TabContent({currIdxCont}: IProps) {
   if ( currIdxCont === 0 ) {
@@ -38,56 +41,50 @@ function TabContent({currIdxCont}: IProps) {
             <C.remark>기내반입 <C.red>X</C.red> / 위탁수하물 <C.red>X</C.red></C.remark>
           </C.flex>
           <C.content>
-            <T.table>
-              <div className="tbl-scrolls tbWrap">
-                <table>
-                  <colgroup>
-                    <col width="25%"></col>
-                    <col width="25%"></col>
-                    <col width="25%"></col>
-                    <col width="25%"></col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <td>폭발물류</td>
-                      <td>인화성 물질</td>
-                      <td>방사성·전염성·독성 물질</td>
-                      <td>기타 위험물질</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><img src={Bomb} /></td>
-                      <td><img src={Fire} /></td>
-                      <td><img src={Nuclear} /></td>
-                      <td><img src={Danger} /></td>
-                    </tr>
-                    <tr>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>수류탄, 다이너마이트, 화약류, 연막탄, 조명탄, 폭죽, 지뢰,뇌관,신관,도화선, 발파캡 등 폭발장치</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>성냥, 라이터, 부탄가스 등 인화성 가스, 휘발유·페인트 등 인화성 액체, 70% 이상의 알코올성 음료 등<br></br>(단, 소형안전성냥 및 휴대용라이터는 각 1개에 한해 객실 반입 가능)</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>염소, 표백제, 산화제, 수은, 하수구 청소재제, 독극물, 의료용·상업용 방사성 동위원소, 전염성·생물학적 위험물질 등</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>소화기, 드라이아이스, 최루가스 등<br></br>(단, 드라이아이스는 1인당 2.5kg에 한해 이산화탄소 배출이 용이하도록 안전하게 포장된 경우 항공사 승인 하에 반입이 가능)</p>
-                        }/>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <Tdv.table>
+              <div className="tbDiv">
+                <ul>
+                  <li>
+                    <p className="tit"><span>폭발물류</span></p>
+                    <div className="imgBox"><img src={Bomb} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>수류탄, 다이너마이트, 화약류, 연막탄, 조명탄, 폭죽, 지뢰,뇌관,신관,도화선, 발파캡 등 폭발장치</p>
+                      }/>
+                    </div>
+                  </li>
+                  <li>
+                  <p className="tit"><span>인화성 물질</span></p>
+                    <div className="imgBox"><img src={Fire} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>성냥, 라이터, 부탄가스 등 인화성 가스, 휘발유·페인트 등 인화성 액체, 70% 이상의 알코올성 음료 등<br></br>(단, 소형안전성냥 및 휴대용라이터는 각 1개에 한해 객실 반입 가능)</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
+                <ul className="lbm">
+                  <li>
+                    <p className="tit"><span>방사성·전염성·독성 물질</span></p>
+                    <div className="imgBox"><img src={Nuclear} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>염소, 표백제, 산화제, 수은, 하수구 청소재제, 독극물, 의료용·상업용 방사성 동위원소, 전염성·생물학적 위험물질 등</p>
+                      }/>
+                    </div>
+                  </li>
+                  <li className="last">
+                  <p className="tit"><span>기타 위험물질</span></p>
+                    <div className="imgBox"><img src={Danger} /></div>
+                    <div className="conBox">
+                    <ListGlobal level="fst td" body={
+                        <p>소화기, 드라이아이스, 최루가스 등<br></br>(단, 드라이아이스는 1인당 2.5kg에 한해 이산화탄소 배출이 용이하도록 안전하게 포장된 경우 항공사 승인 하에 반입이 가능)</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </T.table>
+            </Tdv.table>
           </C.content>
         </C.body>
         <C.body>
@@ -96,79 +93,76 @@ function TabContent({currIdxCont}: IProps) {
             <C.remark>기내반입 <C.red>X</C.red> / 위탁수하물 <C.blue>O</C.blue></C.remark>
           </C.flex>
           <C.content>
-            <T.table>
-                <div className="tbl-scrolls tbWrap">
-                  <table>
-                  <colgroup>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <td>스포츠용품류</td>
-                      <td>창도검류</td>
-                      <td>총기류</td>
-                      <td>무술호신용품</td>
-                      <td>공구류</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><img src={Sport} /></td>
-                      <td><img src={Sword} /></td>
-                      <td><img src={Handgun} /></td>
-                      <td><img src={Safe} /></td>
-                      <td><img src={Tool} /></td>
-                    </tr>
-                    <tr>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>야구배트, 하키스틱, 골프채, 당구큐, 빙상용스케이트, 아령, 볼링골, 활, 화살, 양궁 등</p>
-                        }/>
-                        <ListGlobal level="fst td" body={
-                          <p>테니스라켓 등 라켓류, 인라인스케이트, 스케이트 보드, 등산용 스틱, 야구공 등 공기가 주입되지 않은 공구류는 객실 반입 가능</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>과도, 커터칼, 접이식칼, 면도칼, 작살, 표창, 다트 등</p>
-                        }/>
-                        <ListGlobal level="fst td" body={
-                          <p>안전면도날, 일반 휴대용면도기, 전기면도기 등은 객실 반입 가능</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>모든 총기 및 총기부품, 총알, 전자충격기, 장난감총 등</p>
-                        }/>
-                        <ListGlobal level="fst td" body={
-                          <p>총기류는 항공사에 소지허가서등을 확인 시키고 총알과 분리 후 위탁가능</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>쌍절곤, 공격용 격투무기, 경찰봉, 수갑, 호신용스프레이 등</p>
-                        }/>
-                        <ListGlobal level="fst td" body={
-                          <p>호신용스프레이는 1인당 1개(100ml이하)만 위탁가능</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>도끼, 망치, 못총, 톱, 송곳, 드릴/날길이 6cm를 초과하는 가위</p>
-                        }/>
-                        <ListGlobal level="fst td" body={
-                          <p>스크루드라이버 ·드릴심류/총길이 10cm를 초과하는 렌치 ·스패너 ·펜치류/가축몰이 봉 등</p>
-                        }/>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <Tdv.table>
+              <div className="tbDiv">
+                <ul className="lic2">
+                  <li>
+                    <p className="tit"><span>스포츠용품류</span></p>
+                    <div className="imgBox"><img src={Sport} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>야구배트, 하키스틱, 골프채, 당구큐, 빙상용스케이트, 아령, 볼링골, 활, 화살, 양궁 등</p>
+                      }/>
+                      <ListGlobal level="fst td" body={
+                        <p>테니스라켓 등 라켓류, 인라인스케이트, 스케이트 보드, 등산용 스틱, 야구공 등 공기가 주입되지 않은 공구류는 객실 반입 가능</p>
+                      }/>
+                    </div>
+                  </li>
+                  <li>
+                  <p className="tit"><span>창도검류</span></p>
+                    <div className="imgBox"><img src={Sword} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>과도, 커터칼, 접이식칼, 면도칼, 작살, 표창, 다트 등</p>
+                      }/>
+                      <ListGlobal level="fst td" body={
+                        <p>안전면도날, 일반 휴대용면도기, 전기면도기 등은 객실 반입 가능</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
+                <ul className="lic2">
+                  <li>
+                    <p className="tit"><span>총기류</span></p>
+                    <div className="imgBox"><img src={Handgun} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>모든 총기 및 총기부품, 총알, 전자충격기, 장난감총 등</p>
+                      }/>
+                      <ListGlobal level="fst td" body={
+                        <p>총기류는 항공사에 소지허가서등을 확인 시키고 총알과 분리 후 위탁가능</p>
+                      }/>
+                    </div>
+                  </li>
+                  <li>
+                  <p className="tit"><span>무술호신용품</span></p>
+                    <div className="imgBox"><img src={Safe} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>쌍절곤, 공격용 격투무기, 경찰봉, 수갑, 호신용스프레이 등</p>
+                      }/>
+                      <ListGlobal level="fst td" body={
+                        <p>호신용스프레이는 1인당 1개(100ml이하)만 위탁가능</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
+                <ul className="lic1">
+                  <li className="last">
+                    <p className="tit"><span>공구류</span></p>
+                    <div className="imgBox"><img src={Tool} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>도끼, 망치, 못총, 톱, 송곳, 드릴/날길이 6cm를 초과하는 가위</p>
+                      }/>
+                      <ListGlobal level="fst td" body={
+                        <p>스크루드라이버 ·드릴심류/총길이 10cm를 초과하는 렌치 ·스패너 ·펜치류/가축몰이 봉 등</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </T.table>
+            </Tdv.table>
           </C.content>
         </C.body>
         <C.body>
@@ -177,67 +171,64 @@ function TabContent({currIdxCont}: IProps) {
             <C.remark>기내반입 <C.blue>O</C.blue> / 위탁수하물 <C.blue>O</C.blue></C.remark>
           </C.flex>
           <C.content>
-            <T.table>
-              <div className="tbl-scrolls tbWrap">
-                <table>
-                  <colgroup>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                    <col width="20%"></col>
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <td>생활도구류</td>
-                      <td>액체류 위생용품 ·욕실용품 ·의약품류</td>
-                      <td>의료장비 및 보행 보조도구</td>
-                      <td>구조용품</td>
-                      <td>건전지 및 개인용 휴대 전자장비</td>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><img src={Kit} /></td>
-                      <td><img src={Drug} /></td>
-                      <td><img src={Device} /></td>
-                      <td><img src={Air} /></td>
-                      <td><img src={Portable} /></td>
-                    </tr>
-                    <tr>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>수저, 포크, 손톱깎이, 긴우산, 감자칼, 병따개, 와인따개, 족집게, 손톱정리가위, 바늘류, 제도용 콤파스 등</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>화장품, 염색약, 퍼머약, 목욕용품, 치약, 콘텍트렌즈용품, 소염제, 의료용 소독 알코올, 내복약, 외용연고 등<br></br>(단, 국제선 객실 반입시 100ml이하만 가능, 위탁수하물인 경우 개별용기 500ml이하로 1인당 2kg(2ℓ) 까지 반입 가능)</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>주사바늘, 체온계, 자동제세동기 등 휴대용 전자의료장비, 인공심박기 등 인체이식장치, 지팡이, 목발, 휠체어, 유모차 등</p>
-                        }/>
-                        <ListGlobal level="fst td" body={
-                          <p>수은체온계는 보호케이스에 안전하게 보관된 경우 객실 반입 가능하며 전동휠체어는 배터리 위험성 등으로 위탁만 가능</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>소형 산소통(5kg 이하), 구명조끼에 포함된 실린더 1쌍(여분 실린더 1쌍도 가능), 눈사태용 구조배낭 (1인당 1개)<br></br>(단, 안전기준에 맞게 포장되고 해당 항공사 승인 필요)</p>
-                        }/>
-                      </td>
-                      <td className="vtcTop">
-                        <ListGlobal level="fst td" body={
-                          <p>휴대용 건전지, 시계, 계산기, 카메라, 캠코더, 휴대폰, 노트북컴퓨터, MP3 등</p>
-                        }/>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
+            <Tdv.table>
+              <div className="tbDiv">
+                <ul className="lic2 lb2">
+                  <li>
+                    <p className="tit"><span>생활도구류</span></p>
+                    <div className="imgBox"><img src={Kit} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>수저, 포크, 손톱깎이, 긴우산, 감자칼, 병따개, 와인따개, 족집게, 손톱정리가위, 바늘류, 제도용 콤파스 등</p>
+                      }/>
+                    </div>
+                  </li>
+                  <li>
+                  <p className="tit"><span>액체류 위생용품 ·욕실용품 ·의약품류</span></p>
+                    <div className="imgBox"><img src={Drug} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>화장품, 염색약, 퍼머약, 목욕용품, 치약, 콘텍트렌즈용품, 소염제, 의료용 소독 알코올, 내복약, 외용연고 등<br></br>(단, 국제선 객실 반입시 100ml이하만 가능, 위탁수하물인 경우 개별용기 500ml이하로 1인당 2kg(2ℓ) 까지 반입 가능)</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
+                <ul className="lic2 lb2">
+                  <li>
+                    <p className="tit"><span>의료장비 및 보행 보조도구</span></p>
+                    <div className="imgBox"><img src={Device} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>주사바늘, 체온계, 자동제세동기 등 휴대용 전자의료장비, 인공심박기 등 인체이식장치, 지팡이, 목발, 휠체어, 유모차 등</p>
+                      }/>
+                      <ListGlobal level="fst td" body={
+                        <p>수은체온계는 보호케이스에 안전하게 보관된 경우 객실 반입 가능하며 전동휠체어는 배터리 위험성 등으로 위탁만 가능</p>
+                      }/>
+                    </div>
+                  </li>
+                  <li>
+                  <p className="tit"><span>구조용품</span></p>
+                    <div className="imgBox"><img src={Air} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>소형 산소통(5kg 이하), 구명조끼에 포함된 실린더 1쌍(여분 실린더 1쌍도 가능), 눈사태용 구조배낭 (1인당 1개)<br></br>(단, 안전기준에 맞게 포장되고 해당 항공사 승인 필요)</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
+                <ul className="lic1 lb2">
+                  <li className="last">
+                    <p className="tit"><span>건전지 및 개인용 휴대 전자장비</span></p>
+                    <div className="imgBox"><img src={Portable} /></div>
+                    <div className="conBox">
+                      <ListGlobal level="fst td" body={
+                        <p>휴대용 건전지, 시계, 계산기, 카메라, 캠코더, 휴대폰, 노트북컴퓨터, MP3 등</p>
+                      }/>
+                    </div>
+                  </li>
+                </ul>
               </div>
-            </T.table>
+            </Tdv.table>
           </C.content>
         </C.body>
         <C.body>
@@ -566,71 +557,7 @@ function TabContent({currIdxCont}: IProps) {
 }
 
 const C = {
-  /* 서비스안내 공통css */
-  wrap: styled.div`
-    border-top: 2px solid ${DARK_GRAY1};
-
-    &.bdN {
-      border-top: 0;
-    }
-  `,
-  body: styled.div`
-    margin-top: 100px;
-
-    &:first-of-type {
-      margin-top: 30px;
-    }
-  `,
-  titleMain: styled.h2`
-    font-size: 24px;
-    font-weight: bold;
-
-    @media only screen and (max-width: 767px) {
-      font-size: 22px;
-      line-height: 28px;
-      letter-spacing: -0.04em;
-    }
-  `,
-  titleSub: styled.h3`
-    font-size: 21px;
-    font-weight: 700;
-
-    @media only screen and (max-width: 767px){
-      font-size: 16px;
-      letter-spacing: -0.32px;
-      margin-top: 60px;
-    }
-  `,
-  content: styled.div`
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 1.8em;
-
-    &.mt60 {
-      margin-top: 60px;
-    }
-
-    @media only screen and (max-width: 767px){
-      margin-top: 40px;
-      font-size: 14px;
-      letter-spacing: -0.28px;
-
-      &.mt60 {
-        margin-top: 40px;
-      }
-      .ex{
-        font-size:14px;
-      }
-    }
-  `,
-  linkWrap: styled.div`
-    margin-top: 30px;
-
-    @media only screen and (max-width: 1059px) {
-      margin-top: 20px;
-    }
-  `,
-  /* 서비스안내 공통css 끝 */
+  ...SupportStyle.C1,
 
   blue: styled.span`
     color: ${BLUE1};
@@ -642,10 +569,10 @@ const C = {
     color: ${ORANGE2};
   `,
   ex: styled.div`
+    padding-left: 28px;
     position: relative;
     font-size: 18px;
     line-height: 2em;
-    padding-left: 28px;
     color: ${RED1};
 
     &:before {
@@ -657,6 +584,7 @@ const C = {
       color: ${RED1};
     }
     @media only screen and (max-width: 767px) { 
+      padding-left: 20px;
       font-size: 14px;
       letter-spacing: -0.28px;
 
@@ -669,20 +597,28 @@ const C = {
   remark: styled.div`
     font-size: 20px;
     font-weight: 300;
+
     @media only screen and (max-width: 767px){
       font-size: 14px;
       letter-spacing: -0.28px;
+    }
+
+    @media only screen and (max-width: 480px){
+      margin-top: 15px;
     }
   `,
   flex: styled.div`
     display: flex;
     justify-content: space-between;
+
+    @media only screen and (max-width: 480px){
+      display: block;
+    }
   `,
 }
     
 const T = {  
   table: styled.div`
-
     @media only screen and (max-width: 767px) { 
       .tbl-scrolls{
         width: 100%;
@@ -716,7 +652,218 @@ const T = {
         }
       }
     }
+  `,
+}
 
+
+const Tdv = {  
+  table: styled.div`
+    .tbDiv {
+      width: 100%;
+      &:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+      * { box-sizing: border-box; }
+
+      ul {
+        width: 50%;
+        float: left;
+        display: table;
+        border-bottom: 1px solid ${DARK_BLUE1};
+
+        li {
+          width: 25%;
+          display: table-cell;
+          vertical-align: baseline;
+          border-right: 1px solid transparent;
+          border-image: linear-gradient(${DARK_BLUE2} 69px, ${LIGHT_GRAY6} 69px, ${LIGHT_GRAY6} 100%);
+          border-image-slice: 1;
+          .tit {
+            width: 100%;
+            padding: 18px 10px;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 1.6;
+            letter-spacing: 0.3px;
+            text-align: center;
+            background: ${DARK_BLUE1};
+            display: table;
+            span {
+              display: table-cell;
+              vertical-align: middle;
+            }
+          }
+          .imgBox {
+            width: 100%;
+            height: auto;
+            padding: 18px 10px;
+            vertical-align: middle;
+            text-align: center;
+            border-bottom: 1px solid ${LIGHT_GRAY6};
+            img {
+              vertical-align: middle;
+            }
+          }
+          .conBox {
+            padding: 18px 10px;
+            p {
+              font-weight: 300;
+              letter-spacing: -0.3px;
+            }
+          }
+        }
+        li.last {
+          border: 0;
+        }
+      }
+      ul.lic2 {
+        width: 40%;
+        li {
+          .conBox {
+            height: 510px;
+          }
+        }
+      }
+      ul.lic1 {
+        width: 20%;
+        li {
+          .conBox {
+            height: 510px;
+          }
+        }
+      }
+      ul.lb2 {
+        li {
+          vertical-align: middle;
+          border-right: 1px solid transparent;
+          border-image: linear-gradient(${DARK_BLUE2} 103px, ${LIGHT_GRAY6} 103px, ${LIGHT_GRAY6} 100%);
+          border-image-slice: 1;
+          .tit {
+            span {
+              height: 66px;
+            }
+          }
+        }
+        li.last {
+          border: 0;
+        }
+      }
+    }
+
+    @media only screen and (max-width: 1059px) { 
+      .tbDiv {
+        ul {
+          width: 100%;
+          li:last-child {
+            border-right: 0;
+          }
+        }
+        ul.lic2 {
+          width: 100%;
+          li {
+            .conBox {
+              height: auto;
+            }
+          }
+        }
+        ul.lic1 {
+          width: 50%;
+          li {
+            .conBox {
+              height: auto;
+            }
+          }
+        }
+        ul.lb2 {
+          li {
+            border-right: 1px solid transparent;
+            border-image: linear-gradient(${DARK_BLUE2} 69px, ${LIGHT_GRAY6} 69px, ${LIGHT_GRAY6} 100%);
+            border-image-slice: 1;
+            vertical-align: baseline;
+            .tit {
+              span {
+                height: auto;
+              }
+            }
+          }
+          li:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 767px) { 
+      .tbDiv {
+        ul {
+          li {
+            border-right: 1px solid transparent;
+            border-image: linear-gradient(${DARK_BLUE2} 51px, ${LIGHT_GRAY6} 51px, ${LIGHT_GRAY6} 100%);
+            border-image-slice: 1;
+            .tit {
+              height: 50px;
+              font-size: 14px;
+              padding: 13px 10px;
+            }
+            .imgBox {
+              padding: 10px;
+            }
+          }
+        }
+        ul.lb2 {
+          li {
+            border-right: 1px solid transparent;
+            border-image: linear-gradient(${DARK_BLUE2} 51px, ${LIGHT_GRAY6} 51px, ${LIGHT_GRAY6} 100%);
+            border-image-slice: 1;
+          }
+          li:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 530px) { 
+      .tbDiv {
+        ul.lb2 {
+          li {
+            border-right: 1px solid transparent;
+            border-image: linear-gradient(${DARK_BLUE2} 72px, ${LIGHT_GRAY6} 72px, ${LIGHT_GRAY6} 100%);
+            border-image-slice: 1;
+            vertical-align:-webkit-baseline-middle;
+            .tit {
+              span {
+                height: 45px;
+              }
+            }
+          }
+          li:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 382px) { 
+      .tbDiv {
+        ul.lbm {
+          li {
+            border-right: 1px solid transparent;
+            border-image: linear-gradient(${DARK_BLUE2} 72px, ${LIGHT_GRAY6} 72px, ${LIGHT_GRAY6} 100%);
+            border-image-slice: 1; 
+            vertical-align:-webkit-baseline-middle;
+            .tit {
+              span {
+                height: 45px;
+              }
+            }
+          }
+          li:last-child {
+            border-right: 0;
+          }
+        }
+      }
+    }
   `,
 }
 

@@ -8,11 +8,13 @@ import {
 import withRedux from 'next-redux-wrapper';
 import { Provider } from 'react-redux';
 import configureStore from '@airpremia/core/stores';
+import { useRouter } from 'next/router';
 import {
   Footer,
   Modal,
   ToastPopup,
   Loading,
+  MainNotice
 } from 'src/components';
 import Head from 'next/head';
 import { useModal } from 'src/hooks';
@@ -37,6 +39,9 @@ import styled from 'styled-components';
 
 const AppMiddleWare = ({ Component, pageProps }: any) => {
   const [isInit, setInit] = useState(false);
+  const [showMainNotice, setShowMainNotice] = useState(false);
+  const router = useRouter();
+
   const {
     authStore,
     onGuestLogin,
@@ -118,6 +123,20 @@ const AppMiddleWare = ({ Component, pageProps }: any) => {
     initLoad();
   }, []);
 
+  const onChangeMainNoticeStatus = () => {
+    if(
+      router.pathname ==='/'
+    ) {
+      setShowMainNotice(true)
+    } else {
+      setShowMainNotice(false)
+    }
+  }
+
+  useEffect(() => {
+    onChangeMainNoticeStatus();
+  });
+
   useEffect(() => {
     _onLoadPrimaryData();
   }, [isInit, hasToken]);
@@ -152,6 +171,9 @@ const AppMiddleWare = ({ Component, pageProps }: any) => {
           <Head>
             <title>AirPremia Onepoint</title>
           </Head>
+          <div>
+            {showMainNotice && <MainNotice/>}
+          </div>
           <HeaderGroup resetData={resetBookingSession} />
           <ToastPopup />
           <C.contWrap>

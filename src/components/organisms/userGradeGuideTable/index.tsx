@@ -2,6 +2,7 @@ import { FC, useState, useEffect } from 'react';
 import styled, { css } from 'styled-components';
 import {
   DARK_GRAY1,
+  LIGHT_GRAY1,
   LIGHT_GRAY8,
   LIGHT_GRAY5,
 } from '@airpremia/cdk/styles/colors';
@@ -117,42 +118,30 @@ const UserGradeGuideTable: FC<IProps> = ({ grade }) => {
 };
 
 const commonTableStyle = css`
+  width: 26%;
+  padding: 20px;
+  display: table-cell;
+  vertical-align: middle;
+  word-break: break-all;
+
   &:nth-child(1) {
-    width: 200px;
-    margin-right: 60px;
+    width: 22%;
+    padding-left: 0;
   }
-  &:nth-child(2) {
-    width: 280px;
-    margin-right: 40px;
-  }
-  &:nth-child(3) {
-    width: 280px;
-    margin-right: 40px;
-  }
+
   &:nth-child(4) {
-    width: 280px;
+    padding-right: 0;
   }
+
   @media only screen and (max-width: 767px) { 
+    padding: 15px 10px;
+
     &:nth-child(1) {
-      width: 60px;
-      margin-right: 20px;
-      word-break:keep-all;
+      padding-left: 0;
     }
-    &:nth-child(2) {
-      width: 60px;
-      margin-right: 20px;
-      word-break:keep-all;
-    }
-    &:nth-child(3) {
-      width: 100%;
-      flex:1;
-      margin-right: 20px;
-      word-break:keep-all;
-    }
+
     &:nth-child(4) {
-      width: 100%;
-      flex:1;
-      word-break:keep-all;
+      padding-right: 0;
     }
   }
 `;
@@ -161,16 +150,17 @@ const S = {
   container: styled.div``,
 
   title: styled.div`
-    margin-bottom: 13px;
+    margin-bottom: 30px;
     h3 {
-      font-size: 22px;
-      line-height: 33px;
-      letter-spacing: -0.44px;
+      font-size: 24px;
+      line-height: 1.8em;
     }
 
     @media only screen and (max-width: 767px) { 
+      margin-bottom: 20px;
       h3 {
-        font-size: 18px;
+        font-size: 22px;
+        letter-spacing: -0.4px;
       }
     }
   `,
@@ -184,16 +174,18 @@ const S = {
   body: styled.div``,
 
   row: styled.div<{ selected: number | null }>`
-    display: flex;
-    align-items: center;
+    width: 100%;
+    display: table;
+
     & > div {
-      font-size:18px;
+      font-size: 18px;
+      line-height: 1.36em;
       ${commonTableStyle};
       ${({ selected }) => {
         if (selected) {
           return css`
             &:nth-child(${selected + 1}) {
-              background-color: #fafafa;
+              background-color: ${LIGHT_GRAY1};
             }
           `;
         }
@@ -203,56 +195,21 @@ const S = {
       border-bottom: solid 1px ${LIGHT_GRAY5};
       & > div {
         &:nth-child(1) {
-          font-size: 18px;
-          line-height: 20px;
-          letter-spacing: -0.28px;
           text-align: left;
-        }
-        &:not(:first-of-type) {
-          font-size: 18px;
-          line-height: 22px;
-          letter-spacing: -0.3px;
         }
       }
     }
     @media only screen and (max-width: 767px) { 
       & > div {
-        font-size:14px;  
-      }
-      &.body-row {
-        & > div {
-          &:nth-child(1) {
-            font-size: 14px;
-          }
-          &:not(:first-of-type) {
-            font-size: 14px;
-          }
-        }
+        font-size: 14px;
+        letter-spacing: -0.28px;
       }
     }
   `,
 
   item: styled.div<{ blur?: boolean }>`
     text-align: center;
-    padding: 20px 0;
     color: ${ifProp('blur', LIGHT_GRAY8, DARK_GRAY1)};
-    font-weight: 600;
-    .header-item {
-      font-size: 18px;
-      line-height: 24px;
-      letter-spacing: -0.32px;
-    }
-    .body-item {
-      padding: 25px 0;
-    }
-    @media only screen and (max-width: 767px) { 
-      .header-item {
-        font-size: 14px;
-      }
-      .body-item {
-        padding: 15px 0;
-      }
-    }
   `,
 };
 

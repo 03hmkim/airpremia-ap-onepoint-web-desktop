@@ -7,11 +7,12 @@ import {
   DARK_GRAY1,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
+import { SupportStyle } from 'src/styles/common';
 import Redcarry from 'public/images/support/img_redcarry.png';
 import { ListGlobal } from 'src/components';
-import OneBaggage from 'public/images/support/onebaggage.png';
-import TwoBaggage from 'public/images/support/twobaggage.png';
-import NoBaggage from 'public/images/support/nobaggage.png';
+import OneBaggage from 'public/images/support/oneBaggage.png';
+import TwoBaggage from 'public/images/support/twoBaggage.png';
+import NoBaggage from 'public/images/support/noBaggage.png';
 import Stroller from 'public/images/support/stroller.png';
 import BaggageStroller from 'public/images/support/baggageStroller.png';
 import Link from 'next/link'
@@ -34,7 +35,7 @@ function TabContent({currIdxCont}: IProps) {
           <C.content><C.image></C.image></C.content>
         </C.body>
         <C.body>
-          <C.titleSub>휴대수하물 무게 및 개수</C.titleSub>
+          <C.titleSub>위탁수하물 무게 및 개수</C.titleSub>
           <C.content>
             <T.table>
               <div className="tbWrap">
@@ -52,10 +53,10 @@ function TabContent({currIdxCont}: IProps) {
                   <tbody>
                     <tr>
                       <td>
-                        <C.oneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.oneBaggage>
-                        <C.oneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.oneBaggage>
+                        <C.OneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.OneBaggage>
+                        <C.OneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.OneBaggage>
                       </td>
-                      <td><C.oneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.oneBaggage></td>
+                      <td><C.OneBaggage><C.oneBText>10kg<br></br>(22lbs)</C.oneBText></C.OneBaggage></td>
                     </tr>
                     <tr>
                       <td>무게: 10kg(22lbs) 이내, 개수: 2개</td>
@@ -162,9 +163,9 @@ function TabContent({currIdxCont}: IProps) {
                   <tbody>
                     <tr>
                       <th rowSpan={2}>국내선</th>
-                      <td className="mobN"><C.oneBaggage><C.oneBText>30kg<br></br>(66lbs)</C.oneBText></C.oneBaggage></td>
-                      <td className="mobN"><C.oneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.oneBaggage></td>
-                      <td className="mobN"><C.oneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.oneBaggage></td>
+                      <td className="mobN"><C.OneBaggage><C.oneBText>30kg<br></br>(66lbs)</C.oneBText></C.OneBaggage></td>
+                      <td className="mobN"><C.OneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.OneBaggage></td>
+                      <td className="mobN"><C.OneBaggage><C.oneBText>20kg<br></br>(44lbs)</C.oneBText></C.OneBaggage></td>
                     </tr>
                     <tr>
                       <td>무게: 30kg(66lbs) 이내, 개수: 1개</td>
@@ -174,11 +175,11 @@ function TabContent({currIdxCont}: IProps) {
                     <tr>
                       <th rowSpan={2}>동북아/<br></br>동남아</th>
                       <td className="mobN">
-                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
-                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
+                        <C.OneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.OneBaggage>
+                        <C.OneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.OneBaggage>
                       </td>
-                      <td className="mobN"><C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage></td>
-                      <td className="mobN"><C.noBaggage></C.noBaggage></td>
+                      <td className="mobN"><C.OneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.OneBaggage></td>
+                      <td className="mobN"><C.NoBaggage></C.NoBaggage></td>
                     </tr>
                     <tr>
                       <td>무게: 23kg(51lbs) 이내, 개수: 2개</td>
@@ -188,14 +189,14 @@ function TabContent({currIdxCont}: IProps) {
                     <tr>
                       <th rowSpan={2}>미주</th>
                       <td className="mobN">
-                        <C.oneBaggage><C.oneBText>32kg<br></br>(71lbs)</C.oneBText></C.oneBaggage>
-                        <C.oneBaggage><C.oneBText>32kg<br></br>(71lbs)</C.oneBText></C.oneBaggage>  
+                        <C.OneBaggage><C.oneBText>32kg<br></br>(71lbs)</C.oneBText></C.OneBaggage>
+                        <C.OneBaggage><C.oneBText>32kg<br></br>(71lbs)</C.oneBText></C.OneBaggage>  
                       </td>
                       <td className="mobN">
-                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
-                        <C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage>
+                        <C.OneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.OneBaggage>
+                        <C.OneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.OneBaggage>
                       </td>
-                      <td className="mobN"><C.oneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.oneBaggage></td>
+                      <td className="mobN"><C.OneBaggage><C.oneBText>23kg<br></br>(51lbs)</C.oneBText></C.OneBaggage></td>
                     </tr>
                     <tr>
                       <td>무게: 32kg(71lbs) 이내, 개수: 2개</td>
@@ -294,75 +295,9 @@ function TabContent({currIdxCont}: IProps) {
 
 
 const C = {
-  /* 서비스안내 공통css */
-  wrap: styled.div`
-    border-top: 2px solid ${DARK_GRAY1};
+  ...SupportStyle.C1,
 
-    &.bdN {
-      border-top: 0;
-    }
-  `,
-  body: styled.div`
-    margin-top: 100px;
-
-    &:first-of-type {
-      margin-top: 30px;
-    }
-  `,
-  titleMain: styled.h2`
-    font-size: 24px;
-    font-weight: bold;
-
-    @media only screen and (max-width: 767px) {
-      font-size: 22px;
-      line-height: 28px;
-      letter-spacing: -0.04em;
-    }
-  `,
-  titleSub: styled.h3`
-    font-size: 21px;
-    font-weight: 700;
-
-    @media only screen and (max-width: 767px){
-      font-size: 16px;
-      letter-spacing: -0.32px;
-      margin-top: 60px;
-    }
-  `,
-  content: styled.div`
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 1.8em;
-
-    &.mt60 {
-      margin-top: 60px;
-    }
-
-    @media only screen and (max-width: 767px){
-      margin-top: 40px;
-      font-size: 14px;
-      letter-spacing: -0.28px;
-
-      &.mt60 {
-        margin-top: 40px;
-      }
-      .ex{
-        font-size:14px;
-      }
-    }
-  `,
-  linkWrap: styled.div`
-    margin-top: 30px;
-
-    @media only screen and (max-width: 1059px) {
-      margin-top: 20px;
-    }
-  `,
-  /* 서비스안내 공통css 끝 */
-
-
-
-  oneBaggage: styled.div`
+  OneBaggage: styled.div`
     margin: 0 auto;
     width: 58px;
     height: 112px;
@@ -393,7 +328,7 @@ const C = {
       display: none;
     }
   `,
-  twoBaggage: styled.div`
+  TwoBaggage: styled.div`
     margin: 0 auto;
     width: 127px;
     height: 112px;
@@ -406,7 +341,7 @@ const C = {
     margin-top: 15px;
     margin-left: -68px;
   `,
-  noBaggage: styled.div`
+  NoBaggage: styled.div`
     margin: 0 auto;
     width: 98px;
     height: 112px;

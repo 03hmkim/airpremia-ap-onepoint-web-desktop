@@ -190,7 +190,7 @@ function Confirm({}: IProps) {
             title={
               <S.modalTitle>
                 <PopupTitle>
-                  국제 운송 약관
+                  국내 운송 약관
                 </PopupTitle>
               </S.modalTitle>
             }
@@ -266,7 +266,7 @@ function Confirm({}: IProps) {
       onClick={rulePop4}
       lengthType="short"
     >
-      국제 운송 약관
+      국내 운송 약관
     </ButtonLink2Type4>,
   ];
 

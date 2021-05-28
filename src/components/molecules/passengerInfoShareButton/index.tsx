@@ -24,8 +24,7 @@ function PassengerInfoShareButton({}: IProps) {
   return (
     <S.container>
       <div className="description">
-        주소를 탑승객들에게 공유하면 탑승객들이 직접 여권
-        정보를 입력할 수 있어요!
+        주소를 함께 여행하는 일행들에게 공유하면 일행들이 직접 온라인 체크인을 진행할 수 있어요!
       </div>
       <div className="buttonWrapper">
         <button className="kakao" onClick={() => {}}>

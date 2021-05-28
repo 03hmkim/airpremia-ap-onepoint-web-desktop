@@ -31,8 +31,8 @@ const BoardingPersonInfo: FC<IProps> = ({}: IProps) => {
         desColor="gray"
         description={
           <>
-            <p>여권 상 표기된 이름과 동일하게 입력해주세요.</p>
             <p>예약 완료 후 이름 변경 시 항공권 재발행 수수료가 부과될 수 있습니다.</p>
+            <p>성과 이름은 공항에서 제시할 신분증에 표기된 언어로 입력해주세요.</p>
           </>
         }
       />

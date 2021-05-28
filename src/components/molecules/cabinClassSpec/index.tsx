@@ -2,11 +2,14 @@ import styled from 'styled-components';
 import Link from 'next/link';
 // import SvgBag from 'public/images/ico_bag.svg';
 import SvgSeat from 'public/images/ico_seat.svg';
-import SvgWifi from 'public/images/ico_wifi.svg';
+// import SvgWifi from 'public/images/ico_wifi.svg';
 import {
   DARK_GRAY1,
   BLUE1,
 } from '@airpremia/cdk/styles/colors';
+import {
+  Arrow,
+} from 'src/components';
 
 export interface IProps {
   classType: string;
@@ -28,7 +31,7 @@ const getDummyDataBySpecType = (type: string) =>
       };
 
 function CabinClassSpec({ classType }: IProps) {
-  const { name, seat, wifi } = getDummyDataBySpecType(
+  const { name, seat } = getDummyDataBySpecType(
     classType,
   );
   return (
@@ -43,15 +46,15 @@ function CabinClassSpec({ classType }: IProps) {
           <SvgBag width={18} height={18} />
           <p>수하물 {bag} 개</p>
         </div> */}
-        <div>
+        {/* <div>
           <SvgWifi width={18} height={18} />
           <p>와이파이 {wifi} M</p>
-        </div>
+        </div> */}
       </S.top>
       <S.bottom>
         <Link href={'/ticket/flight/info-class'}>
           <a target="_blank">
-            에어프레미아 클래스<span className="enter" />알아보기 {'>'}
+            에어프레미아 클래스<span className="enter" />&nbsp;알아보기 <Arrow color={BLUE1} />
           </a>
         </Link>
       </S.bottom>
@@ -116,6 +119,12 @@ const S = {
       letter-spacing: -0.28px;
     }
 
+    .arrow {
+      position: relative;
+      top: 4px;
+      display: inline-flex;
+    }
+
     @media only screen and (max-width: 1059px) {
       .enter {
         display: block;
@@ -124,6 +133,12 @@ const S = {
       .enter {
         margin-left: 4px;
         display: inline-block;
+      }
+
+      .arrow {
+        width: 14px;
+        height: 14px;
+        top: 2px;
       }
     }
 

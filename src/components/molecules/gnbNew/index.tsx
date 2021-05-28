@@ -498,6 +498,12 @@ const S = {
         margin: 0 auto;
       }
     }
+
+    @media only screen and (max-width: 767px) {
+      > .innerWrapper {
+        height: 60px;
+      }
+    }
   `,
   logo: styled.div`
     margin-right: 210px;
